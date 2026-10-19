@@ -22,6 +22,8 @@ aliases:
 
 - [[wiki-formatting-guide]] — กฎการเขียน: frontmatter, wikilinks, atomic notes, template ทุกชนิด
 - [[hermes-wiki-persona]] — บทบาทของ Hermes: ตรวจ Inbox, จัดหมวด, อัปเดต MOC, ตรวจ orphan
+- [[agent-access-policy]] — สิทธิ์อ่าน/เขียนของ agent 4 ตัว, hub contract, workflow
+- [[stock-hub-template]] — เทมเพลตหน้า hub ของหุ้น
 - [[main-hub]] — จุดเริ่มต้นของ graph
 
 ## เครื่องมือ
@@ -36,6 +38,15 @@ python3 check-vault.py --vault "/path/to/vault"
 ```
 
 Exit code `0` = สะอาด, `1` = มีปัญหา ใช้ใน weekly review ตาม [[hermes-wiki-persona]] §6
+
+- `check-policy.py` — ตรวจว่าการเขียนอยู่ในสิทธิ์ของ agent ตาม [[agent-access-policy]]
+
+```bash
+python3 check-policy.py            # ตรวจสถานะปัจจุบัน
+python3 check-policy.py --git 30   # ตรวจ 30 commit ล่าสุด (ต้องมี prefix [agent])
+```
+
+Exit code `0` = PASS, `1` = พบการละเมิด
 
 ## Auto-push ขึ้น GitHub
 

@@ -31,6 +31,10 @@ aliases:
 - [[win-rate-vs-expectancy]] — ทำไมชนะ 7 แพ้ 3 ยังขาดทุนได้
 - [[2021-setinvestnow-money-management]] — บทความต้นทาง (SET Invest Now, 22 พ.ย. 2564)
 
+### หุ้นที่ติดตาม
+- [[AAPL]] — hub รวม News / Technical / Financial / Decision
+- [[decisions]] — บันทึกการตัดสินใจของ Leader (append-only)
+
 ### ตลาด & เศรษฐศาสตร์
 - _ว่าง_
 

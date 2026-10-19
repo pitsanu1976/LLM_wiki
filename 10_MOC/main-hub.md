@@ -35,6 +35,8 @@ aliases:
 - [[projects-moc]] — งานที่มีจุดจบและ deliverable
 - [[journals-moc]] — บันทึกรายวัน, retro, decision log
 - [[system-moc]] — กฎ, persona, template ของ vault เอง
+- [[decisions]] — Watchlist และบันทึกการตัดสินใจของ Leader
+- [[AAPL]] — ตัวอย่าง hub ของหุ้น (News · Technical · Financial · Decision)
 
 ## วิธีใช้ vault นี้
 
@@ -58,6 +60,6 @@ Hermes ทำหน้าที่ librarian ตาม [[hermes-wiki-persona]] �
 ## สถานะ vault
 
 - สร้างเมื่อ: 2026-10-19
-- Notes: 17 (MOC 8 + system 2 + knowledge 7)
+- Notes: 21 (MOC 10 + system 4 + knowledge 7)
 - Knowledge notes: 7 — trading 4 · tech 3
 - Inbox: ว่าง
