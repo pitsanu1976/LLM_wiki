@@ -21,12 +21,15 @@ aliases:
 
 ## จุดเริ่มต้น
 
-- _ยังไม่มี_ — เริ่มจาก note แรกใน `20_Knowledge/23_Trading_Finance/`
+- [[money-management]] — MM คืออะไร ทำไมต้องมี ก่อนไปเรื่องอื่น
 
 ## หมวดย่อย
 
 ### หลักการลงทุน
-- _ว่าง_
+- [[money-management]] — การกำหนดความเสี่ยงต่อไม้ + การจัดสรรเงินในพอร์ต
+- [[position-sizing]] — แปลง "เงินที่ยอมเสีย" เป็นจำนวนหุ้น
+- [[win-rate-vs-expectancy]] — ทำไมชนะ 7 แพ้ 3 ยังขาดทุนได้
+- [[2021-setinvestnow-money-management]] — บทความต้นทาง (SET Invest Now, 22 พ.ย. 2564)
 
 ### ตลาด & เศรษฐศาสตร์
 - _ว่าง_
@@ -50,6 +53,5 @@ macro, risk management, position sizing, กลยุทธ์
 
 ## ยังไม่ได้เขียน
 
-- [ ] กรอบการคิด position sizing
 - [ ] วิธีอ่านงบการเงินเร็ว ๆ
 - [ ] บันทึก thesis ของแต่ละ position
