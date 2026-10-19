@@ -290,6 +290,24 @@ python3 check-policy.py --git 30   # ตรวจ 30 commit ล่าสุด (
 
 ---
 
+## 9. สถานะการติดตั้ง
+
+| profile | SOUL.md | เพิ่ม | อัปเดต |
+|---|---|---|:--:|
+| `news` | +49 บรรทัด | §Wiki — เขียน `24_News_Archive/` + block `agent:news` | 2026-10-19 |
+| `tech` | +50 บรรทัด | §Wiki — เขียน `25_Tech_Analysis/` + block `agent:tech` | 2026-10-19 |
+| `finance` | +52 บรรทัด | §Wiki — เขียน `26_Financial_Data/` + block `agent:finance` | 2026-10-19 |
+| `leader` | +47 บรรทัด | §Wiki — เจ้าของ hub + `50_Watchlist/` + สร้าง hub จาก template | 2026-10-19 |
+
+- ไม่มีการลบเนื้อหาเดิม (diff เป็น + ทั้งหมด)
+- backup: `SOUL.md.bak-20261019T192604Z` ในแต่ละ profile
+- ทดสอบโหลดจริงแล้ว: `leader` และ `news` ตอบตรงตาม scope
+
+### ยังไม่ได้ทำ
+
+- ยังไม่มี cron ที่รัน `check-policy.py` อัตโนมัติ (ปัจจุบันรันมือ)
+- agent ยังไม่เคยเขียน wiki จริง — จะเริ่มในรอบทำงานถัดไป
+
 ## เกี่ยวข้อง
 
 - [[main-hub]]
