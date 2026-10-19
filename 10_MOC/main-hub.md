@@ -58,6 +58,6 @@ Hermes ทำหน้าที่ librarian ตาม [[hermes-wiki-persona]] �
 ## สถานะ vault
 
 - สร้างเมื่อ: 2026-10-19
-- Notes: 9 (MOC 7 + system 2)
+- Notes: 10 (MOC 8 + system 2)
 - Knowledge notes: 0 — เริ่มเก็บได้เลย
 - Inbox: ว่าง
