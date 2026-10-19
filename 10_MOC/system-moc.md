@@ -37,6 +37,19 @@ python3 check-vault.py --vault "/path/to/vault"
 
 Exit code `0` = สะอาด, `1` = มีปัญหา ใช้ใน weekly review ตาม [[hermes-wiki-persona]] §6
 
+## Auto-push ขึ้น GitHub
+
+`auto-push.sh` — commit + push ขึ้น `github.com/pitsanu1976/LLM_wiki` อัตโนมัติ
+เรียกโดย Hermes cron job `LLM Wiki autopush` ทุก 5 นาที (no_agent — ไม่เปลือง token)
+
+```bash
+bash 90_System_Prompts/auto-push.sh       # รันมือได้ถ้าอยาก push เดี๋ยวนี้
+tail -5 .git/autopush.log                # ดูประวัติ
+```
+
+พฤติกรรม: ไม่มีอะไรเปลี่ยน → เงียบ · มีของใหม่ → commit + push · push ล้ม → แจ้งเตือนใน Telegram
+ใช้ SSH deploy key (`~/.ssh/llm_wiki_deploy`) — ไม่มี token เก็บใน vault
+
 ## ลำดับชั้นของ vault
 
 ```
