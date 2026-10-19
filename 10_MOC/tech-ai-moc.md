@@ -20,12 +20,14 @@ aliases:
 
 ## จุดเริ่มต้น
 
-- _ยังไม่มี_ — เริ่มจาก note แรกใน `20_Knowledge/21_Tech_AI/`
+- [[llm-wiki-pattern]] — pattern ที่ vault นี้เองก็ใช้อยู่
 
 ## หมวดย่อย
 
 ### AI / LLM
-- _ว่าง_
+- [[llm-wiki-pattern]] — ให้ LLM สร้าง/ดูแลคลังความรู้ markdown ต่อเนื่อง
+- [[llm-wiki-vs-rag]] — compiled knowledge vs retrieval ต่างกันตรงไหน
+- [[2026-karpathy-llm-wiki]] — ต้นทาง: Karpathy gist, 4 เม.ย. 2026
 
 ### Software & Architecture
 - _ว่าง_
