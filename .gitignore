@@ -1,0 +1,14 @@
+# Obsidian — per-device state (ไม่ควร sync ข้ามเครื่อง)
+.obsidian/workspace*.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+~$*
+
+# Obsidian trash
+.trash/
