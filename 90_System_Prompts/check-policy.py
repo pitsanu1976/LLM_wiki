@@ -85,6 +85,10 @@ def static_check(vault: str) -> list[tuple[str, str, str]]:
     """คืน list ของ (severity, path, message)"""
     out: list[tuple[str, str, str]] = []
 
+    hub_path = os.path.join(vault, HUB_DIR)
+    hubs = ({f[:-3] for f in os.listdir(hub_path) if f.endswith(".md")}
+            if os.path.isdir(hub_path) else set())
+
     for root, dirs, files in os.walk(vault):
         dirs[:] = [d for d in dirs if not d.startswith(".")]
         for name in files:
@@ -120,8 +124,16 @@ def static_check(vault: str) -> list[tuple[str, str, str]]:
                 ticker = fm.get("ticker", "")
                 if not ticker:
                     out.append(("ERROR", rel, "ขาด ticker: ใน frontmatter"))
-                elif f"[[{ticker}]]" not in text:
-                    out.append(("ERROR", rel, f"ต้องมีลิงก์ [[{ticker}]]"))
+                elif fm.get("scope") == "market":
+                    pass      # ภาพรวมตลาด — ไม่ผูกกับหุ้นตัวเดียว
+                elif f"[[{ticker}]]" in text:
+                    pass
+                elif ticker in hubs:
+                    out.append(("ERROR", rel,
+                                f"มีหน้า hub [[{ticker}]] แล้ว แต่ไฟล์ไม่ได้ลิงก์"))
+                else:
+                    out.append(("WARN", rel,
+                                f"hub [[{ticker}]] ยังไม่มี — รอ Leader สร้าง (ghost)"))
 
             # 3) hub ต้องมี marker ครบและไม่ซ้อน
             if rel.startswith(HUB_DIR + "/") and not name.startswith("_"):

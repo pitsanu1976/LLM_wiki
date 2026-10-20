@@ -33,6 +33,7 @@ FENCE = re.compile(r"```.*?```", re.S)
 INLINE_CODE = re.compile(r"`[^`\n]*`")
 WIKILINK = re.compile(r"\[\[([^\[\]]+?)\]\]")
 LINK_TARGET = re.compile(r"^([^#|]+?)(?:#[^|]*)?(?:\|.*)?$")
+GHOST_RE = re.compile(r"^[A-Z][A-Z0-9.\-]{0,9}$")   # TSM, MSFT, DAILY-US
 
 
 def resolve_vault(cli_path: str | None) -> str:
@@ -75,6 +76,7 @@ def scan(vault: str) -> dict:
 
     lower = {k.lower(): k for k in notes}
     problems: dict[str, list[str]] = collections.defaultdict(list)
+    ghosts: list[str] = []
     inbound: collections.Counter = collections.Counter()
     outbound: dict[str, list[str]] = collections.defaultdict(list)
 
@@ -111,14 +113,20 @@ def scan(vault: str) -> dict:
                 inbound[hit] += 1
                 outbound[name].append(hit)
             else:
-                problems["broken link"].append(f"{name}: [[{target}]]")
+                # ลิงก์ไปหน้าที่มีลักษณะเป็น ticker = ghost node (ยังไม่ได้เขียนหน้า hub)
+                # ไม่ใช่ error — ใน LLM wiki ghost คือ "รายการที่ตั้งใจจะเขียน"
+                if GHOST_RE.match(target):
+                    ghosts.append(f"{name}: [[{target}]]")
+                else:
+                    problems["broken link"].append(f"{name}: [[{target}]]")
 
-    return {"notes": notes, "problems": problems,
+    return {"notes": notes, "problems": problems, "ghosts": ghosts,
             "inbound": inbound, "outbound": outbound}
 
 
 def report(vault: str, data: dict, quiet: bool = False) -> int:
     notes, problems = data["notes"], data["problems"]
+    ghosts = data.get("ghosts", [])
     inbound, outbound = data["inbound"], data["outbound"]
     orphans = [n for n in notes if inbound[n] == 0 and n != ROOT_NOTE]
 
@@ -150,12 +158,13 @@ def report(vault: str, data: dict, quiet: bool = False) -> int:
     print("\n--- TOTALS ---")
     print(f"  files          : {len(notes)}")
     print(f"  links resolved : {sum(inbound.values())}")
+    print(f"  ghosts         : {len(ghosts)}   (ลิงก์ไปหน้าที่จะเขียนภายหลัง — ไม่ใช่ error)")
     print(f"  broken links   : {len(problems.get('broken link', []))}")
-    print(f"  orphans        : {len(orphans)}")
+    print(f"  orphans        : {len(orphans)}   (leaf ของ agent — จะมี inbound เมื่อมี hub)")
     print(f"  other problems : {sum(len(v) for k, v in problems.items() if k != 'broken link')}")
-    status = "CLEAN" if not problems and not orphans else "NEEDS ATTENTION"
+    status = "CLEAN" if not problems else "NEEDS ATTENTION"
     print(f"  status         : {status}")
-    return 0 if (not problems and not orphans) else 1
+    return 0 if not problems else 1
 
 
 def main(argv: list[str] | None = None) -> int:
