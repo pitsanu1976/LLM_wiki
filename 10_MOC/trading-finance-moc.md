@@ -32,8 +32,13 @@ aliases:
 - [[2021-setinvestnow-money-management]] — บทความต้นทาง (SET Invest Now, 22 พ.ย. 2564)
 
 ### หุ้นที่ติดตาม
-- [[AAPL]] — hub รวม News / Technical / Financial / Decision
+- [[AAPL]] — ตัวอย่าง hub (ยังไม่มีข้อมูลจริง)
+- [[TSM]] · [[CDNS]] · [[CRM]] · [[MSFT]] · [[CEG]] · [[WDAY]] — hub ที่มีข้อมูลจาก agent แล้ว
 - [[decisions]] — บันทึกการตัดสินใจของ Leader (append-only)
+
+### ธีม
+- [[US-AI]] — sector AI / enterprise software
+- [[CRYPTO]] — basket คริปโต
 
 ### ตลาด & เศรษฐศาสตร์
 - _ว่าง_

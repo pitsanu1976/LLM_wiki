@@ -6,6 +6,7 @@ created: 2026-10-19
 updated: 2026-10-19
 agent: tech
 ticker: DAILY-US
+scope: market
 tags:
   - tech/indicators
   - ticker/TSM

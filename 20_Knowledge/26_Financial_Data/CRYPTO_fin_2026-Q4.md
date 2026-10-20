@@ -6,6 +6,7 @@ created: 2026-10-19
 updated: 2026-10-19
 agent: finance
 ticker: CRYPTO
+scope: market
 period: 2026-Q4
 tags:
   - finance/earnings

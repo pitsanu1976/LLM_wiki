@@ -56,6 +56,7 @@ aliases:
 | `00_Inbox/` | W | W | W | W | W |
 | `10_MOC/main-hub.md` | R | R | R | R | W |
 | `10_MOC/stocks/<T>.md` | *block* | *block* | *block* | W | W |
+| `10_MOC/themes/` | R | R | R | W | W |
 | `20_Knowledge/21_Tech_AI/` | R | R | R | R | W |
 | `20_Knowledge/22_Offshore_Ops/` | R | R | R | R | W |
 | `20_Knowledge/23_Trading_Finance/` | R | R | R | R | W |
@@ -107,6 +108,8 @@ tags:
 
 - **`agent:` คือฟิลด์ที่ใช้บังคับสิทธิ์** — checker ตรวจว่าไฟล์ในโฟลเดอร์ของใคร ต้องประกาศ `agent:` ตรงกับเจ้าของ
 - `ticker:` จำเป็นสำหรับไฟล์ใน `24/25/26` และ `10_MOC/stocks/`
+- `scope: market` — สำหรับไฟล์ที่เป็น **ภาพรวมตลาด/ธีม** ไม่ใช่หุ้นตัวเดียว (เช่น `DAILY-US`, `US-AI`, `CRYPTO`)
+  ไฟล์กลุ่มนี้ **ไม่ต้อง**ลิงก์ `[[<TICKER>]]` และไม่ต้องมีหน้า hub ของตัวเอง — ใช้หน้า theme ใน `10_MOC/themes/` แทน
 
 ### 3.3 Append-only
 

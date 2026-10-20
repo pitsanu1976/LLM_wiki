@@ -6,6 +6,7 @@ created: 2026-10-20
 updated: 2026-10-20
 agent: news
 ticker: CRYPTO
+scope: market
 tags:
   - news/theme
   - ticker/CRYPTO
