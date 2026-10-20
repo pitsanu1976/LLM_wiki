@@ -1,5 +1,5 @@
 ---
-title: "CRYPTO — ข่าว 2026-10-20 (shortlist รอบ 8)"
+title: "CRYPTO — ข่าว 2026-10-20 (shortlist รอบ 8 + รอบ 9)"
 type: source
 status: active
 created: 2026-10-20
@@ -42,5 +42,35 @@ SOL: Alpenglow 21 ต.ค. ~13:20Z (สูง, ครั้งเดียว, �
 - ดึงไม่ได้: L2 depth · Farside ต้นทาง · XRPL primary · CME BCH primary · วันหมดอายุ options BTC · notional เป็น Alpaca venue เดียว
 
 รายงานเต็ม: `workspace/reports/news/2026-10-20-CRYPTO-shortlist-r8.md` (รอบก่อนหน้า: `...-r7.md`, pull 04:13Z)
+
+---
+
+## รอบ 9 — pull 2026-10-20 16:36–16:38Z (เพิ่มจากรอบ 8 · ตัวเลขชุดใหม่ทั้งหมดจาก Alpaca)
+
+**สรุป 3 บรรทัด**
+1. **ตัวขับของการขึ้น 13:00–16:32Z = ข่าวน้ำมัน/อิหร่าน ไม่ใช่ดีมานด์:** 14:42Z CoinDesk รายงาน (แบบ "reportedly") ว่า กาตาร์–ปากีสถานเสนอแผนยุติสงครามและได้ preliminary approval จากสหรัฐ/อิหร่าน ⇒ WTI จาก >$101 → −3% ที่ $95.50 ⇒ Nasdaq −1% → +0.6% ⇒ **BTC high 83,343.65 @14:57Z** · แล้ว **15:34Z รายงานถูกปฏิเสธ** ⇒ น้ำมันเด้ง WTI $97.60, BTC ถอยไป ~82,300 — **1D ยังไม่ปิด**
+2. **เทปดีขึ้นแต่ยัง 0/16 ผ่านเกต:** BTC 2 print ≥$3k · exTop **$19,014** (r8 = $5,664) · ETH 2 print แต่ exTop **$6,117** เพราะ 80% อยู่ในชั่วโมง 13Z · ไม่มีคู่ไหนได้ ≥3 print ≥$3k หรือ exTop > $50,000
+3. **ไม่มี print ใหญ่บนทางขึ้น:** หน้าต่าง 14:40–15:05Z BTC มี 47 print รวม **$3,115** และ print ใหญ่สุดแค่ **$280**; print ≥$3k ทั้ง 2 ใบอยู่ที่ **13:52Z @81,682 (ตอนฐาน)** และ **15:37Z @82,346 (ตอนถอย)** ⇒ breakout จาก headline ไม่มีเทปรองรับ
+
+**Sentiment:** Neutral (narrow) — ทิศทาง Neutral เอนบวก (ตัวขับถูกปฏิเสธใน 52 นาที) · ปฏิบัติการ Bearish (0/16 ผ่านเกตเทป)
+
+**ข่าวใหม่รอบนี้ (5 ข้อ)**
+- น้ำมันดิ่งจากรายงานแผนยุติสงครามอิหร่าน (กาตาร์–ปากีสถาน) WTI $101+ → $95.50 | CoinDesk live updates | **2026-10-20 10:42 EDT = 14:42Z** | https://www.coindesk.com/markets/2026/10/20/live-updates-market-jitters-persist-as-the-ai-selloff-deepens — **กึ่งยืนยัน (รายงาน ไม่มีเอกสาร primary)**
+- รายงานเดิมถูกปฏิเสธ · น้ำมันเด้ง · BTC ถอย ~1% จากยอดไป $82,300 | CoinDesk live updates | **2026-10-20 11:34 EDT = 15:34Z** | ลิงก์เดียวกัน — **ยืนยันว่าถูกปฏิเสธ**
+- spot BTC ETF **ไหลเข้า $526.6M** 19 ต.ค. · IBIT **+$665.2M** (มากสุดตั้งแต่ 7 ต.ค. 2025) · FBTC −$83.6M · GBTC −$54.9M | CoinDesk อ้าง SoSoValue | **2026-10-20 04:24 EDT = 08:24Z** | https://www.coindesk.com/business/2026/10/20/bitcoin-etfs-just-saw-their-biggest-day-in-a-month-thanks-entirely-to-blackrock — **ยืนยันแล้ว (ทุติยภูมิ)**
+- ETH ETF **ไหลออก $103.3M ต่อวันที่ 4** · ETHA −$95.4M | CoinDesk (บทความเดียวกับข้างบน) | 08:24Z — **ยืนยันแล้ว**
+- BlackRock ยื่นไฟลิ่ง **iShares Bitcoin Managed Protect ETF (PBIT)** คุม downside ด้วย options บน IBIT | CoinDesk | **2026-10-20 10:28 EDT = 14:28Z** (ยื่น 19 ต.ค.) | https://www.coindesk.com/markets/2026/10/20/blackrock-seeks-to-shield-bitcoin-investors-from-losses-after-rival-fund-weathers-50-crash — **ยืนยันแล้ว**
+
+**ตัวกระตุ้นราคา:** น้ำมัน↔ข่าวอิหร่าน (สูง, half-life <1 ชม.) · ETF flow BTC เข้า/ETH ออก (สูง แต่เป็นของ 19 ต.ค.; flow 20 ต.ค. พิมพ์หลัง 21:00Z) · PBIT + JPMorgan 10%/ปี (กลาง, เชิงโครงสร้าง ไม่ใช่ flow วันนี้) · มหภาคชะลอ (pending home sales −7.3% ต่ำสุด 25 ปี; housing starts −5.2%) · SOL Alpenglow 21 ต.ค. ~13:20Z (สูง, คงจาก r8) · PAXG ถูกขายตอน risk-on (corr 7d 0.43 แต่ spread 37.2 bps)
+
+**เกต/ข้อจำกัดรอบ 9**
+- spread ≤20 bps @16:35Z ผ่าน: BTC 3.6 · ETH 2.9 · SOL 9.4 · AAVE 15.1 / ตก: UNI 21.8 · LINK 24.5 · XRP 39.3 · PAXG 37.2 · LTC 60.2 · BCH 61.2 · AVAX 64.6
+- corr: PAXG **0.43** (7d-1h) / **0.50** (30d-1d) ⇒ ผ่านเฉพาะหน้าต่าง hourly และชนเกตพอดีฝั่ง daily · ที่เหลือ 0.64–1.00 ทั้งคู่
+- EMA20(1D) คำนวณเองถึงแท่งปิด 19 ต.ค. = **82,519.83**; แท่ง 1D วันนี้ (ยังไม่ปิด) 82,500.205 ⇒ อยู่ "ที่ระดับ" ไม่ใช่เหนืออย่างมีนัย (leader ใช้ 82,494.78 ต่างกัน 25 pts จาก seed)
+- Δ 13:29Z→16:35Z: BTC +1.54% แต่ alt ใหญ่ +1.9–2.7% (1.1–1.8×) ⇒ **beta ทั้งกระดาน** ไม่ใช่เหรียญใดเหรียญหนึ่ง; PAXG −0.38%; PEPE +8.59% เป็น outlier ที่เทปบาง (15 print/$247)
+- **ข่าวเก่าที่หน้าตาเหมือนวันนี้ (กัก):** "$83,062 high / sell wall $83k / liquidations $335M / 10y 5.13%" = ของ **19 ต.ค.** (LeoDex/Cointelegraph 19 ต.ค. 16:37; เวอร์ชันเกาหลี published 20 ต.ค. 15:03Z แต่เนื้อในอ้าง "Cointelegraph reported on Oct. 19")
+- ดึงไม่ได้: L2 depth · primary ของแผนสันติภาพ · SoSoValue/Farside ตรง · liquidations วันนี้ (ไม่มีแหล่งระบุเวลา) · XRPL primary · Alpenglow เวลายืนยันซ้ำ · tier=1 effect
+
+รายงานเต็มรอบ 9: `workspace/reports/news/2026-10-20-CRYPTO-shortlist-r9.md`
 
 เชื่อมโยง: [[CRYPTO]] · [[trading-finance-moc]]
