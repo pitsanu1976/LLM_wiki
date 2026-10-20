@@ -28,6 +28,7 @@ aliases:
 - [[llm-wiki-pattern]] — ให้ LLM สร้าง/ดูแลคลังความรู้ markdown ต่อเนื่อง
 - [[llm-wiki-vs-rag]] — compiled knowledge vs retrieval ต่างกันตรงไหน
 - [[2026-karpathy-llm-wiki]] — ต้นทาง: Karpathy gist, 4 เม.ย. 2026
+- [[obsidian-for-llm-wiki]] — ตั้งค่า Obsidian เป็นหน้าจอของ wiki + plugin stack + กับดัก
 
 ### Software & Architecture
 - _ว่าง_
