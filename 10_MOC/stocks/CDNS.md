@@ -29,7 +29,9 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-_ยังไม่มี — ดูแหล่งข่าวในหัวข้อ "แหล่งข้อมูล" ด้านล่าง_
+- **2026-10-20 (ข่าว)**: งบ Q3 2026 = **จันทร์ 26 ต.ค. 2026 14:00 PT / 17:00 ET** ยืนยันโดยบริษัท (Cadence IR/Business Wire, 2026-10-05) — binary event ใกล้นับจากพรุ่งนี้
+- **ราคา 2026-10-20**: $319.87 ปิด −1.84% (Yahoo chart) = relative weakness ก่อนงบ
+- **Sentiment**: Bearish-narrow (ข่าวไม่มีตัวหนุนใหม่, ถ้างบ/guidance พลาดจะ de-rate หลัง 1M +13.8%) — [[DAILY-US_news_2026-10-20]]
 <!-- agent:news:end -->
 
 ## 📈 Technical

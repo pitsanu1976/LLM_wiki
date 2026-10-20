@@ -28,7 +28,9 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-_ยังไม่มี — ดูแหล่งข่าวในหัวข้อ "แหล่งข้อมูล" ด้านล่าง_
+- **2026-10-20 (ข่าว)**: Q3 2026 (15 ต.ค.) รายได้ $46.72B เหนือ high end, GM 66.4%, Q4 guide $52.3–54.3B, FY26 ~+44% USD, capex $60–64B — แต่หุ้นลง 3.4% วันนั้นจาก N2/ต่างประเทศ margin dilution (TSMC IR)
+- **Catalyst ถัดไป**: ยอดขายรายเดือน ต.ค. 2026 · 2026-11-10 13:30 Taipei · TSMC IR financial calendar (inherited 2026-10-18) · งบ Q4 ~ม.ค. 2027 ยังไม่ประกาศวัน
+- **Sentiment**: Bullish-narrow (demand ยืน, margin เป็นตัวกด) — รายละเอียด [[DAILY-US_news_2026-10-20]]
 <!-- agent:news:end -->
 
 ## 📈 Technical

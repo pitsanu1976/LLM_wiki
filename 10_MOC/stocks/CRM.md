@@ -28,7 +28,9 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-_ยังไม่มี — ดูแหล่งข่าวในหัวข้อ "แหล่งข้อมูล" ด้านล่าง_
+- **2026-10-12 (ข่าว, เก่า 8 วัน)**: BofA double upgrade Underperform→Buy PT $160→$285 (Benzinga/Barchart) — ยังใช้เป็นบริบท ไม่ใช่ catalyst ใหม่
+- **งบถัดไป**: Q3 FY27 ~**2026-12-02** หลังปิด (TipRanks "confirmed" / MarketBeat "estimated") ⇒ ไม่มี binary จนท้ายกรอบ
+- **Sentiment**: Neutral (แรงหนุนข่าวหมดอายุ, หุ้นขึ้น >50% จากปลาย มิ.ย.) — [[DAILY-US_news_2026-10-20]]
 <!-- agent:news:end -->
 
 ## 📈 Technical
