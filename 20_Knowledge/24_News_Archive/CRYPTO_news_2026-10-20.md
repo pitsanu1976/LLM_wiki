@@ -1,5 +1,5 @@
 ---
-title: "CRYPTO — ข่าว 2026-10-20 (shortlist รอบ 8 + รอบ 9)"
+title: "CRYPTO — ข่าว 2026-10-20 (shortlist รอบ 8 + 9 + 10)"
 type: source
 status: active
 created: 2026-10-20
@@ -72,5 +72,35 @@ SOL: Alpenglow 21 ต.ค. ~13:20Z (สูง, ครั้งเดียว, �
 - ดึงไม่ได้: L2 depth · primary ของแผนสันติภาพ · SoSoValue/Farside ตรง · liquidations วันนี้ (ไม่มีแหล่งระบุเวลา) · XRPL primary · Alpenglow เวลายืนยันซ้ำ · tier=1 effect
 
 รายงานเต็มรอบ 9: `workspace/reports/news/2026-10-20-CRYPTO-shortlist-r9.md`
+
+---
+
+## รอบ 10 — pull 2026-10-20 23:06–23:15Z (shortlist 5–10 คู่ + คำถาม EMA20 1D)
+
+**สรุป 3 บรรทัด**
+1. **เทปกลางคืนหดแรงเมื่อเทียบหน้าต่างเดียวกัน:** 10 คู่ในตารางรวม notional 6 ชม. (17:09:56–23:09:56Z) **$34,210** / exTop **$9,928** แต่คู่เดิมในหน้าต่างแบบ r9 (10:36:57–16:36:57Z) ได้ **$92,587** / exTop **$38,712** = **0.37× / 0.26×** ⇒ ความต่างหลักคือ "เวลา" ไม่ใช่ "เหรียญ"
+2. **0/10 ผ่านเกตเทป** ทั้งเกต A (≥3 print ≥$3,000) และเกต B (exTop > $50,000) — ดีสุด BTC: **1 print $3,038 @21:10:59Z**, exTop **$7,394** = 15% ของเกต B; อีก 9 คู่ **0 print ≥$3k**
+3. **1D ยังไม่ปิด (ปิด 00:00Z):** เหนือ EMA20(1D) มี **BTC ตัวเดียว +0.14%** (82,854.35 vs EMA 82,734.79 — ไม่มีนัย) · ที่เหลือใต้ทั้งหมด −0.28% (PAXG) ถึง −5.08% (ADA)
+
+**Sentiment:** Neutral (narrow) — ทิศทาง Neutral เอนบวก (BTC +1.25% 24 ชม. จาก risk-on บ่ายสหรัฐ) · ปฏิบัติการ Bearish (0/10 ผ่านเกตเทป · เทปกลางคืน 3.9 เท่าของภาคกลางวัน · 1D ใต้ EMA20)
+
+**ข่าวใหม่รอบนี้ (5 ข้อ)**
+- **Anza: Alpenglow พร้อม activate — เส้นแบ่ง slot 459,653,000, live 21 ต.ค. ~14:00Z** (epoch 1064 เริ่ม ~13:20Z ตาม Foundation / ~13:44Z ตาม slot pace; TowerBFT วิ่งต่อ 5,000 slot) | Solana Compass (อ้าง Anza 12:25Z) | **2026-10-20 15:27Z** | https://solanacompass.com/news/alpenglow-is-pending-activation-on-solana-mainnet-with-towerbft-set-to-retire-at-slot-459653000 — **ยืนยันแล้ว** (อัปเดตจาก 13:20Z ของ r9)
+- **45.2% ของ stake (198.1M SOL, 317 validator) ยังไม่พร้อมสำหรับ Alpenglow** ณ 19 ต.ค. 16:17Z · Firedancer ไม่รองรับระหว่างการย้าย | Solana Compass (Pumpkin's Pool tracker) | **2026-10-19 16:27Z** | https://solanacompass.com/news/alpenglow-tracker-flags-45-of-solana-stake-as-not-ready-two-days-before-epoch-1064-most-of-it-on-agave-430-and-431 — **ยืนยันแล้ว (tracker)**
+- **Kospi −3.73% จากความกังวล AI spending ⇒ BTC $81,400** · Deribit put:call >2:1 · CoinGlass liquidations 24 ชม. $155.1M (−54.7%) · OI $27.4B · funding ~8.8%/ปี | CoinDesk | **2026-10-20 10:22Z** | https://www.coindesk.com/markets/2026/10/20/bitcoin-drops-to-usd81-400-as-asian-chip-stocks-tumble-options-traders-seek-downside-protection — **ยืนยันแล้ว**
+- **บ่ายสหรัฐหุ้น crypto เด้ง:** COIN +1.7% · CRCL +5.3% · MSTR +6.3% · Nasdaq +0.25% | CoinDesk live | **2026-10-20 16:40Z** | https://www.coindesk.com/markets/2026/10/20/live-updates-market-jitters-persist-as-the-ai-selloff-deepens — **ยืนยันแล้ว**
+- **Brent แตะ $111.99 แล้วลง −3.07% → $106.18 (14:40Z)** · Kpler: ไหลออกอ่าว 8.5 ล้านบาร์เรล/วัน | Anadolu/EconoTimes + Reuters (**2 แหล่ง**) | **2026-10-20 14:40Z** | https://econotimes.com/Brent-Falls-3-After-Five-Month-High-Amid-Saudi-Attack-Claims-1757958 — **ยืนยันแล้ว**; คำอ้างโจมตีของ Houthi **ยังไม่ยืนยัน**
+- **ETF flow 20 ต.ค. ยังไม่ครบ:** BTC −$10.3M (BITB เท่านั้น; IBIT/FBTC/ARKB ยังไม่พิมพ์) · ETH ยังไม่พิมพ์ (Total 0.0) | Farside (ดึงตรง 23:14Z) | https://farside.co.uk/btc/ — **ยืนยันบางส่วน ⇒ ห้ามสรุปว่าพลิกเป็นลบ**
+
+**ตัวกระตุ้นราคา:** risk-on จากหุ้นสหรัฐบ่าย (สูง, beta ทั้งกระดาน) · น้ำมันกลับทิศในวันเดียว (สูง, สองทาง) · **Alpenglow 21 ต.ค. ~14:00Z (สูง, breaking change + TPS รายงานจะลดเพราะ vote ไม่นับเป็น tx)** · ETF flow ยังรอพิมพ์ครบ (กลาง) · PAXG ถูกขายตอน risk-on (กลาง, ลบ)
+
+**เกต/ข้อจำกัดรอบ 10**
+- spread ≤20 bps @23:15Z ผ่าน: **BTC ~1.8–3.2 · ETH ~2–4 · SOL ~6** (ตัวเลขขยับทุก tick เพราะ book บาง) / ตก: UNI ~20.5 · LINK 24.4 · ADA 34.6 · XRP 38.2 · LTC ~57 · BCH ~61 · PAXG 95.6
+- corr <0.5 ทั้งสองหน้าต่าง: **PAXG เท่านั้น (0.43 / 0.37)** — แต่ spread 95.6 bps และ exTop $210 ⇒ ใช้ไม่ได้จริง
+- EMA20(1D) คำนวณเองถึงแท่งปิด 19 ต.ค.: BTC **82,734.79** (r9 = 82,519.83; leader ใช้ 82,494.78) ⇒ ค่าไวต่อ seed ±~30 pts
+- 6 ชม. ทั้งกระดานมี print ≥$3,000 **1 ใบเดียว (BTC)** · 74% ของ BTC notional อยู่ในชั่วโมง 18Z · ETH print ใหญ่สุด $236, SOL $98
+- ดึงไม่ได้: L2 depth · `latest/bars?timeframe=1Min` คืน HTTP 400 · ETF flow 20 ต.ค. ไม่ครบ · Solana readiness ล่าสุด · XRPL primary · notional เป็น Alpaca venue เดียว
+
+รายงานเต็มรอบ 10: `workspace/reports/news/2026-10-20-CRYPTO-shortlist-r10.md`
 
 เชื่อมโยง: [[CRYPTO]] · [[trading-finance-moc]]
