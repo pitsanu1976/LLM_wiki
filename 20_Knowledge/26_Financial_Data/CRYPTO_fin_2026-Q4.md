@@ -3,7 +3,7 @@ title: "CRYPTO — สภาพคล่อง/ต้นทุน/valuation (sle
 type: source
 status: active
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-20
 agent: finance
 ticker: CRYPTO
 scope: market
@@ -16,55 +16,60 @@ tags:
 
 # CRYPTO sleeve — สภาพคล่อง / ต้นทุนไป-กลับ / valuation multiples (2026 Q4)
 
-**รอบล่าสุด: r6 · ข้อมูล 2026-10-19 22:05:57Z** (orderbook 22:06:06Z · CoinGecko+DefiLlama 22:07:32Z · Farside 22:08Z · glif RPC + Solana RPC 22:08:37Z)
-**แหล่ง:** Alpaca Data API `/v1beta3/crypto/us/{trades,latest/trades,latest/quotes,latest/orderbooks}` · CoinGecko `/coins/markets` · DefiLlama `/summary/fees` · Farside `/btc /eth /sol /hyp` · Solana RPC · Filecoin glif RPC
-**ข้อจำกัดสำคัญ:** สินทรัพย์กลุ่มนี้ **ไม่มีงบการเงิน/ไม่มี audited statements** ⇒ P/E · P/BV · D/E · ROE · gross margin · dividend yield = **หาไม่ได้/n/a ทุกตัว** · ตัวเลขที่บันทึกไว้คือ (ก) สภาพคล่องที่วัดจากเทปจริง (ข) ต้นทุนไป-กลับ (ค) multiple จาก on-chain fees/revenue (ง) supply/vesting
-**รายงานฉบับเต็มของรอบ:** `workspace/reports/finance/2026-10-19-CRYPTO-r6.md`
+**รอบล่าสุด: r7 · ข้อมูล 2026-10-20 07:16:06Z** (orderbook 07:16:15Z · CoinGecko 07:24Z · Farside 07:29Z · Solana RPC 07:20:43–07:22:43Z · Alpaca fee docs 07:40Z)
+**แหล่ง:** Alpaca Data API `/v1beta3/crypto/us/{trades,latest/trades,latest/quotes,latest/orderbooks,bars}` · CoinGecko `/coins/markets` + `/coins/{id}` · Farside `/btc /eth /sol` · DefiLlama `/unlocks/*` · Solana mainnet-beta RPC · mempool.space · blockchair
+**ข้อจำกัดสำคัญ:** สินทรัพย์กลุ่มนี้ **ไม่มีงบการเงิน/ไม่มี audited statements** ⇒ P/E · P/BV · D/E · ROE · gross margin · dividend yield = **หาไม่ได้/n/a ทุกตัว** · ตัวเลขที่บันทึกคือ (ก) สภาพคล่องจากเทปจริง (ข) ต้นทุนไป-กลับ (ค) supply/vesting (ง) โครงสร้างตลาดของ venue
+**รายงานฉบับเต็มของรอบ:** `workspace/reports/finance/2026-10-20-CRYPTO-r7.md`
 
-## ตัวเลขหลัก (ไม้ $3,000 · 2026-10-19 22:06Z)
+## ตัวเลขหลัก (ไม้ $3,000 · 2026-10-20 07:16Z)
 
-| symbol | notional 24 ชม. | notional 6 ชม. | print ≥$3k 6 ชม./24 ชม. | last trade age | spread @$3k | **RT ไป-กลับ** | % ของ risk $150 | mcap | mcap/fees (ann.) | mcap/revenue (ann.) | FDV/mcap |
-|---|---|---|---|---|---|---|---|---|---|---|---|
-| BTC/USD | **$1,108,466** | $6,370 | **0 / 15** | 6.8 น. | 8.70 bps | **0.643%** ($19.28) | 12.9% | $1.648T | 18,641× | n/a | 1.00× |
-| ETH/USD | $24,999 | $4,803 | **0 / 1** | 33.4 น. | 10.26 | **0.666%** ($19.98) | 13.3% | $293.7B | 1,351× | 3,808.9× | 1.00× |
-| XRP/USD | $37,614 | $2,219 | **0 / 4** | 19.7 น. | 41.39 | **0.914%** ($27.42) | 18.3% | $82.3B | n/a (400) | n/a | 1.58× |
-| SOL/USD | $14,449 | $3,410 | 0 / 0 | 5.7 น. | 64.76 | **1.534%** ($46.03) | 30.7% | $61.9B | 183.4× | 1,497.0× | 1.08× |
-| ARB/USD | $11,558 | $2,233 | 0 / 1 | 103.0 น. | 25.25 | **0.752%** ($22.57) | 15.0% | $1.37B | 162.6× | 163.4× | 1.45× |
-| UNI/USD | $6,894 | $209 | 0 / 1 | 179.4 น. | 19.44 | **0.694%** ($20.83) | 13.9% | $4.55B | **3.4×** | 42.1× | 1.42× |
-| HYPE/USD | $2,600 | $889 | 0 / 0 | 166.6 น. | 48.81 | **0.988%** ($29.64) | 19.8% | $17.5B | 17.0× | **21.1×** | **4.29×** |
-| PAXG/USD | $3,883 | $597 | 0 / 0 | 43.4 น. | **115.07** | **1.797%** ($53.91) | **35.9%** | $1.83B | n/a | n/a | 1.00× |
-| BCH/USD | $837 | $88 | 0 / 0 | 11.6 น. | 55.30 | **1.053%** ($31.59) | 21.1% | $5.60B | 200,950× | n/a | 1.00× |
-| FIL/USD | $456 | $97 | 0 / 0 | 341.1 น. | 35.60 | **0.856%** ($25.68) | 17.1% | $844M | 1,005× | 1,005× | 2.34× |
+| symbol | notional 24 ชม. | notional 6 ชม. | 6 ชม. หักชม.สูงสุด | print ≥$3k 6 ชม./24 ชม. | last trade age | spread @$3k | **RT ไป-กลับ** | % ของ risk $150 | mcap / float |
+|---|---|---|---|---|---|---|---|---|---|
+| BTC/USD | **$338,702** | $51,658 | $15,024 | **3 / 8** | 16.9 น. | 10.61 bps | **0.682%** ($20.45) | **13.6%** | $1.641T · 100% |
+| ETH/USD | $21,529 | $667 | $430 | 0 / 1 | 29.0 น. | 10.79 | **0.681%** ($20.43) | **13.6%** | $292.3B · 100% |
+| ARB/USD | $16,543 | $5,018 | $88 | 1 / 2 | 39.5 น. | 33.42 | **0.834%** ($25.03) | 16.7% | $1.35B · 68.9% |
+| XRP/USD | $24,921 | $2,340 | $1,059 | **0** / 2 | 11.0 น. | 40.25 | **0.902%** ($27.07) | 18.0% | $82.1B · 63.1% |
+| BCH/USD | $5,745 | $5,310 | $114 | 1 / 1 | 31.5 น. | 63.70 | **1.137%** ($34.11) | 22.7% | $5.56B · 100% |
+| SOL/USD | $110,209 | $102,851 | **$841** | 11 / 11 | 29.2 น. | 70.28 | **1.634%** ($49.02) | 32.7% | $61.6B · 92.7% |
+| PAXG/USD | $3,800 | $839 | $581 | **0 / 0** | 10.4 น. | **121.18** | **1.764%** ($52.91) | **35.3%** | $1.82B · 100% |
 
-`[calc]` RT = fee taker 0.25%×2 + spread ระหว่าง level ที่สะสมของได้ ≥$3,000 (ไม่ใช่ L1) + slip buy + slip sell · ต้นทุนเป็นสัดส่วนคงที่ของ notional (ไม่ใช่ fixed cost) ⇒ ขาดทุนที่ stop 5% = 5% + RT = **$169.28–$203.91 = 112.9%–135.9% ของ risk $150** ทุกคู่
+`[calc]` RT = taker 0.25%×2 (=0.50%, docs.alpaca.markets/us/docs/crypto-trading tier 1, ยืนยัน 2026-10-20) + spread ระหว่าง level ที่สะสมของได้ ≥$3,000 + slip buy + slip sell · ค่าธรรมเนียมเป็นก้อนใหญ่สุด: $15 = 73% ของ RT BTC, 60% ARB, 55% XRP, 28% PAXG
+`[alt measure]` ถ้าวัดด้วย median quote spread 3 ชม. (ไม่ขึ้นกับ book snapshot): BTC 0.606% · ETH 0.605% · ARB 0.891% · XRP 0.945% · SOL 1.027% · BCH 1.293% · PAXG 1.715%
 
-## ข้อเท็จจริงเชิงโครงสร้างที่ต้องจำ (วัดซ้ำได้)
+## ข้อเท็จจริงเชิงโครงสร้างที่วัดซ้ำได้ (สะสมหลายรอบ)
 
-1. **เทปทั้งลิสต์ว่างพร้อมกันเป็นช่วง ๆ:** 6 ชั่วโมงล่าสุด (16:06Z→22:06Z) **ไม่มี print ใด ≥$3,000 เลยทั้ง 10 คู่**; ไม้ใหญ่สุดใน 6 ชม. = ARB $2,116.90 · print ≥$3,000 ครั้งสุดท้าย = BTC 15:21:23Z ⇒ ตัวเลข notional 24 ชม. ของ **ทุกคู่** ขับด้วย burst ไม่กี่ชั่วโมง (BTC: 73.5% ของวันมาจากชั่วโมงเดียว)
-2. **L1 spread ไม่ใช่ต้นทุน:** BTC/ETH/SOL post ของที่ L1 เพียง **$81/$80/$101** ⇒ ต้องไล่ book ถึงขนาดไม้ (SOL: L1 7.62 bps → ต้นทุนจริง 1.534%)
-3. **Depth บน book ไม่คงที่:** PAXG L1 ask เคย $17,984 (r5 13:01Z) → **$2** (r6 22:06Z) ใน 9 ชม. ขณะที่ depth รวมยัง $672,705 ⇒ quote MM ถอนได้
-4. **ราคา last trade อาจไม่ใช่ราคาตลาด:** basis last-vs-mid ถึง **−2.80% (ARB)**, −1.54% (HYPE), −0.83% (UNI), +0.84% (FIL) ⇒ 4/10 คู่ใช้ราคา last trade เป็นราคาอ้างอิงไม่ได้
-5. **แท็กซี่ค่าเงิน (economics):** UNI mcap/fees **3.4×** ถูกสุด · HYPE mcap/revenue **21.1×** แต่ **FDV/mcap 4.29×** (circ เพียง 23.3% ของ total) ⇒ บน FDV = ~90× · BCH fees 30 วัน **$2,292** = mcap/fees 200,950× · ARB mcap/revenue 163.4× (take 99.5%)
+1. **L1 ไม่ใช่ต้นทุน:** BTC L1 spread 2.48 bps แต่ไม้ $3,000 จ่าย 10.61 bps เพราะ L1 มีของ $81 (ETH $79, SOL $99, PAXG **$22**) — ต้อง walk book ถึงขนาดไม้เสมอ
+2. **"ผ่านเกตเทป" ≠ "ออกที่ stop ได้":** r7 ผ่านเกต 4 คู่ แต่ SOL ผ่านด้วย print 11 ครั้งใน **8 วินาที** (03:53:27–34Z, 92.6% ของชั่วโมง) · ARB/BCH ผ่านด้วย print เดียว · BTC พึ่ง 2 print 19 ต.ค. 07:34Z = 47.9% ของวัน
+3. **notional 24 ชม. หลอกได้ทุกคู่:** BTC 8 print ≥$3k = $218,247 (64% ของวัน) · XRP 2 print 07:43:20Z = 58% · BCH 1 print = 90% · PAXG print ใหญ่สุด $486
+4. **Venue ไม่มี stop-market:** Alpaca crypto รองรับเฉพาะ Market / Limit / **Stop Limit** (tif gtc, ioc), ไม่มี margin, ไม่มี short, ≤$200k/คำสั่ง ⇒ คำสั่ง stop ทุกใบเป็น limit ที่รอใน book ไม่มีการไล่ราคา — นี่คือเหตุผลเชิงโครงสร้างที่ทำให้ยืนยัน "ออกที่ stop ด้วย market order" ไม่ได้ (r6 พบปัญหาเดียวกัน)
+5. **Book ลึกแต่ห่าง ≠ ใช้งานได้:** PAXG cum ask depth $668,450 แต่ L1 ask $22 และ spread 116–121 bps; ARB cum depth $1.67M แต่เทปมี print แค่ 11/26 ชั่วโมง (gap 299 นาที)
+6. **basis last-vs-mid ต้องตรวจทุกครั้ง:** r6 เจอ ARB เพี้ยน −2.80%; r7 ราคา last trade ทุกคู่ยังอยู่ในกรอบ ±0.6% ของ mid
 
-## Supply / overhang (2026-10-19)
+## Supply / overhang (2026-10-20)
 
-- **BTC** circ 20,098,843 = total · ไม่มี unlock · **BCH** circ 20,105,009 = total · ไม่มี unlock
-- **ETH** circ = total 122,148,378 · **net issuance หาไม่ได้** (ไม่มี Etherscan/Beaconcha.in key)
-- **SOL** circ 589,493,608 / total 636,090,156 · **inflation 3.595281%/ปี = 22,869,230 SOL/ปี = $2.40B/ปี** (Solana RPC getInflationRate epoch 1062) · issuance ÷ revenue = **58.1×**
-- **XRP** circ 63.13B / 99.99B (63.1%) · escrow 1B XRP ต้น พ.ย. (ทุติยภูมิ)
-- **UNI** circ 624.72M / 886.96M (70.4%) · **HYPE** circ 222.45M / 955.31M (**23.3%**) · **ARB** circ 6.892B / 10B (68.9%) · **FIL** circ 835.77M / 1.957B (42.7%)
-- **vesting รายเดือน:** ARB ~92.65M ARB (~1.36% ของ float) · HYPE ~9.9M HYPE (238M ÷ 24 tranches) — **วันถัดไปขัดกันหลายแหล่ง ไม่รับวันเดียว**
-- **event เฉพาะ:** ARB โหวต 100M ARB (=1.451% ของ circ, $19.8M) ปิด 22 ต.ค. · FIL nv29 เสร็จ 13:59Z 19 ต.ค. (หลัง event เทป 2 print, ราคาต่ำกว่า pre-event) · SOL Alpenglow epoch 1064 ETA **2026-10-21 13:28:52Z**
+- **BTC** circ 20,098,843 = total · ไม่มี unlock · halving ถัดไป block 1,050,000 (tip 972,280 ⇒ ~77,720 block ≈ 540 วัน) · **BCH** tip 973,670 ⇒ halving ~529 วัน
+- **ETH** circ = total 122,151,332 · **net issuance หาไม่ได้** (ultrasound API คืนว่าง)
+- **SOL** circ 589.49M / total 636.09M (92.7%) · **inflation 3.5953%/ปี** (RPC epoch 1062) ≈ 1.76M SOL/เดือน ≈ $184M/เดือน
+- **XRP** circ 63.13B / 99.99B (63.1%) · ตาราง escrow รายเดือน **ยังยืนยันไม่ได้** (ไม่มี endpoint ฟรี)
+- **ARB** circ 6.892B / 10B (68.9%) · **unlock 15/16 พ.ย. 2026 ~92.65M ARB ≈ $17–18M = 1.34% ของ float** (DefiLlama unlocks + Tokenomist — ตรงกันเรื่องขนาด ต่างกันเรื่องวัน)
+- **PAXG** 441,809 oz = total · ไม่มี vesting (ค้ำทอง)
 
-## ETF flow สัปดาห์ 12–16 ต.ค. 2026 (Farside)
+## ETF flow (Farside, 7 session 09–19 ต.ค. 2026)
 
-BTC **−$228.4M** · ETH **−$320.1M** · SOL **−$25.5M** · HYPE **−$17.5M** · XRP/PAXG/UNI/ARB/BCH/FIL = **ไม่มีหน้าใน Farside ⇒ หาไม่ได้**
+BTC **+$319.4M** (19 ต.ค. +$526.7M) · ETH **−$479.5M** (19 ต.ค. −$103.3M) · SOL **−$36.0M** (19 ต.ค. −$6.7M) · XRP/PAXG/ARB/BCH = **ไม่มีหน้าใน Farside ⇒ ดึงไม่ได้**
+`[cross-check]` BTC 12–16 ต.ค. = −$228.4M ตรงกับที่บันทึกในรอบ r6 ⇒ parser Total-column ใช้ได้ (DefiLlama `/etfs` เป็นหน้า stale "May 15, 2026" — ห้ามใช้)
+
+## Event 72 ชม.
+
+- **SOL Alpenglow epoch 1064** — วัด slot rate จริง 217.5 ms/slot (459,145,196 → 459,145,750 ใน 120 วินาที, 07:20:43–07:22:43Z) ⇒ epoch 1064 เริ่ม **~2026-10-21 13:43Z**, handoff ที่ slot 459,653,000 **~14:01Z**; แหล่งอื่น: solana.com ~13:20Z · Anza ~14:50Z · CoinDesk ~15:00Z ⇒ **ใช้กรอบ 13:20–15:30Z ห้ามอ้างวินาทีเดียว**
+- ARB: ไม่มี event ใน 72 ชม. (unlock ถัดไป พ.ย.) · BTC/ETH/XRP/BCH/PAXG: ไม่พบ
 
 ## จุดที่ต้องจับตา (สำหรับรอบถัดไป)
 
-1. **ไม่ควรใช้ notional 24 ชม. ตัดสินสภาพคล่อง** — ต้องดู print ≥$3,000 ใน 6 ชม. + ชั่วโมงที่มีเทป + เทปสดของ last trade; ณ r6 ทั้ง 10 คู่ได้ 0 ไม้
-2. **ตรวจ basis last-vs-mid ทุกครั้ง** ก่อนอ้างราคา (ARB เพี้ยน 2.8% ขณะที่ mid ตรงกับราคาอ้างอิงของ leader)
-3. **CME OI day-1 (BCH/UNI) ยังหาไม่ได้ (HTTP 403 ทุก endpoint)** · **DefiLlama unlocks 404/402** ⇒ ตาราง unlock ต้องใช้ทุติยภูมิและระบุว่าไม่ยืนยันวัน
+1. **ค่าธรรมเนียม = ครึ่งหนึ่งของต้นทุนในคู่ที่ spread กว้าง** — ถ้า volume 30 วันขึ้น tier 2 (taker 22 bps) ตัวเลข RT ทั้งตารางจะขยับ ~6 bps; ต้องถาม Leader ว่าใช้ tier ไหน
+2. **SOL ต้องวัด 2 ครั้ง:** book-walk ให้ 1.634% แต่ median quote 1.027% — book snapshot บางเฉียบชั่วขณะ อย่ารายงานตัวเดียว
+3. **XRP ยังไม่มี print ≥$3k ใน 6 ชม.** ทั้งที่ 24 ชม. อันดับ 3 — เกต 6 ชม. คือเกตที่ถูก ไม่ใช่ 24 ชม.
+4. **ห้ามใช้ DefiLlama `/etfs`** (stale) และ `/emissions` (HTTP 402) — ใช้ Farside และหน้า unlocks แทน
 
 ---
 ลิงก์: [[CRYPTO]] · [[trading-finance-moc]]
