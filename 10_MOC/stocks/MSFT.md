@@ -38,7 +38,10 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-_ยังไม่มี block — งบล่าสุดอยู่ใน [[MSFT_fin_2026-Q4]] (งบ: 2026-10-28)_
+**งบล่าสุด:** TTM ถึง **Q4 FY26 (Jun-26)** — รายได้ $331.84B · NI $133.75B · GM 68.0% (stockanalysis, ดึง 2026-10-20)
+**Valuation:** P/E **29.6** (531.87 ÷ EPS 17.95) · fwd 26.9 · EV/EBITDA 20.7 · FCF yield 1.69% · D/E 0.29 · net debt $52.0B
+**จับตา:** capex = **64.6% ของ OCF** ($35.8B/$55.4B) ทำให้ FCF −23.2% yoy · งบ FY27 Q1 **2026-10-28** (ยืนยันจาก microsoft.com/en-us/investor)
+เต็ม: [[DAILY_2026-10-21_fin]] · [[MSFT_fin_2026-Q4]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision

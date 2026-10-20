@@ -40,7 +40,10 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-_ยังไม่มี block — งบล่าสุดอยู่ใน [[CRM_fin_2027-Q2]]_
+**งบล่าสุด:** **Q2 FY27** (Jul-26) — รายได้ $11,345M (**+10.8% yoy** ช้าสุดใน 12 ชื่อ) · GM 76.65% (จาก 78.10%) · OM 21.38%
+**Valuation:** P/E **22.5** (242.44 ÷ EPS 10.79; median 8 ไตรมาส 35.7 = −37%) · fwd 16.5 · **FCF yield 7.60%** · D/E **1.10** · IC 9.4x · net debt $31.0B
+**จับตา:** NI/OI 1.45 = มี one-off ~$1.1B · หุ้น −7.44% yoy จาก buyback (หนี้เพิ่มตาม) · งบ 2026-12-02 (กึ่งยืนยัน — IR เป็น JS shell)
+เต็ม: [[DAILY_2026-10-21_fin]] · [[CRM_fin_2027-Q2]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
