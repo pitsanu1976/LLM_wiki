@@ -16,12 +16,41 @@ tags:
 
 # CRYPTO sleeve — สภาพคล่อง / ต้นทุนไป-กลับ / executability (2026 Q4)
 
-**รอบล่าสุด: r11 · ข้อมูล 2026-10-21 05:21:05Z** (orderbook 05:21:16Z · quotes 3 ชม. 02:21→05:21Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 05:23:14Z · Solana RPC 05:23:46Z · รอบก่อน r10 = 2026-10-21 02:06:06Z) · **รอบก่อน r9 = 2026-10-20 16:46:00Z** (orderbook 16:46:11Z · quotes 3 ชม. ถึง 16:46Z · CoinGecko 16:49:24Z · Farside 16:48:44Z · Alpaca docs 16:57Z · Solana RPC epoch 16:48:58→16:49:18Z)
+**รอบล่าสุด: r12 · ข้อมูล 2026-10-21 14:36:07Z** (orderbook 14:36:18Z · quotes 14:36:08Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 14:38–14:41Z · CoinGecko 14:37–14:39Z · gold-api XAU 14:41:07Z · Farside 14:45Z · **SOL วัดเพิ่ม 15:07:33Z**) · **รอบก่อน r11 = 2026-10-21 05:21:05Z** (orderbook 05:21:16Z · quotes 3 ชม. 02:21→05:21Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 05:23:14Z · Solana RPC 05:23:46Z · รอบก่อน r10 = 2026-10-21 02:06:06Z) · **รอบก่อน r9 = 2026-10-20 16:46:00Z** (orderbook 16:46:11Z · quotes 3 ชม. ถึง 16:46Z · CoinGecko 16:49:24Z · Farside 16:48:44Z · Alpaca docs 16:57Z · Solana RPC epoch 16:48:58→16:49:18Z)
 **แหล่ง:** Alpaca Data API `/v1beta3/crypto/us/{trades,quotes,latest/trades,latest/quotes,latest/orderbooks,bars}` · CoinGecko `/coins/markets` · Farside `/btc /eth /sol` · DefiLlama `/unlocks/{chainlink,aave}` · docs.alpaca.markets `crypto-fees`, `crypto-trading` · `api.mainnet-beta.solana.com`
 **ข้อจำกัดสำคัญ:** สินทรัพย์กลุ่มนี้ **ไม่มีงบการเงิน/ไม่มี audited statements** ⇒ P/E · P/BV · D/E · ROE · gross margin · dividend yield = **หาไม่ได้/n/a ทุกตัว** · ตัวเลขที่บันทึกคือ (ก) สภาพคล่องจากเทปจริง (ข) ต้นทุนไป-กลับ (ค) executability ของ stop (ง) supply/vesting (จ) โครงสร้างตลาดของ venue
-**รายงานฉบับเต็มของรอบ:** r11 = `workspace/reports/finance/2026-10-21-CRYPTO-r11.md` · r10 = `workspace/reports/finance/2026-10-21-CRYPTO-r10.md` · r9 = `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
+**รายงานฉบับเต็มของรอบ:** r12 = `workspace/reports/finance/2026-10-21-CRYPTO-r12.md` · r11 = `workspace/reports/finance/2026-10-21-CRYPTO-r11.md` · r10 = `workspace/reports/finance/2026-10-21-CRYPTO-r10.md` · r9 = `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
 
-## r11 (ล่าสุด) — 2026-10-21 05:21Z · 10 คู่: BTC ETH SOL XRP BCH LINK LTC PAXG UNI AAVE (ADA ออก / AAVE เข้า)
+## r12 (ล่าสุด) — 2026-10-21 14:36Z · 10 คู่: BTC ETH RENDER SOL XRP LINK BCH LTC PAXG BAT (UNI/AAVE ออก / RENDER·BAT เข้า)
+
+หน้าต่าง: **A** = 2026-10-21 05:40:43→11:40:43Z (หน้าต่าง shortlist r12 · ใช้ตรวจซ้ำ) · **B** = 08:36:07→14:36:07Z (6 ชม.ล่าสุด) · **S** = 13:20:00→14:36:07Z (Alpenglow) · **S15** = 15:00:00→15:07:33Z (วัดเพิ่ม)
+**ตรวจซ้ำ shortlist:** exTop หน้าต่าง A ตรงกับ news **10/10 คู่** (BTC $27,329 · ETH $2,252 · SOL $1,600 · XRP $4,442 · LINK $128 · BCH $64 · LTC $223 · PAXG $970 · BAT $49 · RENDER $0) ⇒ ตัวเลขชุด A ของ news ใช้ได้
+
+| symbol | not 6ชม. (B) | exTop (B) | % ของเกต $50k | print ≥$3k (B) | 24h notional | L1 spread | RT @$1k / @$3k | % ของ $150 @$3k | **verdict** |
+|---|---|---|---|---|---|---|---|---|---|
+| BTC/USD | $57,288 | $22,432 | 44.9% | **3** | $218,852 | 3.56 bps | 0.595% / 0.609% | 12.2% | **ออกได้ถึง $3,000** (book 3/3, exit ≤0.25%) — แต่ print เดียว = 52.8% ของหน้าต่าง |
+| ETH/USD | $6,101 | $3,651 | 7.3% | 0 | $94,798 | 1.82 | 0.596% / 0.609% | 12.2% | ยืนยันได้แค่ $1,000 (print ใหญ่สุด $1,393; book ลึก $521k) |
+| XRP/USD | $6,014 | $3,598 | 7.2% | 0 | $18,906 | 36.46 | 0.865% / 0.865% | 17.3% | **ออกได้ที่ราคาเดียวถึง $1,500** (L1 ข้างละ $5.6–5.8k) |
+| SOL/USD | $2,034 | $1,518 | 3.0% | 0 → **1*** | $13,939 | 5.69 → 9.56* | 0.790% / 0.954% | 19.1% | ยืนยันไม่ได้ · *print $4,451 @14:46:39Z มาจากการกวาด 1 วินาที (−104.5 bps) และ **หลัง 15:00Z เทปเหลือ $2 ใน 7.6 นาที** |
+| LINK/USD | $659 | $247 | 0.5% | 0 | $12,023 | 17.20 | 0.658% / 0.658% | 13.2% | ยืนยันไม่ได้ (print ใหญ่สุด $343, last trade 37.9 น.) |
+| BCH/USD | $235 | $98 | 0.2% | 0 | $7,929 | 37.46 | 1.127% / 1.127% | 22.5% | ยืนยันไม่ได้ (6 ชม. = 0.034× ของ r11) |
+| LTC/USD | $1,052 | $331 | 0.7% | 0 | $3,373 | 61.76 | 1.118% / 1.118% | 22.4% | **ออกไม่ได้** — L1 spread เองเกิน 0.25%; 0 print ≥$1k ใน 24 ชม. |
+| PAXG/USD | $1,631 | $891 | 1.8% | 0 | $4,547 | 97.75 | 1.679% / **1.685%** | **33.7% เกินเกต** | **ออกไม่ได้** — L1 119× Coinbase, L1 bid size $40 |
+| RENDER/USD | **$10** | $0 | 0.0% | 0 | $28,172¹ | 35.47 | 0.882% / 0.882% | 17.6% | **UNUSABLE** — 6 ชม. 1 print; 24 ชม. 4 print โดย print เดียว = 91.7%; เทป 3/25 ชม.; gap 22.3 ชม. |
+| BAT/USD | **$59** | $10 | 0.0% | 0 | $3,344 | 62.38 | **14.700%** / 26.929% | 98%–539% | **UNUSABLE** — print ใหญ่สุด $6, last trade 65.9 น., spread +26.5 bps จาก 11:40Z |
+
+¹ RENDER 24 ชม. = $25,832 (print เดียว @2026-10-20T14:51:22Z) + $2,329 ⇒ "24h notional $28,172" ไม่ใช่สภาพคล่อง
+`[calc]` เกตเทป B ไม่ผ่าน **0/10 ต่อเนื่อง 7 รอบ (r6–r12)** · ต้นทุนถูกครอบด้วย fee 0.50% (สลิปเพจเพิ่มแค่ 0–31 bps ยกเว้น BAT) · max notional ตาม impact ≤0.25%: BTC $1.16M · ETH $521k · LINK $116k · XRP $9.2k · SOL $2.7k · **BCH/LTC/PAXG/BAT = $0** (L1 spread เองเกิน 0.25%)
+
+**one-off ที่แก้ตัวเลข news:**
+1. **PAXG "พรีเมียม 0.91%" ไม่จริง** — วัดพร้อมกัน 21 ต.ค. 14:36–14:41Z: Alpaca quote mid **+0.102%** vs spot XAU $4,131.30 (gold-api 14:41:07Z) · Coinbase +0.018% · Kraken +0.027% · CoinGecko +0.031% ⇒ 0.91% เดิมมาจากการเอา **last trade เก่า 2 นาที** ไปเทียบ **spot เก่า 1 ชม. 44 นาที** (last trade ให้ +0.678%)
+2. **BAT ลงแรงนอก Alpaca** — Alpaca last 0.178725 @13:30:13Z vs 0.186762 @10:28:39Z = −4.30% ใน ~3 ชม.; CoinGecko 24 ชม. **−18.25%**; เทป Alpaca ยัง $59 ⇒ เทป venue นี้ไม่สะท้อนการเคลื่อนไหว
+3. **BCH spread แคบลง (53.0→37.46 bps) แต่เทปหาย (0.034×)** ⇒ spread แคบไม่ใช่หลักฐานว่าคล่อง
+4. **SOL Alpenglow:** epoch ตามหน้าทางการ ~15:00Z (cache ~13:20Z) · วัด S (13:20–14:36Z) = $587/18 print · 14:46:39Z มี **6 print ในวินาทีเดียว $12,134 ราคาไหล 107.100→105.980 (−104.5 bps)** = 85.8% ของ notional 6 ชม. · **S15 (15:00–15:07:33Z) = 1 print $2** ⇒ **เทปหาย ไม่ใช่หนาขึ้น** · spread กว้างขึ้น 5.69→9.56 bps
+
+**โครงสร้าง:** Alpaca = **0.024%–0.264%** ของ Coinbase 24 ชม. (RENDER 3.13% เป็นภาพลวงจาก print เดียว) · mid Alpaca สูงกว่า venue อื่น +0.07% ถึง +0.29% ทุกคู่ยกเว้น BAT (−0.20% ถึง −0.32%) · basis last-vs-mid −0.12% ถึง −0.51% (PAXG +0.575%) ⇒ **last price ใช้เป็นราคาอ้างอิงไม่ได้**
+
+## r11 — 2026-10-21 05:21Z · 10 คู่: BTC ETH SOL XRP BCH LINK LTC PAXG UNI AAVE (ADA ออก / AAVE เข้า)
 
 สองหน้าต่าง: **A** = 2026-10-20 23:16:55→2026-10-21 05:16:55Z (หน้าต่าง shortlist r11) · **B** = 23:21:05→05:21:05Z (6 ชม.ล่าสุด) · **C (เพิ่มเอง)** = 2026-10-20 14:00→20:00Z (US cash session)
 **ข้อจำกัด:** news REF 05:16:55Z และดึงข้อมูล 05:21:05Z ⇒ **A กับ B ทับกัน 5 ชม. 56 นาที** ตัวเลขจึงเกือบเท่ากัน — ไม่ใช่หลักฐานว่าเทปนิ่ง จึงเพิ่มหน้าต่าง C มาทดสอบข้อสมมติเรื่องเวลา
@@ -135,7 +164,7 @@ BTC **$19,014** · ETH **$6,117** · SOL **$5,484** · XRP $3,751 · LTC $2,340 
 | 15 ต.ค. 2026 | +$5.1M | −$60.3M | −$9.8M |
 | 16 ต.ค. 2026 | −$82.4M | −$69.7M | −$12.7M |
 | **19 ต.ค. 2026 (ล่าสุดที่รายงาน)** | **+$526.7M** | **−$103.3M** | **−$6.7M** |
-| 20 ต.ค. 2026 | $0.0M (ยังไม่รายงาน) | $0.0M | $0.0M |
+| **20 ต.ค. 2026** | **+$23.2M** (Farside อ่าน 21 ต.ค. 14:45Z; IBIT +29.9 / FBTC +3.6 / BITB −10.3) | −$26.1M (SoSoValue ผ่าน shortlist r12 — ผมยืนยันเองไม่ได้) | −$2.65M (แหล่งเดียวกัน) |
 
 `[cross-check]` ผลรวม 12–16 ต.ค. ตรงกับที่ news รายงาน (BTC −228.4 / ETH −320.1) ⇒ parser Total-column ใช้ได้ · **DefiLlama `/etfs` เป็นหน้า stale "May 15, 2026" — ห้ามใช้** · **farside.co.uk/xrp/ = HTTP 404** ⇒ XRP flow ดึงไม่ได้
 
