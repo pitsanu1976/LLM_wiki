@@ -3,7 +3,7 @@ title: "CRYPTO — สภาพคล่อง/ต้นทุน/valuation (sle
 type: source
 status: active
 created: 2026-10-19
-updated: 2026-10-20
+updated: 2026-10-21
 agent: finance
 ticker: CRYPTO
 scope: market
@@ -16,12 +16,45 @@ tags:
 
 # CRYPTO sleeve — สภาพคล่อง / ต้นทุนไป-กลับ / executability (2026 Q4)
 
-**รอบล่าสุด: r9 · ข้อมูล 2026-10-20 16:46:00Z** (orderbook 16:46:11Z · quotes 3 ชม. ถึง 16:46Z · CoinGecko 16:49:24Z · Farside 16:48:44Z · Alpaca docs 16:57Z · Solana RPC epoch 16:48:58→16:49:18Z)
+**รอบล่าสุด: r10 · ข้อมูล 2026-10-21 02:06:06Z** (orderbook 02:06:17Z · quotes 3 ชม. 23:06:07→02:07:42Z · CoinGecko 02:08:32Z · Farside 02:08Z · Kraken status 02:2xZ · Solana RPC 02:2xZ) · **รอบก่อน r9 = 2026-10-20 16:46:00Z** (orderbook 16:46:11Z · quotes 3 ชม. ถึง 16:46Z · CoinGecko 16:49:24Z · Farside 16:48:44Z · Alpaca docs 16:57Z · Solana RPC epoch 16:48:58→16:49:18Z)
 **แหล่ง:** Alpaca Data API `/v1beta3/crypto/us/{trades,quotes,latest/trades,latest/quotes,latest/orderbooks,bars}` · CoinGecko `/coins/markets` · Farside `/btc /eth /sol` · DefiLlama `/unlocks/{chainlink,aave}` · docs.alpaca.markets `crypto-fees`, `crypto-trading` · `api.mainnet-beta.solana.com`
 **ข้อจำกัดสำคัญ:** สินทรัพย์กลุ่มนี้ **ไม่มีงบการเงิน/ไม่มี audited statements** ⇒ P/E · P/BV · D/E · ROE · gross margin · dividend yield = **หาไม่ได้/n/a ทุกตัว** · ตัวเลขที่บันทึกคือ (ก) สภาพคล่องจากเทปจริง (ข) ต้นทุนไป-กลับ (ค) executability ของ stop (ง) supply/vesting (จ) โครงสร้างตลาดของ venue
-**รายงานฉบับเต็มของรอบ:** `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
+**รายงานฉบับเต็มของรอบ:** r10 = `workspace/reports/finance/2026-10-21-CRYPTO-r10.md` · r9 = `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
 
-## ตัวเลขหลัก (2026-10-20 16:46Z · 10 คู่ตามลิสต์ Leader r9 · taker tier 1)
+## r10 (ล่าสุด) — 2026-10-21 02:06Z · 10 คู่: BTC ETH SOL XRP LINK UNI LTC ADA PAXG BCH
+
+สองหน้าต่าง: **W-A** = 2026-10-20 17:09:56→23:09:56Z (หน้าต่าง shortlist r10) · **W-B** = 2026-10-20 20:06:06→2026-10-21 02:06:06Z (6 ชม. ล่าสุด)
+
+| symbol | 24h notional | W-A exTop | W-B exTop | print ≥$1k 24ชม. | print ≥$3k (A/B) | last age | L1 spread | RT @$1k / @$3k | % ของ $150 | **เพดานที่วัดได้** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| BTC/USD | $136,799 | $7,394 | **$7,867** | 20 | 1 / 1 | 3.4 น. | 4.01 bps | 0.583% / 0.591% | 3.9% / 11.8% | **$7,394** |
+| ETH/USD | $45,548 | $652 | $613 | 6 | 0 / 0 | 4.2 น. | 3.91 | 0.589% / 0.599% | 3.9% / 12.0% | **$613** |
+| XRP/USD | $11,378 | $675 | $1,040 | 3 | 0 / 0 | 1.5 น. | 35.94 | 0.859% / 0.859% | 5.7% / 17.2% | **$675** |
+| LTC/USD | $6,908 | $383 | $532 | 2 | 0 / 0 | **119.7 น.** | 49.59 | 1.093% / 1.104% | 7.3% / 22.1% | **$383** |
+| SOL/USD | $116,077 | $307 | $579 | 37 | 0 / 0 | 15.2 น. | 4.89 | 0.804% / 0.961% | 5.4% / 19.2% | **$307** |
+| PAXG/USD | $3,070 | $210 | $287 | **0** | 0 / 0 | 11.2 น. | 114.79 | 1.716% / 1.718% | 11.4% / **34.4%** | **$210** |
+| LINK/USD | $11,620 | $140 | $159 | 1 | 0 / 0 | **49.8 น.** | 15.35 | 0.653% / 0.653% | 4.4% / 13.1% | **$140** |
+| ADA/USD | $1,269 | $98 | $49 | **0** | 0 / 0 | 26.6 น. | 37.11 | 0.871% / 0.871% | 5.8% / 17.4% | **$49** |
+| UNI/USD | $2,934 | $41 | $117 | 1 | 0 / 0 | 27.4 น. | 22.30 | 0.723% / 0.723% | 4.8% / 14.5% | **$41** |
+| BCH/USD | $12,456 | $28 | $6,671 (print เดียว $6,506 = 97.5%) | 2 | 0 / 1 | 4.7 น. | 65.41 | 1.154% / 1.154% | 7.7% / 23.1% | **$28** |
+
+`[calc]` เพดาน = min(exTop W-A, exTop W-B, 20% bid depth) · เกตครบ 3 ข้อ: N ≤ min exTop **และ** N ≤ 20% bid depth **และ** last age ≤ 30 น.
+`[fact]` **ที่ $3,000 ผ่านเกต 1/10 (BTC เท่านั้น) · ที่ $1,000 ก็ 1/10** — เทียบ r9 (16:46Z) ที่ $3,000 ผ่าน 4 คู่, $1,000 ผ่าน 5 คู่
+`[fact]` ต้นทุนไม่ใช่ตัวตัด: ที่ $1,000 RT $5.83–$17.16 = 3.9%–11.4% ของ $150 · มีช่องเดียวเกินเกต 25% = PAXG ที่ $3,000 (34.4%)
+`[fact]` **L2 depth ไม่ใช่ข้อจำกัด:** การไต่บุ๊กเพื่อขาย $3,000 เพิ่มต้นทุนเหนือ half-spread เพียง 0–21.4 bps ทุกคู่ · ที่ระยะ limit = trigger−maxjump บุ๊กรองรับ $3,000 ได้ทุกคู่ ⇒ ตัวตัดคือ "มี print ไหม" ไม่ใช่ "มีของไหม"
+`[view]` ตัวเลข r10 ต่ำกว่า r9 เพราะ (1) เวลา — r9 วัดกลางวันสหรัฐ 13:30–20Z, r10 วัด 02Z (2) r9 อาศัย print $8.7k–$10.8k ไม่กี่ใบที่ไม่เกิดซ้ำ — แยกสองสาเหตุออกจากกันไม่ได้ด้วยข้อมูลชุดนี้
+
+### สิ่งที่แก้/ยืนยันเพิ่มใน r10 (สำคัญต่อรอบถัดไป)
+
+1. **"6 ชม. ล่าสุดที่รวมภาคกลางวันสหรัฐ (21:00–03:00Z)" ไม่มีจริง** — ตลาดหุ้นสหรัฐ 13:30–20:00Z ปิดไปแล้ว ⇒ 21Z–03Z เป็น Asia/pre-open · **การทดสอบ "กลางวันเทปกลับมา" ต้องวัดหลัง 13:30Z 21 ต.ค.**
+2. **Kraken Order Entry Maintenance ยืนยันแล้ว:** `scheduled_for` 2026-10-21T09:00:00Z → `scheduled_until` 10:00:00Z (60 น., status.kraken.com) — ไม่กระทบ matching บน Alpaca แต่กระทบราคาอ้างอิงที่ MM ใช้ ⇒ ต้องวัด spread ซ้ำหลัง 10:00Z
+3. **ETF flow 20 ต.ค. printed แล้ว (Farside 02:08Z):** BTC **−$6.7M** (19 ต.ค. +$526.7M) · ETH **+$6.9M** · SOL −$2.6M — เล็กมากเทียบ AUM ไม่ใช่ตัวขับสภาพคล่อง
+4. **SOL Alpenglow วัดใหม่ (02:2xZ):** epoch 1063 slotIndex 241,001/432,000 · absSlot 459,457,001 · 4.6391 slot/วิ (215.6 ms) ⇒ **epoch 1064 เริ่ม ~13:35:11Z · slot 459,653,000 ~13:53:08Z** (แทน 13:32Z/13:50Z ของ r9)
+5. **UNI/LINK/LTC ไม่มี unlock ที่จะถึง** (DefiLlama 20–21 ต.ค.) · LTC มีแต่ mining reward 25,260 LTC/สัปดาห์ (0.032% float) · **ADA ยังดึงไม่ได้ (defillama.com/unlocks/cardano = 404)**
+6. **ไม่มี stop-market บน Alpaca** (ยืนยันซ้ำ 02:3xZ: "Market, Limit and Stop Limit … `gtc`, `ioc`") ⇒ limit ต้องห่าง ≥ max jump: BTC 29 · LINK 32 · SOL 43 · ETH 44 · ADA 57 · XRP 75 · LTC 80 · BCH 103 · PAXG 111 · UNI 216 bps
+
+
+## ตัวเลขหลัก — r9 (2026-10-20 16:46Z · 10 คู่ตามลิสต์ Leader r9 · taker tier 1) [ประวัติ]
 
 | symbol | 24h notional | 6h notional | **6h ex-top-hour** | print ≥$1k 6ชม./24ชม. | last age | L1 spread | **eff spread @$3k** | **RT @$1k / @$3k** | % ของ $150 (@$1k/@$3k) | mcap |
 |---|---|---|---|---|---|---|---|---|---|---|
