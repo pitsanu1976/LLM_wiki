@@ -1,5 +1,5 @@
 ---
-title: "CRYPTO — ข่าว shortlist (2026-10-21, รอบ 11–12)"
+title: "CRYPTO — ข่าว shortlist (2026-10-21, รอบ 11–13)"
 type: source
 status: active
 created: 2026-10-21
@@ -18,14 +18,57 @@ tags:
   - ticker/LTC
   - ticker/LINK
   - ticker/PAXG
+  - ticker/AVAX
+  - ticker/BAT
 ---
 
 # CRYPTO — ข่าว shortlist (pull 2026-10-21)
 
-ไฟล์นี้รวม **สองรอบของวันเดียวกัน** — รอบ 12 (ล่าสุด 11:40Z) อยู่บน รอบ 11 (05:16Z) อยู่ล่าง
+ไฟล์นี้รวม **สามรอบของวันเดียวกัน** — รอบ 13 (ล่าสุด 20:41Z) อยู่บนสุด · รอบ 12 (11:40Z) · รอบ 11 (05:16Z) อยู่ล่าง
 ตัวเลขแต่ละรอบดึงเองที่เวลาของรอบนั้น **ห้ามนำตัวเลขข้ามรอบมาใช้แทนกัน**
 
-## รอบ 12 — pull 2026-10-21 11:36–11:40Z (ล่าสุด)
+## รอบ 13 — pull 2026-10-21 20:41:15–20:41:52Z (ล่าสุด)
+
+### สรุป 3 บรรทัด
+
+1. **เทปดีขึ้นจริงเป็นรอบแรกนับแต่ r7: BTC exTop 6 ชม. $27,329 → $36,065 (+32.0% = 72.1% ของเกต B) และ top-hour share 66.5% → 42.4%** ⇒ notional กระจายขึ้น ไม่ใช่แค่ตัวเลขหนา · ETH exTop 3.81× · SOL 3.98× · LINK 9.66× · BCH 8.92× แต่ **ยัง 0/18 ผ่านเกต B ($50,000)**.
+2. **สถานะราคาพลิกจาก "wick" เป็น "breakout ที่ยืนได้": BTC 84,686.80 @20:41:24Z = เหนือ 83,343.65 +1.61% · เหนือ trigger 84,265.37 +0.50% · ใต้ 84,852.68 −0.20% · 16/18 คู่เบรก high 4H ของ 20 ต.ค. และ 11 คู่ยังยืนเหนือ level** · 24h: XRP +4.26% · LINK +3.22% · BTC +2.30% · BAT −10.21% · **17/18 คู่บวก**.
+3. **ตัวขับ = equity-led risk bid + short squeeze ไม่ใช่ demand ใหม่**: SpaceX Q3 revenue $14.6B (+161% YoY) + committee ควบรวม SpaceX/Tesla (>30,000 BTC) ดัน BTC ผ่าน $84k หลังตลาดสหรัฐเปิด · short liq 24 ชม. ~$250M (รวม $327M) · **Alpenglow live แล้ว ~13:54Z แต่ dashboard วัดได้ finality 6.6s / 4,721 TPS ไม่ใช่ 150ms** ⇒ sell-the-news risk.
+
+### ข่าว 5 ข้อ
+
+- **BTC ทะลุ $84k หลังตลาดสหรัฐเปิด — SpaceX Q3 revenue $14.6B (+161% YoY) + merger committee (>30,000 BTC) · BTC แตะ $84,600–84,739 (high ตั้งแต่ 7 ต.ค.) · broke 200-period SMA 4H ที่ $83,878 · liquidations 24 ชม. $327M ($250M short)** | bitbo.io · bitcoinfoundation.org · news.bitcoin.com · tradingnews | 2026-10-21 ~18:34Z | https://bitbo.io/news/bitcoin-nears-85k-spacex-earnings/ · https://bitcoinfoundation.org/news/bitcoin/why-is-bitcoin-going-up-btc-nears-85k-as-us-stocks-rise
+- **Alpenglow LIVE บน mainnet-beta ที่ slot 459,653,000 ~13:54–14:00Z — TowerBFT → Votor, เป้า finality 150ms แต่ dashboard วัดได้ 6.6s / 4,721 TPS · validator ประหยัด ~60% (0.8 SOL/epoch) · Rotor ยังไม่มีกำหนด · Agave 4.5 เลื่อนไป ธ.ค. 2026** | Anza (PRNewswire) · The Block · Cointelegraph | 2026-10-21 13:54Z | https://www.theblock.co/news/ecosystems/2026-10-21-anzas-alpenglow-goes-live-on-solana-cutting-finality-to-150-milliseconds-421508
+- **Meta Q3 2026 (หลังปิดตลาด): revenue $64.60B vs $63.37B · EPS $3.83 · Q4 guide $73–76B เหนือ midpoint · capex แคบลง $135–145B · DAP 3.64B พลาดเล็กน้อย · ตั้งหุ้น Class C ไม่มีสิทธิออกเสียง (ม.ค. 2027)** | CNBC + Meta IR | 2026-10-21 20:00–20:28Z | https://www.cnbc.com/2026/10/21/meta-earnings-q3-2026-live-updates.html
+- **Tesla Q3 2026: revenue $28.05B vs LSEG $27.88B · non-GAAP EPS $0.48 vs $0.45 · FCF +$1.53B vs คาด −$4.92B · capex $4.73B · ส่งมอบ 486,532 · operating income −56% YoY · หุ้น +1–3% after-hours · Q&A 21:30Z** | Reuters · electrek · Tesla IR | 2026-10-21 ~20:05Z | https://uk.marketscreener.com/news/tesla-revenue-beats-estimates-as-deliveries-rebound-and-energy-storage-grows-ce785cd9dd8cf327
+- **ETF 20 ต.ค.: BTC +$23.2M (IBIT +$29.9M) · ETH −$26.1M (วันที่ 5) · SOL −$2.6M · รวม −$5.5M · XRP flow = 0 ทั้ง 19–20 ต.ค.** | Farside / SoSoValue ผ่าน Gate + HedgeCo + Crypto Economy | 2026-10-21 04:00–08:33Z | https://www.gate.com/news/detail/us-crypto-etfs-record-55m-net-outflows-on-october-20-as-bitcoin-inflows-25100521
+
+### Sentiment (รอบ 13)
+
+**Bullish (narrow)** — ทิศทาง **Bullish ระยะสั้น** (BTC percentile 92.8% ของช่วง 24h, 17/18 คู่บวก, breakout ยืนได้) แต่ **ปฏิบัติการ Neutral แคบเหลือ BTC/ETH/SOL**: เกต B 0/18 · spread ≤20 bps มี 2 คู่ (BTC 2.4 · ETH 3.2) · corr <0.5 ทั้งสองหน้าต่างมี 3 คู่ (PAXG 0.360/0.375 spread 107.7 bps · BAT 0.228/0.412 เหนือ EMA 19% · CRV 0.487/0.325 เทป 6 ชม. $27) แต่ใช้เทรดไม่ได้จริง
+
+### ตัวกระตุ้นราคา (รอบ 13)
+
+- **Equity-led risk bid + short squeeze (สูง/BTC, เกิดแล้ว)** — เป็นการปิด pos เก่า ไม่ใช่ demand ใหม่; IBIT 20 ต.ค. เหลือ $23.2M (4.4% ของ 19 ต.ค.) ⇒ ถ้า flow 21 ต.ค. ไม่มา breakout ไม่มีฐาน
+- **Alpenglow live แล้ว (สูง/SOL)** — ความเสี่ยงคือ sell-the-news เพราะตัวเลขที่วัดได้ (6.6s) ห่างจากเป้า (150ms); เทป SOL print ≥$3k ใบเดียว ⇒ stop market ไถล
+- **Meta งบ 20:00–20:28Z (สูง/ทั้งกระดาน)** — revenue beat + Q4 guide ดี แต่ capex $135–145B ยังสูง + DAP พลาด = สองทาง
+- **Tesla งบ ~20:05Z / call 21:30Z (กลาง–สูง)** — FCF พลิกบวก, capex ต่ำกว่าคาดมาก; มุม merger กับ SpaceX คือช่องส่งผ่านมาที่ BTC
+- **ETF flow 20 ต.ค. (กลาง)** — BTC บาง, ETH/SOL/XRP ไม่มี bid ⇒ alt ขึ้นเพราะ beta ล้วน
+
+### ข้อควรระวังเรื่องแหล่งข้อมูล (รอบ 13)
+
+- **AVAX อันดับ 5 ของ venue ($14,209) แต่ 96.4% ของ notional 6 ชม. อยู่ในชั่วโมงเดียว (exTop $466) และไม่มีข่าว** ⇒ อันดับ notional ≠ สภาพคล่อง
+- **LTC เทป 6 ชม. $22 (0.045× ของ r12) · ราคาเก่า 150.9 นาที** ⇒ ใช้ไม่ได้แม้ percentile 85%
+- **PAXG spread 107.7 bps และหนังสือเอียงข้างเดียว (bid 4,112.94 / ask 4,157.48 = ราคา print ล่าสุด)** ⇒ mid 4,135.21 ไม่ใช่ราคาที่ออกได้
+- **ETH quote mid 2,495.30 vs print ล่าสุด 2,488.60 (ห่าง 0.27%, print เก่า 17.4 นาที)** ⇒ ราคาอ้างอิงไม่นิ่ง
+- **EMA20(1D) รอบนี้ใช้ 139 แท่งปิดถึง 20 ต.ค. (seed SMA20) — ทดสอบ 72/80/100 แท่งแล้วต่างกันแค่ 0.00–0.03%** ⇒ เชื่อถือได้กว่า r11/r12 ที่มี 72 แท่งและแกว่ง 0.06–0.66%
+- **FedWatch / OI / funding / ราคาทอง spot / ราคาน้ำมัน ไม่ได้ดึงรอบนี้** — ตัวเลข 90% Fed hike ธ.ค. ใน tradingnews เป็นแหล่งเดียว ใช้ไม่ได้
+
+รายงานเต็ม: `workspace/reports/news/2026-10-21-CRYPTO-shortlist-r13.md`
+
+---
+
+## รอบ 12 — pull 2026-10-21 11:36–11:40Z
 
 ### สรุป 3 บรรทัด
 
