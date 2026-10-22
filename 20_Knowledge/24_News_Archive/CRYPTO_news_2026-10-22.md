@@ -1,5 +1,5 @@
 ---
-title: "CRYPTO — ข่าว 2026-10-22 (shortlist รอบ 14)"
+title: "CRYPTO — ข่าว 2026-10-22 (shortlist รอบ 14 + 15)"
 type: source
 status: active
 created: 2026-10-22
@@ -19,6 +19,9 @@ tags:
   - ticker/LTC
   - ticker/PAXG
   - ticker/CRV
+  - ticker/AAVE
+  - ticker/ARB
+  - ticker/DOGE
 ---
 
 # CRYPTO — ข่าว (pull 2026-10-22 05:51:57Z, shortlist รอบ 14)
@@ -65,6 +68,47 @@ tags:
 - bars แบบ `start+asc` ถูกตัดกลางทางและไม่ให้ next_page_token ในหน้าแรก → ต้อง paginate (1Hour 216 / 4Hour 72 / 1Day 150 แท่ง)
 - ราคาน้ำมัน spot ไม่ได้ดึง · HYPE last trade age **657 นาที** (stale) · **ZEC ไม่มีใน Alpaca paper** · FedWatch สดไม่มี (ใช้ Yahoo 20 ต.ค. = 18% hike chance 28 ต.ค.)
 - PAXG/LTC แท่ง 1Hour มี bad print (4,702.46 / 54.155) → ใช้ print ที่กรอง ±2% แทน
+
+---
+
+## รอบ 15 — pull 2026-10-22T15:08:29Z (อัปเดตบ่าย)
+
+รายงานเต็ม: `workspace/reports/news/2026-10-22-CRYPTO-shortlist-r15.md` · ตัวเลขทุกตัวดึง/คำนวณใหม่ที่ REF **15:08:29Z** (Alpaca GET) · **ห้ามใช้แทนการดึงใหม่ในรอบถัดไป**
+
+### สรุป 3 บรรทัด (รอบ 15)
+
+1. **DELTA vs รอบ 14: ราคาลง −1.212% แต่เทปหนาขึ้นคนละโลก** — BTC 82,617.90 → **81,616.75** · 24h notional **$161,983 → $332,659 (+105.4%)** · 6h ex-top-hour **$13,752 → $116,357 (+746%)** ⇒ เกต B ($50,000) ผ่านครั้งแรก (233% ของเกต)
+2. **คำตอบข้อ 6 พลิกจากรอบ 14: "ขายจริงหนาแน่น" ไม่ใช่ "bid หาย"** — BTC 09–12Z **$10,471/126 prints** เทียบ 12–15Z **$210,976/308 prints** = หนากว่า **20.1×** · 3 print ใหญ่รวม **$168,525 = 79.9%** ของ window B (12:29:36Z $90,396 + $12,921 · 13:50:47Z $65,208)
+3. **Relative strength แคบและใช้กระจายความเสี่ยงไม่ได้** — เทียบ 12:00Z: AAVE +0.751% · ETH +0.283% · SOL +0.181% ดีกว่า BTC −0.048% แต่ **ทั้ง 10 คู่ corr ≥0.5 อย่างน้อย 1 หน้าต่าง**; CRV ผ่าน corr (0.363/0.418) แต่เทป 6h **$3.31** ⇒ ใช้ไม่ได้
+
+**Sentiment Rating: Bearish (narrow)** · ทั้ง 10 คู่ใต้ EMA20(1D) (−0.99% ถึง −4.51%) · 8/10 ใต้ low 21 ต.ค. · ไม่มีคู่ฟื้นเหนือ high 4H ล่าสุด
+
+**ข้อขัดแย้งสำคัญ:** EMA20(1D) BTC ที่ผมคำนวณซ้ำ (40/60/70 แท่งปิด) = **84,117.24 เท่ากันทั้งสาม** ไม่ตรงกับ **82,604.65** ที่ค้างใน work order/r14 ⇒ BTC ใต้ EMA20 **−2.97%** ไม่ใช่ −1.06%
+
+### ข่าว 5 ข้อ (รอบ 15)
+
+- **Bitcoin slides below $82,000 as AI doubts return, with DeFi tokens leading declines** — BTC −2.9% จากเที่ยงคืน UTC · CD80 −3.2% · DFX −5.6% · derivatives volume +19% $226.6B / OI −2.46% $141.8B / liquidations +52% $431.1M · **CVD พลิกเป็น market-order selling** · ETF >$1B/3 วัน (SoSoValue) | CoinDesk | **2026-10-22 10:50Z** | https://www.coindesk.com/markets/2026/10/22/bitcoin-slides-below-usd82-000-as-ai-doubts-return-with-defi-tokens-leading-declines — ยืนยันแล้ว · สูง
+- **Live updates 12:03Z** — Nasdaq100 futures −1.7% · OAT 10y 5.11% (spread 177bp = สูงสุด 15 ปี) · UST10y 5.046% (−10.3bp) | CoinDesk (Godbole) | **12:03Z** | https://www.coindesk.com/business/2026/10/22/live-updates-bitcoin-s-round-trip-to-usd85-000-burns-traders-on-both-sides — ยืนยันแล้ว · สูง
+- **Live updates 13:43Z** — Nasdaq −1.5% early trading · BTC ใกล้ session low $81,500 · MSTR −5.6% · COIN −4% | CoinDesk (Alpher) | **13:43Z** | 〃 — ยืนยันแล้ว · สูง (time anchor ของการหลุด)
+- **Live updates 14:25Z "Fed rate hike bets vanish"** — hike odds 27–28 ต.ค. **8%** (16% d-1, 28% w-1) · hold ถึงสิ้นปี 16% · 10y 5.02% · CME FedWatch | CoinDesk (Alpher) | **14:25Z** | 〃 — ยืนยันแล้ว (ทุติยภูมิ 1 ชั้น) · สูง
+- **Jobless claims 194,000 vs consensus 200,000** (week ended 17 ต.ค.) · 4-wk 197,750 · continuing 1,728,000 | CNBC + ALM First + FinanceCalendar (3 แหล่ง) | **2026-10-22 13:21Z** (ออก 12:30Z) | https://www.cnbc.com/2026/10/22/jobless-claims-record-low-weekly.html — ยืนยันแล้ว · กลาง
+- **Bitcoin ETFs attract $1.08B in 3 days but may not be enough** (SoSoValue) | CoinDesk | **~06:30Z** | https://www.coindesk.com/markets/2026/10/22/bitcoin-etfs-attract-usd1-08-billion-in-3-days-but-it-may-not-be-enough-for-a-steep-rally — ยืนยันแล้ว · กลาง
+
+### ตัวกระตุ้นราคา (รอบ 15)
+
+1. **AI/tech risk-off รอบสอง + การขายบล็อก (สูง · 12:03–13:50Z)** — bloc 12:29:36Z ($90,396+$12,921) เกิด ~29 นาทีหลัง 4H แท่ง 08:00Z ปิด 81,655.55 ใต้ 82,020.32; bloc 13:50:47Z ($65,208 @81,400) ทำให้เกิด low วัน 81,270.00
+2. **Fed hike odds ทรุด (กลาง–สูง · 14:25Z)** — 28% → 8% ใน 1 สัปดาห์ แต่ BTC ยังลง ⇒ **equity risk-off ชนะ rate repricing**
+3. **ETF inflow 3 วันติดแต่ไม่ช่วยราคา (กลาง)** — CVD พลิกเป็น market-order selling ⇒ derivatives/positioning ขายกลบ spot demand
+4. **DeFi เป็นตัวนำลง (กลาง · DFX −5.6%)** — CRV −8.2% · UNI −5% (OI −10.17%) · ENA −7.2% ⇒ AAVE/UNI/ARB เด้งแรงกว่า BTC ใน 3 ชม.สุดท้าย แต่ 24h แย่กว่า
+5. **AVAX unlock 24 ต.ค. 20:20Z $16.14m (1.67m AVAX, 0.38% float)** — AVAX −7.53% 24h, percentile 6.6% (DefiLlama)
+
+### ปฏิทิน 12 ชม. (15:05Z 22 ต.ค. → 03:05Z 23 ต.ค.)
+
+- **Fed blackout 17–29 ต.ค.** (stlouisfed.org + federalreserve.gov) ⇒ ไม่มีคำกล่าว Fed ในหน้าต่างนี้
+- **16:00Z** 4H แท่ง 12:00Z ปิด · **20:00Z** US equity cash close · **~21:00–22:00Z** ETF flow session 22 ต.ค. (SoSoValue)
+- 17:00Z 5y TIPS auction / 17:30Z T-bill — **สืบทอดจากรอบ 14 ยังไม่ยืนยันซ้ำ**
+- **ไม่มี crypto-native event ที่ยืนยันได้** ในหน้าต่าง · ถัดไป TON $49.65m + Humanity $17.22m 23 ต.ค. · AVAX 24 ต.ค. 20:20Z
+- นอกหน้าต่าง: FOMC 27–28 ต.ค. (hike odds 8%) · 23 ต.ค. flash PMI
 
 ---
 
