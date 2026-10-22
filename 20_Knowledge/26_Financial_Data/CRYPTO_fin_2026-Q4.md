@@ -16,12 +16,43 @@ tags:
 
 # CRYPTO sleeve — สภาพคล่อง / ต้นทุนไป-กลับ / executability (2026 Q4)
 
-**รอบล่าสุด: r13 · ข้อมูล 2026-10-21 23:41:06Z** (orderbook 23:41:17Z · quotes 23:41:08Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 23:43:38–23:43:57Z · CoinGecko 23:43:38Z · gold-api XAU $4,125.700195 @23:43:38Z · Farside 23:44–23:52Z · DefiLlama etfs 00:05Z · XRP Insights ETF JSON 00:14Z · unlocks 23:47Z) · **รอบก่อน r12 = 2026-10-21 14:36:07Z** (orderbook 14:36:18Z · quotes 14:36:08Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 14:38–14:41Z · CoinGecko 14:37–14:39Z · gold-api XAU 14:41:07Z · Farside 14:45Z · **SOL วัดเพิ่ม 15:07:33Z**) · **รอบก่อน r11 = 2026-10-21 05:21:05Z**
+**รอบล่าสุด: r14 · ข้อมูล 2026-10-22 08:51:07Z** (orderbook 08:51:18Z · quotes 08:51:08Z · venue เทียบ Coinbase/Kraken/Bybit 08:53:40–08:56:10Z · CoinGecko 08:53:28Z · gold-api XAU $4,087.00 @08:55:10Z · Farside 08:54Z · DefiLlama etfs 08:55Z · unlocks 08:57–08:59Z) · **รอบก่อน r13 = 2026-10-21 23:41:06Z** (orderbook 23:41:17Z · quotes 23:41:08Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 23:43:38–23:43:57Z · CoinGecko 23:43:38Z · gold-api XAU $4,125.700195 @23:43:38Z · Farside 23:44–23:52Z · DefiLlama etfs 00:05Z · XRP Insights ETF JSON 00:14Z · unlocks 23:47Z) · **รอบก่อน r12 = 2026-10-21 14:36:07Z** (orderbook 14:36:18Z · quotes 14:36:08Z · venue เทียบ Coinbase/Kraken/Bitstamp/Bybit 14:38–14:41Z · CoinGecko 14:37–14:39Z · gold-api XAU 14:41:07Z · Farside 14:45Z · **SOL วัดเพิ่ม 15:07:33Z**) · **รอบก่อน r11 = 2026-10-21 05:21:05Z**
 **แหล่ง:** Alpaca Data API `/v1beta3/crypto/us/{trades,quotes,latest/trades,latest/quotes,latest/orderbooks,bars}` · CoinGecko `/coins/markets` · Farside `/btc /eth /sol` · DefiLlama `/unlocks/{chainlink,aave}` · docs.alpaca.markets `crypto-fees`, `crypto-trading` · `api.mainnet-beta.solana.com`
 **ข้อจำกัดสำคัญ:** สินทรัพย์กลุ่มนี้ **ไม่มีงบการเงิน/ไม่มี audited statements** ⇒ P/E · P/BV · D/E · ROE · gross margin · dividend yield = **หาไม่ได้/n/a ทุกตัว** · ตัวเลขที่บันทึกคือ (ก) สภาพคล่องจากเทปจริง (ข) ต้นทุนไป-กลับ (ค) executability ของ stop (ง) supply/vesting (จ) โครงสร้างตลาดของ venue
-**รายงานฉบับเต็มของรอบ:** r13 = `workspace/reports/finance/2026-10-22-CRYPTO-r13.md` · r12 = `workspace/reports/finance/2026-10-21-CRYPTO-r12.md` · r11 = `workspace/reports/finance/2026-10-21-CRYPTO-r11.md` · r10 = `workspace/reports/finance/2026-10-21-CRYPTO-r10.md` · r9 = `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
+**รายงานฉบับเต็มของรอบ:** r14 = `workspace/reports/finance/2026-10-22-CRYPTO-r14.md` · r13 = `workspace/reports/finance/2026-10-22-CRYPTO-r13.md` · r12 = `workspace/reports/finance/2026-10-21-CRYPTO-r12.md` · r11 = `workspace/reports/finance/2026-10-21-CRYPTO-r11.md` · r10 = `workspace/reports/finance/2026-10-21-CRYPTO-r10.md` · r9 = `workspace/reports/finance/2026-10-20-CRYPTO-r9.md`
 
-## r13 (ล่าสุด) — 2026-10-21 23:41Z · 10 คู่: BTC ETH SOL XRP LINK BCH AVAX LTC PAXG BAT (AVAX เข้า / RENDER ออก)
+## r14 (ล่าสุด) — 2026-10-22 08:51Z · 10 คู่: BTC ETH SOL XRP LINK BCH AVAX LTC PAXG **CRV** (CRV เข้า / BAT ออก)
+
+หน้าต่าง: **24 ชม.** = 2026-10-21 08:51:07→2026-10-22 08:51:07Z · **6 ชม.** = 02:51:07→08:51:07Z · **1 ชม.** = 07:51:07→08:51:07Z · **A (ก่อนย่อ)** = 02:51:57→05:51:57Z · **B (ช่วงย่อ)** = 05:51:57→08:51:57Z · **C (อ้างอิงเก่า)** = 2026-10-21 23:51:57→2026-10-22 02:51:57Z (anchor = REF 05:51:57Z)
+**หมายเหตุหน้าต่าง B:** สิ้นสุด 08:51:57Z แต่ pull ล่าสุด 08:51:07Z ⇒ ขาด 50 วินาทีสุดท้าย (ไม่ได้ประมาณแทน)
+
+| symbol | not 6ชม. | exTop 6ชม. | print ≥$3k (6ชม.) | 24h notional | 24h r14/r13 | L1 spread | RT @$1k / @$3k | % ของ $150 @$3k | last age | **verdict** |
+|---|---|---|---|---|---|---|---|---|---|---|
+| BTC/USD | $31,603 | **$18,113** | **3** | $166,009 | 0.70× | 3.52 bps | 0.581% / 0.592% | 11.8% | 1.1 น. | **ออกได้ถึง $3,000** (book $1,057,115 · bid 1% $1.21M) — แต่ **1 ชม. exTop $103** และ print ≥$1k ทั้ง 2 ใบเวลาเดียวกัน 08:19:18Z |
+| ETH/USD | $9,178 | **$4,639** | **1** | $35,686 | **0.33×** | 2.87 | 0.589% / 0.599% | 12.0% | 16.9 น. | **$3,000 แบบมีเงื่อนไข** (exTop6 = 1.55× ของไม้; print ≥$3k ใบเดียว 08:17:54Z $3,875; book $462,372) |
+| XRP/USD | $3,419 | $2,078 | 0 | $22,817 | 0.94× | 43.82 | 0.938% / 0.938% | 18.8% | 4.4 น. | **ออกได้ที่ราคาเดียวถึง $2,000** (L1 ข้างละ $5,515/$5,568) · **$3,000 รับไม่ได้** (exTop6 $2,078) |
+| SOL/USD | $1,102 | $689 | 0 | $23,724 | 0.89× | 9.64 | 0.793% / 0.934% | 18.7% | 19.1 น. | **รับไม่ได้ตั้งแต่ $1,000** (exTop6 $689; book $3,313) |
+| LINK/USD | $718 | $325 | 0 | $5,077 | 1.03× | 16.53 | 0.665% / 0.665% | 13.3% | 16.0 น. | **รับไม่ได้** (exTop6 $325; print ใหญ่สุด $392) — บุ๊กไม่ใช่ปัญหา ($108,443) |
+| BCH/USD | $353 | $118 | 0 | $3,246 | **0.31×** | 59.34 | 1.093% / 1.093% | 21.9% | 36.5 น. | **`UNUSABLE`** — 61.5% ของ 24 ชม. = print เดียว $1,996 @19:04:57Z; max notional **$0**; gap 216.1 น. |
+| AVAX/USD | $2,451 | $226 | 0 | $17,087 | 1.16× | 60.88 | 1.109% / 1.285% | 25.7% | 31.4 น. | **รับไม่ได้** — 6 ชม. 90.8% เป็น print เดียว $2,088 @08:03:14Z; max notional **$0** |
+| LTC/USD | $1,139 | $193 | 0 | $2,237 | 1.22× | 62.73 | 1.127% / 1.127% | 22.5% | 35.3 น. | **`UNUSABLE`** — 0 print ≥$1k ใน 24 ชม.; max notional **$0**; เทปมี 17/26 ชั่วโมง |
+| PAXG/USD | $5,756 | $2,985 | 0 | $10,064 | **2.29×** | **104.44** | 1.661% / 1.665% | **33.3%** | 6.4 น. | **รับไม่ได้** — bid L1 = **$2**, max notional **$0** (tape ผ่านถึง $2,000 แต่ book ตก; สองเกตขัดกัน) |
+| CRV/USD | $335 | $63 | 0 | $481 | — (r13 มี BAT) | 22.18 | 0.722% / 0.722% | 14.4% | **182.4 น.** | **`UNUSABLE`** — 1 ชม. **0 print**, 6/26 ชั่วโมงมีเทป, gap 609.6 น., exTop6 $63 |
+
+`[fact]` **เกต tape-side (exTop6 ≥ ไม้) ผ่าน 3 คู่ที่ $1,000 (BTC·ETH·XRP) · 2 คู่ที่ $3,000 (BTC·ETH)** — ดีขึ้นจาก r13 (2 คู่ที่ $3,000) แต่ยังไม่ผ่านเกต $50,000
+`[calc]` ส่วนเพิ่มจากการไต่บุ๊ก $1,000→$3,000: SOL **+14.14 bps** · AVAX **+17.64** · BTC +1.09 · ETH +0.96 · PAXG +0.36 · XRP/LINK/BCH/LTC/CRV **0.00** ⇒ fee 50 bps ยังเป็นตัวหลัก
+
+**r14 one-off / สิ่งที่ต้องจำ:**
+1. **การย่อ 05:52Z→08:47Z = distribution เฉพาะ BTC/ETH, bid หายในอีก 8 คู่:** B/A notional BTC **1.17×** (exTop **3.8×**) · ETH **3.55×** (exTop **7.2×**) — print ≥$3k รวม **$9,817 = 57.6% ของ B (BTC)** และ **$3,875 = 54.1% (ETH)** กระจุกชั่วโมง 08Z (**76.1% / 63.4%**) ⇒ **ตัด 2 print นี้ออก เทปช่วงย่อเหลือ BTC $7,224 = 0.50× ของ A และ ETH $3,286 = 1.63×** · ตรงข้าม XRP 0.80× · LINK 0.59× · BCH 0.22× · LTC 0.06× · CRV 0 print และ **6 คู่ไม่มี print ≥$1,000 เลยในหน้าต่าง B** ⇒ ราคาลงเพราะไม่มี bid · **PAXG สวนทาง: B หนา 9.25× ราคาบวก +1.370%** (มีคนซื้อทองขณะ crypto ลง)
+2. **BTC หลุด low 1D 82,117.882 = เทปยืนยันแค่ช่วง flush ไม่ยืนยันที่ตัว low:** 1m bar แรกที่ low ต่ำกว่า = **07:50Z (low 82,020.32)** ไม่ใช่ 08:4xZ · print ≥$3k ใต้ low: **$3,521.31 @82,000.00 + $6,295.96 @81,957.50 เวลา 08:19:18Z** · **หลัง 08:20Z ไม่มี print ≥$1,000 (ใหญ่สุด $164.34)** · **print ที่ทำ low 24 ชม. 81,800.00 @08:38:58Z = $1.02** ⇒ **low เกิดบน dust — stop ที่อิงราคาจะถูก trigger ด้วย print ที่ไม่มีความหมายเชิงขนาด**
+3. **ETF flow session 21 ต.ค. — shortlist ใช้ตัวเลขผิด:** Farside **+$524.8M** BTC = DefiLlama **+$524.8M** (ตรงกันเป๊ะ; IBIT +235.0 / FBTC +212.7 / GBTC +32.6) vs shortlist **+$281.6M** (ต่าง $243.2M = 46%, อธิบายไม่ได้) · ETH **+$14.9M** (Farside = DefiLlama; แต่การ์ดสรุปใน DefiLlama เองเขียน +$13.6m) · SOL +$600,000 · **session 22 ต.ค. ยังไม่พิมพ์** · **flow บวกทั้งที่ BTC −1.66%/24 ชม. ⇒ flow ETF กับราคา spot สวนทางกันวันนี้**
+4. **AVAX unlock ยืนยันได้:** 24 ต.ค. 2026 **20:20Z** · **1.67m AVAX · $15.65m** (ราคา 22 ต.ค.) · 0.23% mcap / **0.38% ของ float** · Foundation cliff (DefiLlama) — leader อ้าง $16.12M ต่างเพราะราคา ไม่ใช่จำนวน · **= 6,775× ของเทป 3 ชม. / 916× ของ 24 ชม.** ⇒ ขาย 1% ของ unlock ($156.5K) = 9.2× เทป 24 ชม. · **LINK/LTC "no upcoming unlocks" · SOL 11 พ.ย. (นอก 7 วัน) · BTC/ETH/BCH/PAXG ไม่มี vesting · XRP/CRV ดึงไม่ได้**
+5. **perp เอียง short ระหว่างการย่อ:** Bybit funding **BTC −0.00393%/8h · ETH −0.01121% · AVAX −0.01751%** (ติดลบแรงสุด ตรงกับที่ลงแรงสุด −5.14%) · OI BTC **$4.86B = 29,000× ของ spot Alpaca 24 ชม.** ⇒ **สภาพคล่องจริงอยู่ที่ perp ไม่ใช่ spot venue นี้**
+6. **spread ไม่ถ่างเทียบ r13** (median quote 3 ชม.: BTC 3.03 · ETH 3.18 · SOL 9.59 · LINK 21.79 · XRP 44.74) ⇒ **ไม่พบ stress ในบุ๊ก สิ่งที่เปลี่ยนคือ "คนหยุดเทรด" ใน 8 คู่** · Alpaca L1 กว้างกว่า Coinbase **4.1×–>2,000×** (PAXG 104.44 vs 1.785) · ส่วนแบ่ง Alpaca **0.014%–0.399%** ของ Coinbase 24 ชม.
+7. **PAXG พรีเมียมทองจริงใกล้ 0.2%:** quote mid $4,096.21 vs XAU **$4,087.00 @08:55:10Z** = **+0.225%** · last trade $4,121.32 = **+0.840%** (อายุ 6.4 น.) ⇒ **104.44 bps คือ spread ไม่ใช่พรีเมียม**
+
+
+## r13 — 2026-10-21 23:41Z · 10 คู่: BTC ETH SOL XRP LINK BCH AVAX LTC PAXG BAT (AVAX เข้า / RENDER ออก)
 
 หน้าต่าง: **A** = 2026-10-20 23:41:06→2026-10-21 23:41:06Z (24 ชม.) · **B** = 17:41:06→23:41:06Z (6 ชม.) · **C** = 22:41:06→23:41:06Z (1 ชม.) · **R** = 14:41:52→20:41:52Z (หน้าต่าง shortlist r13 · ใช้ตรวจซ้ำ — REF 20:41:52Z)
 **ตรวจซ้ำ shortlist r13:** notional/exTop/topH หน้าต่าง R ตรงกับ news **10/10 คู่** (BTC $62,651/$36,065/42.4% · ETH $18,609/$8,582/53.9% · SOL $18,541/$6,370/65.6% · XRP $6,313/$2,989/52.7% · LINK $1,780/$1,237/30.5% · BCH $2,568/$571/77.8% · AVAX $13,088/$466/96.4% · LTC $22/$10/55.9% · PAXG $837/$607/27.5% · BAT $446/$270/39.4%) ⇒ ตัวเลขชุด R ของ news ใช้ได้
