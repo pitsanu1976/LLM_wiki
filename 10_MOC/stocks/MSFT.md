@@ -42,10 +42,10 @@ _ยังไม่มี — ดูแหล่งข่าวในหัว�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-**งบล่าสุด:** TTM ถึง **Q4 FY26 (Jun-26)** — รายได้ $331.84B · NI $133.75B · GM 68.0% (stockanalysis, ดึง 2026-10-20)
-**Valuation:** P/E **29.6** (531.87 ÷ EPS 17.95) · fwd 26.9 · EV/EBITDA 20.7 · FCF yield 1.69% · D/E 0.29 · net debt $52.0B
-**จับตา:** capex = **64.6% ของ OCF** ($35.8B/$55.4B) ทำให้ FCF −23.2% yoy · งบ FY27 Q1 **2026-10-28** (ยืนยันจาก microsoft.com/en-us/investor)
-เต็ม: [[DAILY_2026-10-21_fin]] · [[MSFT_fin_2026-Q4]]
+**งบล่าสุด:** TTM ถึง **Q4 FY26 (Jun-26)** — รายได้ $331.84B · NI $133.75B · GM 67.20% (จาก 69.05% เมื่อ 3 ไตรมาสก่อน) · OM 45.11% (stockanalysis, ดึง 2026-10-25)
+**Valuation (ปิด 2026-10-23 ราคา $524.51):** P/E **29.2** (524.51 ÷ EPS TTM 17.959) · fwd 26.54 · median P/E 5y **31.6** ⇒ ต่ำกว่า median 7% · EV/EBITDA 20.32 · FCF yield 1.72% · D/E 0.29 · net debt **$51.97B** (จาก $18.36B เมื่อ 3 ไตรมาสก่อน)
+**จับตา:** งบ **2026-10-28 หลังปิด** (Nasdaq calendar) — ATM straddle 30 ต.ค. **5.28%** ของ spot, strip event แล้ว **σ 3.90% / expected |move| 3.12%** ⇒ **stop 515 ห่าง spot เพียง 1.81% = 0.43–0.58 เท่าของ move ที่ตลาด price** · one-off gainInvestments +$4,830M = 13.5% ของ NI Q4 FY26 · XD ถัดไป **2026-11-19**
+เต็ม: [[DAILY_2026-10-26_fin]] · [[MSFT_fin_2026-Q4]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
