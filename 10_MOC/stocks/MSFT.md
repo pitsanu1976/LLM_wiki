@@ -48,10 +48,10 @@ _ยังไม่มี — ดูแหล่งข่าวในหัว�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-**งบล่าสุด:** TTM ถึง **Q4 FY26 (Jun-26)** — รายได้ $331.84B · NI $133.75B · GM 67.20% (จาก 69.05% เมื่อ 3 ไตรมาสก่อน) · OM 45.11% (stockanalysis, ดึง 2026-10-25)
-**Valuation (ปิด 2026-10-23 ราคา $524.51):** P/E **29.2** (524.51 ÷ EPS TTM 17.959) · fwd 26.54 · median P/E 5y **31.6** ⇒ ต่ำกว่า median 7% · EV/EBITDA 20.32 · FCF yield 1.72% · D/E 0.29 · net debt **$51.97B** (จาก $18.36B เมื่อ 3 ไตรมาสก่อน)
-**จับตา:** งบ **2026-10-28 หลังปิด** (Nasdaq calendar) — ATM straddle 30 ต.ค. **5.28%** ของ spot, strip event แล้ว **σ 3.90% / expected |move| 3.12%** ⇒ **stop 515 ห่าง spot เพียง 1.81% = 0.43–0.58 เท่าของ move ที่ตลาด price** · one-off gainInvestments +$4,830M = 13.5% ของ NI Q4 FY26 · XD ถัดไป **2026-11-19**
-เต็ม: [[DAILY_2026-10-26_fin]] · [[MSFT_fin_2026-Q4]]
+**งบล่าสุด:** TTM ถึง **Q4 FY26 (Jun-26)** — รายได้ $331.84B · NI $133.75B · GM 67.20% (จาก 69.05% เมื่อ 3 ไตรมาสก่อน) · OM 45.11% (stockanalysis, ดึง 2026-10-26)
+**Valuation (ปิด 2026-10-26 ราคา $532.59, derive จาก statistics):** P/E **29.67** (532.59 ÷ EPS TTM 17.96) · fwd 26.95 · median P/E 5y **31.56** ⇒ ต่ำกว่า 6% · EV/EBITDA 20.62 · FCF TTM $66.99B · D/E 0.29 · net debt **$51.97B**
+**จับตา:** งบ **2026-10-28 หลังปิด** (Nasdaq cal, EPS fcst $4.71 vs LY 4.13) — **AR +39.6% q/q ขณะรายได้ +8.6% q/q คือจุดเดียวที่แย่ลงจริง** · one-off กำไรเงินลงทุน TTM $15,961M = 11.9% ของ NI · GM ลง 3 ไตรมาสติด (−185bp) · XD 2026-11-19 · มุมพื้นฐาน: **ถือเต็ม 16**
+เต็ม: [[DAILY_2026-10-27_fin]] · [[MSFT_fin_2026-Q4]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
