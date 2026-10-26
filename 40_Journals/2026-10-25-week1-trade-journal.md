@@ -76,3 +76,21 @@
 | เวลาถือเฉลี่ย | 1.0 วัน |
 
 **ไฟล์ที่เกี่ยวข้อง:** `reports/leader/decisions.md` (41 แถว) · `shared/portfolio.md` · memo `reports/leader/2026-10-2*.md` (27 ฉบับ) · wiki: `40_Journals/2026-10-25-trade-journal.md`
+
+## เกี่ยวข้อง
+
+- [[2026-10-18]]
+- [[2026-10-19]]
+- [[2026-10-20]]
+- [[2026-10-21]]
+- [[2026-10-22]]
+- [[2026-10-23]]
+- [[2026-10-25]]
+- [[MSFT]]
+- [[NVDA]]
+- [[TSM]]
+- [[CDNS]]
+- [[CRM]]
+- [[decisions]]
+- [[journals-moc]]
+- [[trading-finance-moc]]
