@@ -5,10 +5,16 @@ status: active
 ticker: TSM
 agent: leader
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-25
 tags:
   - moc
   - ticker/TSM
+related:
+  - "[[NVDA]]"
+  - "[[2026-10-19]]"
+  - "[[2026-10-25]]"
+  - "[[2026-10-25-week1-trade-journal]]"
+  - "[[decisions]]"
 aliases:
   - TSM
 ---
@@ -22,9 +28,9 @@ aliases:
 
 | | |
 |---|---|
-| Sector | _รอ Leader เติม_ |
-| Watchlist status | เฝ้าดู |
-| ความเห็นล่าสุด | _ยังไม่มี_ |
+| Sector | Semiconductors — foundry / advanced packaging |
+| Watchlist status | **ยกเลิกคำสั่งแล้ว** (49 @407 ไม่เคย fill) |
+| ความเห็นล่าสุด | ค้าง 7 sessions ไม่ fill · notional 20.02% เกินเพดาน 20% · corr NVDA 0.651 ⇒ ยกเลิก 2026-10-25 |
 
 ## 📰 News
 <!-- agent:news:begin -->
@@ -48,7 +54,18 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 👑 Decision
 <!-- agent:leader:begin -->
-_ยังไม่มีการตัดสินใจ_
+### 2026-10-19 — BUY limit 49 @407.00 (stop 393.90 / TP 452.47)
+- เหตุผล: demand + Q4 guide $52.3–54.3B (ยืนยันจาก IR) · limit ใต้ตลาด 5.8%
+- บันทึก: [[2026-10-19]]
+
+### 2026-10-25 — ยกเลิกคำสั่ง (`ef20ced4` → canceled)
+- ค้าง 7 sessions ไม่มี fill · $19,943 = **20.02% เกินเพดาน 20%** หลัง equity ลด · corr NVDA–TSM **0.651**
+- ปลด buying power $19,943 · ไม่มีต้นทุนเกิดขึ้น
+- บันทึก: [[2026-10-25]]
+
+### สถานะปัจจุบัน (2026-10-25)
+- **ไม่มี position** · ไม่มีออเดอร์ค้าง (legs ถูกยกเลิกตาม parent)
+- กลับเข้าได้เมื่อ: มี catalyst ใหม่ + ขนาดไม่เกินเพดานที่ equity ปัจจุบัน + ถ้าถือ NVDA/MSFT อยู่ต้องคิด corr ก่อน
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล

@@ -5,10 +5,15 @@ status: active
 ticker: CRM
 agent: leader
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-25
 tags:
   - moc
   - ticker/CRM
+related:
+  - "[[2026-10-19]]"
+  - "[[2026-10-22]]"
+  - "[[2026-10-25-week1-trade-journal]]"
+  - "[[decisions]]"
 aliases:
   - CRM
 ---
@@ -22,9 +27,9 @@ aliases:
 
 | | |
 |---|---|
-| Sector | _รอ Leader เติม_ |
-| Watchlist status | เฝ้าดู |
-| ความเห็นล่าสุด | _ยังไม่มี_ |
+| Sector | Software — SaaS / enterprise CRM |
+| Watchlist status | **ยกเลิกคำสั่งแล้ว** (71 @235 ไม่เคย fill) |
+| ความเห็นล่าสุด | news + finance ตรงกันว่าไม่มี catalyst มีวันจนถึง 2 ธ.ค. ⇒ ยกเลิก 2026-10-22 · P/E 22.5 + FCF yield 7.6% ยังน่าสนใจแต่ต้องมีตัวกระตุ้น |
 
 ## 📰 News
 <!-- agent:news:begin -->
@@ -48,7 +53,18 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 👑 Decision
 <!-- agent:leader:begin -->
-_ยังไม่มีการตัดสินใจ_
+### 2026-10-19 — BUY limit 71 @235.00 (stop 221.00 / TP 263.60)
+- เหตุผล: valuation reset — P/E 22.5 (−37% vs ประวัติ) + FCF yield 7.6%
+- บันทึก: [[2026-10-19]]
+
+### 2026-10-22 — ยกเลิกคำสั่ง (`d04b3af7` → canceled)
+- news + finance ตรงกัน: **ไม่มี catalyst ที่มีวันชัดเจนจนถึง 2 ธ.ค.** ⇒ ถือ limit ที่ไม่ fill ต่อไปไม่ก่อประโยชน์
+- ปลด notional $16,685 / risk $994
+- บันทึก: [[2026-10-22]]
+
+### สถานะปัจจุบัน (2026-10-25)
+- **ไม่มี position** · ไม่มีออเดอร์ค้าง
+- กลับเข้าได้เมื่อ: มี catalyst ที่มีวัน (เช่น งบ/คำประกาศ) + ราคายังไม่หลุดโครงสร้างขาขึ้น
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล

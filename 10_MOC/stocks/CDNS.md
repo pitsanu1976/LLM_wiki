@@ -5,10 +5,15 @@ status: active
 ticker: CDNS
 agent: leader
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-10-25
 tags:
   - moc
   - ticker/CDNS
+related:
+  - "[[2026-10-19]]"
+  - "[[2026-10-21]]"
+  - "[[2026-10-25-week1-trade-journal]]"
+  - "[[decisions]]"
 aliases:
   - CDNS
   - Cadence
@@ -23,9 +28,9 @@ aliases:
 
 | | |
 |---|---|
-| Sector | _รอ Leader เติม_ |
-| Watchlist status | เฝ้าดู |
-| ความเห็นล่าสุด | _ยังไม่มี_ |
+| Sector | Software — EDA / semiconductor design tools |
+| Watchlist status | **ยกเลิกคำสั่งแล้ว** (64 @312 ไม่เคย fill) |
+| ความเห็นล่าสุด | tech: stop 0.91×ATR อยู่ใน noise · finance: FCF yield 1.89% + margin ลด 4 ไตรมาส · งบ 26 ต.ค. ⇒ ยกเลิก 2026-10-21 |
 
 ## 📰 News
 <!-- agent:news:begin -->
@@ -49,7 +54,17 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 👑 Decision
 <!-- agent:leader:begin -->
-_ยังไม่มีการตัดสินใจ_
+### 2026-10-19 — BUY limit 64 @312.00 (stop 301.90)
+- เหตุผล: pullback หลังงบในธีม AI-EDA · limit ใต้ตลาด
+- บันทึก: [[2026-10-19]]
+
+### 2026-10-21 — ยกเลิกคำสั่ง (`adf37c4f` → canceled)
+- tech: ไม่มี setup — stop 12.10 = **0.91×ATR** (อยู่ใน noise) + ปิดใต้ MA200
+- finance: FCF yield **1.89%** · margin ลด 4 ไตรมาสติด · งบ 26 ต.ค. + gap งบ 2/4 ครั้งเกินระยะ stop
+- บันทึก: [[2026-10-21]]
+
+### สถานะปัจจุบัน (2026-10-25)
+- **ไม่มี position** · ไม่มีออเดอร์ค้าง · รอผลงบ 26 ต.ค. ก่อนพิจารณาใหม่
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล

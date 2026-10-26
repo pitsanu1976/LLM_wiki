@@ -94,3 +94,5 @@
 - [[decisions]]
 - [[journals-moc]]
 - [[trading-finance-moc]]
+- [[US-AI]]
+- [[CRYPTO]]
