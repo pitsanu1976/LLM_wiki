@@ -38,7 +38,10 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-_ยังไม่มี block — งบล่าสุดอยู่ใน [[WDAY_fin_2027-Q2]]_
+**งบล่าสุด:** **Q2 FY27 (31 ก.ค. 26, 10-Q ยื่น 2026-08-27)** — รายได้ $2,649M (+12.8% yoy) · GM 75.39% · **OM GAAP 11.82%** · OCF/NI 2.46 · FCF yield 5.74% (stockanalysis, ดึง 2026-10-27)
+**Valuation (ปิด 2026-10-27 $205.48):** P/E **42.32** · fwd 17.03 · median P/E 5y 61.0 ⇒ −31% · EV/EBITDA 31.46 · net debt $369M · CR **0.91** · **PT consensus $209.25 = upside +1.85%**
+**จับตา:** **SBC 17.4% ของรายได้ ($462M) = สูงสุดใน 10 ชื่อ** · **ภาษีeff 2.57%** (ถ้า 21% P/E = 48.8) · ช่องว่าง EPS FY27 consensus $11.09 vs EPS TTM $5.19 เกือบทั้งหมดมาจาก SBC ที่ไม่ถูกหักใน non-GAAP · finance: **VETO** · งบ **2026-11-24**
+เต็ม: [[DAILY_2026-10-28_fin]] · [[WDAY_fin_2027-Q2]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
