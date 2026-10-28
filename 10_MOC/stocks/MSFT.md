@@ -34,7 +34,10 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-_ยังไม่มี — ดูแหล่งข่าวในหัวข้อ "แหล่งข้อมูล" ด้านล่าง_
+**2026-10-28 (ปิด 531.01, −0.06%, SIP) — งบ Q1 FY27 ออกแล้ว หลังปิด:** revenue **$92.279B (+19%)**, non-GAAP EPS **$4.89** (คาด $4.71–4.73), GAAP EPS $4.92, **Azure $33.165B (+48%)** เทียบ guide ~44–45%, MS Cloud $63.9B (+30%), RPO +73% → $677B (คาด $705.6B), capex รวม lease **$45.2B** (คาด $50.67B), FCF $18.63B (−27% y/y), guide Q2 revenue **$96.0–97.1B** + Azure **49–50% cc**, calendar-2026 capex ~$170B (จาก ~$175B), เปลี่ยนอายุสินทรัพย์ 15→25 ปี
+**After-hours:** SIP 1Min 22:22 UTC = **549.31 (+3.45%)**, high 568.03 / low 529.50; Yahoo 552.78 @20:26 UTC (+4.10%) — ที่ 549.31 ต้นทุน 526.158 = **uPL +$370.4 (calc)**
+**Sentiment: Bullish** (Azure beat + guide เร่ง + capex ต่ำกว่าคาด) — จุดอ่อนเดียว: RPO ต่ำกว่าคาด + capex ลดอาจเลื่อนคำสั่งซื้ออุปกรณ์ไป 2H FY27
+ที่มา: MSFT IR press release FY27 Q1 (2026-10-28) · CNBC · GeekWire · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-29-DAILY.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical
