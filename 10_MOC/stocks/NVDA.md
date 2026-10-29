@@ -35,7 +35,12 @@ related:
 
 ## 📰 News
 <!-- agent:news:begin -->
-_ยังไม่มีข้อมูล — News agent จะเติมในรอบถัดไป_
+**2026-10-29 (ปิด 213.66, −0.80%, SIP, ดึง 22:36Z)** · AH 22:21Z = **210.40** (lo 210.06) · **ไม่พบข่าวเฉพาะตัว NVDA ในวันที่ 29 ต.ค.** — ที่อ่อนใน AH = INTC guide spillover (Reuters อ้าง Rosenblatt)
+**Relative strength:** 1D −0.80% vs SMH −1.06% = **ไม่ได้อ่อนกว่ากลุ่มเมื่อวาน** แต่ **1W +0.68% vs SMH +7.32% = ตามกลุ่มอยู่ 6.6 pp** ← นี่คือจุดที่ต้องใช้จริง
+**งบ Q3 FY27 = 2026-11-17 ยืนยันจากบริษัท** (ประกาศ ~20:20 UTC, call 14:00 PT/22:00 UTC) — **ปฏิทิน Nasdaq ระบุ 18 พ.ย. = estimated, ใช้ 17 พ.ย.** · guide Q3 = $108.0B ±2%
+**XD ถัดไปยังไม่ประกาศ** (ล่าสุด 2026-09-10 $0.25) ⇒ ไม่มี XD ในกรอบถือ
+**Sentiment: Bearish-narrow ระยะสั้น / demand ยังไม่พัง** — งบ 17 พ.ย. = binary ที่อยู่ในกรอบถือ
+ที่มา: nvidianews.nvidia.com (2026-10-28) · Reuters 2026-10-29 · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical

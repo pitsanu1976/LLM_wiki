@@ -34,10 +34,12 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-10-28 (ปิด 531.01, −0.06%, SIP) — งบ Q1 FY27 ออกแล้ว หลังปิด:** revenue **$92.279B (+19%)**, non-GAAP EPS **$4.89** (คาด $4.71–4.73), GAAP EPS $4.92, **Azure $33.165B (+48%)** เทียบ guide ~44–45%, MS Cloud $63.9B (+30%), RPO +73% → $677B (คาด $705.6B), capex รวม lease **$45.2B** (คาด $50.67B), FCF $18.63B (−27% y/y), guide Q2 revenue **$96.0–97.1B** + Azure **49–50% cc**, calendar-2026 capex ~$170B (จาก ~$175B), เปลี่ยนอายุสินทรัพย์ 15→25 ปี
-**After-hours:** SIP 1Min 22:22 UTC = **549.31 (+3.45%)**, high 568.03 / low 529.50; Yahoo 552.78 @20:26 UTC (+4.10%) — ที่ 549.31 ต้นทุน 526.158 = **uPL +$370.4 (calc)**
-**Sentiment: Bullish** (Azure beat + guide เร่ง + capex ต่ำกว่าคาด) — จุดอ่อนเดียว: RPO ต่ำกว่าคาด + capex ลดอาจเลื่อนคำสั่งซื้ออุปกรณ์ไป 2H FY27
-ที่มา: MSFT IR press release FY27 Q1 (2026-10-28) · CNBC · GeekWire · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-29-DAILY.md`
+**2026-10-29 (ปิด 530.14, −0.16%, SIP consolidated, ดึง 22:36Z) — gap 543.56 หลังงบหายหมดระหว่างวัน** · AH 22:21Z = **528.97** (hi 532.91 / lo 524.15)
+**เหตุผลที่ระบุได้:** (ก) แผนออกหุ้นกู้ **$25B** มีดีมานด์ล้น (Bloomberg 29 ต.ค.) ⇒ ตลาดเริ่มคิดต้นทุนทุนของ AI buildout กับ MSFT (ข) ตลาดโฟกัส capex เร่งใน **2H FY27** (William Blair: Q2 >$50B + component inflation) (ค) commercial bookings **−11% cc**
+**Analyst หลังงบ:** BofA คง Buy ขึ้น TP **$630** (จาก 600) · Jefferies คง Buy TP **$650** (แหล่งทุติยภูมิ = สื่อสรุป brokernote)
+**XD ปันผล: 2026-11-19 $0.98/หุ้น** (declared 2026-09-15, record 11/19, pay 12/10 — Nasdaq dividends API) ⇒ อยู่ในกรอบถือ ต้องไม่ตีความราคาที่ถูกหักว่าเป็นขาดทุน
+**Sentiment: Neutral (narrow)** — งบแข็ง (Azure +48%, RPO $677B) แต่การก่อหนี้ + capex 2H ทำให้ multiple ไม่ได้ต่อ
+ที่มา: Invezz 2026-10-29 · Proactive/Yahoo 2026-10-29 · Bloomberg wrap 29 ต.ค. · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical

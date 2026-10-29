@@ -34,9 +34,12 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-- **2026-10-20 (ข่าว)**: Q3 2026 (15 ต.ค.) รายได้ $46.72B เหนือ high end, GM 66.4%, Q4 guide $52.3–54.3B, FY26 ~+44% USD, capex $60–64B — แต่หุ้นลง 3.4% วันนั้นจาก N2/ต่างประเทศ margin dilution (TSMC IR)
-- **Catalyst ถัดไป**: ยอดขายรายเดือน ต.ค. 2026 · 2026-11-10 13:30 Taipei · TSMC IR financial calendar (inherited 2026-10-18) · งบ Q4 ~ม.ค. 2027 ยังไม่ประกาศวัน
-- **Sentiment**: Bullish-narrow (demand ยืน, margin เป็นตัวกด) — รายละเอียด [[DAILY-US_news_2026-10-20]]
+**2026-10-29 (ปิด 431.81, −1.75%, SIP, ดึง 22:36Z)** · AH 22:21Z = **420.98** · 1W **+4.72%** · ATR14 2.80% (ผ่านเกตไม้เต็มเพดาน)
+**เหตุการณ์ล่าสุด:** −1.75% เมื่อวาน = อ่อนกว่า SMH −1.06% ท่ามกลางการเทขาย semis หลัง INTC guide; **ไม่มีข่าวเฉพาะตัว TSM ใน 29 ต.ค.**
+**Catalyst ที่มีวัน:** **ไม่พบงบในปฏิทิน Nasdaq 30 ต.ค.–11 ธ.ค.** (Q3 รายงานไปแล้ว 15 ต.ค.) — วันที่ **2026-11-10 13:30 Taipei (ยอดขายรายเดือน ต.ค.)** ที่ค้างอยู่ใน block นี้เป็น **ข้อมูล inherited จาก TSMC IR calendar ที่ดึง 2026-10-18 ยังไม่ re-verify รอบนี้** ⇒ อย่าใช้เป็นวันยืนยัน
+**XD:** Nasdaq dividends API คืนค่า rows ว่างสำหรับ TSM ⇒ **ไม่ยืนยันว่าไม่มี XD** ต้องดู TSMC IR เอง
+**Sentiment: Neutral** — demand ยืน (เป็นผู้ผลิตจริงของ GPU ทุกค่าย) แต่ไม่มี catalyst ข้างหน้าในกรอบ
+ที่มา: Nasdaq earnings API 2026-10-29 (43 วัน, 0 error) · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical
