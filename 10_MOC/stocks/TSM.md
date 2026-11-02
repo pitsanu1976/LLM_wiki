@@ -34,12 +34,11 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-10-29 (ปิด 431.81, −1.75%, SIP, ดึง 22:36Z)** · AH 22:21Z = **420.98** · 1W **+4.72%** · ATR14 2.80% (ผ่านเกตไม้เต็มเพดาน)
-**เหตุการณ์ล่าสุด:** −1.75% เมื่อวาน = อ่อนกว่า SMH −1.06% ท่ามกลางการเทขาย semis หลัง INTC guide; **ไม่มีข่าวเฉพาะตัว TSM ใน 29 ต.ค.**
-**Catalyst ที่มีวัน:** **ไม่พบงบในปฏิทิน Nasdaq 30 ต.ค.–11 ธ.ค.** (Q3 รายงานไปแล้ว 15 ต.ค.) — วันที่ **2026-11-10 13:30 Taipei (ยอดขายรายเดือน ต.ค.)** ที่ค้างอยู่ใน block นี้เป็น **ข้อมูล inherited จาก TSMC IR calendar ที่ดึง 2026-10-18 ยังไม่ re-verify รอบนี้** ⇒ อย่าใช้เป็นวันยืนยัน
-**XD:** Nasdaq dividends API คืนค่า rows ว่างสำหรับ TSM ⇒ **ไม่ยืนยันว่าไม่มี XD** ต้องดู TSMC IR เอง
-**Sentiment: Neutral** — demand ยืน (เป็นผู้ผลิตจริงของ GPU ทุกค่าย) แต่ไม่มี catalyst ข้างหน้าในกรอบ
-ที่มา: Nasdaq earnings API 2026-10-29 (43 วัน, 0 error) · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
+**2026-11-02 (ปิด 398.63, −1.85%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W −6.07% · 1M −15.68% · ATR14 **3.44%**
+**Catalyst ที่มีวัน: ไม่มีในกรอบ** — งบ Q3 ออกแล้ว ต.ค.; วันประกาศยอดขายรายเดือน พ.ย. **ยังไม่ได้ดึง investor.tsmc.com รอบนี้ ⇒ ห้ามใช้เป็นวันยืนยัน** (ค่าที่เคยมีใน block นี้เป็น inherited ยังไม่ re-verify)
+**คะแนนแคทาทิสต์ N = 3/10** (ต่ำสุดในลิสต์) — ไม่มีแคทาทิสต์ของตัวเอง และเป็นผู้รับ read-across ตรงจาก AMD 2026-11-03 + NVDA 2026-11-17 ⇒ ข่าวที่กระทบมีแต่ด้านลบ
+**Sentiment: Bearish-narrow ระดับธีม / demand ยังยืน** — เป็น foundry จริงของทุกค่าย แต่ไม่มีตัวขับ narrative ของตัวเองในกรอบ 2–6 สัปดาห์
+ที่มา: Alpaca SIP bars 2026-11-02 · Nasdaq earnings calendar 2026-11-02 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical

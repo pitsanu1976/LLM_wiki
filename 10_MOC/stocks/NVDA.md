@@ -35,12 +35,11 @@ related:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-10-29 (ปิด 213.66, −0.80%, SIP, ดึง 22:36Z)** · AH 22:21Z = **210.40** (lo 210.06) · **ไม่พบข่าวเฉพาะตัว NVDA ในวันที่ 29 ต.ค.** — ที่อ่อนใน AH = INTC guide spillover (Reuters อ้าง Rosenblatt)
-**Relative strength:** 1D −0.80% vs SMH −1.06% = **ไม่ได้อ่อนกว่ากลุ่มเมื่อวาน** แต่ **1W +0.68% vs SMH +7.32% = ตามกลุ่มอยู่ 6.6 pp** ← นี่คือจุดที่ต้องใช้จริง
-**งบ Q3 FY27 = 2026-11-17 ยืนยันจากบริษัท** (ประกาศ ~20:20 UTC, call 14:00 PT/22:00 UTC) — **ปฏิทิน Nasdaq ระบุ 18 พ.ย. = estimated, ใช้ 17 พ.ย.** · guide Q3 = $108.0B ±2%
-**XD ถัดไปยังไม่ประกาศ** (ล่าสุด 2026-09-10 $0.25) ⇒ ไม่มี XD ในกรอบถือ
-**Sentiment: Bearish-narrow ระยะสั้น / demand ยังไม่พัง** — งบ 17 พ.ย. = binary ที่อยู่ในกรอบถือ
-ที่มา: nvidianews.nvidia.com (2026-10-28) · Reuters 2026-10-29 · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
+**2026-11-02 (ปิด 202.06, −1.26%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W −6.45% · 1M −13.63% · ATR14 **3.15%** (ต่ำสุดพอใส่ไม้เต็มเพดาน)
+**งบ Q3 FY27 = 2026-11-17 ยืนยันจากบริษัท** (ผล ~20:20 UTC, call 22:00 UTC) — primary = NVIDIA PR 2026-10-28 · guide Q3 $108B ±2%, outlook ไม่นับ China data-center
+**ไม่มี XD ในกรอบ** (ล่าสุด 2026-09-10 $0.25) · **คะแนนแคทาทิสต์ N = 6/10** (สูงสุดในลิสต์ 10 ชื่อ — แคทาทิสต์มีวัน+primary เดียว; ถูกจำกัดที่ 6 เพราะ sentiment ธีม Bearish)
+**Sentiment: Bearish-narrow ระดับธีม / demand ยังไม่พัง** — งบ 17 พ.ย. = binary ที่อยู่ในกรอบถือ (gap ไม่ใช่ trend)
+ที่มา: Alpaca SIP bars 2026-11-02 · NVIDIA PR 2026-10-28 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical

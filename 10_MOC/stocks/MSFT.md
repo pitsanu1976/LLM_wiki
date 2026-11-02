@@ -34,12 +34,11 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-10-29 (ปิด 530.14, −0.16%, SIP consolidated, ดึง 22:36Z) — gap 543.56 หลังงบหายหมดระหว่างวัน** · AH 22:21Z = **528.97** (hi 532.91 / lo 524.15)
-**เหตุผลที่ระบุได้:** (ก) แผนออกหุ้นกู้ **$25B** มีดีมานด์ล้น (Bloomberg 29 ต.ค.) ⇒ ตลาดเริ่มคิดต้นทุนทุนของ AI buildout กับ MSFT (ข) ตลาดโฟกัส capex เร่งใน **2H FY27** (William Blair: Q2 >$50B + component inflation) (ค) commercial bookings **−11% cc**
-**Analyst หลังงบ:** BofA คง Buy ขึ้น TP **$630** (จาก 600) · Jefferies คง Buy TP **$650** (แหล่งทุติยภูมิ = สื่อสรุป brokernote)
-**XD ปันผล: 2026-11-19 $0.98/หุ้น** (declared 2026-09-15, record 11/19, pay 12/10 — Nasdaq dividends API) ⇒ อยู่ในกรอบถือ ต้องไม่ตีความราคาที่ถูกหักว่าเป็นขาดทุน
-**Sentiment: Neutral (narrow)** — งบแข็ง (Azure +48%, RPO $677B) แต่การก่อหนี้ + capex 2H ทำให้ multiple ไม่ได้ต่อ
-ที่มา: Invezz 2026-10-29 · Proactive/Yahoo 2026-10-29 · Bloomberg wrap 29 ต.ค. · Alpaca SIP bars — รายงานเต็ม `workspace/reports/news/2026-10-30-DAILY.md`
+**2026-11-02 (ปิด 507.12, −2.83%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W −4.78% · 1M −2.01% · ATR14 **2.52%** (ต่ำสุดในธีม)
+**ไม่มี earnings ในกรอบถือ** (งบถัดไป ~ก.พ. 2027) · **XD ปันผล 2026-11-19 $0.98** (declared 2026-09-15, pay 12/10, Nasdaq dividends API) = หักราคา ~0.19% แบบกลไก ไม่ใช่ sentiment
+**คะแนนแคทาทิสต์ N = 4/10** — ต่ำเป็นอันดับสองในลิสต์ เพราะไม่มีวันนัดในกรอบ + เป็นฝ่ายจ่าย capex ที่ตลาดกำลังลงโทษ (1D −2.83% แรงกว่าดัชนี)
+**Sentiment: Bearish ระดับธีม / Neutral-narrow เฉพาะตัว** — งบ 28 ต.ค. แข็ง (Azure +48%, RPO $677B) แต่การก่อหนี้ $25B + capex 2H FY27 กด multiple
+ที่มา: Alpaca SIP bars 2026-11-02 · Nasdaq dividends API 2026-11-02 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
 <!-- agent:news:end -->
 
 ## 📈 Technical
