@@ -5,13 +5,14 @@ status: active
 ticker: GDDY
 agent: leader
 created: 2026-11-02
-updated: 2026-11-03
+updated: 2026-11-04
 tags:
   - moc
   - ticker/GDDY
 related:
   - "[[2026-11-02]]"
   - "[[2026-11-03]]"
+  - "[[2026-11-04]]"
   - "[[decisions]]"
   - "[[trading-finance-moc]]"
 aliases:
@@ -22,11 +23,11 @@ aliases:
 # GDDY — GoDaddy
 
 ## Snapshot
-| | |
+|||
 |---|---|
 | Sector | Internet infrastructure — domain registry / hosting / SMB tools |
-| Watchlist status | **มีคำสั่งค้าง** buy 1.35 @113.60 · DAY (re-arm #2) · filled 0 |
-| ความเห็นล่าสุด | ไม้เดียวที่ armed ในบัญชี `PA3ZME9WF` ($1,000) · risk $9.79 (0.979%) · R:R 2.50 · stop 106.35 = 1.48×ATR |
+| Watchlist status | **ถือจริง (OPEN)** 1.35 หุ้น @ 113.08 · fill 2026-11-03 14:37Z |
+| ความเห็นล่าสุด | ไม้เดียวในบัญชี `PA3ZME9WF` ($1,000.50) · risk $9.09 (0.909%) · R:R 2.77 · stop 106.35 = 1.32×ATR14 5.08 · mark 113.45 (+$0.50) |
 
 *(ส่วนนี้เป็นของ Leader)*
 
