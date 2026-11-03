@@ -3,7 +3,7 @@ title: Journals — MOC
 type: moc
 status: active
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-11-03
 tags:
   - moc
   - domain/journal
@@ -30,6 +30,9 @@ aliases:
 - [[2026-10-23]] — **NVDA stop 212.20 = −0.80R** · DAILY 0 ไม้
 - [[2026-10-25]] — ปิด TSM · เขียน journal + อัปเดต ledger xlsx
 - [[2026-10-29]] — **อนุมัติ NVDA 94 @211** (stop 201 / TP 243.37) · MSFT +$325.79
+- [[2026-10-30]] — HOLD · 0 ไม้ใหม่ · NVDA ยังไม่ fill
+- [[2026-11-02]] — **เปลี่ยนบัญชีเป็น PA3ZME9WF $1,000 (rev8)** · GDDY rev3 armed
+- [[2026-11-03]] — GDDY re-arm #2 · 0 ไม้ใหม่ (ตกที่คะแนน)
 
 ## กติกา
 
