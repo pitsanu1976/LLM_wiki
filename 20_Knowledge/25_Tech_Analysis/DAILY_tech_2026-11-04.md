@@ -109,4 +109,13 @@ tags:
 ## ข้อมูลที่ดึงไม่ได้
 Yahoo chart + options = HTTP 429 ทั้งหมด (ทดแทน cross-check ด้วย stockanalysis 3 ชื่อสำเร็จ; อีก 7 ชื่อเหลือแหล่งเดียว) · NBBO/spread ปิดตลาด · AH ใน IEX feed มีแค่ AMD/CEG/AMZN และบางมาก (AMD 12,506 หุ้น) ใช้ตัดสินไม่ได้ · วันงบ CEG/AMAT/AVGO มาจาก Nasdaq calendar (ทุติยภูมิ) · ไม่ได้ทดสอบ divergence
 
+## คะแนน T (ADDENDUM 2026-11-04, rubric เดิมของทีม)
+
+median **6** (ช่วง 5–7; รอบ 11-03 median 7 ช่วง 6–8 ⇒ **−14.3%**)
+**MSFT 7** (6.65, trend 9.00 = 1W ยังขึ้น wRSI 63.1 wHist +5.29) · **AMZN 7** (6.64, structure 7.50 = entry 245.34 ห่างแนวรับ 242.28 0.37 ATR, ทดสอบ 3 ครั้ง) · TSM 6 (6.38) · ETN 6 (6.21) · AVGO 6 (5.99) · CEG 6 (5.94) · AMAT 6 (5.83) · NVDA 6 (5.68) · AMD 5 (5.40) · **ANET 5 (4.55, NO PLAN)**
+
+**ceil ของรอบ = 7.89** เพราะ (ก) net R:R 2.00–2.01 ทุกชื่อ ⇒ มิติ R:R = 5.73/10 = 1.44 จาก 2.50 คะแนน (ข) entry ทุกตัวใต้ MA10/EMA20 ⇒ obstacle แรก 0.05–0.92 ATR ⇒ s3 = 0.5/3 ทั้ง 10 แถว (ค) 1D ใต้ MA20+MA50 ครบ 10/10 ⇒ trend anchor ≤6
+รอบนี้ **R:R เป็นค่าคงที่** ⇒ อันดับตัดสินด้วย structure (3.50–7.50) + volume (2.50–10.00) — ตรงข้ามรอบ 11-03 ที่ R:R (0.98–2.95) เป็นตัวแยกอันดับ
+รายงานเต็ม: `workspace/reports/tech/2026-11-04-DAILY-scores.md`
+
 [[trading-finance-moc]]
