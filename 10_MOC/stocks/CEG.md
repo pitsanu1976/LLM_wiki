@@ -42,7 +42,10 @@ _ยังไม่มี block — ข้อมูลล่าสุดอย�
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-_ยังไม่มี block — งบล่าสุดอยู่ใน [[CEG_fin_2026-Q2]]_
+- งวด: TTM ถึง 2026-06-30 (10-Q Q2, unaudited) · รายได้ 31,270M · NI 3,465M · FCF 295M (margin 0.9%)
+- Valuation: P/E 25.49 (263.40 ÷ 10.33) vs median 23.00 · EV/EBITDA 14.75 vs 11.12 · P/FCF 316x
+- จับตา: **VETO ฝั่ง finance (คะแนน 4.0)** — FCF 295M, dilution 6.85% YoY, net debt 24,003M, D/E 76.4%; งบ 2026-11-09 ก่อนเปิด; XD 2026-11-16 $0.4265
+- เต็ม: [[DAILY_2026-11-04_fin]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision

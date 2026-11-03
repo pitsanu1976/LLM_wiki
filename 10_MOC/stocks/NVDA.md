@@ -53,12 +53,10 @@ RSI14 **42.27** · MACD hist **−1.03** (ดีขึ้นจาก −1.12) �
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-**งบล่าสุด:** Q2 FY2027 (ended 2026-07-26, unaudited) — รายได้ 96.22B, NI 59.69B, EPS 2.46, GM 74.98%, FCF 21.40B
-**TTM:** รายได้ 302.97B · NI 192.88B · EPS 7.91 · FCF 127.01B · net cash +23.61B · D/E 0.17
-**Valuation (ราคาปิด 2026-10-29 = 213.66):** P/E 27.0 (213.66/7.91) · fwd 17.65 · median 5 ปี 51.55 (**−48%**) · EV/EBITDA 25.42 · FCF yield 2.46%
-**ต้องจับตา:** 1) EPS TTM มีกำไรขายเงินลงทุน ~$1.06/หุ้น → core P/E ~31.2x 2) receivables +54.9% QoQ ขณะรายได้ +17.9% QoQ (AR days 45.4→59.6), OCF/NI 0.70 3) งบ Q3 FY2027 **2026-11-17** (ยืนยันจาก NVIDIA IR 28 ต.ค. 2026)
-**คำตัดสิน (มุมการเงิน):** PASS · อันดับ 1 ใน shortlist 8 ชื่อ
-ไฟล์เต็ม: [[DAILY_2026-10-30_fin]] · รายงาน: `reports/finance/2026-10-30-DAILY.md`
+- งวด: TTM ถึง 2026-07-26 (10-Q Q2 FY27, unaudited) · รายได้ 302,970M · NI 192,880M · FCF 127,006M (41.9%)
+- Valuation: P/E 26.14 (206.69 ÷ 7.91) = ต่ำกว่า median ตัวเอง 54.60 ถึง −52% · EV/EBITDA 24.68 vs 46.88
+- จับตา: GM FY2026 71.1% ต่ำสุดใน 3 ปี (TTM ฟื้น 74.7%) · OCF/NI 0.70 · งบ 2026-11-17 หลังปิด
+- เต็ม: [[DAILY_2026-11-04_fin]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
