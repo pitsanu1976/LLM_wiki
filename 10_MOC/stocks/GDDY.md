@@ -23,7 +23,7 @@ aliases:
 # GDDY — GoDaddy
 
 ## Snapshot
-|||
+| | |
 |---|---|
 | Sector | Internet infrastructure — domain registry / hosting / SMB tools |
 | Watchlist status | **ถือจริง (OPEN)** 1.35 หุ้น @ 113.08 · fill 2026-11-03 14:37Z |
@@ -60,9 +60,18 @@ _ยังไม่มีข้อมูล — Finance agent จะเติม
 - ส่งใหม่ **`9d3c7071`** 1.35 @113.60 · **DAY (หมดอายุ 3 พ.ย. 21:00Z)** · stop 106.35 = **1.48×ATR 4.892** · target 131.74
 - บันทึก: [[2026-11-03]]
 
-### สถานะปัจจุบัน (2026-11-03)
-- **ไม่มี position** · มีคำสั่งค้าง 1 ใบ (DAY — ต้อง re-arm ทุก session เพราะ fractional บังคับ DAY)
-- ความเสี่ยงค้าง: ถ้าเปิด gap ต่ำกว่า 106.35 → fill ที่ราคาเปิด (ใต้ stop) → watchdog ขายที่ tick ถัดไป (≤15 นาที) ขาดทุนจริง ≈ slippage
+### 2026-11-03 — ✅ FILLED: 1.35 @ 113.08 (ไม้เปิดจริงไม้แรกของบัญชี)
+- order `9d3c7071` (1.35 @113.60 · DAY · simple) **fill 2026-11-03 14:37:25Z ที่ 113.08** — ดีกว่า limit $0.52 · mv $153.16 · mark 113.45 (**+$0.50**)
+- **ไม่มี legs ที่ broker** (fractional บังคับ simple+DAY) ⇒ stop **106.35** / target **131.74** เป็น manual ใน `ingest/manual_stops.json` + watchdog `fractional-stop-watchdog` (`*/15 13-21 จ.-ศ.`) — `--status` ยืนยัน `held=1.35 stop=106.35 target=131.74`
+- ตัวเลขจริงหลัง fill: stop 6.73 = **1.32×ATR14 5.08** · risk **$9.09 (0.909% ของ $1,000.50)** · **R:R 2.77** · weight **15.31%** ≤20% · cash เหลือ $847.34 ≥ reserve $200
+- รอบ DAILY 2026-11-04: คัด 10 ชื่อ AI/semis ใหม่ — **ไม่มีชื่อใดผ่านเกตคะแนน** ⇒ **ไม่เพิ่มไม้** (GDDY ยังเป็นไม้เดียว, 2 ช่องว่าง)
+- **invalidation:** ปิด 1D < **106.35** → watchdog ขาย market ทั้งจำนวน · ทบทวนถึง **2026-12-15**
+- หมายเหตุ: block `agent:news` / `agent:tech` / `agent:finance` ของหน้านี้ยังว่าง — รอบนี้ใช้รายงานต้นทาง `reports/{news,tech,finance}/2026-11-04-DAILY.md` แทน (ไม่เดาแทน block ที่ว่าง)
+- บันทึก: [[2026-11-04]]
+
+### สถานะปัจจุบัน (2026-11-04)
+- **ถือ GDDY 1.35 @113.08** · stop 106.35 · target 131.74 · **1/3 ไม้**
+- ความเสี่ยงค้าง: ไม่มี broker-side stop — พึ่ง watchdog ทุก 15 นาที · gap เปิดต่ำกว่า 106.35 จะขายที่ tick ถัดไป (ยอมรับ slippage)
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล
@@ -74,5 +83,5 @@ _ยังไม่มีข้อมูล — Finance agent จะเติม
 
 ## เกี่ยวข้อง
 
-- [[2026-11-02]] · [[2026-11-03]] — วันที่ตัดสิน/ส่งคำสั่ง
+- [[2026-11-02]] · [[2026-11-03]] · [[2026-11-04]] — วันที่ตัดสิน/ส่งคำสั่ง/fill
 - [[trading-finance-moc]] · [[journals-moc]]
