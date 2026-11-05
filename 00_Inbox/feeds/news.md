@@ -3,8 +3,10 @@ title: "news.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-02 18:03 UTC
+source_sha256: 214da93f5563cd52
 tags:
   - source/feed
   - domain/trading
@@ -13,8 +15,8 @@ related:
 source: "workspace/raw/news.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/news.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
-> News feed — sentiment/ข่าวของ shortlist
+> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/news.md` (mtime 2026-11-02 18:03 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> News feed — ข่าว/sentiment ธีมของ shortlist
 
 # raw/news.md — News Agent Feed (outstanding stocks)
 

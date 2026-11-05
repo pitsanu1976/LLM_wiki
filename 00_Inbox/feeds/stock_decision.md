@@ -3,8 +3,10 @@ title: "stock_decision.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-03 22:58 UTC
+source_sha256: 4fe6a7b7ce83439a
 tags:
   - source/feed
   - domain/trading
@@ -13,8 +15,8 @@ related:
 source: "workspace/ingest/stock_decision.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
-> ตาราง DEC-xxxx — ผลตัดสินต่อชื่อ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-03 22:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> ตาราง DEC-* — ผลตัดสินต่อชื่อ
 
 # Stock Decision Log
 
@@ -167,6 +169,39 @@ source: "workspace/ingest/stock_decision.md"
 - **ANET — REJECT:** ผ่านเกตตัวเลข แต่ structure ต่ำสุด (entry ห่างแนวรับ 0.93 ATR, แนวรับทดสอบครั้งเดียว) + งบ 3 พ.ย. หลังปิด = gap ก่อนไม้จะได้ทำงาน
 - **corr (leader คำนวณเอง d60 ถึง 2026-11-02):** กับ GDDY = −0.503 (ETN) ถึง +0.093 (MSFT) ⇒ ไม่มีตัวชนเกต · **เกตนี้เป็นแบบด้านเดียว (positive ≤ 0.5)**: ค่าติดลบ = ช่วยกระจายความเสี่ยง ไม่ใช่ความเสี่ยงซ้ำ (ETN −0.503 จึงผ่าน) · ภายในลิสต์ 25 คู่ ≥0.5 (สูงสุด NVDA–TSM 0.867 d30) ⇒ ถ้ามีไม้ในอนาคต ชุดที่ถือร่วมได้คือ AMZN+CEG+PLTR (max 0.386) หรือ AMZN+CEG+AMAT (max 0.296)
 - **จะเปลี่ยนใจเมื่อ:** (1) avg ของชื่อใดขยับถึง 7.5 หลังงบ 3–5 พ.ย. (2) ราคาปิดยืนเหนือระดับ trigger ที่ arm ไว้ (ดูหัวข้อ `## Armed levels 2026-11-04` ใน `trade_planning.md`) (3) NVDA ปิด ≥206.00 แล้วย่อ ≤203.00 ก่อนงบ 17 พ.ย.
+
+## รอบ DAILY-2026-11-04
+
+- ข้อมูล: ปิด **2026-11-03 (SIP)** · `reports/{news,tech,finance}/2026-11-04-DAILY.md` + `-scores.md` (mtime 22:42:12Z / 22:53:04Z / 22:52:39Z · scores 22:57:20Z / 22:55:39Z, 2026-11-03)
+- equity ณ ตัดสิน: **$1,000.50** (Alpaca GET 2026-11-03 22:30:56Z) · risk/ไม้ $10 · เพดาน/ตัว $200 · reserve $200 · **positions 1 (GDDY 1.35 @113.08)** · open orders 0 · เหลือ 2 ช่อง
+- เกตที่ใช้: avg ≥7.5 · tech ≥7 · finance ≥7 · R:R (T2, net) ≥2.0 · stop ≥1 ATR · corr ≤0.5 กับไม้ที่ถือ (GDDY) · มติห้ามเข้าไม้ก่อน 2026-11-04 **หมดอายุแล้วรอบนี้**
+- **id convention:** `NEWS-20261104-NN` = ลำดับในรายงาน news · `TECH-20261104-NN` = ตามไฟล์ tech-scores (ลำดับต่างจาก news — จับคู่ด้วย ticker) · **`FIN-20261104-NN` leader เป็นผู้ออกเองตามลำดับตาราง verdict ของ finance (desk ไม่ได้ออก id รอบนี้)**
+- คอลัมน์ `finance easy exp` = **ต่อสินทรัพย์ 100 · หนี้ = Total liabilities** จาก `scripts/fundamentals_easy.py` (SEC XBRL, TTM) run 2026-11-03 23:0x UTC → `data/fundamentals-easy-2026-11-03.json` · **TSM ดึงไม่ได้** (foreign private issuer ไม่มี tag `Assets` ใน SEC XBRL) · **AVGO ไม่มี NetIncome TTM** ในสคริปต์ · AMD ยังเป็นงวด 2026-06-27 (10-Q Q3 ที่ยื่น 3 พ.ย. ยังไม่เข้า companyfacts)
+
+| decision_id | round | date | stock | news_id | finance_id | tech_id | N | F | T | avg | ผลคัด | ตกเพราะ | verdict | plan_id | finance easy exp | revision_of |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| DEC-20261104-01 | DAILY-2026-11-04 | 2026-11-04 | NVDA | NEWS-20261104-01 | FIN-20261104-01 | TECH-20261104-08 | 9 | 8.5 | 6 | 7.83 | ตก | **tech 6 < 7** (volR 0.91x, trend 4.50, entry ห่าง double bottom 200.92 = 0.96 ATR) — avg ผ่าน 7.83 และ finance ผ่าน 8.5 | **REJECT** | — | หนี้ 28.5 · ทุน 71.5 · กำไร/100 47.9 · ดอก/100 0.13 ‖ moat: CUDA + NVLink/networking lock-in, net cash | — |
+| DEC-20261104-02 | DAILY-2026-11-04 | 2026-11-04 | AMD | NEWS-20261104-02 | FIN-20261104-09 | TECH-20261104-09 | 5 | 5.5 | 5 | 5.17 | ตก | **finance VETO 5.5** (P/E 105.04, EV/EBITDA 75.07, หนี้ +119% ในไตรมาส, FCF Q3 4%) · bonus: news 5 (งบออกแล้ว AH +7.64%) | **REJECT** | — | หนี้ 20.4 · ทุน 79.6 · กำไร/100 6.8 · ดอก/100 0.15 ‖ moat: x86 + Instinct (hyperscaler-qualified) แต่ตามหลัง NVDA 2 อันดับ | — |
+| DEC-20261104-03 | DAILY-2026-11-04 | 2026-11-04 | ANET | NEWS-20261104-03 | FIN-20261104-04 | TECH-20261104-10 | 5 | 7.5 | 5 | 5.83 | ตก | **tech 5 + NO PLAN** (AH 192.49 → R:R ที่ทำได้จริง 0.43–1.12 <2.0) | **REJECT** | — | หนี้ 37.6 · ทุน 62.4 · กำไร/100 16.2 · ดอก/100 n/a ‖ moat: EOS + hyperscaler qualification, ไม่มีหนี้ | — |
+| DEC-20261104-04 | DAILY-2026-11-04 | 2026-11-04 | ETN | NEWS-20261104-04 | FIN-20261104-07 | TECH-20261104-04 | 5 | 6.5 | 6 | 5.83 | ตก | avg 5.83 · F 6.5 (D/E 99.5%, net debt $20.1B) · N 5 (งบออกแล้ว 3 พ.ย., XD 10 พ.ย.) | **REJECT** | — | หนี้ 63.9 · ทุน 36.1 · กำไร/100 7.0 · ดอก/100 0.66 ‖ moat: Electrical Americas installed base + backlog (orders +39%) | — |
+| DEC-20261104-05 | DAILY-2026-11-04 | 2026-11-04 | CEG | NEWS-20261104-05 | FIN-20261104-10 | TECH-20261104-06 | 7 | 4.0 | 6 | 5.67 | ตก | **finance VETO 4.0** (FCF $295M = 0.9%, P/FCF 316, หุ้น +6.85% YoY) | **REJECT** | — | หนี้ 67.1 · ทุน 32.5 · กำไร/100 2.0 · ดอก/100 0.69 ‖ moat: nuclear fleet ใน PJM (barrier สูง) แต่ FCF เกือบศูนย์ | — |
+| DEC-20261104-06 | DAILY-2026-11-04 | 2026-11-04 | AMAT | NEWS-20261104-06 | FIN-20261104-05 | TECH-20261104-07 | 7 | 7.0 | 6 | 6.67 | ตก | avg 6.67 · tech 6 (volume ต่ำสุด volR 0.75x, trend 2.00) · งบ 12 พ.ย. gap 11.13% > stop 6.60% | **REJECT** | — | หนี้ 41.1 · ทุน 58.9 · กำไร/100 17.8 · ดอก/100 0.62 ‖ moat: process-equipment installed base + service annuity | — |
+| DEC-20261104-07 | DAILY-2026-11-04 | 2026-11-04 | AVGO | NEWS-20261104-07 | FIN-20261104-06 | TECH-20261104-05 | 6 | 6.5 | 6 | 6.17 | ตก | avg 6.17 · F 6.5 (SBC 9.5%, net debt $35.4B) · N 6 (งบ 10 ธ.ค. = ท้ายกรอบ) | **REJECT** | — | หนี้ 86.7 · ทุน 13.3 · กำไร/100 n/a · ดอก/100 1.71 ‖ moat: custom ASIC + VMware switching cost แต่ leverage/SBC สูง | — |
+| DEC-20261104-08 | DAILY-2026-11-04 | 2026-11-04 | MSFT | NEWS-20261104-08 | FIN-20261104-03 | TECH-20261104-01 | 4 | 7.5 | 7 | 6.17 | ตก | **news 4** — ไม่มี catalyst ในกรอบ (เหลือ XD $0.98 = 0.19%); T 7 ผ่าน, F 7.5 ผ่าน ⇒ **ขาดแค่ N** | **REJECT** | — | หนี้ 39.6 · ทุน 60.4 · กำไร/100 18.3 · ดอก/100 0.41 ‖ moat: Azure + enterprise switching cost; เป็นฝ่ายจ่าย capex ($135.9B) | — |
+| DEC-20261104-09 | DAILY-2026-11-04 | 2026-11-04 | AMZN | NEWS-20261104-09 | FIN-20261104-08 | TECH-20261104-02 | 4 | 6.0 | 7 | 5.67 | ตก | **news 4** (ไม่มี catalyst) + **F 6.0** (FCF −$46.9B, net debt $190.6B); T 7 ผ่าน | **REJECT** | — | หนี้ 50.7 · ทุน 49.3 · กำไร/100 6.2 · ดอก/100 0.28 ‖ moat: AWS scale + logistics; FCF ติดลบเพราะ capex $215B | — |
+| DEC-20261104-10 | DAILY-2026-11-04 | 2026-11-04 | TSM | NEWS-20261104-10 | FIN-20261104-02 | TECH-20261104-03 | 5 | 8.0 | 6 | 6.33 | ตก | avg 6.33 · N 5 (ไม่มีวัน catalyst ยืนยัน) · T 6 (volR 0.77x, MACD hist −3.147) | **REJECT** | — | **ดึงไม่ได้** (foreign private issuer — ไม่มี tag `Assets` ใน SEC XBRL) ‖ moat: pure-play foundry process leadership (GM 65.8%, ROIC 60.3%) | — |
+
+## Leader comments — รอบ DAILY-2026-11-04
+
+- **ผลรวม: 0 ไม้ใหม่ · 0 SELECT · REJECT 10 · GDDY HOLD** — ไม่มีชื่อใดผ่านเกตคะแนนทั้ง 3 ข้อพร้อมกัน · **ไม่มีการส่ง/แก้/ยกเลิกออเดอร์ในรอบนี้**
+- **เพดานเชิงกลไกที่ทำให้ avg พังทั้งลิสต์:** ธีมดีด 3 พ.ย. ทั้งลิสต์ (+1.55% ถึง +7.00%) แต่ **10/10 ปิดใต้ MA20 และ MA50 · MACD hist ติดลบ 10/10 · volR 0.75–0.91 ใน 7/10** ⇒ tech ประกาศเพดานตัวเองที่ 7 · ขณะที่ news ให้ N ≥7 ได้เฉพาะชื่อที่ **มีตัวกระตุ้นที่ยังไม่เกิดในกรอบ** (NVDA 9 · CEG 7 · AMAT 7) — และ 2 ใน 3 ถูกปิดด้วย finance VETO (CEG) หรือ gap งบที่ stop รับไม่ได้ (AMAT)
+- **NVDA — REJECT (ใกล้สุด แต่ตกที่ tech ไม่ใช่ที่ราคา):** avg **7.83 ผ่าน** · F 8.5 ผ่าน · **T 6 ไม่ผ่าน** ⇒ ตกเกตเดียว. และ PM test ซ้ำอีกชั้น: งบ 17 พ.ย. gap ใหญ่สุด 252 แท่ง **6.30%** > **stop 3.54%** ⇒ ถ้าเข้าต้องออกก่อนงบ ⇒ กรอบถือจริง ~2 สัปดาห์ ไม่ใช่ 2–6 สัปดาห์. **armed level:** entry 206.51–207.24 · stop 199.90 · T2 222.19 · 0.967 หุ้น · risk $6.74 · **trigger: ปิด 1D ≥212.15 (MA20) + volR>1.0** · invalidated ปิด <200.92
+- **MSFT / AMZN — REJECT ที่ news:** T 7 ผ่านทั้งคู่ (ชื่อเดียวในลิสต์ที่ได้ ≥7) และ F ผ่าน/เกือบผ่าน แต่ **N 4** เพราะไม่มี catalyst ที่มีวันในกรอบเลย — MSFT เหลือแค่ XD $0.98 (0.19%), AMZN ไม่มีอะไร ⇒ "หุ้นดีแต่ไม่มีตัวเร่ง" ไม่ใช่เหตุผลพอสำหรับไม้ 2–6 สัปดาห์. armed level ครบ (MSFT 514.51–517.84/501.50/551.15 · AMZN 243.85–245.34/235.50/265.34)
+- **TSM / AMAT — REJECT ที่ avg + tech:** finance ให้สูงสุด/สูง (8.0 / 7.0) แต่ T 6 ทั้งคู่ (volR 0.77x / 0.75x = แรงซื้อไม่มีปริมาณ) และ N 5–7 ⇒ avg 6.33 / 6.67. **AMAT ยังมีงบ 12 พ.ย. ที่ gap 11.13% > stop 6.60%** ⇒ แม้ผ่านคะแนนก็ต้องออกก่อนวันงบ
+- **CEG / AMD — REJECT (VETO):** ตัวเลขเงินปิดประตูเอง — CEG FCF 0.9% + P/FCF 316 + หุ้นเพิ่ม 6.85%/ปี; AMD P/E 105 + หนี้ +119% ในไตรมาส + FCF Q3 เหลือ 4% ⇒ **ทั้งคู่เป็น "ข่าวดีที่ราคาเต็มไปแล้ว"** ไม่ใช่ของถูกที่ตลาดมองข้าม
+- **ANET — REJECT (geometry):** Q4 guide สูงกว่า consensus 8–11% คือตัวเลขที่ดีที่สุดของวัน แต่ AH 192.49 (+13.29%) ทำให้ R:R ที่ทำได้จริง **0.43–1.12** ⇒ ไม่มีไม้ ไม่ว่าชอบบริษัทแค่ไหน
+- **corr (leader คำนวณเอง d60 ถึง 2026-11-03):** กับ GDDY = **−0.510 (ETN)** ถึง **+0.061 (MSFT)** ⇒ **ไม่มีตัวใด ≥ +0.5** ⇒ รอบนี้ correlation **ไม่ใช่**ตัวตัดสิน (ต่างจาก 30 ต.ค. ที่ตัด 4 ชื่อ) · เกตเป็นแบบด้านเดียว: ค่าลบ = กระจายความเสี่ยง ไม่ใช่ไม้ซ้ำ
+- **จะเปลี่ยนใจเมื่อ:** (1) ชื่อใดได้ **avg ≥7.5 พร้อม T ≥7** — ทางเดียวที่ทำได้จริงคือปิด 1D เหนือ MA20 (ทั้ง 10 อยู่ใต้) หรือ news ได้ catalyst ใหม่ที่มีวัน+primary สำหรับ MSFT/AMZN/TSM (2) NVDA ปิด ≥212.15 ด้วย volR >1.0 **ก่อน** งบ 17 พ.ย. (3) finance ปลด VETO CEG (FCF TTM >$1.5B หลังงบ 9 พ.ย.) หรือ AMD (FCF m ≥15% สองไตรมาส)
 
 ## กติกาการอัปเดต
 

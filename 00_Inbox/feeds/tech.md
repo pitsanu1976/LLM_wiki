@@ -3,8 +3,10 @@ title: "tech.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-01 13:20 UTC
+source_sha256: 643a7c950ae817f8
 tags:
   - source/feed
   - domain/trading
@@ -13,8 +15,8 @@ related:
 source: "workspace/raw/tech.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/tech.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
-> Technical feed — setup/stop/target ของ tech desk
+> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/tech.md` (mtime 2026-11-01 13:20 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> Technical feed — setup/entry/stop/target/ATR/corr
 
 # raw/tech.md — Technical Agent Feed
 

@@ -3,8 +3,10 @@ title: "finance.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-01 13:09 UTC
+source_sha256: 56f8638d7365df2f
 tags:
   - source/feed
   - domain/trading
@@ -13,8 +15,8 @@ related:
 source: "workspace/raw/finance.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/finance.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
-> Finance feed — งบ/valuation ของ finance desk
+> 🔁 สำเนาอัตโนมัติจาก `workspace/raw/finance.md` (mtime 2026-11-01 13:09 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> Finance feed — งบ/valuation/FCF
 
 # raw/finance.md — Finance Agent Output (schema v2)
 

@@ -3,8 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-03 22:59 UTC
+source_sha256: 9c26d819a4a944d8
 tags:
   - source/feed
   - domain/trading
@@ -13,18 +15,19 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
-> แผนเทรดที่ leader ส่งจริง (order id)
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-03 22:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
 
-- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → DAILY-2026-11-03
+- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → DAILY-2026-11-03 → DAILY-2026-11-04
 - แหล่งข้อมูล: `raw/news.md` (09:57–10:02 UTC) · `raw/finance.md` (10:05 UTC) · `raw/tech.md` (10:08 UTC) — จับคู่ด้วย `news_id`
 - ราคาอ้างอิง: ปิด **Fri 2026-10-30 16:00 ET / 20:00 UTC** (SIP) · ไม่มี session ใหม่ระหว่าง 30 ต.ค. → 2 พ.ย. ⇒ ข้อมูลยังเป็นชุดล่าสุด · ตลาดเปิด **Mon 2026-11-02 09:30 ET = 14:30 UTC / 21:30 ICT** (DST สหรัฐสิ้นสุด 1 พ.ย. ⇒ เปิด/ปิดเร็วขึ้น 1 ชม. จากสัปดาห์ก่อน)
 - บัญชี: Alpaca paper **`PA3ZME9WF`** — equity **$1,000.00** · cash $1,000.00 · positions 0 · open orders 1 (GET 2026-11-01 22:31:12 UTC)
 - **การตัดสินใจต่อหุ้นทุกตัว (score + verdict + เหตุผล): `ingest/stock_decision.md`** — ทุกแถว plan_id ในไฟล์นี้ต้องมีแถว `SELECT` ที่นั่น (ตรวจด้วย `scripts/reconcile_journal.py`)
 - กติกา: risk/ไม้ ≤1% = **$10.00** · เพดาน/ตัว ≤20% = **$200.00** · reserve ≥20% = $200 · max 3 ไม้ · R:R ≥2.0 · stop ≥1 ATR · stop ก่อนเข้าเสมอ
-- **สถานะ: SENT (fractional) — order `9d3c7071-0d15-4f9e-81c1-fc6c3998699a` ACCEPTED · 1.35 หุ้น @113.60 · TIF=DAY · expires 2026-11-03 21:00 UTC** (armed สำหรับ session อังคาร 3 พ.ย. — fractional บังคับ DAY, ต้อง re-arm ทุก session)
+- **สถานะ: ✅ FILLED — order `9d3c7071-0d15-4f9e-81c1-fc6c3998699a` · 1.35 หุ้น · fill avg 113.08 (ดีกว่า limit 113.60 $0.52) · session 2026-11-03** · position เปิดจริง mv $153.16 · uPL +$0.50 (GET 2026-11-03 22:30:56Z) · **ไม่มี legs ที่ broker (fractional simple DAY)** ⇒ stop 106.35 / target 131.74 เป็น manual + watchdog
+- **re-arm:** ไม่ต้อง — fill แล้วก่อน DAY หมดอายุ · order `858c1f0a` (re-arm #2) = EXPIRED 2026-11-02 21:00Z filled 0 มาก่อนหน้า
 - **re-arm #2 (2026-11-02 22:32 UTC):** order ก่อนหน้า `858c1f0a` = **EXPIRED** 2026-11-02 21:00Z · **filled 0** — low 2 พ.ย. **115.93** ไม่แตะ 113.60 (ปิด 2 พ.ย. **116.61**, o 118.87 / h 121.48) ⇒ แผนยังไม่ถูก invalidate (ปิด > stop 106.35) และยังอยู่ก่อน deadline 2026-11-07 · ATR14 อัปเดต **4.892** ⇒ stop 7.25 = **1.48×ATR** (ยัง ≥1 ATR ✓)
 - **stop + target เป็น manual ทั้งคู่**: ไม่มี leg ที่ broker · ตั้งใน `ingest/manual_stops.json` — **SL 106.35 / TP 131.74** · watchdog `fractional-stop-watchdog` (cron `*/15 13-21 * * 1-5`) ตรวจทุก 15 นาทีขณะตลาดเปิด: ราคา ≤106.35 หรือ ≥131.74 → ขาย market ทั้งจำนวน
 - **rev3 แก้ 2 อย่างจาก rev2** (2026-11-01 22:33 UTC): (1) ยกเลิก order `67e075ae` 1.739 @115.00 (CANCELED, filled 0) (2) ส่งใหม่ 1.35 @113.60 พร้อม **stop 106.35** — เหตุผล: stop 110.80 ของ rev2 = 4.20 USD = **0.87×ATR14 4.84** = แคบกว่า noise 1 วัน (ผิดเกต "stop ≥1 ATR" ของบัญชี และผิดหลักห้ามตั้ง stop ให้แคบเพื่อรีด R:R) · 106.35 คือ stop โครงสร้างที่ tech desk ออกแบบเอง (ใต้ 94.02–110.90 cluster) = 7.25 = **1.50×ATR** · ผลคือ entry ต้องลงมาอยู่ในโซนของ tech (≤114.81 เพื่อให้ R:R ≥2 ที่ stop นี้)
@@ -184,3 +187,62 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - กับ GDDY (armed): d60 NVDA −0.212 · MSFT +0.093 · AMZN −0.029 · TSM −0.405 · AVGO −0.307 · CEG −0.254 · ETN −0.503 · AMAT −0.393 · PLTR +0.074 · ANET −0.440 ⇒ **ไม่มีตัวชนเกต ≥0.5** (ค่าที่ใกล้เส้นเป็นลบ)
 - ภายในลิสต์ d60: TSM–ETN 0.744 · TSM–AVGO 0.737 · NVDA–TSM 0.722 · TSM–AMAT 0.721 · ETN–ANET 0.779 · ETN–AMAT 0.719 · AVGO–AMAT 0.621 · AVGO–ETN 0.611 · MSFT–PLTR 0.593 · CEG–ETN 0.571 · NVDA–AVGO 0.569 · AMZN–ANET 0.346 · CEG–PLTR 0.069
 - ไฟล์ดิบ: `workspace/data/bars-2026-11-02-leader.json` (15 symbols, SIP daily 2026-06-01→2026-11-02)
+
+---
+
+# รอบ DAILY-2026-11-04 (rev5 · 2026-11-03 23:05 UTC)
+
+- ราคาอ้างอิง: ปิด **2026-11-03 (SIP)** · equity **$1,000.50** · cash $847.34 · **positions 1 (GDDY 1.35 @113.08)** · open orders 0 — GET 2026-11-03 22:30:56Z
+- **ผล: 0 ไม้ใหม่ (0 SELECT · REJECT 10)** — ไม่มีชื่อใดผ่านเกตคะแนนทั้ง 3 ข้อพร้อมกัน · **ไม่มีการส่ง/แก้/ยกเลิกออเดอร์ในรอบนี้**
+- รายละเอียดต่อชื่อ + leader comments: `ingest/stock_decision.md` §รอบ DAILY-2026-11-04 · memo: `reports/leader/2026-11-04-DAILY.md`
+- desk reports วันเดียวกัน (mtime): news **22:42:12Z** · tech **22:53:04Z** · finance **22:52:39Z** · news-scores **22:57:20Z** · tech-scores **22:55:39Z** — pull day 2026-11-03, bar ปิด 3 พ.ย.
+
+## Plan state — ไม้ที่ถืออยู่
+
+| plan_id | stock | สถานะ | order id | TIF / class | qty สั่ง | filled | entry จริง | SL (manual) | TP (manual) | re-arm | invalidated |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 | GDDY | **OPEN (filled)** | `9d3c7071-0d15-4f9e-81c1-fc6c3998699a` | DAY / simple (fractional) | 1.35 | **1.35 @113.08** | 113.08 | **106.35** (1.32×ATR14 5.08) | **131.74** (R:R 2.77) | 2 (ทั้งคู่ EXPIRED ก่อนหน้า) | ปิด 1D < **106.35** |
+
+- **ไม่มี legs ที่ broker** — fractional บังคับ `simple` + `DAY` ⇒ stop/target อยู่ที่ `ingest/manual_stops.json` และบังคับด้วย watchdog `fractional-stop-watchdog` (`*/15 13-21 * * 1-5`, job `e86652860dbf`)
+- risk ที่ใช้ **$9.09 = 0.909%** ของ equity · weight **15.31%** ⩽ 20% · cash เหลือ $847.34 ⩾ $200 · **เหลือ 2 ช่องจาก 3**
+
+## Armed levels 2026-11-05 (ระดับรอ trigger — **ไม่ใช่แผนที่อนุมัติ**)
+
+ทุกแถวมาจาก `reports/tech/2026-11-04-DAILY.md` · **ยังไม่ผ่าน score gate ⇒ ห้ามส่งออเดอร์จนกว่าคะแนนจะถึง 7.5 และ trigger ทำงาน**
+
+| ticker | limit (entry zone) | stop | T1 | T2 | R:R net T2 | qty | notional | risk | trigger ก่อนส่ง | invalidated เมื่อ |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| NVDA | 206.51–207.24 | 199.90 | 212.15 | 222.19 | 2.01 | 0.967 | $200 | $6.74 | **ปิด 1D ≥ 212.15 (MA20) + volR >1.0** ⇒ tech 6→7 · **ต้องออกก่อน 17 พ.ย.** | ปิด 1D < 200.92 |
+| MSFT | 514.51–517.84 | 501.50 | 533.25 | 551.15 | 2.01 | 0.387 | $200 | $5.69 | news 4→7 ต้องมี catalyst ที่มีวัน+primary | ปิด 1D < 504.96 |
+| AMZN | 243.85–245.34 | 235.50 | 254.60 | 265.34 | 2.01 | 0.818 | $200 | $7.44 | news 4→7 (เดิมไม่มี catalyst เลย) | ปิด 1D < 242.28 |
+| TSM | 398.49–401.18 | 384.00 | 414.76 | 436.04 | 2.01 | 0.500 | $200 | $7.92 | N 5→7 ต้องมีวันงบ/รายได้ที่ยืนยันได้ | ปิด 1D < 398.29 |
+| AMAT | 372.25–376.35 | 351.50 | 395.93 | 426.52 | 2.00 | 0.439 | $164 | $10.00 | tech 6→7 (volR 0.75x) · **ออกก่อน 12 พ.ย.** (gap 11.13% > stop 6.60%) | ปิด 1D < 372.80 |
+| ETN | 379.83–383.83 | 362.00 | 399.30 | 427.96 | 2.00 | 0.504 | $193 | $10.00 | F 6.5→7 ต้อง D/E ≤0.80 · XD 10 พ.ย. | ปิด 1D < 363.76 |
+| AVGO | 327.45–331.71 | 314.50 | 342.33 | 366.55 | 2.01 | 0.607 | $200 | $9.15 | tech 6→7 · **งบ 10 ธ.ค. = วันสุดท้ายกรอบ** (gap 14.66% > stop 5.19%) | ปิด 1D < 319.30 |
+| CEG | 257.16–259.89 | 246.50 | 269.02 | 287.00 | 2.01 | 0.774 | $200 | $9.30 | **ห้ามส่งก่อน 9 พ.ย.** (งบ) + ต้องปลด VETO (FCF TTM >$1.5B) | ปิด 1D < 247.20 |
+| AMD | 496.93–502.52 | 464.50 | 523.92 | 579.18 | 2.00 | 0.284 | $142 | $10.00 | ต้องปลด VETO (FCF m ≥15% 2 ไตรมาสติด) | ปิด 1D < 466.07 |
+| ANET | — | — | — | — | **NO PLAN** | — | — | — | รอปิด 1D > 200.68 แล้วย่อ ⇒ ต้องออกแบบระดับใหม่ | — |
+
+- **กติกา fill (สองด้าน):** fill **ต่ำกว่า** ปลายล่างของโซน = ระยะ stop หด → ไม่รับไม้ · fill **สูงกว่า** ปลายบน = net R:R <2 → ไม่รับไม้
+- **งบในกรอบถือ:** AMAT 12 พ.ย. (gap 11.13% vs stop 6.60%) · NVDA 17 พ.ย. (6.30% vs 3.54%) · CEG 9 พ.ย. · AVGO 10 ธ.ค. (14.66% vs 5.19%) ⇒ **ทุกตัวต้องออกก่อนวันงบ** ถ้าจะถือ
+
+## ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| stock | N | F | T | avg | ตกเพราะ (ตัวเลขแรกที่ fail) | verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| NVDA | 9 | 8.5 | 6 | 7.83 | **tech 6 < 7** (volR 0.91x, trend 4.50) | REJECT |
+| AMAT | 7 | 7.0 | 6 | 6.67 | avg 6.67 · volR 0.75x ต่ำสุด · gap งบ 11.13% > stop 6.60% | REJECT |
+| TSM | 5 | 8.0 | 6 | 6.33 | avg 6.33 · N 5 ไม่มีวัน catalyst | REJECT |
+| MSFT | 4 | 7.5 | 7 | 6.17 | **news 4** — ไม่มี catalyst ในกรอบ (XD 0.19%) | REJECT |
+| AVGO | 6 | 6.5 | 6 | 6.17 | avg 6.17 · SBC 9.5% · net debt $35.4B | REJECT |
+| ANET | 5 | 7.5 | 5 | 5.83 | tech 5 + NO PLAN (R:R จริง 0.43–1.12) | REJECT |
+| ETN | 5 | 6.5 | 6 | 5.83 | avg 5.83 · D/E 99.5% · งบออกแล้ว AH +7.00% | REJECT |
+| CEG | 7 | **4.0** | 6 | 5.67 | **finance VETO** (FCF $295M = 0.9%, P/FCF 316) | REJECT |
+| AMZN | 4 | 6.0 | 7 | 5.67 | news 4 (ไม่มี catalyst) + F 6.0 (FCF −$46.9B) | REJECT |
+| AMD | 5 | **5.5** | 5 | 5.17 | **finance VETO** (P/E 105, EV/EBITDA 75, หนี้ +119%) | REJECT |
+
+## Correlation (leader คำนวณเอง · SIP daily returns ถึง 2026-11-03, n=60/252)
+
+- กับ **GDDY**: ETN **−0.510** · ANET −0.450 · TSM −0.412 · AMD −0.405 · AMAT −0.401 · AVGO −0.322 · CEG −0.263 · NVDA −0.227 · AMZN −0.047 · MSFT **+0.061** ⇒ **ไม่มีตัวใด ≥ +0.5** ⇒ รอบนี้ correlation ไม่ใช่ตัวตัดสิน
+- เกตเป็นแบบ **ด้านเดียว (positive ≥ +0.5 = ไม้ซ้ำ)** — ค่าติดลบคือการกระจายความเสี่ยง ไม่ใช่ความเสี่ยงซ้ำ
+- ไฟล์ดิบ: `workspace/data/corr-2026-11-03-vsGDDY.json` (20 symbols)

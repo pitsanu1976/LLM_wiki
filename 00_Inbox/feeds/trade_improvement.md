@@ -3,8 +3,10 @@ title: "trade_improvement.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-03
-updated: 2026-11-03
+created: 2026-11-05
+updated: 2026-11-05
+source_mtime: 2026-11-01 13:52 UTC
+source_sha256: 49ea51f231745013
 tags:
   - source/feed
   - domain/trading
@@ -13,7 +15,7 @@ related:
 source: "workspace/ingest/trade_improvement.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (sync 2026-11-03) — ต้นฉบับที่ทีมใช้อยู่ใน workspace
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (mtime 2026-11-01 13:52 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > บทเรียน/สิ่งที่ต้องแก้ของทีม
 
 # Trade Improvement
