@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-05
 updated: 2026-11-05
-source_mtime: 2026-11-03 22:59 UTC
-source_sha256: 9c26d819a4a944d8
+source_mtime: 2026-11-05 11:03 UTC
+source_sha256: 5da7cf9721cfba6f
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-03 22:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-05 11:03 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -246,3 +246,57 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - กับ **GDDY**: ETN **−0.510** · ANET −0.450 · TSM −0.412 · AMD −0.405 · AMAT −0.401 · AVGO −0.322 · CEG −0.263 · NVDA −0.227 · AMZN −0.047 · MSFT **+0.061** ⇒ **ไม่มีตัวใด ≥ +0.5** ⇒ รอบนี้ correlation ไม่ใช่ตัวตัดสิน
 - เกตเป็นแบบ **ด้านเดียว (positive ≥ +0.5 = ไม้ซ้ำ)** — ค่าติดลบคือการกระจายความเสี่ยง ไม่ใช่ความเสี่ยงซ้ำ
 - ไฟล์ดิบ: `workspace/data/corr-2026-11-03-vsGDDY.json` (20 symbols)
+
+
+---
+
+# รอบ DAILY-2026-11-05 (rev6 · leader ตัดสิน 2026-11-05 10:55–11:02 UTC · ก่อนเปิด 14:30Z)
+
+- ราคาอ้างอิง: **ปิด 2026-11-04** (Alpaca SIP 1Day, last bar `2026-11-04T05:00:00Z`) · leader ตรวจซ้ำ 11:00Z ด้วย `scripts/px_equity.py` ตรงกับ analyst ทุกหลัก
+- บัญชี **`PA3ZME9WF`** — equity **$1,006.85** · cash $847.33 · positions GDDY 1.35 · open orders 0 (GET 10:55:52Z ก่อนส่ง)
+- รายงานวันเดียวกันครบ 3 สาย: news 09:52Z · finance 10:19Z · tech 10:21Z
+- กติกา rev8: risk/ไม้ ≤$10.07 · เพดาน/ตัว ≤$201.37 · reserve $201.37 · max 3 ไม้ · R:R ≥2 · stop ≥1 ATR
+
+## ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261105-01 | — (IMP ชุดเดิม archived 2026-11-02) | 2026-11-05 | NEWS-20261105-01 | FIN-20261105-01 | TECH-20261105-01 | MSFT | 551.00 | 585.00 | 535.00 | 0.36 |
+
+## Plan state — 2026-11-05
+
+| plan_id | status | order id | TIF | filled qty | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261105-01 | **SENT** (ACCEPTED 10:57:57Z · read-back 10:59Z filled 0) | `4ebc3a3d-c3cd-44be-bc72-f0cc2c4812bb` | DAY | 0 / 0.36 | 0 | ปิด 1D < 542.30 · เปิด < 549.84 · ไม่ fill ถึง 2026-11-10 21:00Z |
+| PLAN-20261102-01 | **OPEN** (GDDY 1.35 @113.08) | `9d3c7071-0d15-4f9e-81c1-fc6c3998699a` (FILLED) | DAY→manual | 1.35 / 1.35 | 2 | ปิด 1D < 106.35 · deadline 2026-12-15 |
+
+- **MSFT เป็น fractional ⇒ ไม่มี bracket ที่ broker** (`order_class=simple` + TIF=DAY เท่านั้น) · stop 535.00 / target 585.00 อยู่ใน `ingest/manual_stops.json` (plan PLAN-20261105-01) · broker DAY stop จะถูกวางโดย `scripts/arm_day_stops.py` (cron 13:25/14:25 UTC) เมื่อมี position จริง · watchdog `fractional-stop-watchdog` (*/15 13–21 UTC) เป็นชั้นที่ 2
+- **ถ้าไม่ fill ภายใน 2026-11-05 21:00Z** (DAY หมดอายุ): re-arm ที่ 551.00 ตราบที่ยังไม่ปิด 1D < 542.30 และยังไม่เกิน deadline 2026-11-10 · ถ้าเปิดต่ำกว่า 549.84 = ยกเลิก ห้ามรับ fill
+
+
+## Armed levels 2026-11-05 (ระดับรอ trigger — **ไม่ใช่แผนที่อนุมัติ**)
+
+- **AMZN** — trigger: ปิด 1D ≥ **265.34** (high 2026-10-20) **และ** ย่อไม่หลุด 262 · entry 262.00 · stop 253.00 (1.05×ATR) · T1 271.49 (R 1.06 = ตก) · **T2 280.00 (R 2.00)** ⇒ ถ้า entry ไม่ลงมาถึง 262 R:R ไม่ผ่าน
+- **ANET** — trigger: ย่อถึง **171.00** (gap fill ใต้ close 4 พ.ย. 4.2%) · stop 161.30 (1.02×ATR) · T2 191.11 (R 2.07) · ถ้าไม่ย่อใน 2–3 วัน = ไม่มีไม้ (ห้ามไล่)
+- **NVDA** — trigger: ปิด 1D ≥ **212.15** (MA20) + volR >1.0 **และต้องออกก่อนงบ 17 พ.ย.** · แผน breakout 206.79/199.50 ให้ R:R 1.28–1.98 (ตกเกต) ⇒ ยังไม่ใช่แผน
+- **MSFT T2** — ถ้า fill 551.00 และปิด 1D เหนือ 585 (T1) ⇒ ยก target เป็น 597.00 (measured move) และเลื่อน stop ขึ้นเป็น breakeven 551.00 (ต้องเขียน trigger + วันที่ก่อนทำ)
+- **ไม่จับตา:** AMAT 383.65 · MU 853.34 · CEG 250.85 · ETN 378.23 · GEV 879.04 · PWR 627.07 — ปิดเหนือระดับเหล่านี้แล้ว R:R ยัง 0.38–1.61 = ตกเกตทุกตัว
+
+## ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| stock | N | F | T | avg | ตกเพราะ (ตัวเลขแรกที่ fail) | verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| ANET | 7 | 8.0 | 6.5 | 7.17 | **T 6.5 < 7** (ปิดใต้ MA20 185.48, แท่ง 11-04 fade) · ต้องรอย่อถึง 171 | REJECT |
+| NVDA | 7 | 9.0 | 5.5 | 7.17 | **T 5.5** (ปิดใต้ MA200 204.67 ครั้งแรก, R:R 1.28/1.98) | REJECT |
+| AMZN | 8 | 5.5 | 7.0 | 6.83 | **F 5.5** (FCF TTM −$46.9B, net debt $190.6B, D/E 49.7%) | REJECT |
+| AMAT | 4 | 7.0 | 4.5 | 5.17 | avg · R:R 1.50/1.61 · MA20 slope −12.91% · งบ 12 พ.ย. | REJECT |
+| MU | 3 | 7.5 | 4.5 | 5.00 | N 3 + R:R 0.84/1.86 · ATR% 6.45 · ไม่มี corr | REJECT |
+| GEV | 3 | 8.0 | 3.0 | 4.67 | R:R 0.38/0.52 (แย่สุด) | REJECT |
+| PWR | 3 | 7.0 | 4.0 | 4.67 | R:R 0.45/1.28 · stop ต้องกว้าง 10.54% | REJECT |
+| ETN | 3 | 6.5 | 3.5 | 4.33 | R:R 0.66/1.02 · corr GDDY −0.510 | REJECT |
+| CEG | 4 | 4.0 | 4.0 | 4.00 | **F 4.0** (FCF m 0.9%, D/E 76.4%, dilution +13.4%) | REJECT |
+
+## Correlation (leader · SIP daily returns ถึง 2026-11-04, n=60)
+
+- กับ **GDDY**: MSFT **+0.061** · AMZN −0.047 · NVDA −0.227 · CEG −0.263 · AMAT −0.401 · ANET −0.450 · ETN −0.510 ⇒ **ไม่มีตัวใด ≥ +0.5** ⇒ correlation ไม่ใช่ตัวตัดสินรอบนี้ (เกตด้านเดียว: positive ≥ +0.5 = ไม้ซ้ำ)
+- MU / GEV / PWR: **ไม่มีค่า corr** ในไฟล์ `data/corr-2026-11-03-vsGDDY.json` ⇒ ถ้าจะเข้า ต้องถือเป็นความเสี่ยงซ้ำซ้อนที่วัดไม่ได้ (ทั้ง 3 ตกเกตอื่นอยู่แล้ว)

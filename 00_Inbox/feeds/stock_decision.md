@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-05
 updated: 2026-11-05
-source_mtime: 2026-11-03 22:58 UTC
-source_sha256: 4fe6a7b7ce83439a
+source_mtime: 2026-11-05 11:00 UTC
+source_sha256: 2c9ec6013808b821
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/stock_decision.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-03 22:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-05 11:00 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > ตาราง DEC-* — ผลตัดสินต่อชื่อ
 
 # Stock Decision Log
@@ -210,3 +210,38 @@ source: "workspace/ingest/stock_decision.md"
 - ถ้า verdict เปลี่ยนภายหลัง → เพิ่มแถวใหม่ `DEC-...` พร้อมช่อง `revision_of` ใน comment (ไม่แก้แถวเดิม)
 - `verdict` ต้องสอดคล้องกับ `trade_planning.md`: มี `SELECT` = ต้องมี `plan_id`; ไม่มี `plan_id` = ห้ามเป็น SELECT
 - ตรวจความสอดคล้องได้ด้วย `scripts/reconcile_journal.py` (ตรวจ plan ↔ journal) และการอ่านไฟล์นี้เทียบกับ `trade_planning.md`
+
+
+---
+
+## รอบ DAILY-2026-11-05 (leader, ตัดสิน 2026-11-05 10:55–11:02 UTC · ก่อนเปิดตลาด 14:30Z)
+
+> **ที่มาของคะแนนรอบนี้:** `N` = คะแนนที่ news ให้มาเอง (1–10) · `F`/`T` = **leader-map จากตัวเลขของ finance/tech** เพราะใบสั่งงานรอบนี้ไม่ได้ขอคะแนน 1–10 จาก 2 สายนั้น (ช่องว่างกระบวนการ ข้อ 7 ใน memo) — rubric: F ผ่าน+FCF ใหญ่+P/E ต่ำกว่า median = 8–9, ผ่านแบบมีเงื่อนไข = 7, ไม่ผ่าน = 4–6 · T ขาขึ้นยืนยัน+R:R≥2 ที่ T1 = 8–8.5, ผ่านเกตแต่ไกล/ต้องรอย่อ = 7, ตก R:R หรือขาลง = ≤6
+> **id:** analyst ไม่ได้ออก id ต่อชื่อรอบนี้ ⇒ `NEWS/FIN/TECH-20261105-NN` เรียงตามลำดับแถวในรายงานของแต่ละสาย (leader กำหนด)
+> `finance easy exp` = `scripts/fundamentals_easy.py` (SEC XBRL, ดึง 2026-11-05) — assets = 100
+
+| decision_id | round | date | stock | news_id | finance_id | tech_id | N | F | T | avg | ผลคัด | ตกเพราะ | verdict | plan_id | finance easy exp | revision_of |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| DEC-20261105-01 | DAILY-2026-11-05 | 2026-11-05 | MSFT | NEWS-20261105-01 | FIN-20261105-01 | TECH-20261105-01 | 8 | 7.5 | 8.5 | **8.00** | **ผ่าน** | — (R:R 2.125 T1 / 2.875 T2 · stop 1.08 ATR14 · corr GDDY +0.061) | **SELECT** | **PLAN-20261105-01** | หนี้ 39.6 · ทุน 60.4 · กำไร/100 18.30 · ดอก/100 0.41 ‖ moat: Azure + enterprise switching cost; เป็นฝ่ายจ่าย capex ($135.9B = 69% ของ OCF) | — |
+| DEC-20261105-02 | DAILY-2026-11-05 | 2026-11-05 | AMZN | NEWS-20261105-02 | FIN-20261105-02 | TECH-20261105-02 | 8 | 5.5 | 7.0 | 6.83 | ตก | **F 5.5** — FCF TTM −$46.9B (capex $215.2B), net debt $190.6B, D/E 49.7% · เสริม: T1 R:R 1.06 | REJECT | — | หนี้ 50.7 · ทุน 49.3 · กำไร/100 6.21 · ดอก/100 0.28 ‖ moat: AWS scale; FCF ติดลบเพราะ capex | — |
+| DEC-20261105-03 | DAILY-2026-11-05 | 2026-11-05 | ANET | NEWS-20261105-03 | FIN-20261105-03 | TECH-20261105-03 | 7 | 8.0 | 6.5 | 7.17 | ตก | **T 6.5** — ปิดใต้ MA20 185.48 + แท่ง 11-04 fade (high 188.53 ปิด 178.48) · entry 171 ห่าง 4.2% | REJECT | — | หนี้ 37.6 · ทุน 62.4 · กำไร/100 16.17 · ดอก/100 n/a ‖ moat: EOS + hyperscaler qualification, net cash $14.4B | — |
+| DEC-20261105-04 | DAILY-2026-11-05 | 2026-11-05 | NVDA | NEWS-20261105-04 | FIN-20261105-04 | TECH-20261105-04 | 7 | 9.0 | 5.5 | 7.17 | ตก | **T 5.5** — ปิดใต้ MA200 204.67 ครั้งแรก, R:R 1.28/1.98 <2, งบ 17 พ.ย. binary | REJECT | — | หนี้ 28.5 · ทุน 71.5 · กำไร/100 47.88 · ดอก/100 0.13 ‖ moat: CUDA + networking lock-in, P/E 25.3 = ต่ำสุด 5 ปี | — |
+| DEC-20261105-05 | DAILY-2026-11-05 | 2026-11-05 | AMAT | NEWS-20261105-05 | FIN-20261105-05 | TECH-20261105-05 | 4 | 7.0 | 4.5 | 5.17 | ตก | avg · R:R 1.50/1.61 · MA20 slope −12.91% · งบ 12 พ.ย. | REJECT | — | หนี้ 41.1 · ทุน 58.9 · กำไร/100 17.82 · ดอก/100 0.62 ‖ moat: process-equipment installed base + service annuity; P/E 31.9 = สูงสุด 5 ปี | — |
+| DEC-20261105-06 | DAILY-2026-11-05 | 2026-11-05 | MU | NEWS-20261105-06 | FIN-20261105-06 | TECH-20261105-06 | 3 | 7.5 | 4.5 | 5.00 | ตก | N 3 + R:R 0.84/1.86 · ATR% 6.45 · ไม่มีค่า corr | REJECT | — | หนี้ 29.4 · ทุน 70.6 · กำไร/100 43.38 · ดอก/100 0.05 ‖ moat: HBM/DRAM supply; margin เป็น peak-cycle (GM 80.7% vs 39.8% FY2025) | — |
+| DEC-20261105-07 | DAILY-2026-11-05 | 2026-11-05 | CEG | NEWS-20261105-07 | FIN-20261105-07 | TECH-20261105-07 | 4 | 4.0 | 4.0 | 4.00 | ตก | **F 4.0** — FCF margin 0.9% ($295M), D/E 76.4%, dilution +13.4% YoY | REJECT | — | หนี้ 67.1 · ทุน 32.5 · กำไร/100 2.03 · ดอก/100 0.69 ‖ moat: nuclear fleet ใน PJM แต่ FCF เกือบศูนย์ | — |
+| DEC-20261105-08 | DAILY-2026-11-05 | 2026-11-05 | ETN | NEWS-20261105-08 | FIN-20261105-08 | TECH-20261105-08 | 3 | 6.5 | 3.5 | 4.33 | ตก | R:R 0.66/1.02 · D/E 99.5% · corr GDDY −0.510 | REJECT | — | หนี้ 63.9 · ทุน 36.1 · กำไร/100 6.99 · ดอก/100 0.66 ‖ moat: Electrical Americas installed base + backlog +46% YoY | — |
+| DEC-20261105-09 | DAILY-2026-11-05 | 2026-11-05 | GEV | NEWS-20261105-09 | FIN-20261105-09 | TECH-20261105-09 | 3 | 8.0 | 3.0 | 4.67 | ตก | R:R 0.38/0.52 (แย่สุดในลิสต์) | REJECT | — | หนี้ 86.8 · ทุน 13.2 · กำไร/100 6.64 · ดอก/100 n/a ‖ moat: gas turbine + grid equipment backlog $197B; EPS TTM บวม one-off (P/E จริง ~36) | — |
+| DEC-20261105-10 | DAILY-2026-11-05 | 2026-11-05 | PWR | NEWS-20261105-10 | FIN-20261105-10 | TECH-20261105-10 | 3 | 7.0 | 4.0 | 4.67 | ตก | R:R 0.45/1.28 · stop ต้องกว้าง 10.54% (ไม่ผ่าน 1 ATR ในขนาดที่มีความหมาย) | REJECT | — | หนี้ 67.6 · ทุน 32.2 · กำไร/100 4.23 · ดอก/100 0.84 ‖ moat: T&D contractor scale, backlog $63.7B record; P/E 52.6 vs median 42.1 | — |
+
+## Leader comments — รอบ DAILY-2026-11-05
+
+- **ผลรวม: 1 SELECT (MSFT) · 9 REJECT · GDDY HOLD** — ส่งออเดอร์จริง **1 ใบ** (MSFT 0.36 หุ้น limit 551.00 DAY · id `4ebc3a3d-c3cd-44be-bc72-f0cc2c4812bb` ACCEPTED read-back 10:59Z) · ไม่มีการยกเลิก/แก้ order ใด
+- **MSFT — SELECT (ชื่อเดียวที่ผ่านทั้ง 4 เกต):** N 8 (ฝ่ายได้ประโยชน์จากข้อจำกัดการสร้างของคู่แข่ง — WSJ 4 พ.ย.) · F 7.5 (FCF +$60.0B, FCF margin 17.3%, P/E 29.05 vs median 5 ปี 34.30 = ~40th pct) · T 8.5 (ขาขึ้นเรียง MA ครบ, ปิด ATH 559.15 ด้วย vol 2.10× MA20, R:R 2.125/2.875, stop 1.08 ATR) · corr GDDY +0.061
+  - **PM test (ก):** catalyst (moratorium ที่ผูกพัน) **อยู่นอกกรอบ** ⇒ ไม่ใช้ market buy แต่ใช้ **retest 551.15** เป็นเงื่อนไขยืนยัน + ขนาดถูกเพดาน 20% บีบเหลือ risk 0.572%
+  - **PM test (ข):** T1 585 = +6.17% (2.125R) ไม่ใช่เป้า 1–2% ติดแนวต้าน ⇒ ใช้ได้; เกตคิดที่ far target T2 597 = 2.875R
+  - **ขนาด:** size by risk = 10.07/16.00 = 0.629 หุ้น · size by cap = 201.37/551 = 0.3655 ⇒ **เพดานบังคับ** → 0.36 หุ้น = $198.36 (19.70%) · risk $5.76 (0.572%) — ยอมใช้ risk ไม่เต็มงบ ดีกว่าไปบีบ stop ให้แคบกว่า 1 ATR
+- **AMZN — REJECT ที่ F (ไม่ใช่ที่เทคนิค):** T 7 ผ่าน (breakout + MACD hist พลิกบวก) แต่ FCF TTM **−$46.9B** และ net debt $190.6B ⇒ F 5.5 · และ T1 271.49 ให้ R:R เพียง 1.06 (ต้องถือถึง 280) ⇒ **armed level: ปิด 1D ≥265.34 + ย่อไม่หลุด 262**
+- **ANET / NVDA — REJECT ที่ T:** ANET ผ่าน F 8.0 (FCF m 42.2%, net cash) แต่ปิดใต้ MA20 และแท่ง 4 พ.ย. fade ⇒ T 6.5 · NVDA F 9.0 สูงสุดในลิสต์ (P/E 25.3 ต่ำสุด 5 ปี) แต่ปิดใต้ MA200 ครั้งแรกและงบ 17 พ.ย. เป็น binary ⇒ T 5.5 — **คะแนนพื้นฐานดีแต่จังหวะ/โครงสร้างไม่ให้**
+- **ฝั่ง power/EPC 4 ตัว (CEG ETN GEV PWR) — REJECT ทั้งกลุ่ม:** งบจริง *หักล้าง* narrative ขาลง (GEV orders +96% organic, backlog $197B; PWR backlog $63.7B record; ETN Electrical backlog +46%) แต่ **R:R 0.38–1.28** เพราะราคาเพิ่งถูกเท 6.7–11.7% ในวันเดียว ⇒ ไม่มีไม้ ไม่ว่าชอบ thesis แค่ไหน · CEG ตกทั้ง F (FCF 0.9%, dilution +13.4%) และ T
+- **corr:** กับ GDDY = **MSFT +0.061** (ผ่าน) · ETN −0.510 (ติดลบ = กระจาย ไม่ใช่ไม้ซ้ำ แต่ตกที่ R:R อยู่แล้ว) · MU/GEV/PWR ไม่มีค่า ⇒ ใช้ไม่ได้ · เกตเป็นด้านเดียว (≥ +0.5 = ไม้ซ้ำ)
+- **จะเปลี่ยนใจเมื่อ:** (1) AMZN ได้ FCF TTM > 0 หรือ T1 ขยับจน R:R ≥2 (2) ANET ย่อถึง 171.00 (stop 161.30 · T2 191.11 = 2.07R) (3) NVDA ปิด ≥212.15 + volR >1.0 **ก่อน** งบ 17 พ.ย. (4) MSFT เปิดต่ำกว่า **549.84** = ยกเลิก order ไม่ถือ
