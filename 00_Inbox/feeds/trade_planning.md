@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-06
 updated: 2026-11-06
-source_mtime: 2026-11-06 10:59 UTC
-source_sha256: c0579c2843a68bd4
+source_mtime: 2026-11-06 14:12 UTC
+source_sha256: 42ca016b3801ba2d
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-06 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-06 14:12 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -261,7 +261,7 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 
 | plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| PLAN-20261105-01 | — (IMP ชุดเดิม archived 2026-11-02) | 2026-11-05 | NEWS-20261105-01 | FIN-20261105-01 | TECH-20261105-01 | MSFT | 551.00 | 585.00 | 535.00 | 0.36 |
+| PLAN-20261105-01 | IMP-20261106-01 | 2026-11-05 | NEWS-20261105-01 | FIN-20261105-01 | TECH-20261105-01 | MSFT | 551.00 | 585.00 | 535.00 | 0.36 |
 
 ## Plan state — 2026-11-05
 

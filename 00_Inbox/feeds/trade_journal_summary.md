@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-06
 updated: 2026-11-06
-source_mtime: 2026-11-06 10:59 UTC
-source_sha256: e15c04ad63c51160
+source_mtime: 2026-11-06 14:12 UTC
+source_sha256: 001ed0e3b193c096
 tags:
   - source/feed
   - domain/trading
@@ -15,21 +15,21 @@ related:
 source: "workspace/ingest/trade_journal_summary.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-06 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-06 14:12 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > สรุป trade journal (R/win rate)
 
 # Trade Journal Summary
 
-- อัปเดต: 2026-11-03 23:05 UTC · แหล่งข้อมูล: Alpaca paper API (`GET /v2/positions`, `GET /v2/orders?status=all`, `GET /v2/account`) — ตรวจด้วย `scripts/reconcile_journal.py` 2026-11-03 23:1x UTC: ดูผลท้ายไฟล์
+- อัปเดต: 2026-11-06 11:45 UTC · แหล่งข้อมูล: Alpaca paper API (`GET /v2/positions`, `GET /v2/orders?status=all`, `GET /v2/account`) — ตรวจด้วย `scripts/reconcile_journal.py` 2026-11-03 23:1x UTC: ดูผลท้ายไฟล์
 - **บัญชีปัจจุบัน: `PA3ZME9WF` · เริ่มต้น $1,000.00 (2026-11-01)**
 - ประวัติบัญชีเก่า `PA3Z4JM8I` (เริ่ม $100,000 → ปิด $98,741.89 · 3 ไม้ขาดทุน −$1,258.11) ถูกย้ายไป `reports/leader/archive/2026-11-01-PA3Z4JM8I-trade_journal_summary.md` — ไม่ได้ลบ
-- สถิติบัญชีนี้: **ปิด 0 ไม้ · realized $0.00** · equity **$1,000.50** · cash $847.34 · **positions 1 (GDDY 1.35 @113.08, uPL +$0.50)**
+- สถิติบัญชีนี้: **ปิด 1 ไม้ · realized −$6.20** (MSFT J-20261105-01 · −1.08R) · equity **$1,003.27** · cash **$841.11** · **positions 1 (GDDY 1.35 @113.08, mark 120.12, uPL +$9.50)**
 
 ## ตารางบันทึกการเทรด
 
 | journal_id | plan_id | stock | entry date | entry price | volume | exit date | exit price | profit & loss | net balance | profit reason | loss reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| J-20261105-01 | PLAN-20261105-01 | MSFT | 2026-11-05 (fill 14:33:09Z) | 550.914 | 0.36 | 2026-11-05 (20:30:49Z) | 533.70 | **−$6.20** | $1,003.27 (GET 2026-11-06 10:55:56Z — รวม mark GDDY 120.12) | — | **STOP_HIT:** watchdog ขาย market เมื่อราคา 534.01 < stop 535.00 · slippage ใต้ stop $1.31/หุ้น ⇒ realized เกินแผน $0.44 (แผน risk $5.76) · ค่าธรรมเนียม Alpaca $0 |
+| J-20261105-01 | PLAN-20261105-01 | MSFT | 2026-11-05 (fill 14:33:09Z) | 550.914 | 0.36 | 2026-11-05 (20:30:49Z) | 533.70 | **−$6.20** | $1,003.27 (GET 2026-11-06 10:55:56Z — รวม mark GDDY 120.12) | — | **STOP_HIT:** watchdog ขาย market เมื่อราคา 534.01 < stop 535.00 · **−1.08R** (risk แผน $5.73) · slippage ใต้ stop $1.31/หุ้น ⇒ realized เกินแผน $0.44 (แผน risk $5.76) · ค่าธรรมเนียม Alpaca $0 |
 
 ## คำนิยามคอลัมน์ / convention
 
