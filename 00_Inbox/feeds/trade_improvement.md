@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-06
 updated: 2026-11-06
-source_mtime: 2026-11-06 14:12 UTC
-source_sha256: 5efdf861cf376cae
+source_mtime: 2026-11-06 15:01 UTC
+source_sha256: 62b413756b4fcb58
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_improvement.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (mtime 2026-11-06 14:12 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (mtime 2026-11-06 15:01 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > บทเรียน/สิ่งที่ต้องแก้ของทีม
 
 # Trade Improvement
@@ -30,6 +30,20 @@ source: "workspace/ingest/trade_improvement.md"
 | improve_id | improve_date | plan_id | journal_id | stock | buy limit | sell limit | sell stop | volume | news score improvement | finance score improvement | technical score improvement |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | IMP-20261106-01 | 2026-11-06 | PLAN-20261105-01 | J-20261105-01 | MSFT | 551.00 | 585.00 (T1) | 535.00 | 0.36 | **−1.0** — N 8 สร้างจากธีม macro (ผลเลือกตั้ง + WSJ 4 พ.ย. "structural winner") ไม่มี event ของบริษัทในกรอบถือ ⇒ เพดาน N = 7 เว้นแต่มี event เฉพาะบริษัทที่มีวันที่ · ถ้าธีมเป็นตัวหลัก ต้องลดน้ำหนักหรือรอ confirmation ราคา | **0.0** — F 7.5 สะท้อนงบจริง (FCF/op margin/net cash) ไม่ใช่สาเหตุขาดทุน | **−2.0** — T 8.5 สูงเกินจริง: (ก) แผนเรียกว่า breakout ATH แต่ entry 551.00 อยู่ **ใต้ pivot 559.15** ⇒ เป็น pullback ที่ใช้ stop ของ breakout (ข) stop 15.91 = **1.08×ATR14** < 1.5× ⇒ อยู่ใน noise ของแท่งเมื่อวาน (range 16.46) (ค) เข้า 14:33Z = 09:33 ET ใน 5 นาทีแรก |
+
+## ผลของการปรับปรุงต่อรอบถัดไป (wiring — 2026-11-06)
+
+Improvement จะไม่มีผลถ้าไม่ถูกอ่าน ⇒ ผูกเข้า 3 จุด:
+
+| ชั้น | ไฟล์/กลไก | ผลที่เกิดขึ้น |
+| :--- | :--- | :--- |
+| 1. คะแนน desk | `ingest/score_adjustments.json` + `shared/scoring_policy.md` | delta/cap ต่อ ticker หรือต่อ desk · มี `source_improve` และ `expires` บังคับ · desk ต้องรายงานทั้งคะแนนดิบและหลังปรับ |
+| 2. การตัดสิน leader | `scripts/apply_adjustments.py` + cron 05:30 ICT ขั้นที่ 4 และ 7 | ใช้คะแนนหลังปรับเท่านั้น · เพิ่ม gate: setup consistency · entry window (ห้าม fill ก่อน 10:00 ET) · broker stop ต้องวางจริง · stop ≥1.5 ATR เมื่อ ATR% >2.5 |
+| 3. ไม้ที่เปิด/order ค้าง | `shared/position_policy.md` + `manual_stops.json` ladder | ยก stop ได้อย่างเดียว · trailing (Chandelier) · time stop · ขยาย stop ได้เฉพาะเมื่อลดขนาดให้ $ risk เท่าเดิม |
+
+**ทดสอบย้อนกลับกับไม้นี้:** `.venv/bin/python scripts/apply_adjustments.py --round DAILY-2026-11-05`
+→ MSFT N 8→7 · T 8.5→6.5 ⇒ avg **7.00 < 7.5** และ T 6.5 < 7 ⇒ **ตกคัด** (ถ้าใช้กฎวันนี้ ไม้ที่ขาดทุนจะไม่ถูกส่ง)
+→ ผลข้างเคียง: AMZN N 8→7 (avg 6.83→6.5) ตกอยู่แล้ว · ตัวอื่นไม่เปลี่ยนผล
 
 ## Post-mortem — MSFT `PLAN-20261105-01` / `J-20261105-01`
 
