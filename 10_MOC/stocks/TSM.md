@@ -52,10 +52,10 @@ aliases:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-- งวด: TTM ถึง 2026-09-30 (Q3-26, TWD ล้าน) · รายได้ 4,944,817 · NI 2,527,571 · FCF 1,480,739 (29.9%)
-- Valuation: P/E 27.24 (404.80 ÷ 14.86) vs median ตัวเอง 23.68 (+15%) · EV/EBITDA 15.25 vs 13.54
-- จับตา: GM 65.8% / OM 58.0% ดีสุดในกลุ่ม · net cash 3.20T TWD · D/E 11.6% · XD 2026-12-10 $1.08544/ADS
-- เต็ม: [[DAILY_2026-11-04_fin]]
+- งวด: TTM ถึง 2026-09-30 (Q3-2026, TWD ล้าน, unaudited) · รายได้ 4,944,816 · NI 2,527,571 · FCF 1,480,739 (29.9%)
+- Valuation: P/E 23.88 (353.10 ÷ 14.79 ADR) vs median ตัวเอง 22.37 (+6.8%) · EV/EBITDA 14.66 · net cash 3.20T TWD · D/E 0.12
+- จับตา: GM 66.4% / OM 58.7%, ICov 324, dilution +0.01% · รายได้เดือน ต.ค. 2026-11-10 · XD 2026-12-10 $1.08544/ADS
+- เต็ม: [[DAILY_fin_2026-11-06]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision

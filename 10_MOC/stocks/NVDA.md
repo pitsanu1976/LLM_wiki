@@ -53,10 +53,10 @@ related:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-- งวด: TTM ถึง 2026-07-26 (10-Q Q2 FY27, unaudited) · รายได้ 302,970M · NI 192,880M · FCF 127,006M (41.9%)
-- Valuation: P/E 26.14 (206.69 ÷ 7.91) = ต่ำกว่า median ตัวเอง 54.60 ถึง −52% · EV/EBITDA 24.68 vs 46.88
-- จับตา: GM FY2026 71.1% ต่ำสุดใน 3 ปี (TTM ฟื้น 74.7%) · OCF/NI 0.70 · งบ 2026-11-17 หลังปิด
-- เต็ม: [[DAILY_2026-11-04_fin]]
+- งวด: TTM ถึง 2026-07-26 (Q2 FY27, unaudited) · รายได้ 302,969M · NI 192,880M · FCF 127,006M (41.9%)
+- Valuation: P/E 22.96 (181.60 ÷ 7.91) = ต่ำกว่า median 5 ปี 51.55 ถึง −55.5% (percentile 0/20) · EV/EBITDA 21.67 · P/B 19.15
+- จับตา: หนี้รวม 12,814→38,860M$ ใน Q2 FY27 · NM Q1 FY27 71.46% เจือ one-off ~20pp ของรายได้ · งบ 2026-11-17 หลังปิด
+- เต็ม: [[DAILY_fin_2026-11-06]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
