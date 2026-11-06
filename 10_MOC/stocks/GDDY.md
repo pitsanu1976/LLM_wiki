@@ -5,7 +5,7 @@ status: active
 ticker: GDDY
 agent: leader
 created: 2026-11-02
-updated: 2026-11-04
+updated: 2026-11-06
 tags:
   - moc
   - ticker/GDDY
@@ -13,6 +13,7 @@ related:
   - "[[2026-11-02]]"
   - "[[2026-11-03]]"
   - "[[2026-11-04]]"
+  - "[[2026-11-06]]"
   - "[[decisions]]"
   - "[[trading-finance-moc]]"
 aliases:
@@ -26,8 +27,8 @@ aliases:
 | | |
 |---|---|
 | Sector | Internet infrastructure — domain registry / hosting / SMB tools |
-| Watchlist status | **ถือจริง (OPEN)** 1.35 หุ้น @ 113.08 · fill 2026-11-03 14:37Z |
-| ความเห็นล่าสุด | ไม้เดียวในบัญชี `PA3ZME9WF` ($1,000.50) · risk $9.09 (0.909%) · R:R 2.77 · stop 106.35 = 1.32×ATR14 5.08 · mark 113.45 (+$0.50) |
+| Watchlist status | **ถือจริง (OPEN)** 1.35 หุ้น @ 113.08 · fill 2026-11-03 14:37Z · **stop 113.08 (breakeven, ยก 2026-11-06)** |
+| ความเห็นล่าสุด | ไม้เดียวในบัญชี `PA3ZME9WF` ($1,003.27) · risk เดิม $9.09 (0.909%) → **risk ที่เหลือ $0 หลังยก stop เป็น breakeven** · target 131.74 · mark **120.12 (+$9.50, +6.23%)** · 2026-11-06 |
 
 *(ส่วนนี้เป็นของ Leader)*
 
@@ -76,6 +77,15 @@ _ยังไม่มีข้อมูล — Finance agent จะเติม
 ### สถานะปัจจุบัน (2026-11-04)
 - **ถือ GDDY 1.35 @113.08** · stop 106.35 · target 131.74 · **1/3 ไม้**
 - ความเสี่ยงค้าง: ไม่มี broker-side stop — พึ่ง watchdog ทุก 15 นาที · gap เปิดต่ำกว่า 106.35 จะขายที่ tick ถัดไป (ยอมรับ slippage)
+
+### 2026-11-06 — HOLD · **stop ยกเป็น breakeven 113.08**
+- ปิด **2026-11-05 = 120.12** (Alpaca SIP) ⇒ mark 120.12 · **uPL +$9.50 (+6.23%)** · weight 16.2% (GET 2026-11-06 10:55:56Z: equity $1,003.27 · cash $841.11 · open orders 0)
+- **trigger ที่เขียนไว้ล่วงหน้าเกิดจริง:** ปิด 1D **120.12 ≥ 120.00** (= **1.40×ATR14 5.04** เหนือ entry) ⇒ **stop 106.35 → 113.08 (= entry, breakeven)** · ระยะใหม่จาก mark = 7.04/หุ้น = 1.40×ATR (ไม่ใช่ stop ใน noise)
+- **บันไดถัดไป:** ปิด 1D ≥ **126.00** → stop 118.00 · **target คงเดิม 131.74**
+- risk ที่เหลือ **$0.00** (ยกเว้น slippage) · `ingest/manual_stops.json` อัปเดตแล้ว · broker DAY stop จะถูกวางโดย `scripts/arm_day_stops.py` (cron 13:25/14:25 UTC) · watchdog (*/15 13–21 UTC) เป็นชั้นที่ 2
+- **บริบทของรอบ:** ธีม AI-infra ที่คัดวันนี้ sentiment = **Bearish (narrow)** · NVDA/TSM ผ่านเกตตัวเลข (8.17 / 7.50) แต่ leader **ไม่ส่ง** (BLS 13:30Z, counter-trend ใต้ MA200, T1 ทุกตัว 1.25–1.65 net, corr NVDA–TSM 0.80/0.93) ⇒ GDDY ยังเป็นไม้เดียว, ว่าง 2 ช่อง
+- **invalidation:** ปิด 1D < **113.08** → watchdog ขาย market ทั้งจำนวน
+- บันทึก: [[2026-11-06]] · memo `reports/leader/2026-11-06-DAILY.md`
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล
