@@ -3,10 +3,10 @@ title: "stock_decision.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-05
-updated: 2026-11-05
-source_mtime: 2026-11-05 11:00 UTC
-source_sha256: 2c9ec6013808b821
+created: 2026-11-06
+updated: 2026-11-06
+source_mtime: 2026-11-06 10:58 UTC
+source_sha256: 2512bac97426fb66
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/stock_decision.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-05 11:00 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-06 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > ตาราง DEC-* — ผลตัดสินต่อชื่อ
 
 # Stock Decision Log
@@ -245,3 +245,33 @@ source: "workspace/ingest/stock_decision.md"
 - **ฝั่ง power/EPC 4 ตัว (CEG ETN GEV PWR) — REJECT ทั้งกลุ่ม:** งบจริง *หักล้าง* narrative ขาลง (GEV orders +96% organic, backlog $197B; PWR backlog $63.7B record; ETN Electrical backlog +46%) แต่ **R:R 0.38–1.28** เพราะราคาเพิ่งถูกเท 6.7–11.7% ในวันเดียว ⇒ ไม่มีไม้ ไม่ว่าชอบ thesis แค่ไหน · CEG ตกทั้ง F (FCF 0.9%, dilution +13.4%) และ T
 - **corr:** กับ GDDY = **MSFT +0.061** (ผ่าน) · ETN −0.510 (ติดลบ = กระจาย ไม่ใช่ไม้ซ้ำ แต่ตกที่ R:R อยู่แล้ว) · MU/GEV/PWR ไม่มีค่า ⇒ ใช้ไม่ได้ · เกตเป็นด้านเดียว (≥ +0.5 = ไม้ซ้ำ)
 - **จะเปลี่ยนใจเมื่อ:** (1) AMZN ได้ FCF TTM > 0 หรือ T1 ขยับจน R:R ≥2 (2) ANET ย่อถึง 171.00 (stop 161.30 · T2 191.11 = 2.07R) (3) NVDA ปิด ≥212.15 + volR >1.0 **ก่อน** งบ 17 พ.ย. (4) MSFT เปิดต่ำกว่า **549.84** = ยกเลิก order ไม่ถือ
+
+
+---
+
+## รอบ DAILY-2026-11-06 (leader, ตัดสิน 2026-11-06 10:55–11:10 UTC · ก่อนเปิดตลาด 14:30Z)
+
+> **ที่มาของคะแนนรอบนี้:** `N` = คะแนนที่ news ให้มาเอง (1–10) · `F`/`T` = **leader-map จากตัวเลขของ finance/tech** (ใบสั่งงานรอบนี้ยังไม่ได้ขอคะแนน 1–10 จาก 2 สาย — ช่องว่างกระบวนการเดิม) — rubric F: PASS + FCF ใหญ่ + P/E ต่ำกว่า median = 8–9, PASS มีเงื่อนไข = 7, VETO = 4–6 · rubric T: ขาขึ้นยืนยัน + R:R≥2 ที่ T1 = 8–8.5, ผ่านเกตแต่ต้องรอย่อ/ไกล = 7–7.5, ตก R:R หรือ tech สั่งไม่เข้า = ≤4
+> **id:** analyst ไม่ได้ออก id ต่อชื่อรอบนี้ ⇒ `NEWS/FIN-20261106-NN` เรียงตามลำดับแถวในรายงานของแต่ละสาย · `TECH-20261106-01..06` เรียงตามลำดับหัวข้อแผนของ tech (BABA NVDA CSCO TSM AMAT CEG)
+> `finance easy exp` = `scripts/fundamentals_easy.py` (SEC XBRL, ดึง 2026-11-06 11:00Z) — assets = 100 · TSM = `ดึงไม่ได้` (6-K ไม่มี XBRL `Assets`)
+
+| decision_id | round | date | stock | news_id | finance_id | tech_id | N | F | T | avg | ผลคัด | ตกเพราะ | verdict | plan_id | finance easy exp | revision_of |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| DEC-20261106-01 | DAILY-2026-11-06 | 2026-11-06 | NVDA | NEWS-20261106-02 | FIN-20261106-02 | TECH-20261106-02 | 8 | 9.0 | 7.5 | **8.17** | **ผ่านตัวเลขครบ** | — (R:R net 2.47 T2 · stop 1.00×ATR 7.34 · corr GDDY −0.24) · **ไม่ส่งเพราะ entry quality:** sentiment ธีม Bearish + BLS 13:30Z + counter-trend ใต้ MA200 | **WATCH** | — | หนี้ 28.5 · ทุน 71.5 · กำไร/100 47.88 · ดอก/100 0.13 ‖ moat: CUDA + networking lock-in; P/E 22.96 = percentile 0 ของ 5 ปี | — |
+| DEC-20261106-02 | DAILY-2026-11-06 | 2026-11-06 | TSM | NEWS-20261106-04 | FIN-20261106-04 | TECH-20261106-04 | 7 | 8.5 | 7.0 | **7.50** | **ผ่านตัวเลขครบ** | — (R:R net 2.88 T2 · stop 1.01×ATR 16.10 · corr GDDY −0.37) · **ไม่ส่ง:** entry ห่าง 5.9% + รายได้เดือน 10 พ.ย. gap proxy 1.49× stop · corr NVDA–TSM 0.80/0.93 ⇒ คู่ถูกปฏิเสธ เก็บ NVDA | **WATCH** | — | ดึงไม่ได้ (6-K ไม่มี XBRL Assets) | — |
+| DEC-20261106-03 | DAILY-2026-11-06 | 2026-11-06 | CSCO | NEWS-20261106-03 | FIN-20261106-03 | TECH-20261106-03 | 7 | 7.0 | 7.0 | 7.00 | ตก | **avg 7.00 < 7.5** · entry ต้องเบรก +6.8% (ปิดที่ low วัน) · ใต้ 95.43 ไม่มีแนวรับถึง 85.78 | REJECT | — | หนี้ 61.2 · ทุน 38.8 · กำไร/100 10.23 · ดอก/100 1.13 ‖ moat: installed base + AI networking read-through; P/E 28.74 = pct 90 | — |
+| DEC-20261106-04 | DAILY-2026-11-06 | 2026-11-06 | AMAT | NEWS-20261106-01 | FIN-20261106-01 | TECH-20261106-05 | 8 | 7.0 | 4.0 | 6.33 | ตก | **T 4.0 — tech สั่งไม่เข้า:** stop ที่ผ่าน 1 ATR (23.50) ไม่มีโครงสร้าง (311.07→287.49 ว่าง) · ATR 7.21% · ไม้เต็มเพดานไม่ได้ (สูงสุด $135) | REJECT | — | หนี้ 41.1 · ทุน 58.9 · กำไร/100 17.82 · ดอก/100 0.62 ‖ moat: installed base + service annuity; P/E 27.54 = pct 85 | — |
+| DEC-20261106-05 | DAILY-2026-11-06 | 2026-11-06 | BABA | NEWS-20261106-06 | FIN-20261106-06 | TECH-20261106-01 | 6 | 4.0 | 7.5 | 5.83 | ตก | **F VETO:** FCF 4 ไตรมาส −175,755 M CNY · OM 7.29% (จาก 14.13%) · ROIC 3.08% | REJECT | — | หนี้ 44.4 · ทุน 55.6 · กำไร/100 5.42 · ดอก/100 0.51 ‖ moat: cloud+China ecom scale; FCF ติดลบเพราะลงทุน/ค่าใช้จ่าย | — |
+| DEC-20261106-06 | DAILY-2026-11-06 | 2026-11-06 | CEG | NEWS-20261106-05 | FIN-20261106-05 | TECH-20261106-06 | 6 | 4.0 | 3.0 | 4.33 | ตก | **R:R ตกทุกแผน** (ดีสุด 1.34 net) + งบ 9 พ.ย. gap max 9.92% = 1.79× stop + F VETO (FCF 0.98% ของรายได้, ICov 6.01) | REJECT | — | หนี้ 67.1 · ทุน 32.5 · กำไร/100 2.03 · ดอก/100 0.69 ‖ moat: nuclear fleet ใน PJM แต่ FCF เกือบศูนย์ | — |
+
+## Leader comments — รอบ DAILY-2026-11-06
+
+- **ผลรวม: 0 SELECT · 2 WATCH (NVDA, TSM) · 4 REJECT · GDDY HOLD (stop ยกเป็น breakeven)** — **ไม่มีการส่งออเดอร์ในรอบนี้**
+- **NVDA — ผ่านเกตตัวเลขทุกข้อ แต่ไม่ส่ง (WATCH):** N 8 / F 9.0 / T 7.5 = **8.17** · R:R net 2.47 ที่ T2 197.97 · stop 7.34 = **1.00×ATR พอดี** · corr GDDY −0.24/−0.52 ⇒ ติดที่ **entry quality** ไม่ใช่ที่ขนาด: (1) sentiment ธีม Bearish (news hard gate ยังไม่ผ่าน + เงื่อนไข BLS 13:30Z และ 60 นาทีแรกหลังเปิด) (2) counter-trend ใต้ MA200 ครั้งแรก RSI 25.4 vol 2.67× (3) วันศุกร์ (4) เมื่อวาน MSFT ที่ stop 1.09×ATR ถูกเขี่ยออกใน 6 ชม. ⇒ **armed: ปิด 1D ≥188.88 → buy 189.00 / stop 181.60 / T2 206.79 / 1 หุ้น $189.00 (18.8%) risk $7.40 (0.74%) net 2.32**
+- **TSM — ผ่านเกตตัวเลข (7.50) แต่ถูกปฏิเสธด้วย corr + วัน:** corr NVDA–TSM **0.80 d60 / 0.93 d30** ⇒ คู่เดียวกับ NVDA ไม่ได้ · entry 332.20 ห่าง 5.9% และ gap proxy ของรายได้เดือน 10 พ.ย. = **1.49× stop** ⇒ armed แบบมีเงื่อนไข: **หลังรายได้เดือนออกดี AND ย่อ ≤332.20 → เศษ 0.60 หุ้น $199.32 stop 316.10 T2 380.00 risk $9.66 (0.96%) net 2.88**
+- **CSCO / AMAT / BABA / CEG — REJECT ทุกตัวด้วยเหตุผลต่างกัน:** CSCO ตก avg (7.00) และต้องเบรก +6.8% · AMAT tech สั่งไม่เข้าเพราะ stop ไม่มีโครงสร้าง (ATR 7.21%) · BABA F VETO (FCF ติดลบ 4 ไตรมาส −175,755 M CNY) ทั้งที่เทคนิคดีสุดในลิสต์ (T 7.5) · CEG ตกทั้ง R:R (1.34) และงบ 9 พ.ย. ห่าง 1 session
+- **BABA วันงบขัดกัน:** news (primary: Business Wire + IR) = **19 พ.ย.** · tech/finance (yfinance/stockanalysis) = 24 พ.ย. ⇒ ยึด primary; ไม่กระทบรอบนี้เพราะ VETO
+- **PM test ที่ทำให้ไม่ใช่แค่ "อ่านตาราง":** (ก) T1 ของทั้ง 6 ตัว = 1.25–1.65 net ⇒ **เป้าแรกใช้ไม่ได้ทุกตัว** ต้องตัดสินที่ T2 (ข) `stop% ≤ risk/cap = 5.00%` ⇒ AMAT (7.41%) และ CEG (5.55%) เต็มเพดานไม่ได้ตั้งแต่ต้น (ค) ที่ 1.5×ATR NVDA ต้องลดเป็นเศษ 0.91 หุ้น ไม่ใช่บีบ stop
+- **GDDY:** ปิด 1D 120.12 ≥ trigger 120.00 (written) ⇒ **stop 106.35 → 113.08 (breakeven)** · บันไดถัดไป ปิด ≥126.00 → 118.00 · target 131.74 คงเดิม · broker DAY stop จะถูกวางโดย `arm_day_stops.py` 13:25/14:25Z
+- **จะเปลี่ยนใจเมื่อ:** (1) NVDA ปิด 1D ≥188.88 (armed A) หรือย่อ ≤179.20 หลัง BLS ผ่าน (armed B) (2) TSM รายได้เดือน 10 พ.ย. 05:30Z ออกดี + ย่อ ≤332.20 (3) sentiment ธีมกลับเป็น neutral/บวก และ NVDA ยืนเหนือ 188.88 (4) ถ้า AMAT 12 พ.ย. พูดว่า orders pushed out = เปลี่ยน regime เป็น earnings-cut ⇒ ปิดธีม long ทั้งหมด
+

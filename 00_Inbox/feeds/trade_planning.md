@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-05
-updated: 2026-11-05
-source_mtime: 2026-11-05 11:03 UTC
-source_sha256: 5da7cf9721cfba6f
+created: 2026-11-06
+updated: 2026-11-06
+source_mtime: 2026-11-06 10:59 UTC
+source_sha256: c0579c2843a68bd4
 tags:
   - source/feed
   - domain/trading
@@ -15,12 +15,12 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-05 11:03 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-06 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
 
-- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → DAILY-2026-11-03 → DAILY-2026-11-04
+- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
 - แหล่งข้อมูล: `raw/news.md` (09:57–10:02 UTC) · `raw/finance.md` (10:05 UTC) · `raw/tech.md` (10:08 UTC) — จับคู่ด้วย `news_id`
 - ราคาอ้างอิง: ปิด **Fri 2026-10-30 16:00 ET / 20:00 UTC** (SIP) · ไม่มี session ใหม่ระหว่าง 30 ต.ค. → 2 พ.ย. ⇒ ข้อมูลยังเป็นชุดล่าสุด · ตลาดเปิด **Mon 2026-11-02 09:30 ET = 14:30 UTC / 21:30 ICT** (DST สหรัฐสิ้นสุด 1 พ.ย. ⇒ เปิด/ปิดเร็วขึ้น 1 ชม. จากสัปดาห์ก่อน)
 - บัญชี: Alpaca paper **`PA3ZME9WF`** — equity **$1,000.00** · cash $1,000.00 · positions 0 · open orders 1 (GET 2026-11-01 22:31:12 UTC)
@@ -300,3 +300,60 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 
 - กับ **GDDY**: MSFT **+0.061** · AMZN −0.047 · NVDA −0.227 · CEG −0.263 · AMAT −0.401 · ANET −0.450 · ETN −0.510 ⇒ **ไม่มีตัวใด ≥ +0.5** ⇒ correlation ไม่ใช่ตัวตัดสินรอบนี้ (เกตด้านเดียว: positive ≥ +0.5 = ไม้ซ้ำ)
 - MU / GEV / PWR: **ไม่มีค่า corr** ในไฟล์ `data/corr-2026-11-03-vsGDDY.json` ⇒ ถ้าจะเข้า ต้องถือเป็นความเสี่ยงซ้ำซ้อนที่วัดไม่ได้ (ทั้ง 3 ตกเกตอื่นอยู่แล้ว)
+
+
+---
+
+# รอบ DAILY-2026-11-06 (rev7 · leader ตัดสิน 2026-11-06 10:55–11:10 UTC · ก่อนเปิด 14:30Z)
+
+- ราคาอ้างอิง: **ปิด 2026-11-05** (Alpaca SIP 1Day) · close ของ 6 ชื่อตรงกันทั้ง 3 สายถึง cent
+- บัญชี **`PA3ZME9WF`** — equity **$1,003.27** · cash **$841.11** · positions **GDDY 1.35 (mark 120.12 · uPL +$9.50)** · open orders **0** (GET 10:55:56Z · `/v2/clock` is_open=false next_open 14:30Z)
+- รายงานวันเดียวกันครบ 3 สาย: news 09:53Z · finance 10:18Z · tech 10:18Z · ใบสั่งงานเข้า `done/` ครบ 3 คิว
+- กติกา rev8 @ equity วันนี้: risk/ไม้ ≤**$10.03** · เพดาน/ตัว ≤**$200.65** · reserve ≥**$200.65** · max 3 ไม้ (ว่าง 2) · R:R ≥2 · stop ≥1 ATR · `stop% ≤ risk/cap = 5.00%`
+- **ผลรอบ: 0 แผนที่ส่ง** · 2 WATCH (NVDA, TSM) · 4 REJECT · MSFT ปิดโดย stop เมื่อวาน (−$6.20)
+
+## ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| — | — | 2026-11-06 | — | — | — | **ไม่มีแผนที่ส่งรอบนี้** | — | — | — | — |
+
+> ไม่มี `plan_id` ใหม่เพราะไม่มี `SELECT` — NVDA/TSM เป็น **WATCH** (มี trigger + ขนาดเขียนไว้ครบ แต่ยังไม่ใช่ใบอนุญาตเข้า) ดู "Armed levels" ด้านล่าง · ตามกติกา: ไม่มี `plan_id` = ห้ามเป็น SELECT (ตรวจด้วย `scripts/reconcile_journal.py`)
+
+## Plan state — 2026-11-06
+
+| plan_id | status | order id | TIF | filled qty | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261105-01 (MSFT) | **CLOSED — STOP_HIT 2026-11-05 20:30:49Z** | `4ebc3a3d` (buy fill 550.914 14:33:09Z) → `2f819ada` (sell 533.70) | DAY | 0.36 / 0.36 → **ปิดแล้ว** | 0 | ปิดจบ: realized **−$6.20 (−0.617% ของ equity)** · slippage ใต้ stop 535 = $1.31/หุ้น |
+| PLAN-20261102-01 (GDDY) | **OPEN · stop ยกเป็น breakeven 2026-11-06** | `9d3c7071` (FILLED 1.35 @113.08) | DAY→manual | 1.35 / 1.35 | 2 | ปิด 1D < **113.08** (เดิม 106.35) · target 131.74 · deadline 2026-12-15 |
+| — (NVDA armed A) | **WATCH** — trigger ปิด 1D ≥ 188.88 | — | — | — | — | ปิด 1D < 174.64 · ไม่เกิดถึง 2026-11-13 |
+| — (NVDA armed B) | **WATCH** — ย่อ ≤179.20 หลัง BLS ผ่าน | — | — | — | — | เปิดต่ำกว่า 179.20 = ห้ามรับ fill |
+| — (TSM armed) | **WATCH** — หลังรายได้เดือน 10 พ.ย. + ย่อ ≤332.20 | — | — | — | — | ปิด 1D < 325.19 · รายได้เดือนออกแย่ = ยกเลิกทั้งแผน |
+
+- **GDDY:** fractional ⇒ ไม่มี bracket ที่ broker · stop 113.08 / target 131.74 อยู่ใน `ingest/manual_stops.json` · broker DAY stop วางโดย `scripts/arm_day_stops.py` (cron 13:25/14:25 UTC) · watchdog `fractional-stop-watchdog` (*/15 13–21 UTC) เป็นชั้นที่ 2
+- **MSFT:** ปิดแล้ว — order `2f819ada` sell market 0.36 @533.70 (watchdog STOP_HIT, log: `price=534.01 stop=535.0`) · แถว journal `J-20261105-01` อยู่ใน `ingest/trade_journal_summary.md`
+
+## Armed levels 2026-11-06 (ระดับรอ trigger — **ไม่ใช่แผนที่อนุมัติ**)
+
+- **NVDA A (breakout — ทางหลัก):** trigger **ปิด 1D ≥ 188.88** (สูงกว่า high 2026-03-16) → buy limit **189.00** · stop **181.60** (7.40 = 1.01×ATR14 7.34) · T1 200.13 (1.44 net = ตก) · **T2 206.79 (2.32 net ✓)** · size **1 หุ้น = $189.00 (18.8%)** · risk **$7.40 (0.74%)** · งบ 17 พ.ย. gap max 2.65% = 0.65× stop ⇒ ถือข้ามได้
+- **NVDA B (pullback):** trigger ย่อแตะ **≤179.20** *หลัง* BLS 13:30Z ผ่านและไม่ถูกขายกลับในชั่วโมงแรก → buy limit **179.20** · stop **171.86** (1.00×ATR) · T2 **197.97** (2.47 net ✓) · 1 หุ้น $179.20 หรือเศษ 0.91 หุ้นที่ stop 168.19 (1.5×ATR, risk $10.02) · **fill floor 179.20** = เปิดต่ำกว่านี้ห้ามรับ fill
+- **TSM:** trigger = รายได้เดือน ต.ค. ออก **10 พ.ย. 05:30Z** MoM/YoY เร่ง **และ** ราคาย่อ ≤**332.20** → เศษ **0.60 หุ้น = $199.32 (19.9%)** · stop **316.10** (1.01×ATR) · T2 **380.00 (2.88 net ✓)** · risk **$9.66 (0.96%)** · ถ้ารายได้เดือนแย่ = ยกเลิกแผน ไม่รอย่อ
+- **NVDA A/B และ TSM ใช้ slot เดียวกัน** — เกิดอันใดอันหนึ่งแล้ว อีกอันเป็นโมฆะ · corr NVDA–TSM 0.80 (d60) / 0.93 (d30) ⇒ **ห้ามถือพร้อมกัน**
+- **ไม่จับตา (ตกเกตแล้ว):** CSCO ปิด >102.14 (avg 7.00) · AMAT (tech สั่งไม่เข้า, stop ไม่มีโครงสร้าง) · BABA (F VETO) · CEG (R:R 1.34 + งบ 9 พ.ย.)
+
+## ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| stock | N | F | T | avg | ตกเพราะ (ตัวเลขแรกที่ fail) | verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| CSCO | 7 | 7.0 | 7.0 | 7.00 | **avg 7.00 < 7.5** · entry ต้องเบรก +6.8% จากปิด 95.72 · ปิดที่ low วัน | REJECT |
+| AMAT | 8 | 7.0 | 4.0 | 6.33 | **T 4.0 (tech สั่งไม่เข้า)** · stop 23.50 ไม่มีโครงสร้าง (311.07→287.49 ว่าง) · ATR 7.21% | REJECT |
+| BABA | 6 | 4.0 | 7.5 | 5.83 | **F VETO** · FCF 4 ไตรมาส −175,755 M CNY · OM 7.29% · ROIC 3.08% | REJECT |
+| CEG | 6 | 4.0 | 3.0 | 4.33 | **R:R ดีสุด 1.34 < 2** · งบ 9 พ.ย. gap max 9.92% = 1.79× stop | REJECT |
+
+## Correlation (tech · SIP daily returns ถึง 2026-11-05, 546 แท่ง)
+
+- กับ **GDDY**: NVDA **−0.24 (d60) / −0.52 (d30)** · TSM −0.37 / −0.47 · CSCO −0.29 / −0.39 · CEG −0.29 / −0.38 · AMAT −0.39 / −0.47 · BABA **+0.06 / +0.12** ⇒ ไม่มีตัวใด ≥ +0.5 (เกตด้านเดียว)
+- **ภายในลิสต์:** NVDA–TSM **0.80 / 0.93** · AMAT–TSM 0.79 / 0.83 · AMAT–NVDA 0.60 / 0.76 · CSCO–TSM 0.57 / 0.76 · CSCO–NVDA 0.45 / 0.75 · CSCO–CEG 0.44 / 0.51 ⇒ **semis 4 ตัวเป็น exposure เดียวกัน ⇒ ถือได้ไม่เกิน 1 ตัว** · BABA แยกออกได้ (≤+0.2 กับทุกตัว) แต่ติด F VETO
+- **คู่ที่ผมปฏิเสธรอบนี้: NVDA + TSM** (0.80/0.93) — เก็บ NVDA เพราะ entry ห่างราคา 1.3% (ไม่ใช่ 5.9%), gap งบ 0.65× stop (ไม่ใช่ 1.49×), สภาพคล่อง $23.8B/วัน (เทียบ $5.75B)
+- หมายเหตุ: ไฟล์ `data/corr-2026-11-03-vsGDDY.json` คำนวณถึง 3 พ.ย. (ก่อน crash) และไม่มี CSCO/BABA ⇒ รอบนี้ใช้ค่าที่คำนวณถึง 5 พ.ย. ของ tech
+

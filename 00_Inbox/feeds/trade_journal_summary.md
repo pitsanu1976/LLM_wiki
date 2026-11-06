@@ -3,10 +3,10 @@ title: "trade_journal_summary.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-05
-updated: 2026-11-05
-source_mtime: 2026-11-03 22:59 UTC
-source_sha256: 510eca43e43e727a
+created: 2026-11-06
+updated: 2026-11-06
+source_mtime: 2026-11-06 10:59 UTC
+source_sha256: e15c04ad63c51160
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_journal_summary.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-03 22:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-06 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > สรุป trade journal (R/win rate)
 
 # Trade Journal Summary
@@ -29,7 +29,7 @@ source: "workspace/ingest/trade_journal_summary.md"
 
 | journal_id | plan_id | stock | entry date | entry price | volume | exit date | exit price | profit & loss | net balance | profit reason | loss reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| — | — | — | — | — | — | — | — | — | — | — | — |
+| J-20261105-01 | PLAN-20261105-01 | MSFT | 2026-11-05 (fill 14:33:09Z) | 550.914 | 0.36 | 2026-11-05 (20:30:49Z) | 533.70 | **−$6.20** | $1,003.27 (GET 2026-11-06 10:55:56Z — รวม mark GDDY 120.12) | — | **STOP_HIT:** watchdog ขาย market เมื่อราคา 534.01 < stop 535.00 · slippage ใต้ stop $1.31/หุ้น ⇒ realized เกินแผน $0.44 (แผน risk $5.76) · ค่าธรรมเนียม Alpaca $0 |
 
 ## คำนิยามคอลัมน์ / convention
 
@@ -45,7 +45,9 @@ source: "workspace/ingest/trade_journal_summary.md"
 
 | plan_id | stock | สถานะ | order id | qty สั่ง | fill | entry | SL | TP | ส่งเมื่อ |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| PLAN-20261102-01 | GDDY | **OPEN (filled 2026-11-03)** | 9d3c7071-0d15-4f9e-81c1-fc6c3998699a | 1.35 | **1.35** | 113.08 (fill avg; limit 113.60) | 106.35 (manual) | 131.74 (manual) | 2026-11-02 22:32:46 UTC |
+| PLAN-20261102-01 | GDDY | **OPEN (filled 2026-11-03)** | 9d3c7071-0d15-4f9e-81c1-fc6c3998699a | 1.35 | **1.35** | 113.08 (fill avg; limit 113.60) | **113.08 (manual · ยกเป็น breakeven 2026-11-06)** | 131.74 (manual) | 2026-11-02 22:32:46 UTC |
+
+- **GDDY mark 2026-11-05 = 120.12** (SIP) ⇒ uPL **+$9.50 (+6.23%)** · weight 16.2% · **stop ยกจาก 106.35 → 113.08** ตาม trigger ที่เขียนไว้ (ปิด 1D ≥120.00) · บันไดถัดไป ปิด ≥126.00 → 118.00
 
 - **GDDY fill 2026-11-03:** 1.35 หุ้นที่ **113.08** (limit 113.60 ⇒ fill ดีกว่า $0.52) · mv $153.16 · uPL +$0.50 (mark 113.45) · **ไม่มี legs ที่ broker** (fractional = simple + DAY) ⇒ stop/target อยู่ใน `ingest/manual_stops.json` และบังคับด้วย `fractional-stop-watchdog` (*/15 13-21 จ.-ศ.)
 - risk ที่ใช้ **$9.09 (0.909%)** · weight **15.31%** · cash เหลือ $847.34 ≥ reserve $200 · **2 ช่องว่างจาก 3**
