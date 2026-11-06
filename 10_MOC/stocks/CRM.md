@@ -33,9 +33,11 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-- **2026-10-12 (ข่าว, เก่า 8 วัน)**: BofA double upgrade Underperform→Buy PT $160→$285 (Benzinga/Barchart) — ยังใช้เป็นบริบท ไม่ใช่ catalyst ใหม่
-- **งบถัดไป**: Q3 FY27 ~**2026-12-02** หลังปิด (TipRanks "confirmed" / MarketBeat "estimated") ⇒ ไม่มี binary จนท้ายกรอบ
-- **Sentiment**: Neutral (แรงหนุนข่าวหมดอายุ, หุ้นขึ้น >50% จากปลาย มิ.ย.) — [[DAILY-US_news_2026-10-20]]
+- **2026-11-06 (news):** วันงบ Q3 FY27 = **พ. 2 ธ.ค. 2026 หลังปิด** แต่ **บริษัทยังไม่ยืนยัน** (MarketBeat/SignalStack เป็น secondary) ⇒ **ตกเกต "วันต้องมีแหล่ง primary"** ของ leader
+- ปิด 2026-11-05 = **222.41** (−2.07% 1D, −3.68% 5D, −0.96% 21D), ATR% 4.19 (calc), ห่าง high 52w −17.35% ⇒ ร่วงน้อยกว่ากลุ่ม AI มาก
+- วัด thesis ด้วย: cRPO growth + Agentforce ARR (ไม่ใช่ EPS beat)
+- เสี่ยง: ไม่มี primary ยืนยันวัน ⇒ leader ไม่สามารถออกแบบแผนรอบ 5 สัปดาห์จากวันนี้ได้
+- อ้างอิง: [[DAILY_news_2026-11-06]]
 <!-- agent:news:end -->
 
 ## 📈 Technical

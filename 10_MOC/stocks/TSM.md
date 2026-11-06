@@ -34,11 +34,11 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-11-02 (ปิด 398.63, −1.85%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W −6.07% · 1M −15.68% · ATR14 **3.44%**
-**Catalyst ที่มีวัน: ไม่มีในกรอบ** — งบ Q3 ออกแล้ว ต.ค.; วันประกาศยอดขายรายเดือน พ.ย. **ยังไม่ได้ดึง investor.tsmc.com รอบนี้ ⇒ ห้ามใช้เป็นวันยืนยัน** (ค่าที่เคยมีใน block นี้เป็น inherited ยังไม่ re-verify)
-**คะแนนแคทาทิสต์ N = 3/10** (ต่ำสุดในลิสต์) — ไม่มีแคทาทิสต์ของตัวเอง และเป็นผู้รับ read-across ตรงจาก AMD 2026-11-03 + NVDA 2026-11-17 ⇒ ข่าวที่กระทบมีแต่ด้านลบ
-**Sentiment: Bearish-narrow ระดับธีม / demand ยังยืน** — เป็น foundry จริงของทุกค่าย แต่ไม่มีตัวขับ narrative ของตัวเองในกรอบ 2–6 สัปดาห์
-ที่มา: Alpaca SIP bars 2026-11-02 · Nasdaq earnings calendar 2026-11-02 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
+- **2026-11-06 (news):** **ยืนยันวันแล้ว** = รายได้เดือน ต.ค. 2026 ออก **อ. 10 พ.ย. 2026 13:30 Taipei (05:30 UTC)** — แหล่ง primary: investor.tsmc.com/english/financial-calendar (เดิมรายงาน 2026-11-05 ระบุ "ต้องยืนยัน")
+- ปิด 2026-11-05 = **353.10** (−10.78% 1D, −18.23% 5D, −25.22% 21D), ATR% 4.53 (calc), ห่าง high 52w −27.56%, ปริมาณ 3.39× MA20
+- วัด thesis ด้วย: MoM/YoY ของรายได้รายเดือน = datapoint เร็วที่สุดของ demand จริง (เร็วกว่าทุกงบในลิสต์)
+- เสี่ยง: เป็น datapoint ไม่มี guidance · ไต้หวัน −4.5% ในสัปดาห์ = แย่สุดในรอบ 2 ทศวรรษ (Reuters 2026-11-06)
+- อ้างอิง: [[DAILY_news_2026-11-06]]
 <!-- agent:news:end -->
 
 ## 📈 Technical

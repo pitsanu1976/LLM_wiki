@@ -35,11 +35,11 @@ related:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-11-02 (ปิด 202.06, −1.26%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W −6.45% · 1M −13.63% · ATR14 **3.15%** (ต่ำสุดพอใส่ไม้เต็มเพดาน)
-**งบ Q3 FY27 = 2026-11-17 ยืนยันจากบริษัท** (ผล ~20:20 UTC, call 22:00 UTC) — primary = NVIDIA PR 2026-10-28 · guide Q3 $108B ±2%, outlook ไม่นับ China data-center
-**ไม่มี XD ในกรอบ** (ล่าสุด 2026-09-10 $0.25) · **คะแนนแคทาทิสต์ N = 6/10** (สูงสุดในลิสต์ 10 ชื่อ — แคทาทิสต์มีวัน+primary เดียว; ถูกจำกัดที่ 6 เพราะ sentiment ธีม Bearish)
-**Sentiment: Bearish-narrow ระดับธีม / demand ยังไม่พัง** — งบ 17 พ.ย. = binary ที่อยู่ในกรอบถือ (gap ไม่ใช่ trend)
-ที่มา: Alpaca SIP bars 2026-11-02 · NVIDIA PR 2026-10-28 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
+- **2026-11-06 (news):** วันงบ Q3 FY27 = **อ. 17 พ.ย. 2026 หลังปิด** (ผล ~16:20 ET, call 17:00 ET / 22:00 UTC) — **ยืนยันแล้ว** (nvidianews.nvidia.com, 28 ต.ค. 2026)
+- ปิด 2026-11-05 = **181.60** (−9.26% 1D, −15.01% 5D, −23.53% 21D), ATR% 4.04 (calc), ห่าง high 52w −25.38%, ปริมาณ 2.90× MA20 = วัน liquidation
+- วัด thesis ด้วย: data-center revenue + guidance Q4 FY27 + ไม่มีคำว่า "push out" ในคำอธิบายลูกค้า
+- เสี่ยง: เป็น binary ที่ใหญ่ที่สุดของธีม — ถ้า guide ต่ำกว่าคาด กระทบทั้งกระดาน ไม่ใช่แค่ NVDA
+- อ้างอิง: [[DAILY_news_2026-11-06]]
 <!-- agent:news:end -->
 
 ## 📈 Technical

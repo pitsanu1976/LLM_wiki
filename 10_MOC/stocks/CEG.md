@@ -28,11 +28,11 @@ aliases:
 
 ## 📰 News
 <!-- agent:news:begin -->
-**2026-11-02 (ปิด 257.25, −1.96%, SIP consolidated 21:00 UTC ดึง 22:36Z)** · 1W **+1.89%** · 1M −0.09% (แบนราบขณะ SMH 1M −19.39%) · ATR14 **4.64%**
-**งบ Q3-2026 = 2026-11-09 ก่อนเปิด** — แหล่ง **ปฏิทิน Nasdaq = ทุติยภูมิ ⚠️** ยังไม่ยืนยันกับ IR ของ CEG
-**คะแนนแคทาทิสต์ N = 5/10** — มีวันแต่ทุติยภูมิ; เป็นตัวแทนธีม "ไฟสำหรับ AI" ที่ corr กับ SMH เพียง 0.40 (กระจายความเสี่ยงในธีมได้จริง แต่ corr กับ TLN 0.91 ⇒ CEG+TLN = ไม้เดียวกัน)
-**Sentiment: Bullish-narrow เฉพาะกลุ่ม power/electrical** — บวกได้แม้ semis ลบ; ความเสี่ยงหลัก = ค่าไฟ/data center กลายเป็นประเด็นการเมืองหลัง midterm 2026-11-03 (กดผ่าน sentiment ไม่ใช่รายได้)
-ที่มา: Alpaca SIP bars 2026-11-02 · Nasdaq earnings calendar 2026-11-02 — รายงานเต็ม `workspace/reports/news/2026-11-03-DAILY.md` · คะแนน `workspace/reports/news/2026-11-03-DAILY-scores.md`
+- **2026-11-06 (news):** วัน catalyst = **จ. 9 พ.ย. 2026 ก่อนเปิด** งบ Q3 2026 + call 09:00 ET / 14:00 UTC — **ยืนยันแล้ว** (investors.constellationenergy.com event-details) · ห่างวันเปิดไม้ 1 วันทำการ = binary ยังไม่คลี่
+- ปิด 2026-11-05 = **239.65** (−2.47% 1D, −9.42% 5D, −20.01% 21D), ATR% 5.39 (calc จาก SIP), ห่าง high 52w −41.93%
+- วัด thesis ด้วย: guidance FY + PJM/capacity revenue + ความคืบหน้า PPA data center · ไม่ใช่แค่ตัวเลข EPS
+- เสี่ยง: instrument ที่ผูกพันจริงมีอยู่แล้ว = คำสั่ง Gov. Abbott ให้ TCEQ หยุด permit data center (21 ก.ย. 2026, gov.texas.gov) — ไม่มีวันสิ้นสุด (ผูกกับ ERCOT audit)
+- อ้างอิง: [[DAILY_news_2026-11-06]]
 <!-- agent:news:end -->
 
 ## 📈 Technical
