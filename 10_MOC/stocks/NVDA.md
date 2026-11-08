@@ -35,11 +35,14 @@ related:
 
 ## 📰 News
 <!-- agent:news:begin -->
-- **2026-11-06 (news):** วันงบ Q3 FY27 = **อ. 17 พ.ย. 2026 หลังปิด** (ผล ~16:20 ET, call 17:00 ET / 22:00 UTC) — **ยืนยันแล้ว** (nvidianews.nvidia.com, 28 ต.ค. 2026)
-- ปิด 2026-11-05 = **181.60** (−9.26% 1D, −15.01% 5D, −23.53% 21D), ATR% 4.04 (calc), ห่าง high 52w −25.38%, ปริมาณ 2.90× MA20 = วัน liquidation
-- วัด thesis ด้วย: data-center revenue + guidance Q4 FY27 + ไม่มีคำว่า "push out" ในคำอธิบายลูกค้า
-- เสี่ยง: เป็น binary ที่ใหญ่ที่สุดของธีม — ถ้า guide ต่ำกว่าคาด กระทบทั้งกระดาน ไม่ใช่แค่ NVDA
-- อ้างอิง: [[DAILY_news_2026-11-06]]
+- **2026-11-08 (news · ดึงข้อมูล 09:26 UTC):** sentiment **Neutral (เอนลบ · narrow)** กรอบ 1–3 สัปดาห์ — ไม่มี guidance cut ในห่วงโซ่ แต่ความเสี่ยง permit data center ระดับรัฐยังไม่คลี่ + ตลาด price chance ขึ้นดอกเบี้ย ธ.ค. **78%** (LSEG ผ่าน Reuters 6 พ.ย.)
+- ปิด **2026-11-06 = 186.64** (+5.04 / +2.78%, prev close 181.60 · stockanalysis "At close: Nov 6, 2026, 4:00 PM EST") · −23.31% จาก 52w high 243.37 (calc) ⇒ **ปิดต่ำกว่า invalidation 204.14 ของคำสั่งค้าง buy 94 @211.00 (filled 0) แล้ว** — ต้องตัดสินเรื่องคำสั่งค้างก่อนคิดเรื่องงบ
+- วันงบ = **อ. 17 พ.ย. 2026 หลังปิด** (ผล ~16:20 ET · call 17:00 ET / 22:00 UTC) — ยืนยันแล้ว (nvidianews.nvidia.com 28 ต.ค. 2026) ⇒ **ไม่ใช่ 18 พ.ย. ตาม block Decision (บันทึก 29 ต.ค.)**
+- วัด thesis งบ 17 พ.ย.: revenue ≥ **$108.0B ±2%** · GM ≥ **74.0% ±50bp** (จาก 75.0% Q2) · Q4 guide โตต่อ · ไม่มีคำว่า "push out" · คำอธิบาย China + permitting
+- จีนสองทาง (ยังไม่มีกำหนด): H200 ~**600,000** ชิปค้างฮ่องกงรอผู้อนุมัติ (Reuters 5 พ.ย., กึ่งยืนยัน) = upside ที่ guide **ไม่รวม**; NYT 7 พ.ย. ชี้การอนุมัติบริษัทจีนมีช่องโหว่ ⇒ เสี่ยงถูกทบทวน (= ตัด optionality)
+- เสี่ยงหลัก: GM vs ต้นทุน memory (commitments $119B → **$279B "primarily memory"**, 26 ส.ค.) · EO/moratorium ระดับรัฐ · binary งบ 17 พ.ย.
+- ปฏิทินใกล้: 10 พ.ย. TSMC Oct sales 05:30 UTC · CPI ต.ค. 13:30 UTC · CoreWeave Q3 22:00 UTC · 12 พ.ย. AMAT + CSCO
+- อ้างอิง: [[NVDA_news_2026-11-08]] · [[DAILY_news_2026-11-06]]
 <!-- agent:news:end -->
 
 ## 📈 Technical
