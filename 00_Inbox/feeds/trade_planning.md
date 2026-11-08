@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-06
-updated: 2026-11-06
-source_mtime: 2026-11-06 14:12 UTC
-source_sha256: 42ca016b3801ba2d
+created: 2026-11-08
+updated: 2026-11-08
+source_mtime: 2026-11-08 09:32 UTC
+source_sha256: 5cd62b512eb1742d
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-06 14:12 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-08 09:32 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -357,3 +357,15 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - **คู่ที่ผมปฏิเสธรอบนี้: NVDA + TSM** (0.80/0.93) — เก็บ NVDA เพราะ entry ห่างราคา 1.3% (ไม่ใช่ 5.9%), gap งบ 0.65× stop (ไม่ใช่ 1.49×), สภาพคล่อง $23.8B/วัน (เทียบ $5.75B)
 - หมายเหตุ: ไฟล์ `data/corr-2026-11-03-vsGDDY.json` คำนวณถึง 3 พ.ย. (ก่อน crash) และไม่มี CSCO/BABA ⇒ รอบนี้ใช้ค่าที่คำนวณถึง 5 พ.ย. ของ tech
 
+
+# รอบตรวจ NVDA-2026-11-08 (rev8 · leader ตรวจกับ desks 2026-11-08 ~09:30 UTC · ตลาดปิด)
+
+- **ผล: 0 SELECT · NVDA คงเป็น WATCH · ไม่มี plan_id ใหม่ · ไม่ส่งออเดอร์**
+- รายงาน 3 สายวันเดียวกัน: `reports/news/2026-11-08-NVDA.md` (09:31Z, 122 บรรทัด) · `reports/finance/2026-11-08-NVDA.md` (09:28Z, 130) · `reports/tech/2026-11-08-NVDA.md` (09:28Z, 135)
+- ราคาอ้างอิง: ปิด **2026-11-06 = 186.64** (Alpaca SIP, ผ่าน tech) — ตรงกับที่ news/finance ใช้
+- **armed levels rev7 ถูกยกเลิกทั้งคู่ (stop ใต้กฎ 1.5×ATR ที่ตั้งหลัง MSFT post-mortem IMP-20261106-01):**
+  - NVDA A: stop 181.60 = **0.95×ATR14 7.77** → ต่ำกว่ากฎ · ถ้าขยับเป็น 176.50 (1.61×ATR) ⇒ risk $12.50 · **R:R ที่ T2 206.79 = 1.42 < 2** ⇒ ตกเกต (ต้องมี target ≥ **214.00**)
+  - NVDA B: stop 171.86 = **0.94×ATR** → เช่นกัน · stop 167.50 (1.5×ATR) ⇒ risk $11.70 · **R:R ที่ T2 197.97 = 1.60 < 2** ⇒ ตกเกต (ต้องมี target ≥ **202.60**)
+- ขนาดที่ fit ถ้าจะเข้า: A 0.80 หุ้น ($151.20 = 15.1%, risk $10.00) · B 0.85 หุ้น ($152.32, risk $9.95) — ใต้เพดาน $200.65 ทั้งคู่ แต่ติด R:R
+- งบ Q3 FY27 **2026-11-17** อยู่ในกรอบถือ ⇒ ถ้าเข้า 16 พ.ย. ต้องตัดสินถือ/ลดก่อนงบ
+- ทิศทาง 1D ขาลง: ปิดใต้ MA20 211.55 / MA50 219.81 / MA200 204.67 · RSI14 30.76 · MACD hist −3.20 · dd −23.3% จาก high 243.37 (6 ต.ค.)
