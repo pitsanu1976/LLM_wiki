@@ -19,6 +19,8 @@ kanban-plugin: board
 # relia-work — Kanban
 
 บอร์ดงานของ **Reliability Intelligence Platform** (`/opt/data/projects/reliability-app`) รวมงานวิเคราะห์ CMMS + งาน knowledge ที่ป้อนเข้าไป
+> ถ้าเปิดแล้วไม่เห็นเป็นบอร์ด: ต้องเปิด community plugin **Kanban** (Settings → Community plugins → Kanban) — ทางเลือกที่ไม่ต้องใช้ plugin คือเปิด `relia-work.canvas` (Obsidian Canvas มีมาให้ตั้งแต่ v1.4)
+
 WIP limit: **3 ใบใน Doing** · การ์ดที่ค้างเกิน 2 สัปดาห์ให้ย้ายไป Blocked พร้อมระบุสิ่งที่รอ
 
 ## Backlog
