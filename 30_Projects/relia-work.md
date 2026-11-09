@@ -3,7 +3,7 @@ title: relia-work — Kanban
 type: project
 status: active
 created: 2026-11-02
-updated: 2026-11-02
+updated: 2026-11-09
 tags:
   - project/kanban
   - reliability/cmms
@@ -22,6 +22,11 @@ kanban-plugin: board
 > ถ้าเปิดแล้วไม่เห็นเป็นบอร์ด: ต้องเปิด community plugin **Kanban** (Settings → Community plugins → Kanban) — ทางเลือกที่ไม่ต้องใช้ plugin คือเปิด `relia-work.canvas` (Obsidian Canvas มีมาให้ตั้งแต่ v1.4)
 
 WIP limit: **3 ใบใน Doing** · การ์ดที่ค้างเกิน 2 สัปดาห์ให้ย้ายไป Blocked พร้อมระบุสิ่งที่รอ
+
+> **บอร์ดที่ใช้งานจริง (2026-11-09):** Hermes dashboard → แท็บ **Kanban** → บอร์ด **Relia Work**
+> (`hermes kanban --board relia-work`) — ยก 31 ใบไปแล้ว, workspace เริ่มต้น `/opt/data/projects/reliability-app`
+> คอลัมน์ในบอร์ด Hermes: Backlog/Next อยู่ใน **Ready** (เรียงตาม priority: Doing 100 → Next 13/12/11 → Backlog 0), ที่เหลือตรงชื่อ (Blocked / Review / Done)
+> ไฟล์นี้ยังเป็นแหล่งข้อมูลเต็มของ backlog — แก้การ์ดในบอร์ด Hermes ก่อนแล้วค่อย sync กลับมาที่นี่
 
 ## Backlog
 
