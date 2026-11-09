@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-08
-updated: 2026-11-08
-source_mtime: 2026-11-08 09:32 UTC
-source_sha256: 5cd62b512eb1742d
+created: 2026-11-09
+updated: 2026-11-09
+source_mtime: 2026-11-09 11:01 UTC
+source_sha256: 166528eb6bc3ff72
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-08 09:32 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-09 11:01 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -369,3 +369,58 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - ขนาดที่ fit ถ้าจะเข้า: A 0.80 หุ้น ($151.20 = 15.1%, risk $10.00) · B 0.85 หุ้น ($152.32, risk $9.95) — ใต้เพดาน $200.65 ทั้งคู่ แต่ติด R:R
 - งบ Q3 FY27 **2026-11-17** อยู่ในกรอบถือ ⇒ ถ้าเข้า 16 พ.ย. ต้องตัดสินถือ/ลดก่อนงบ
 - ทิศทาง 1D ขาลง: ปิดใต้ MA20 211.55 / MA50 219.81 / MA200 204.67 · RSI14 30.76 · MACD hist −3.20 · dd −23.3% จาก high 243.37 (6 ต.ค.)
+
+
+# รอบ DAILY-2026-11-09 (rev9 · leader ตัดสิน 2026-11-09 10:55–11:10 UTC · ก่อนเปิด 14:30Z)
+
+- ราคาอ้างอิง: **ปิด 2026-11-06** · tech ใช้ consolidated (stockanalysis) · news ใช้ Alpaca IEX — ต่าง ≤$0.06 ทุกชื่อ
+- บัญชี **`PA3ZME9WF`** — equity **$995.52** · cash **$841.11** · positions **GDDY 1.35 (mark 114.38 · uPL +$1.76)** · open orders **0** ตอน sync (แล้วมี DAY stop `afb697f6` ที่ผมวาง 10:57:59Z) — GET 10:55:58Z · clock is_open=false next_open 14:30Z
+- รายงานวันเดียวกันครบ 3 สาย: news 09:54Z · finance 10:20Z · tech 10:23Z · ใบสั่งงานเข้า `done/` ครบ 3 คิว
+- กติกา rev8 @ equity วันนี้: risk/ไม้ ≤**$9.96** · เพดาน/ตัว ≤**$199.10** · reserve ≥**$199.10** · max 3 ไม้ (ว่าง 2) · R:R ≥2 · stop ≥1.5×ATR · `stop% ≤ risk/cap = 5.00%`
+- **ธีมรอบ:** post-crash dislocation — non-semis + dated catalyst · TF 3–10 sessions (9–27 พ.ย.)
+- **ผลรอบ: 0 แผนที่ส่ง** · 8 REJECT · 0 armed ใหม่ · TSM armed revoked · GDDY HOLD
+
+## ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| — | — | 2026-11-09 | — | — | — | **ไม่มีแผนที่ส่งรอบนี้** | — | — | — | — |
+
+> ไม่มี `plan_id` ใหม่เพราะไม่มี `SELECT` — ตามกติกา: ไม่มี `plan_id` = ห้ามเป็น SELECT
+
+## Plan state — 2026-11-09
+
+| plan_id | status | order id | TIF | filled qty | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 (GDDY) | **OPEN · stop 113.08 (breakeven) · broker DAY stop re-armed** | `9d3c7071` (FILLED 1.35 @113.08) · stop `afb697f6` | DAY | 1.35 / 1.35 | 2 | ปิด 1D < **113.08** · target 131.74 · deadline 2026-12-15 |
+
+- **GDDY:** fractional ⇒ ไม่มี bracket · stop 113.08 / target 131.74 ใน `ingest/manual_stops.json` · **broker DAY stop `afb697f6-cae5-4e3d-b151-1a859408d99e` SELL 1.35 @113.08 NEW created 2026-11-09 10:57:59Z** (read-back by id) · watchdog `fractional-stop-watchdog` (*/15 13–21 UTC) = ชั้นที่ 2
+- **defect ที่แก้รอบนี้:** cron `arm-day-stops` + `stop-audit` ล้ม 4 ครั้งติด (`ModuleNotFoundError: No module named 'alpaca'`) เพราะ `script` ชี้สำเนา `/opt/data/profiles/leader/scripts/arm_day_stops.py` และถูกรันด้วย python ที่ไม่มี alpaca-py ⇒ **ไม่มี DAY stop ตั้งแต่ 2026-11-04 14:55Z** · แก้เป็น **shim** ที่ exec ตัวจริง (`/opt/data/home/hermes-stock-team/scripts/arm_day_stops.py`) ด้วย `.venv/bin/python` · ทดสอบ `--status` และ path ของ cron (ไม่มี arg → `--quiet`) ผ่านทั้งคู่
+
+## Armed levels — 2026-11-09 (ไม่มี)
+
+| ระดับ | สถานะ | เหตุ |
+| :--- | :--- | :--- |
+| NVDA A (189.00/181.60) · NVDA B (179.20/171.86) | **revoked 2026-11-08** | stop 0.94–0.95×ATR · ขยับถูกกฎแล้ว R:R 1.42/1.60 < 2 |
+| **TSM (332.20/316.10/T2 380.00)** | **revoked 2026-11-09** | stop 16.10 = **1.01×ATR14 16.73** < 1.5×ATR · ที่ 1.5×ATR (stop 307.11) **R2 gross 1.90 < 2** |
+| TSM เงื่อนไขปลดล็อก (ราคา) | — | entry **≤328.80** + stop = entry − 25.09 (≈303.71) ⇒ R2 net ≥2.0 + รายได้เดือน ต.ค. 10 พ.ย. 05:30Z ดี + corr GDDY ≤0.5 |
+| ระดับใหม่ | **ไม่มี** | ทุกชื่อตกเกต **คะแนน** ⇒ armed level ไม่ช่วย (ราคาไม่ทำให้ avg ผ่าน 7.5) |
+
+## ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| stock | N | F | T | avg | ตกเพราะ (ตัวเลขแรกที่ fail) | verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| NTES | 6 | 8.0 | 7.0 | **7.00** | **avg 7.00 < 7.5** (ใกล้สุด) · ที่เหลือผ่าน: R2 net 2.93 · stop 1.50×ATR · risk ที่เพดาน $7.62 | REJECT |
+| JD | 7 | 6.5 | 6.5 | 6.67 | **avg 6.67** · F 6.5 (OM TTM 0.17%) · R2 net 1.55 | REJECT |
+| TGT | 8 | 7.0 | 4.0 | 6.33 | **T 4.0** (R2 net 1.07) + stop 6.52% > 5.00% | REJECT |
+| DIS | 7 | 7.0 | 5.0 | 6.33 | **T 5.0** · R2 net 1.30 | REJECT |
+| WMT | 5 | 5.0 | 7.0 | 5.67 | **F 5.0** — PE 45.48 = pct 89 · FCF yield 1.4% | REJECT |
+| BABA | 6 | 4.0 | 6.5 | 5.50 | **F VETO** — FCF TTM −$11.47B · OM 14.13→7.29% | REJECT |
+| TJX | 6 | 7.0 | 3.0 | 5.33 | **T 3.0** — ขาลง (ใต้ MA200 10.27%, MACD −0.984) | REJECT |
+| BIDU | 5 | 4.0 | 6.0 | 5.00 | **F VETO** (TTM ขาดทุน, FCF −$1.90B) + stop 5.32% > 5.00% | REJECT |
+
+## Correlation (tech, 60 daily returns ถึง 2026-11-06)
+
+- กับ **GDDY**: TGT **+0.31 (20d +0.51)** · DIS +0.35 (+0.32) · JD +0.20 · WMT +0.22 (+0.48) · TJX +0.28 · NTES −0.00 · BABA +0.09 · BIDU +0.03 ⇒ ผ่านเกต ≤0.5 ทุกตัวที่ d60 **ยกเว้น TGT ที่ 20d = +0.51** ⇒ ถ้า TGT เป็น candidate ต้องวัดซ้ำทั้งสองหน้าต่าง
+- **ภายในลิสต์:** JD–BABA **+0.52** · WMT–TJX **+0.51** · JD–NTES **+0.50** · TGT–WMT +0.39 · NTES–BIDU +0.24 ⇒ กลุ่ม retail (WMT/TJX/TGT) และกลุ่ม China (JD/BABA/NTES) อย่างละ **เดิมพันเดียว** ไม่ใช่ diversification
+- ข้อจำกัด: tech คำนวณเป็น 60 daily returns (ไม่ใช่ 49 hourly แบบที่ news ใช้) ⇒ เทียบข้ามสายไม่ได้ตรงตัว

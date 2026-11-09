@@ -3,10 +3,10 @@ title: "stock_decision.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-06
-updated: 2026-11-06
-source_mtime: 2026-11-06 10:58 UTC
-source_sha256: 2512bac97426fb66
+created: 2026-11-09
+updated: 2026-11-09
+source_mtime: 2026-11-09 11:01 UTC
+source_sha256: bb3850cb722d7cf1
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/stock_decision.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-06 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/stock_decision.md` (mtime 2026-11-09 11:01 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > ตาราง DEC-* — ผลตัดสินต่อชื่อ
 
 # Stock Decision Log
@@ -275,3 +275,33 @@ source: "workspace/ingest/stock_decision.md"
 - **GDDY:** ปิด 1D 120.12 ≥ trigger 120.00 (written) ⇒ **stop 106.35 → 113.08 (breakeven)** · บันไดถัดไป ปิด ≥126.00 → 118.00 · target 131.74 คงเดิม · broker DAY stop จะถูกวางโดย `arm_day_stops.py` 13:25/14:25Z
 - **จะเปลี่ยนใจเมื่อ:** (1) NVDA ปิด 1D ≥188.88 (armed A) หรือย่อ ≤179.20 หลัง BLS ผ่าน (armed B) (2) TSM รายได้เดือน 10 พ.ย. 05:30Z ออกดี + ย่อ ≤332.20 (3) sentiment ธีมกลับเป็น neutral/บวก และ NVDA ยืนเหนือ 188.88 (4) ถ้า AMAT 12 พ.ย. พูดว่า orders pushed out = เปลี่ยน regime เป็น earnings-cut ⇒ ปิดธีม long ทั้งหมด
 
+
+## รอบ DAILY-2026-11-09 (leader, ตัดสิน 2026-11-09 10:55–11:10 UTC · ก่อนเปิดตลาด 14:30Z)
+
+> **ที่มาของคะแนนรอบนี้:** `N` = คะแนนที่ news ให้มาเอง (1–10) · `F`/`T` = **leader-map จากตัวเลขของ finance/tech** — ใบสั่งงานรอบนี้ยังไม่ได้ขอคะแนน 1–10 จาก 2 สาย (ช่องว่างกระบวนการเดิม ครั้งที่ 2) · rubric F: 8–9 = FCF บวกสม่ำเสมอ + net cash + valuation ≤ ค่ากลางตัวเอง, 7 = FCF บวกแต่มีจุดอ่อนชัด 1 ข้อ, 5–6 = FCF ผันผวน/valuation แพงชัด/OM บาง, ≤4 = FCF ติดลบหลายไตรมาส (VETO) · rubric T: 8+ = ขาขึ้นยืนยัน + R:R≥2 ที่ T1, 7 = ผ่านเกตแต่ต้องถือถึง T2, 5–6 = โครงสร้างกลาง/กลับตัว, ≤4 = ตก R:R หรือ tech สั่งไม่เข้า
+> **id:** analyst ไม่ได้ออก id ต่อชื่อ ⇒ `NEWS/FIN/TECH-20261109-01..08` เรียงตามลำดับใน shortlist ของ news (TGT DIS JD WMT TJX NTES BABA BIDU) ซึ่งตรงกับลำดับในรายงาน finance และ tech
+> `finance easy exp` = `scripts/fundamentals_easy.py` (SEC XBRL, ดึง 2026-11-09) — assets = 100 · JD/NTES เป็น 20-F ไม่มี TTM ใน XBRL ⇒ กำไร/100 = n/a
+
+| decision_id | round | date | stock | news_id | finance_id | tech_id | N | F | T | avg | ผลคัด | ตกเพราะ | verdict | plan_id | finance easy exp | revision_of |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| DEC-20261109-01 | DAILY-2026-11-09 | 2026-11-09 | TGT | NEWS-20261109-01 | FIN-20261109-01 | TECH-20261109-01 | 8 | 7.0 | 4.0 | **6.33** | ตก | **avg 6.33 < 7.5** · T 4.0 (R2 net 1.07) · stop 6.52% > 5.00% ⇒ เต็มเพดานไม่ได้ (risk ที่เพดาน $12.97 > $9.96) · XD 10 พ.ย. $1.160 อยู่ในกรอบ | REJECT | — | หนี้ 70.9 · ทุน 29.1 · กำไร/100 7.59 · ดอก/100 0.70 ‖ moat: scale + owned brands แต่ OM 5.0% บาง · PE 16.43 = pct 55 (ถูกสุดในกลุ่ม) แต่ current ratio 0.99; XD 2026-11-10 | — |
+| DEC-20261109-02 | DAILY-2026-11-09 | 2026-11-09 | DIS | NEWS-20261109-02 | FIN-20261109-02 | TECH-20261109-02 | 7 | 7.0 | 5.0 | **6.33** | ตก | **avg 6.33** · T 5.0 · R2 net 1.30 · entry 113.90 ต้องรอย่อ −2.4% จากปิด 116.75 | REJECT | — | หนี้ 46.3 · ทุน 53.7 · กำไร/100 4.78 · ดอก/100 0.87 ‖ moat: IP + parks; fwd PE 15.42 vs TTM 24.14 แต่ net debt $40.86B กด NI (2,638 vs OI 4,873) | — |
+| DEC-20261109-03 | DAILY-2026-11-09 | 2026-11-09 | JD | NEWS-20261109-03 | FIN-20261109-03 | TECH-20261109-03 | 7 | 6.5 | 6.5 | **6.67** | ตก | **avg 6.67** · F 6.5 (OM TTM 0.17%) · R2 net 1.55 (variant A) · RSI 71.98 + เลย EMA20 3.77 ATR · gap p95 3.13% vs stop 4.20% | REJECT | — | หนี้ 67.6 · ทุน 32.4 · กำไร/100 n/a · ดอก/100 0.40 (2025-12-31) ‖ moat: logistics + net cash $22.78B, FCF yield 10.9%; OM บางมาก | — |
+| DEC-20261109-04 | DAILY-2026-11-09 | 2026-11-09 | WMT | NEWS-20261109-04 | FIN-20261109-04 | TECH-20261109-04 | 5 | 5.0 | 7.0 | **5.67** | ตก | **avg 5.67 · F 5.0** — PE 45.48 = percentile 89 ของตัวเอง · EV/EBITDA 24.04 · FCF yield 1.4% · consensus FCF FY27 11.76B < TTM 13.51B · N 5 (วันงบเป็น secondary) | REJECT | — | หนี้ 66.6 · ทุน 33.4 · กำไร/100 7.22 · ดอก/100 0.61 ‖ moat: scale + grocery, แต่ re-rate เป็น defensive compounder แพงกว่าประวัติตัวเอง | — |
+| DEC-20261109-05 | DAILY-2026-11-09 | 2026-11-09 | TJX | NEWS-20261109-05 | FIN-20261109-05 | TECH-20261109-05 | 6 | 7.0 | 3.0 | **5.33** | ตก | **T 3.0 — ขาลงชัด:** ใต้ MA200 10.27% · MACD hist −0.984 (ติดลบมากขึ้น) · RSI 42.56 · doji upper wick 79% ปฏิเสธ 138 · stop ที่ทำให้ R:R ผ่าน (127.50) = 1.21×ATR ผิดกฎ | REJECT | — | หนี้ 71.3 · ทุน 28.7 · กำไร/100 15.55 · ดอก/100 0.21 ‖ moat: off-price buying power; FCF บวกทุกไตรมาส, OM 12.2% — แต่ D/E 1.34 (lease) + PB 13.99 | — |
+| DEC-20261109-06 | DAILY-2026-11-09 | 2026-11-09 | NTES | NEWS-20261109-06 | FIN-20261109-06 | TECH-20261109-06 | 6 | 8.0 | 7.0 | **7.00** | ตก | **avg 7.00 < 7.5 (ใกล้สุดในรอบ)** — ตกที่ avg ไม่ใช่ที่ขนาด: ถ้าเข้าได้ size 1.570 หุ้น = $199.10 risk $7.62 (0.765%) pass ทุกข้ออื่น · N 6 เพราะ catalyst = งบ 19 พ.ย. (ไม่ใช่ event เฉพาะบริษัทที่แรงกว่า) · ADV $97.9M/วัน บางสุดในลิสต์ | REJECT | — | หนี้ 27.6 · ทุน 72.4 · กำไร/100 n/a · ดอก/100 n/a (2025-12-31) ‖ moat: game IP + FCF margin 33–53% · net cash $23.96B = 29% mcap · EV/EBITDA 9.18 — พื้นฐานดีสุดในลิสต์ | — |
+| DEC-20261109-07 | DAILY-2026-11-09 | 2026-11-09 | BABA | NEWS-20261109-07 | FIN-20261109-07 | TECH-20261109-07 | 6 | 4.0 | 6.5 | **5.50** | ตก | **F VETO:** FCF TTM −$11.47B (capex $23.23B) · OM 14.13% → 7.29% YoY · consensus FY27 เองยังคาด FCF −$31.08B · วันงบขัดกัน (primary 19 พ.ย. / statistics 18 พ.ย.) | REJECT | — | หนี้ 44.4 · ทุน 55.6 · กำไร/100 5.42 · ดอก/100 0.51 ‖ moat: cloud + ecom scale; โตแต่ไม่เหลือเงิน (capex AI/cloud) | — |
+| DEC-20261109-08 | DAILY-2026-11-09 | 2026-11-09 | BIDU | NEWS-20261109-08 | FIN-20261109-08 | TECH-20261109-08 | 5 | 4.0 | 6.0 | **5.00** | ตก | **F VETO** (TTM ขาดทุน · FCF −$1.90B · capex พุ่ง 5.7× ใน Q2-2026) · **stop 5.32% > 5.00%** ⇒ เต็มเพดานไม่ได้ (risk $10.59 > $9.96) · gap p95 4.70% แย่สุดในกลุ่ม · long = counter-trend (−50% จาก 52w high) | REJECT | — | หนี้ 40.7 · ทุน 59.3 · กำไร/100 1.24 · ดอก/100 0.62 ‖ moat: search + AI cloud แต่ EV/EBITDA 5.57 สะท้อนตลาดไม่เชื่อกำไรอนาคต | — |
+
+## Leader comments — รอบ DAILY-2026-11-09
+
+- **ผลรวม: 0 SELECT · 8 REJECT · 0 armed ใหม่ · 1 armed revoked (TSM) · GDDY HOLD (re-arm stop ที่ broker + แก้ cron defect)** — **ไม่มีการส่งออเดอร์ซื้อ/ขายในรอบนี้**
+- **ทำไมไม่มีไม้:** ธีมผ่าน (news พิสูจน์ว่า crash เป็น narrow: non-semis 80 ตัว 5D บวก 51.2% / median +0.29% ⇒ hard gate ≥60% ไม่ติด) แต่ **ไม่มีชื่อที่ทั้ง "ผ่านเกตคะแนน" และ "ทน gap ได้"** — avg สูงสุด 7.00 (NTES) และชื่อที่ผ่าน R:R ≥2 ผ่านได้เพราะ **T2 ซึ่งอยู่หลังวันงบ 16–19 พ.ย.**
+- **NTES (ชื่อที่ดีที่สุด):** N6/F8/T7 = 7.00 · R2 net 2.93 · stop 1.50×ATR พอดี · ขนาดที่เพดาน 1.570 หุ้น $199.10 risk $7.62 = ผ่านทุกข้อ **ยกเว้น avg** ⇒ ถ้าจะเข้าได้ N ต้องขึ้นเป็น 8 (event เฉพาะบริษัทที่มีวันในกรอบ ไม่ใช่แค่งบ 19 พ.ย.) ⇒ avg 7.67
+- **ตัวตัดสินที่สองที่ผมเพิ่มเอง (PM test):** CPI 10 พ.ย. 13:30Z เกิด 1 session หลังวันเข้า และงบทุกชื่ออยู่ในกรอบถือ ⇒ วัด gap p95 1.16–4.70% เทียบ stop 3.81–5.32% ⇒ ที่ BIDU/JD gap เกือบเท่าหรือเกิน stop = stop ไม่ได้ทำงานตามที่ออกแบบ · tech เห็นตรงกันและแนะนำให้รอแท่งปิด 1D ของ 10 พ.ย.
+- **F VETO 2 ตัว (BABA, BIDU)** เป็นเรื่องกระแสเงินสด ไม่ใช่ราคา: BABA FCF −$11.47B จาก capex AI/cloud, BIDU TTM ขาดทุน + capex พุ่ง 5.7 เท่า ⇒ ราคาลงเท่าไรก็ไม่ปลด VETO
+- **WMT ตกที่ราคา ไม่ใช่ที่คุณภาพ:** PE 45.48 = pct 89 ของตัวเอง + FCF yield 1.4% ⇒ T ดี (7.0) แต่ F 5.0
+- **GDDY:** stop **113.08 (breakeven)** ไม่เปลี่ยน · พบว่า cron arm-day-stops ล้ม 4 ครั้งติด (ModuleNotFoundError จากสำเนา script ใน profile) ⇒ **ไม่มี broker stop ตั้งแต่ 4 พ.ย.** · แก้เป็น shim → DAY stop `afb697f6` 1.35 @113.08 NEW 10:57:59Z · ระยะถึง stop = 0.26×ATR ⇒ มีโอกาสถูกเขี่ยที่ breakeven สูง — ยอมรับ เพราะการยืด stop ลงคือการเพิ่มความเสี่ยงที่ไม่เคยอนุมัติ · ถ้าถูกเขี่ย realized ≈ $0
+- **TSM armed ถูก revoke:** stop 316.10 = 1.01×ATR14 16.73 < 1.5×ATR (กฎ IMP-20261106-01) และที่ stop ถูกกฎ R2 เหลือ 1.90 ⇒ ปลดล็อกใหม่เป็นราคา: entry ≤328.80 + stop entry−25.09
+- **ช่องว่างกระบวนการ (ครั้งที่ 2):** ใบสั่งงาน tech/finance ไม่ได้ขอคะแนน 1–10 ⇒ F/T เป็น leader-map · **รอบหน้าต้องใส่ช่องคะแนนในใบสั่งงาน** · tech รายงาน JD variant B ขัดกันเอง (stop 27.40 vs "1.85×ATR = 28.49" ⇒ R2 1.67 หรือ 0.67 ไม่ใช่ 2.15) ⇒ ใช้ variant A และแจ้ง tech
+- **จะเปลี่ยนใจเมื่อ:** (1) CPI ผ่าน + non-semis breadth ยังบวก ⇒ เปิดรอบบนลิสต์เดิมด้วยคะแนนใหม่ (2) NTES N→8 ⇒ avg 7.67 ผ่าน (3) WMT ราคาลงจน F ≥7 (4) BABA/BIDU FCF พลิกบวก (5) GDDY ปิด 1D ≥126.00 → stop 118.00
