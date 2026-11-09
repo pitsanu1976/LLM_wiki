@@ -22,6 +22,7 @@ aliases:
 ## จุดเริ่มต้น
 
 - [[money-management]] — MM คืออะไร ทำไมต้องมี ก่อนไปเรื่องอื่น
+- [[trade-forex-kanban]] — บอร์ดงานเทรด Forex (เดโม Exness) · บันทึกผลอยู่ที่ [[forex_journal]]
 
 ## หมวดย่อย
 

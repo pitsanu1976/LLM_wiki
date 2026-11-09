@@ -14,6 +14,7 @@ aliases:
 related:
   - trading-finance-moc
   - journals-moc
+  - trade-forex-kanban
 ---
 
 # Forex Experiment Journal — Exness MT5 Demo
