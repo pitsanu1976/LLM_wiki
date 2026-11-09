@@ -3,7 +3,7 @@ title: Projects — MOC
 type: moc
 status: active
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-11-02
 tags:
   - moc
   - domain/projects
@@ -20,7 +20,7 @@ aliases:
 
 ## กำลังทำ
 
-- _ยังไม่มี_
+- [[relia-work]] — Kanban บอร์ดงาน Reliability Intelligence Platform (CMMS + Weibull) · อัปเดต 2026-11-02
 
 ## เสร็จแล้ว
 
