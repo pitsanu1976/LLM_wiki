@@ -12,7 +12,7 @@ aliases:
   - Reliability Intelligence Platform
 related:
   - projects-moc
-  - RCM Reliability Centered Maintenance
+  - main-hub
 kanban-plugin: board
 ---
 
@@ -36,7 +36,7 @@ WIP limit: **3 ใบใน Doing** · การ์ดที่ค้างเ�
 - [ ] Recalibrate reorder point ด้วย lead time จริงจากจัดซื้อ (ตอนนี้ใช้ค่าประมาณ) #spares
 - [ ] Source note + reading notes *Efficacy of Maintenance* 17 บท เข้า brain2nd #vault
 - [ ] หน้า wiki `CMMS Failure Coding` จาก `data/oracle-eam/` + mapping ISO 14224 #vault #cmms
-- [ ] ถอด ISO 14224 Table B.4/B.5 จาก PETROSYNC sl.100 → ขยาย [[Failure Hierarchy]] จาก 19 modes เป็นรหัส ISO #vault
+- [ ] ถอด ISO 14224 Table B.4/B.5 จาก PETROSYNC sl.100 → ขยาย Failure Hierarchy (brain2nd) จาก 19 modes เป็นรหัส ISO #vault
 - [ ] Reading notes PETROSYNC Applied RCM 8 โมดูล (173 สไลด์) #vault
 - [ ] ขอ export CMMS ย้อนหลัง 12 เดือน (n=20 events น้อยเกินให้ CI แคบ) #data
 
@@ -73,5 +73,5 @@ WIP limit: **3 ใบใน Doing** · การ์ดที่ค้างเ�
 ### ลิงก์
 
 - แอป: `/opt/data/projects/reliability-app` · `README.md` · `docs/FINDINGS_TH.md`
-- Knowledge: [[RCM Reliability Centered Maintenance]] · [[Failure Hierarchy]] · [[ISO 14224 Taxonomy]] · [[CMMS]]
+- Knowledge (อยู่ vault **brain2nd** ไม่ใช่ vault นี้): `concepts/RCM Reliability Centered Maintenance.md` · `concepts/Failure Hierarchy.md` · `concepts/ISO 14224 Taxonomy.md` · `concepts/CMMS.md`
 - Raw ที่ ingest ล่าสุด: `raw/oracle-manual.md` · `raw/oracle-eam-user-guide.md` · `raw/applied-rcm.md`
