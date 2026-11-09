@@ -1,9 +1,19 @@
 ---
-title: "relia-work — Kanban"
-kanban-plugin: board
+title: relia-work — Kanban
+type: project
+status: active
 created: 2026-11-02
 updated: 2026-11-02
-tags: [project, reliability, kanban, relia-work]
+tags:
+  - project/kanban
+  - reliability/cmms
+aliases:
+  - relia-work
+  - Reliability Intelligence Platform
+related:
+  - projects-moc
+  - RCM Reliability Centered Maintenance
+kanban-plugin: board
 ---
 
 # relia-work — Kanban
