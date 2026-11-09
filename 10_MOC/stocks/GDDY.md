@@ -86,6 +86,13 @@ _ยังไม่มีข้อมูล — Finance agent จะเติม
 - **บริบทของรอบ:** ธีม AI-infra ที่คัดวันนี้ sentiment = **Bearish (narrow)** · NVDA/TSM ผ่านเกตตัวเลข (8.17 / 7.50) แต่ leader **ไม่ส่ง** (BLS 13:30Z, counter-trend ใต้ MA200, T1 ทุกตัว 1.25–1.65 net, corr NVDA–TSM 0.80/0.93) ⇒ GDDY ยังเป็นไม้เดียว, ว่าง 2 ช่อง
 - **invalidation:** ปิด 1D < **113.08** → watchdog ขาย market ทั้งจำนวน
 - บันทึก: [[2026-11-06]] · memo `reports/leader/2026-11-06-DAILY.md`
+
+### 2026-11-09 — HOLD · DAY stop re-arm ที่ broker (ระดับไม่เปลี่ยน)
+- ปิด **2026-11-06 = 114.34** (Alpaca IEX) · mark 114.38 · uPL +$1.76 (+1.15%) · equity $995.52 · weight 15.5%
+- **defect ที่พบ:** cron `arm-day-stops`/`stop-audit` ล้ม **4 ครั้งติด** (`ModuleNotFoundError: No module named 'alpaca'` — script เป็นสำเนาใน profile และถูกรันด้วย python ที่ไม่มี alpaca-py) ⇒ **GDDY ไม่มี broker-side stop ตั้งแต่ 2026-11-04 14:55Z** · แก้เป็น shim ที่ exec ตัวจริงด้วย `.venv/bin/python`
+- **stop 113.08 (breakeven) ไม่เปลี่ยน** · DAY stop ใหม่ **`afb697f6`** SELL 1.35 @113.08 NEW 2026-11-09 10:57:59Z (read-back by id) · target 131.74
+- **ความเสี่ยงที่ยอมรับ:** ระยะถึง stop = $1.26 = **0.26×ATR14 4.79** ⇒ อยู่ใน noise มีโอกาสถูกเขี่ยที่ breakeven สูง · **ไม่ยืด stop ลง** (กฎ: ขึ้นทางเดียว) · ถ้าถูกเขี่ย realized ≈ $0
+- บันไดเดิม: ปิด 1D ≥126.00 → stop 118.00 · deadline 2026-12-15 · memo `reports/leader/2026-11-09-DAILY.md`
 <!-- agent:leader:end -->
 
 ## แหล่งข้อมูล
