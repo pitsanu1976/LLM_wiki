@@ -3,10 +3,10 @@ title: "trade_journal_summary.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-06
-updated: 2026-11-06
-source_mtime: 2026-11-06 14:12 UTC
-source_sha256: 001ed0e3b193c096
+created: 2026-11-10
+updated: 2026-11-10
+source_mtime: 2026-11-10 10:57 UTC
+source_sha256: b90eda1d7c55284d
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_journal_summary.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-06 14:12 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_journal_summary.md` (mtime 2026-11-10 10:57 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > สรุป trade journal (R/win rate)
 
 # Trade Journal Summary
@@ -23,12 +23,13 @@ source: "workspace/ingest/trade_journal_summary.md"
 - อัปเดต: 2026-11-06 11:45 UTC · แหล่งข้อมูล: Alpaca paper API (`GET /v2/positions`, `GET /v2/orders?status=all`, `GET /v2/account`) — ตรวจด้วย `scripts/reconcile_journal.py` 2026-11-03 23:1x UTC: ดูผลท้ายไฟล์
 - **บัญชีปัจจุบัน: `PA3ZME9WF` · เริ่มต้น $1,000.00 (2026-11-01)**
 - ประวัติบัญชีเก่า `PA3Z4JM8I` (เริ่ม $100,000 → ปิด $98,741.89 · 3 ไม้ขาดทุน −$1,258.11) ถูกย้ายไป `reports/leader/archive/2026-11-01-PA3Z4JM8I-trade_journal_summary.md` — ไม่ได้ลบ
-- สถิติบัญชีนี้: **ปิด 1 ไม้ · realized −$6.20** (MSFT J-20261105-01 · −1.08R) · equity **$1,003.27** · cash **$841.11** · **positions 1 (GDDY 1.35 @113.08, mark 120.12, uPL +$9.50)**
+- สถิติบัญชีนี้: **ปิด 2 ไม้ · realized −$6.25** (MSFT J-20261105-01 −$6.20 · −1.08R · GDDY J-20261109-01 −$0.05 ≈0.0R) · equity **$993.69** · cash **$993.69** · **positions 0 (เงินสด 100%)** — GET 2026-11-10 10:55:55Z
 
 ## ตารางบันทึกการเทรด
 
 | journal_id | plan_id | stock | entry date | entry price | volume | exit date | exit price | profit & loss | net balance | profit reason | loss reason |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| J-20261109-01 | PLAN-20261102-01 | GDDY | 2026-11-03 (fill 09:00:19Z) | 113.08 | 1.35 | 2026-11-09 (filled_at 15:40:26Z) | 113.04 | **−$0.05** | $993.69 (GET 2026-11-10 10:55:55Z — positions 0, cash = equity) | — | **STOP_HIT (broker DAY stop `afb697f6`) @113.04 ใต้ stop 113.08 = $0.04/หุ้น = 0.6% ของระยะ stop เดิม 6.73** · **≈0.0R** (risk แผนเดิม $9.79; stop ยกเป็น breakeven 2026-11-06 ⇒ risk ที่เหลือ $0) · ค่าธรรมเนียม Alpaca $0 · **บทเรียน: stop ที่ breakeven ห่าง mark 0.26×ATR14 4.79 = noise ⇒ ถูกเขี่ยใน 2 session ตามที่ memo 2026-11-09 เขียนเตือนไว้ล่วงหน้า** |
 | J-20261105-01 | PLAN-20261105-01 | MSFT | 2026-11-05 (fill 14:33:09Z) | 550.914 | 0.36 | 2026-11-05 (20:30:49Z) | 533.70 | **−$6.20** | $1,003.27 (GET 2026-11-06 10:55:56Z — รวม mark GDDY 120.12) | — | **STOP_HIT:** watchdog ขาย market เมื่อราคา 534.01 < stop 535.00 · **−1.08R** (risk แผน $5.73) · slippage ใต้ stop $1.31/หุ้น ⇒ realized เกินแผน $0.44 (แผน risk $5.76) · ค่าธรรมเนียม Alpaca $0 |
 
 ## คำนิยามคอลัมน์ / convention
@@ -45,7 +46,10 @@ source: "workspace/ingest/trade_journal_summary.md"
 
 | plan_id | stock | สถานะ | order id | qty สั่ง | fill | entry | SL | TP | ส่งเมื่อ |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| PLAN-20261102-01 | GDDY | **OPEN (filled 2026-11-03)** | 9d3c7071-0d15-4f9e-81c1-fc6c3998699a | 1.35 | **1.35** | 113.08 (fill avg; limit 113.60) | **113.08 (manual · ยกเป็น breakeven 2026-11-06)** | 131.74 (manual) | 2026-11-02 22:32:46 UTC |
+| — | — | **ไม่มีไม้เปิด (positions 0 · open orders 0)** | — | — | — | — | — | — | — |
+
+- **GDDY ปิดแล้ว 2026-11-09 15:40:26Z** ที่ 113.04 ด้วย broker DAY stop `afb697f6` (arm 10:57:59Z · TIF=DAY · expires 21:00Z) ⇒ `ingest/manual_stops.json` ล้าง entry ออกแล้ว · watchdog ไม่มีอะไรต้องเฝ้า
+- **mechanism ที่แก้ 2026-11-09 ใช้งานได้จริง:** DAY stop ถูกวางและ fill จริง ⇒ cron `arm-day-stops`/`stop-audit` (shim → venv) ทำงาน (last_status ok 14:25Z/14:35Z 2026-11-09)
 
 - **GDDY mark 2026-11-05 = 120.12** (SIP) ⇒ uPL **+$9.50 (+6.23%)** · weight 16.2% · **stop ยกจาก 106.35 → 113.08** ตาม trigger ที่เขียนไว้ (ปิด 1D ≥120.00) · บันไดถัดไป ปิด ≥126.00 → 118.00
 
