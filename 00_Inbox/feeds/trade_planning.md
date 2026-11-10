@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-09
-updated: 2026-11-09
-source_mtime: 2026-11-09 11:01 UTC
-source_sha256: 166528eb6bc3ff72
+created: 2026-11-10
+updated: 2026-11-10
+source_mtime: 2026-11-10 11:14 UTC
+source_sha256: c094b21518026b0e
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-09 11:01 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-10 11:14 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -424,3 +424,51 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - กับ **GDDY**: TGT **+0.31 (20d +0.51)** · DIS +0.35 (+0.32) · JD +0.20 · WMT +0.22 (+0.48) · TJX +0.28 · NTES −0.00 · BABA +0.09 · BIDU +0.03 ⇒ ผ่านเกต ≤0.5 ทุกตัวที่ d60 **ยกเว้น TGT ที่ 20d = +0.51** ⇒ ถ้า TGT เป็น candidate ต้องวัดซ้ำทั้งสองหน้าต่าง
 - **ภายในลิสต์:** JD–BABA **+0.52** · WMT–TJX **+0.51** · JD–NTES **+0.50** · TGT–WMT +0.39 · NTES–BIDU +0.24 ⇒ กลุ่ม retail (WMT/TJX/TGT) และกลุ่ม China (JD/BABA/NTES) อย่างละ **เดิมพันเดียว** ไม่ใช่ diversification
 - ข้อจำกัด: tech คำนวณเป็น 60 daily returns (ไม่ใช่ 49 hourly แบบที่ news ใช้) ⇒ เทียบข้ามสายไม่ได้ตรงตัว
+
+---
+
+## รอบ DAILY 2026-11-10 — rev10 (**0 ไม้ · ไม่มีแผนส่ง · ไม่มี armed**)
+
+- **บัญชี (GET 2026-11-10 10:55:55Z):** `PA3ZME9WF` · equity **$993.69** · cash **$993.69 (100%)** · **positions 0** · **open orders 0** · trading_blocked false · clock is_open=false, next_open 2026-11-10 14:30Z
+- **caps รอบนี้:** risk/ไม้ **$9.94** · เพดาน/ตัว **$198.74** · reserve **$198.74** · deployable **$794.95** · max 3 ไม้ ⇒ ว่าง 3 ช่อง · ไม้เต็มเพดานต้อง **stop ≤ 5.00%**
+- **GDDY ปิดไม้:** DAY stop `afb697f6` filled **1.35 @113.04** ที่ 2026-11-09 15:40:26Z · realized **−$0.054 ≈ 0.0R** · journal `J-20261109-01` · registry ล้างแล้ว
+- **ผลคัด: 0 SELECT · 8 REJECT** — รายละเอียด + คะแนน: `ingest/stock_decision.md` (DEC-20261110-01..08) · memo `reports/leader/2026-11-10-DAILY.md`
+
+### ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| stock | N | F | T | avg (N เพดานบน 7) | ตกเพราะ (ตัวเลขแรกที่ fail) | verdict |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| LVS | 7* | 7.0 | 6.0 | **6.67** | avg 6.67 < 7.5 + T 6.0 <7 + R2 net 1.78 + stop 5.61% >5% | REJECT |
+| MGM | 7* | 7.0 | 4.0 | 6.00 | T 4.0 (ใต้ MA50/MA200, MACD hist ไม่ขยับ) + R2 1.72 + stop 6.70% | REJECT |
+| DUK | 7* | 5.0 | 6.0 | 6.00 | F 5.0 (FCF −$3.30B ติดลบ 3/4 ปี) + R2 1.98 | REJECT |
+| NEE | 7* | 5.0 | 5.0 | 5.67 | F 5.0 (FCF ตรวจไม่ได้) + R2 1.68 | REJECT |
+| SBUX | 7* | 3.0 | 6.0 | 5.33 | **F VETO** (equity −$7.67B · P/E pct 90) | REJECT |
+| AEP | 7* | 4.0 | 4.0 | 5.00 | F 4.0 + T 4.0 (R2 2.19 ผ่านตัวเดียวแต่คะแนนตก) | REJECT |
+| SO | 7* | 4.0 | 3.0 | 4.67 | F 4.0 (FCF −$3.47B · ออกหุ้น +2.6%) + R2 1.14 | REJECT |
+| MRK | 7* | 3.0 | 3.0 | 4.33 | **F VETO** (P/E 151.8 จาก one-off 2 ไตรมาส) | REJECT |
+
+`*` N = เพดานบนตาม rubric (news ไม่ให้คะแนนเพราะไม่มี catalyst เฉพาะบริษัทที่ยืนยันวัน) ⇒ avg เป็น **กรณีดีที่สุด**
+
+### Plan state (ตารางที่สอง — ไม่แตะ schema หลัก)
+
+| plan_id | symbol | status | order id | TIF | filled | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 | GDDY | **CLOSED (STOP_HIT)** | `afb697f6` (sell stop) | DAY | 1.35 @113.04 | 0 | — (ปิดแล้ว) |
+| — | — | ไม่มีแผนใหม่รอบนี้ | — | — | — | — | — |
+
+### Armed levels — 2026-11-10 (**ไม่มี**)
+
+| ระดับ | สถานะ | เหตุ / เงื่อนไขปลดล็อก (ต้องเป็นตัวเลข) |
+| :--- | :--- | :--- |
+| NVDA A/B (188.88 / 179.20) | revoked 2026-11-08 | stop <1.5×ATR; ที่ถูกกฎ R:R 1.42/1.60 |
+| TSM (332.20 / 316.10) | revoked 2026-11-09 | stop 1.01×ATR; ที่ถูกกฎ R:R 1.90 · ปลดล็อก: entry ≤328.80 + stop entry−25.09 |
+| LVS | ไม่อาวุธ | ต้อง T→7 (ปิด 1D >41.73 volR≥1.2) **และ** entry ≤39.93 (stop 37.85) เพื่อ R2 ≥2 **และ** N 8 จากวัน DICJ GGR — สองข้อแรกขัดกัน (breakout 41.80 → R:R ~1.0) |
+| DUK | ไม่อาวุธ | ต้อง F→7 ⇒ FCF TTM พลิกบวก (ปัจจุบัน −$3.30B) — ไม่ใช่เรื่องราคา |
+| อื่น ๆ | ไม่อาวุธ | ตกที่คะแนน ไม่ใช่ที่ราคา ⇒ armed level แก้ไม่ได้ |
+
+### Correlation ที่ใช้ปฏิเสธรอบนี้ (SIP daily ถึง 2026-11-09, leader คำนวณเอง + tech ยืนยัน)
+
+- utility: DUK–SO **0.87/0.84** · DUK–NEE **0.85/0.87** · SO–AEP **0.85/0.84** · DUK–AEP 0.74/0.69 · SO–NEE 0.68/0.57 · NEE–AEP 0.58/0.48 ⇒ **1 ไม้เดียว**
+- คาสิโน: **LVS–MGM 0.46 / 0.59 (20d)** ⇒ **ปฏิเสธคู่** · MGM–NEE 0.47/0.56 · MGM–SBUX 0.43/0.52
+- ไฟล์: `workspace/data/prices-2026-11-10-pool.json`
+
