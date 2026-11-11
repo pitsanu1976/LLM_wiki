@@ -25,10 +25,10 @@ tags:
 
 ## ข่าวและแหล่งอ้างอิง
 
-- TJX จะรายงาน Q3 FY27 **18 พ.ย. 2026 ก่อน 09:30 ET** | TJX IR (press release 4 พ.ย. 2026) | ดึง 2026-11-11 09:57 UTC | https://thetjxcompaniesinc.gcs-web.com/news-releases/news-release-details/tjx-companies-inc-report-q3-fy27-results-november-18-2026
-- TGT Q3 2026 earnings call **18 พ.ย. 2026 8:00–9:00 a.m. ET** | Target IR — Events & Presentations | ดึง 2026-11-11 09:58 UTC | https://corporate.target.com/investors/events-presentations
-- KO ปันผล $0.53 **XD 2026-12-01** จ่าย 12-15 ประกาศ 10-15 | Coca-Cola IR Dividends | ดึง 2026-11-11 10:00 UTC | https://investors.coca-colacompany.com/stock-info/dividends
-- DICJ: สถิติ GGR รายเดือน **Next Update: December 1-3, 2026** (หน้าต่างตีพิมพ์ปกติ ไม่ใช่วันเดียว) | dicj.gov.mo | ดึง 2026-11-11 09:59 UTC | https://www.dicj.gov.mo/web/en/information/DadosEstat_mensal/index.html
+- TJX จะรายงาน Q3 FY27 **18 พ.ย. 2026 ก่อน 09:30 ET** | TJX IR (press release 4 พ.ย. 2026) | ดึง 2026-11-11 ~09:52 UTC | https://thetjxcompaniesinc.gcs-web.com/news-releases/news-release-details/tjx-companies-inc-report-q3-fy27-results-november-18-2026
+- TGT Q3 2026 earnings call **18 พ.ย. 2026 8:00–9:00 a.m. ET** | Target IR — Events & Presentations | ดึง 2026-11-11 ~09:52 UTC | https://corporate.target.com/investors/events-presentations
+- KO ปันผล $0.53 **XD 2026-12-01** จ่าย 12-15 ประกาศ 10-15 | Coca-Cola IR Dividends | ดึง 2026-11-11 ~09:52 UTC | https://investors.coca-colacompany.com/stock-info/dividends
+- DICJ: สถิติ GGR รายเดือน **Next Update: December 1-3, 2026** (หน้าต่างตีพิมพ์ปกติ ไม่ใช่วันเดียว) | dicj.gov.mo | ดึง 2026-11-11 ~09:52 UTC | https://www.dicj.gov.mo/web/en/information/DadosEstat_mensal/index.html
 - **SIFMA ยืนยันตลาด fixed income ปิดเต็มวัน 11 พ.ย. 2026** (Veterans Day; เป็น recommendation) | SIFMA press release 28 ต.ค. 2026 | https://sifma.org/news/press-releases/sifma-fixed-income-market-close-recommendation-in-the-u-s-the-u-k-and-japan-for-the-u-s-veterans-day-holiday-2026
 - Macau GGR ต.ค. 2026 = MOP 21.68 พันล้าน **−10% YoY** (+20.0% MoM) | DICJ ผ่าน IAG และ The Standard (2 แหล่งอิสระ) | 1 พ.ย. 2026 (**เก่า 10 วัน**) | https://asgam.com/2026/11/01/octoberggr_falls_to_mop21b/
 
