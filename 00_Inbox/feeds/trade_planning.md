@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-10
-updated: 2026-11-10
-source_mtime: 2026-11-10 11:14 UTC
-source_sha256: c094b21518026b0e
+created: 2026-11-11
+updated: 2026-11-11
+source_mtime: 2026-11-11 10:57 UTC
+source_sha256: 870f060d44e93ae9
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-10 11:14 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-11 10:57 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -472,3 +472,55 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - คาสิโน: **LVS–MGM 0.46 / 0.59 (20d)** ⇒ **ปฏิเสธคู่** · MGM–NEE 0.47/0.56 · MGM–SBUX 0.43/0.52
 - ไฟล์: `workspace/data/prices-2026-11-10-pool.json`
 
+## รอบ DAILY 2026-11-11 — rev11 (**0 ไม้ · ไม่มีแผนส่ง · ไม่มี armed**)
+
+- **บัญชี:** `PA3ZME9WF` · equity **$993.69** · cash **$993.69** · **positions 0** · **open orders 0** · trading_blocked=false · clock is_open=false next_open **14:30Z** (GET 2026-11-11 10:55:52Z `/v2/account` + `/v2/clock`; `alpaca_sync.py` 10:56:00Z)
+- **caps:** risk/ไม้ **$9.94** · เพดาน/ตัว **$198.74** · reserve **$198.74** · deployable **$794.95** · max 3 ไม้ (ว่าง 3) · `stop% ≤ 5.00%` สำหรับไม้เต็มเพดาน
+- **แหล่งข้อมูล:** news `reports/news/2026-11-11-DAILY.md` (09:52Z) · finance `reports/finance/2026-11-11-DAILY.md` (10:19Z) · tech `reports/tech/2026-11-11-DAILY.md` (10:22Z) — **วันเดียวกันทั้ง 3 สาย** · ลิสต์ 10 ชื่อ: TJX KO TGT LVS WMT PEP MDLZ VZ KR DIS · ใบสั่งงานครบใน `inbox/{news,finance,tech}/done/2026-11-11-DAILY.md`
+- **ราคาอ้างอิง:** ปิด **2026-11-10** SIP (`v2/stocks/bars` 1Day, tech ดึง 10:19Z) · ตรวจซ้ำ Nasdaq secondaryData ต่าง ≤$0.03 ทุกชื่อ · **pre-market 11-11 (Nasdaq, 09:00–10:19Z, บาง)**: TJX 139.10 · KO 96.21 · TGT 160.97 · LVS 40.76 · WMT 124.01–124.12 · PEP 142.05 · MDLZ 65.95 · VZ 45.96 · KR 68.60 · DIS 118.66 (ใช้เป็น indicative เท่านั้น ไม่ใช้ตัดสิน)
+
+### ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| — | ADJ-20261110-01 (gate, delta 0) | 2026-11-11 | — | — | — | **ไม่มีแผน** | — | — | — | 0 |
+
+### Plan state (ตารางที่สอง — ไม่แตะ schema หลัก)
+
+| plan_id | symbol | status | order id | TIF | filled | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 | GDDY | **CLOSED (STOP_HIT 2026-11-09 15:40:26Z)** | `afb697f6` (sell stop) | DAY | 1.35 @113.04 | 0 | — (ปิดแล้ว, realized −$0.054 ≈ 0.0R) |
+| — | — | ไม่มีแผนใหม่รอบนี้ | — | — | — | — | — |
+
+### Armed levels — 2026-11-11 (**ไม่มี**)
+
+| ระดับ | สถานะ | เหตุ / เงื่อนไขปลดล็อก (ต้องเป็นตัวเลข) |
+| :--- | :--- | :--- |
+| NVDA A/B | revoked 2026-11-08 | stop <1.5×ATR; ที่ถูกกฎ R:R 1.42/1.60 |
+| TSM | revoked 2026-11-09 | stop 1.01×ATR; ที่ถูกกฎ R:R 1.90 · ปลดล็อก: entry ≤328.80 + stop entry−25.09 |
+| LVS | ไม่อาวุธ | F VETO (equity −$115M) — ไม่ใช่เรื่องราคา · stop% 5.66% > เพดาน 5.00% |
+| KO (ใกล้สุด) | ไม่อาวุธ | ต้อง **T ≥7.5** ⇒ 1D ปิดเหนือ **97.39** ด้วย volR ≥1.2 (วันนี้ 0.91) ⇒ avg (8+7+7.5)/3 = 7.50 · เมื่อเกิดต้อง re-derive plan (โซน pullback 93.60–94.80 หมดอายุ) |
+| TJX | ไม่อาวุธ | ต้องปิดเหนือ MA20 **142.17** + ออกก่อนงบ 18 พ.ย. · แต่ T2 148.57 ให้ R:R <2 ⇒ ตายในกรอบนี้ |
+| DIS | ไม่อาวุธ | R:R 3.99/T7 ผ่าน แต่ต้อง N≥8 และ F≥7 พร้อมกัน (ตอนนี้ N4/F6) ⇒ ยังไม่ใช่ผู้สมัคร |
+| อื่น ๆ | ไม่อาวุธ | ตกที่คะแนน ไม่ใช่ที่ราคา ⇒ armed level แก้ไม่ได้ |
+
+### ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| ticker | N | F | T | avg | เหตุที่ตก (ตัวเลข) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| KO | 8 | 7 | 6 | 7.00 | avg <7.5 · T 6 <7 (RSI 68.0, volR 0.91) |
+| TJX | 9 | 8 | 3 | 6.67 | T 3 · NO PLAN (gap งบ p95 4.29% ≥ 1.5×ATR 4.25%) |
+| TGT | 8 | 7 | 4 | 6.33 | T 4 · NO PLAN (stop ขั้นต่ำ 5.56% > 5.00%, gap p95 5.16%) |
+| LVS | 7 | 5 | 6 | 6.00 | F VETO (equity −$115M) · stop% 5.66% |
+| PEP | 5 | 8 | 5 | 6.00 | N 5 · T 5 |
+| WMT | 7 | 6 | 4 | 5.67 | F VETO (P/E 45.50 > p90 43.37) · NO PLAN (gap p95 6.63%) |
+| MDLZ | 5 | 6 | 6 | 5.67 | N 5 · F 6 · margin series ไม่ verified |
+| DIS | 4 | 6 | 7 | 5.67 | N 4 · F 6 (แม้ R:R net 3.99 ดีสุด) |
+| KR | 5 | 4 | 6 | 5.00 | F VETO (P/E 39.87 = pct100) |
+| VZ | 5 | 6 | 3 | 4.67 | T 3 · NO PLAN (R2 net 1.28) |
+
+### Correlation (tech · SIP daily returns ถึง 2026-11-10)
+
+- 60d: คู่ ≥0.5 = **8/45** (PEP/MDLZ 0.752 · KO/PEP 0.708 · KO/MDLZ 0.671 · PEP/KR 0.560 · TGT/MDLZ 0.558 · KO/KR 0.554 · LVS/DIS 0.545 · TGT/PEP 0.542)
+- 20d: คู่ ≥0.5 = **32/45** (สูงสุด PEP/MDLZ 0.838 · WMT/KR 0.832 · KO/MDLZ 0.821)
+- **ข้อสรุป:** ลิสต์นี้คือ **ธีมเดียว (defensive bid)** ⇒ ถ้ารอบหน้าเลือก 2 ชื่อ ต้องตัดคู่ ≥0.5 ใน 20d ทิ้งก่อน (เช่น KO+PEP 0.80 = เลือกได้ตัวเดียว) · รอบนี้ไม่ผูกพันเพราะ 0 ไม้ · โฟลเดอร์ข้อมูล: `workspace/data/2026-11-11-DAILY-*.json`
