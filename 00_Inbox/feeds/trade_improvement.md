@@ -3,10 +3,10 @@ title: "trade_improvement.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-10
-updated: 2026-11-10
-source_mtime: 2026-11-10 11:14 UTC
-source_sha256: fc0245d8237acf31
+created: 2026-11-12
+updated: 2026-11-12
+source_mtime: 2026-11-12 16:01 UTC
+source_sha256: e0ba8bbf24845673
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_improvement.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (mtime 2026-11-10 11:14 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_improvement.md` (mtime 2026-11-12 16:01 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > บทเรียน/สิ่งที่ต้องแก้ของทีม
 
 # Trade Improvement
@@ -30,6 +30,7 @@ source: "workspace/ingest/trade_improvement.md"
 | improve_id | improve_date | plan_id | journal_id | stock | buy limit | sell limit | sell stop | volume | news score improvement | finance score improvement | technical score improvement |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | IMP-20261106-01 | 2026-11-06 | PLAN-20261105-01 | J-20261105-01 | MSFT | 551.00 | 585.00 (T1) | 535.00 | 0.36 | **−1.0** — N 8 สร้างจากธีม macro (ผลเลือกตั้ง + WSJ 4 พ.ย. "structural winner") ไม่มี event ของบริษัทในกรอบถือ ⇒ เพดาน N = 7 เว้นแต่มี event เฉพาะบริษัทที่มีวันที่ · ถ้าธีมเป็นตัวหลัก ต้องลดน้ำหนักหรือรอ confirmation ราคา | **0.0** — F 7.5 สะท้อนงบจริง (FCF/op margin/net cash) ไม่ใช่สาเหตุขาดทุน | **−2.0** — T 8.5 สูงเกินจริง: (ก) แผนเรียกว่า breakout ATH แต่ entry 551.00 อยู่ **ใต้ pivot 559.15** ⇒ เป็น pullback ที่ใช้ stop ของ breakout (ข) stop 15.91 = **1.08×ATR14** < 1.5× ⇒ อยู่ใน noise ของแท่งเมื่อวาน (range 16.46) (ค) เข้า 14:33Z = 09:33 ET ใน 5 นาทีแรก |
+| IMP-20261110-01 | 2026-11-10 | PLAN-20261102-01 | J-20261109-01 | GDDY | 113.60 | 131.74 | **113.08** (raised) | 1.35 | **0.0** — ไม่ใช่ความผิดของ news (ไม่มีข่าวมากระทบ) | **0.0** — งบไม่เกี่ยว | **0.0** — ไม่ใช่ความผิดของ tech; การยก stop เป็นการตัดสินของ leader ⇒ บันทึกเป็น **gate** `ADJ-20261110-01`: ยก stop ได้เมื่อ (close − stop ใหม่) ≥ 1×ATR14 เท่านั้น · ระยะ <1 ATR ให้ขายบางส่วนแทน |
 
 ## ผลของการปรับปรุงต่อรอบถัดไป (wiring — 2026-11-06)
 
@@ -69,14 +70,14 @@ Improvement จะไม่มีผลถ้าไม่ถูกอ่าน �
 
 | metric | ค่า | วิธีคำนวณ |
 | :--- | :--- | :--- |
-| closed trades | **1** | นับจากตารางใน trade_journal_summary (J-20261105-01) |
-| win rate | **0% (0/1)** | ชนะ / ปิดทั้งหมด — ตัวอย่างน้อยเกินสรุป |
-| avg win / avg loss | — / **−$6.20** | เฉลี่ยจากไม้ที่ปิด |
-| expectancy ต่อไม้ | **−$6.20 (−0.62% equity)** | (win rate × avg win) − (loss rate × avg loss) |
-| avg R multiple | **−1.08R** | (exit − entry) / (entry − stop) = −17.214 / 15.914 |
-| max drawdown | **−0.36%** | equity peak $1,006.85 (2026-11-05 ก่อน stop) → $1,003.27 |
+| closed trades | **2** | J-20261105-01 (MSFT) · J-20261109-01 (GDDY) |
+| win rate | **0% (0/2)** | ชนะ / ปิดทั้งหมด — ตัวอย่างน้อยเกินสรุป |
+| avg win / avg loss | — / **−$3.13** | realised รวม −$6.25 ÷ 2 |
+| expectancy ต่อไม้ | **−0.54R (−$3.13)** | เฉลี่ย R = (−1.08 + 0.00) / 2 |
+| avg R multiple | **−0.54R** | MSFT −1.08R · GDDY ≈0.00R (stop = entry) |
+| max drawdown | **−0.63%** | equity peak $1,000.00 → $993.69 (2026-11-12) |
 | fees สะสม | ~$0.00 | regulatory fees จาก Alpaca (ไม่แยกต่อออเดอร์) |
-| equity เริ่ม / ปัจจุบัน | $1,000.00 / **$1,003.27** | GET /v2/account 2026-11-06 10:55:56Z |
+| equity เริ่ม / ปัจจุบัน | $1,000.00 / **$993.69** | GET /v2/account 2026-11-12 16:00Z (positions 0) |
 
 ## Pre-registered review — PLAN-20261101-01 (GDDY)
 
