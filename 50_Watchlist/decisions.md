@@ -4,7 +4,7 @@ type: moc
 status: active
 agent: leader
 created: 2026-10-19
-updated: 2026-10-25
+updated: 2026-11-12
 tags:
   - moc
   - domain/finance
@@ -122,6 +122,13 @@ aliases:
 - **เงื่อนไขที่ทำให้คิดใหม่:** GDDY ปิด < 113.08 (watchdog ขาย) · NVDA ปิด 1D ≥ 188.88 → buy 189.00 / stop 181.60 / T2 206.79 · TSM หลังรายได้เดือน 10 พ.ย. + ย่อ ≤ 332.20
 - **แหล่งข้อมูล:** `reports/leader/2026-11-06-DAILY.md` · [[GDDY]] · [[2026-11-06]]
 
+## [2026-11-12] DAILY — 0 ไม้ (6 REJECT · 0 armed)
+- **ราคาอ้างอิง:** ปิด **2026-11-11 SIP** — KO 97.57 (high 97.83) · TGT 162.70 · WMT 125.67 · KR 69.49 · LVS 40.23 · MGM 33.47
+- **เหตุผลหลัก:** ไม่มีชื่อใดผ่านเกตคะแนน (avg ≥7.5 ∧ F≥7 ∧ T≥7) — ดีสุด **KO 7.33** (adjusted 7.00) · KO มีแผนครบ (stop 1.70×ATR14 1.939, R:R net 2.085 ที่ entry ≤97.99) แต่ **breakout ยังไม่ยืนยัน** (ปิด 97.57 < pivot 97.83, volR 0.80 < 1.2) ⇒ T 7 ไม่ใช่ 8 · R:R ≥2 ผ่าน 3/6 · stop ≥1.5×ATR ผ่านเชิงเรขาคณิตครบ
+- **ความเสี่ยงที่เห็น:** ธีม defensive/domestic ทั้งลิสต์ (corr 20d 10/15 คู่ ≥0.5, KO–KR 0.740) ⇒ ถ้าเทปหมุนกลับ AI จะ underperform · TGT/WMT ถือข้ามงบไม่ได้ (gap p95 17.12% / 7.55% = 3.1× / 2.0× stop) · MGM invalidation อยู่เหนือ stop
+- **เงื่อนไขที่ทำให้คิดใหม่:** **KO ปิด 1D > 97.83 ด้วย volR ≥1.2** ⇒ avg 7.67 ผ่าน ⇒ entry ≤97.99 / stop 94.60 / T2 105.08 / 2 หุ้น (risk $6.78 = 0.682%) · หรือผู้ใช้แก้ `score_adjustments.json` (N-cap `ADJ-20261106-02`) แล้ว re-run `apply_adjustments.py`
+- **แหล่งข้อมูล:** `reports/leader/2026-11-12-DAILY.md` · `reports/{news,finance,tech}/2026-11-12-DAILY.md` · `ingest/stock_decision.md` (`DEC-20261112-01..06`)
+
 ## Watchlist ปัจจุบัน
 
 | Ticker | สถานะ | อัปเดตล่าสุด | หน้า |
@@ -138,6 +145,8 @@ aliases:
 | TSM | **WATCH (armed)** หลังรายได้เดือน 10 พ.ย. + ย่อ ≤332.20 → เศษ 0.60 / stop 316.10 / T2 380.00 (risk $9.66) | 2026-11-06 | [[TSM]] |
 | TSM | **WATCH ยกเลิก (revoked)** — stop 316.10 = 1.01×ATR14 16.73 < 1.5×ATR (กฎ IMP-20261106-01) และที่ stop ถูกกฎ R2 เหลือ 1.90 < 2 · ปลดล็อกใหม่: entry ≤328.80 + stop = entry−25.09 | 2026-11-09 | [[TSM]] |
 | GDDY | **ถือจริง (OPEN)** 1.35 @113.08 · stop 113.08 (breakeven, ระดับไม่เปลี่ยน) · target 131.74 · **broker DAY stop `afb697f6` วางใหม่** หลังแก้ cron ที่ล้ม 4 ครั้ง (ไม่มี stop ที่ broker ตั้งแต่ 4 พ.ย.) | 2026-11-09 | [[GDDY]] |
+| GDDY | **ปิดแล้ว (CLOSED — STOP_HIT)** DAY stop `afb697f6` filled 1.35 @113.04 (2026-11-09 15:40:26Z) · realized **−$0.054 ≈ 0.0R** · ไม่ใช่ position ที่ถืออยู่ | 2026-11-12 | [[GDDY]] |
+| KO (ยังไม่มี hub) | **WATCH (ไม่ armed — ตกเกตคะแนน avg 7.33)** ต้องปิด 1D >**97.83** ด้วย **volR ≥1.2** ก่อน · เมื่อผ่าน: entry ≤**97.99** / stop **94.60** / T2 **105.08** / 2 หุ้น $195.98 (19.72%) · risk $6.78 (0.682%) · R:R net 2.005 | 2026-11-12 | — (hub ยังไม่สร้าง) |
 
 ## เกี่ยวข้อง
 
