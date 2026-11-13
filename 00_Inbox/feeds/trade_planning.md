@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-12
-updated: 2026-11-12
-source_mtime: 2026-11-12 10:59 UTC
-source_sha256: 37f69fd7b9620c8c
+created: 2026-11-13
+updated: 2026-11-13
+source_mtime: 2026-11-13 11:00 UTC
+source_sha256: 86d16819270cf909
 tags:
   - source/feed
   - domain/trading
@@ -15,12 +15,12 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-12 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-13 11:00 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
 
-- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
+- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev13: 2026-11-13 11:15 UTC (รอบ DAILY-2026-11-13 · CONTRARIAN-REVERSAL · 0 ไม้ · 1 REJECT · 0 armed · positions 0)** · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
 - แหล่งข้อมูล: `raw/news.md` (09:57–10:02 UTC) · `raw/finance.md` (10:05 UTC) · `raw/tech.md` (10:08 UTC) — จับคู่ด้วย `news_id`
 - ราคาอ้างอิง: ปิด **Fri 2026-10-30 16:00 ET / 20:00 UTC** (SIP) · ไม่มี session ใหม่ระหว่าง 30 ต.ค. → 2 พ.ย. ⇒ ข้อมูลยังเป็นชุดล่าสุด · ตลาดเปิด **Mon 2026-11-02 09:30 ET = 14:30 UTC / 21:30 ICT** (DST สหรัฐสิ้นสุด 1 พ.ย. ⇒ เปิด/ปิดเร็วขึ้น 1 ชม. จากสัปดาห์ก่อน)
 - บัญชี: Alpaca paper **`PA3ZME9WF`** — equity **$1,000.00** · cash $1,000.00 · positions 0 · open orders 1 (GET 2026-11-01 22:31:12 UTC)
@@ -584,3 +584,51 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 4. **MGM: invalidation เหนือ stop** (33.15 > 31.20) ⇒ ต้องออกด้วยมือก่อน stop ถึง ⇒ ไม่ใช่แผนที่ถือได้แบบ set-and-forget
 5. **KR: ช่องว่าง join ระหว่างสาย** — news ให้ N 4 (เปิด stockanalysis ไม่ได้) แต่ finance ดึง **วันงบ 3 ธ.ค. 2026** จาก Nasdaq/Zacks ในรอบเดียวกัน (อยู่ในกรอบ) ⇒ ใบสั่งงานรอบหน้าควรให้ finance ส่งวันงบเข้า news ก่อนให้ N
 6. **เงื่อนไขปลดล็อกของรอบ 11-11 ตรวจแล้วบางส่วน:** KO ปิด **97.57 > 97.39** ✓ **แต่ volR 0.80 < 1.2** ✗ ⇒ ยังไม่ผ่าน (ไม่ใช่การละเลย — เป็นการตรวจซ้ำตามที่เขียนไว้)
+
+## รอบ DAILY 2026-11-13 — rev13 (**CONTRARIAN-REVERSAL · 0 ไม้ · ไม่มีแผนส่ง · ไม่มี armed**)
+
+- **บัญชี:** `PA3ZME9WF` (paper) · **equity $993.69** · cash **$993.69** · **positions 0** · **open orders 0** · status ACTIVE · trading_blocked=false · `alpaca_sync.py` 10:55:54Z "OK synced" · clock is_open=false **next_open 2026-11-13 14:30Z · next_close 21:00Z (EST)**
+- **caps โหมดนี้ (0.5% / 20%):** risk/ไม้ **$4.97** · เพดาน/ตัว **$198.74** · reserve **$198.74** · deployable **$794.95** · **ถือได้ 1 ไม้** (โหมด contrarian) ⇒ ว่าง 1 ช่อง
+- **แหล่งข้อมูล (วันเดียวกันทั้ง 3 สาย):** news `reports/news/2026-11-13-DAILY.md` (10:12Z · SCAN-CONTRARIAN-02 · universe 506 ชื่อ) · finance `reports/finance/2026-11-13-NVDA.md` (10:18Z) · tech `reports/tech/2026-11-13-NVDA.md` (10:18Z) · ใบสั่งงานครบใน `inbox/{news,finance,tech}/done/2026-11-13-DAILY.md`
+- **ราคาอ้างอิง:** ปิด **2026-11-12** · **leader ดึงเองซ้ำด้วย SIP** (`scripts/leader_metrics.py NVDA`, 10:56Z): c **166.19** · 1D −4.34% · **ATR14 9.86 = 5.93%** · SMA20 **201.25** · SMA50 215.96 · 20d hi **222.19** · 20d lo **148.80** ⇒ ตรงกับ tech ทุกช่อง (tech ใช้ iex 166.07 = ต่าง 0.07%)
+- **primary source ที่ leader เปิดเอง:** SEC EDGAR `0001045810-26-000082` — 8-K Item 5.02 (12 พ.ย. 2026) + EX-99.1 → Huang ลาออกมีผลทันที · Kress interim CEO · **งบ Q3 FY2027 17 พ.ย. 2026 13:20 PT ตามกำหนดเดิม** · **ไม่ระบุเหตุผล/severance/ความเสียหายเป็นเงิน**
+
+### ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| — | ADJ-20261110-01 · ADJ-20261106-02 | 2026-11-13 | — | — | — | **ไม่มีแผน** | — | — | — | 0 |
+
+### Plan state (ตารางที่สอง — ไม่แตะ schema หลัก)
+
+| plan_id | symbol | status | order id | TIF | filled | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 | GDDY | **CLOSED (STOP_HIT 2026-11-09 15:40:26Z)** | `afb697f6` (sell stop) | DAY | 1.35 @113.04 | 0 | — (ปิดแล้ว, realized −$0.054 ≈ 0.0R) |
+| — | — | ไม่มีแผนใหม่รอบนี้ | — | — | — | — | — |
+
+### Armed levels — 2026-11-13 (**ไม่มี**)
+
+| ระดับ | สถานะ | เหตุ / เงื่อนไขปลดล็อก (ต้องเป็นตัวเลข) |
+| :--- | :--- | :--- |
+| NVDA A/B | revoked 2026-11-08 | stop <1.5×ATR; ที่ถูกกฎ R:R 1.42/1.60 |
+| TSM | revoked 2026-11-09 | stop 1.01×ATR; ที่ถูกกฎ R:R 1.90 · ปลดล็อก: entry ≤328.80 + stop entry−25.09 |
+| **NVDA (รอบนี้ — ไม่ armed)** | **ไม่อาวุธ** | เหตุ: **เงื่อนไขปลดล็อกเป็น ATR ไม่ใช่ราคา** — ต้อง **ATR14% ≤ 3.33%** เพื่อให้ 1.5×ATR ≤ 5.00% · วันนี้ **5.93%** ⇒ entry ใด ๆ ก็ไม่ผ่าน · tech's trigger (ปิด >167.14 + vol ≥199M + low >148.80) เป็นเงื่อนไข *จำเป็น* แต่ไม่พอ · **ห้ามตั้ง limit ใต้ตลาด** (159.25 ที่จะทำให้ R:R=2) ตาม §5 ข้อ 2 |
+| KO | ไม่ตรวจรอบนี้ | เงื่อนไขเดิม: 1D ปิด >97.83 ∧ volR ≥1.2 (ปิด 11-12 = 97.57 ไม่ผ่าน) |
+| อื่น ๆ | ไม่อาวุธ | ตกที่คัด/พื้นฐาน ไม่ใช่ที่ราคา ⇒ armed level แก้ไม่ได้ |
+
+### ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| ticker | N | F | T | avg (raw → adj) | เหตุที่ตก (ตัวเลข) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| NVDA | 4 | 5 | 2 | **3.67 → 3.67** | ตก 4 เหตุอิสระ: (1) news เกต 6 — งบ 17 พ.ย. ในกรอบ ⇒ เหลือ 2 session (2) finance เกต 5 ตัดสินไม่ได้ (3) tech 0/5 — lower low 148.80 = 52w low (4) stop ใต้ฐาน 11.65% = 1.96×ATR > 5.00% และ R:R net 0.953 |
+
+**ตกที่ชั้นคัด (news) ก่อนถึง shortlist — 7 ชื่อ structural (ไม่ใช่ imagery):** `NOW` (cRPO guide) · `INTC` (guide + burn cash) · `DDOG` (Q4 guide ทรงตัวเชิงลำดับ) · `MRVL` (dilution all-stock $115B) · `NBIS` (guidance) · `SMCI` (ลูกค้ารายเดียว 44% + คดีส่งออก) · `HOOD` (รายได้ crypto) · `AXON` (ตัด guidance 2026, ราคา > เพดานด้วย)
+**ตกข้อ 5 (ราคา/สภาพคล่อง) — 35 จาก 43 ชื่อ:** ราคา > $198.74 = 15 ชื่อ (AXON CIEN DELL FIX FFIV HUBS ILMN LITE PANW SNDK TER STX TPL TWLO WDC) · ADV20 < $50M = 20 ชื่อ (APLD AQST CIFR CRDO DBD COIN DDD CORT CTVA FRMI FTNT FLEX FMC KTOS MCHP NVA OKTA P SPWR TEAM)
+
+### PM findings ที่แก้/ท้วงตัวเลขของ desk (ใช้รอบหน้า)
+
+1. **เพดาน stop 5.00% ของโหมด = คัดออกทุกชื่อ ATR% > 3.33%** (5.00 ÷ 1.5) — ไม่ขึ้นกับ entry และไม่ขึ้นกับขนาด ⇒ ในยามผันผวนสูง โหมดนี้จะคืน 0 ชื่อซ้ำ ๆ · **ต้องให้ผู้ใช้เลือก** (คงเพดาน / เปลี่ยนเป็น "stop กว้างได้แต่ลดขนาด" / รอหลัง event)
+2. **T1 ใช้ตัวเข้ม:** tech ให้ 2 นิยาม — 185.49 (จาก base low) และ 194.12 (จากปิด) ⇒ ผมใช้ **185.50** เป็นตัวตัดสิน และบันทึกว่าที่ 194.19 ก็ยังตก (1.389)
+3. **ขนาดไม่แก้ R:R:** ที่ stop ถูกกฎ ขนาดที่ risk 0.5% ยอมให้ = **0.257 หุ้น = $42.66** แต่ R:R ยัง 0.95 ⇒ การลดขนาด (ทางเลือก (i) ของ tech) แก้เพดาน risk ได้เท่านั้น
+4. **นิยาม digest ใน EX-99.1:** เอกสาร **ไม่บอกเหตุผลการลาออก** — headline ทั้งหมดเรื่องเหตุส่วนตัวเป็น secondary ⇒ ถ้าจะถือ thesis นี้ ต้องมีเอกสารที่ตรวจได้ว่าเหตุเป็นเรื่องส่วนตัว ไม่ใช่ความขัดแย้งเชิงธุรกิจ
+5. **news ใช้ iex** (403 recent SIP ต่อเนื่อง) — ต้องระบุทุกครั้ง · leader ใช้ SIP ยืนยันซ้ำ ต่าง 0.07%
