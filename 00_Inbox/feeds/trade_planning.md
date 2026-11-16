@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-13
-updated: 2026-11-13
-source_mtime: 2026-11-13 11:00 UTC
-source_sha256: 86d16819270cf909
+created: 2026-11-16
+updated: 2026-11-16
+source_mtime: 2026-11-16 10:58 UTC
+source_sha256: 451fccd9a29a126a
 tags:
   - source/feed
   - domain/trading
@@ -15,12 +15,12 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-13 11:00 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-16 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
 
-- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev13: 2026-11-13 11:15 UTC (รอบ DAILY-2026-11-13 · CONTRARIAN-REVERSAL · 0 ไม้ · 1 REJECT · 0 armed · positions 0)** · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
+- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev14: 2026-11-16 11:40 UTC (รอบ DAILY-2026-11-16 · CONTRARIAN-REVERSAL · 0 ไม้ · 2 REJECT · 0 armed · positions 0)** · **rev13: 2026-11-13 11:15 UTC (รอบ DAILY-2026-11-13 · CONTRARIAN-REVERSAL · 0 ไม้ · 1 REJECT · 0 armed · positions 0)** · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
 - แหล่งข้อมูล: `raw/news.md` (09:57–10:02 UTC) · `raw/finance.md` (10:05 UTC) · `raw/tech.md` (10:08 UTC) — จับคู่ด้วย `news_id`
 - ราคาอ้างอิง: ปิด **Fri 2026-10-30 16:00 ET / 20:00 UTC** (SIP) · ไม่มี session ใหม่ระหว่าง 30 ต.ค. → 2 พ.ย. ⇒ ข้อมูลยังเป็นชุดล่าสุด · ตลาดเปิด **Mon 2026-11-02 09:30 ET = 14:30 UTC / 21:30 ICT** (DST สหรัฐสิ้นสุด 1 พ.ย. ⇒ เปิด/ปิดเร็วขึ้น 1 ชม. จากสัปดาห์ก่อน)
 - บัญชี: Alpaca paper **`PA3ZME9WF`** — equity **$1,000.00** · cash $1,000.00 · positions 0 · open orders 1 (GET 2026-11-01 22:31:12 UTC)
@@ -632,3 +632,57 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 3. **ขนาดไม่แก้ R:R:** ที่ stop ถูกกฎ ขนาดที่ risk 0.5% ยอมให้ = **0.257 หุ้น = $42.66** แต่ R:R ยัง 0.95 ⇒ การลดขนาด (ทางเลือก (i) ของ tech) แก้เพดาน risk ได้เท่านั้น
 4. **นิยาม digest ใน EX-99.1:** เอกสาร **ไม่บอกเหตุผลการลาออก** — headline ทั้งหมดเรื่องเหตุส่วนตัวเป็น secondary ⇒ ถ้าจะถือ thesis นี้ ต้องมีเอกสารที่ตรวจได้ว่าเหตุเป็นเรื่องส่วนตัว ไม่ใช่ความขัดแย้งเชิงธุรกิจ
 5. **news ใช้ iex** (403 recent SIP ต่อเนื่อง) — ต้องระบุทุกครั้ง · leader ใช้ SIP ยืนยันซ้ำ ต่าง 0.07%
+
+---
+
+## rev14 — รอบ DAILY-2026-11-16 (leader, ตัดสิน 2026-11-16 11:05–11:40 UTC · ก่อนเปิดตลาด 14:30Z) · CONTRARIAN-REVERSAL
+
+- **บัญชี:** `PA3ZME9WF` (paper) · **equity $993.69** · cash **$993.69** · **positions 0** · **open orders 0** · ACTIVE · trading_blocked=false · `alpaca_sync.py` 10:55:56Z "OK synced" · clock is_open=false **next_open 2026-11-16 14:30Z · next_close 21:00Z (EST)**
+- **caps โหมดนี้ (0.5% / 20%):** risk/ไม้ **$4.9685** · เพดาน/ตัว **$198.74** · reserve **$198.74** · deployable **$794.95** · **ถือได้ 1 ไม้** ⇒ ว่าง 1 ช่อง
+- **แหล่งข้อมูล (วันเดียวกันทั้ง 3 สาย):** news `reports/news/2026-11-16-DAILY.md` (09:54Z · ปิด 11-13 · universe 506) · finance `reports/finance/2026-11-16-SMCI.md` (10:19Z) · tech `reports/tech/2026-11-16-SMCI.md` (10:17Z) · ใบสั่งงานครบ `inbox/{news,finance,tech}/done/2026-11-16-DAILY.md`
+- **ราคาอ้างอิง:** ปิด **2026-11-13 (ศุกร์)** · **leader ดึงเองซ้ำทั้ง iex และ SIP** (2026-11-16 10:58–11:02Z): SMCI c **26.865** · ATR14 **2.6826 = 9.99%** (SIP) / 2.6368 = 9.81% (iex) · 20d hi **37.450** · dd **−28.26%** · NVDA c **162.85** · ATR14 **11.0043 = 6.76%** · dd **−26.71%** ⇒ ตรงกับ tech (ATR tech 9.78% = Wilder บน Yahoo consolidated)
+
+### ตารางแผน (รอบนี้)
+
+| plan_id | refer improve_id | plan date | news_id | finance_id | tech_id | stock | buy limit | sell limit | sell stop | volume |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| — | ADJ-20261110-01 · ADJ-20261106-02 | 2026-11-16 | — | — | — | **ไม่มีแผน** | — | — | — | 0 |
+
+### Plan state (ตารางที่สอง — ไม่แตะ schema หลัก)
+
+| plan_id | symbol | status | order id | TIF | filled | re-arms | invalidation |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| PLAN-20261102-01 | GDDY | **CLOSED (STOP_HIT 2026-11-09 15:40:26Z)** | `afb697f6` (sell stop) | DAY | 1.35 @113.04 | 0 | — (ปิดแล้ว, realized −$0.054 ≈ 0.0R) |
+| — | — | ไม่มีแผนใหม่รอบนี้ · ไม่มีออเดอร์ถูกส่ง (`open_orders=0`) | — | — | — | — | — |
+
+### Armed levels — 2026-11-16 (**ไม่มี**)
+
+| ระดับ | สถานะ | เหตุ / เงื่อนไขปลดล็อก (ต้องเป็นตัวเลข) |
+| :--- | :--- | :--- |
+| NVDA A/B | revoked 2026-11-08 | stop <1.5×ATR · ที่ถูกกฎ R:R 1.42/1.60 |
+| TSM | revoked 2026-11-09 | stop 1.01×ATR · ที่ถูกกฎ R:R 1.90 |
+| **SMCI (รอบนี้)** | **ไม่อาวุธ** | ตัวบล็อก = **ATR + R:R ไม่ใช่ราคา** ⇒ armed level จะผิดกฎทันทีที่ fill · ต้องครบ 4: (1) ATR14 ≤ **$0.8956** (3.33% · ลด 65.9%) (2) เหนือ **$25.70** (3) ปิด 1D **>$27.30** vol consolidated **≥48.1M** (4) **R:R net ≥2 ที่ T1** ⇒ ต้องมี **T1 = $35.00** (วันนี้ $32.16 ขาด 8.8%) — ข้อ (4) คือตัวบล็อกจริง |
+| **NVDA** | **ไม่อาวุธ** | งบ Q3 FY2027 **2026-11-17 20:20Z** (พรุ่งนี้) + ATR 6.76% ⇒ เงื่อนไขเดิมจาก 11-13 ยังไม่ครบ |
+
+**⚠️ กฎที่ตรวจซ้ำกับระดับ armed ที่มีอยู่:** ไม่มีระดับ armed ที่มีชีวิต ⇒ **ไม่มีการละเมิดกฎ stop-width ค้าง** ในไฟล์นี้
+
+### ตารางรายชื่อที่ตกคัด (แสดงเพื่อตรวจความมีวินัย)
+
+| ticker | N | F | T | avg (raw → adj) | เหตุที่ตก (ตัวเลข) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| SMCI | 5 | 3 | 2 | **3.33 → 3.33** | ตก 3 ชั้น: (1) finance เกต 5 ประเมินความเสียหายไม่ได้ (10-Q Note 15) + dilution 31.8% ของ mcap + FCF TTM −$6.50B (2) tech ไม่มีแผน — stop ใต้ฐาน 0.449×ATR / stop 1.5×ATR = 14.98% > 5.00% · net R:R 1.299 <2 · T1 = 1.315×(1.5×ATR) (3) sentiment ลิสต์ 81% ธีมเดียว |
+| NVDA | 4 | — | — | — | ตกที่ชั้นคัด: งบ **17 พ.ย. 20:20Z** อยู่ในกรอบถือ (เกต 6) · ATR 6.76% ⇒ 1.5×ATR 10.14% > 5.00% |
+
+**ตกที่ชั้นคัด (news) ก่อนถึง shortlist — 49 ชื่อตก ≥20% จาก 20d high, ผ่านด่าน 1+5 = 21 ชื่อ, เป็น imagery จริง = 2 ชื่อ:**
+`MRVL` (dilution $115B all-stock) · `INTC` (guide + burn cash) · `NOW` (cRPO guide) · `DDOG` (Q4 guide) · `NBIS` (guidance + Microsoft ทบทวนสัญญา) · `HOOD` (รายได้ crypto) · `CRWV` (สัญญา neocloud) · `CSCO` (GM 63.7% จาก 65.5%) · `AXON` (ตัด guidance) · `CTVA` (EPS miss) · `BE` (de-rating ธีม/การเมือง ไม่ใช่ imagery) · `CVS` (แตกบริษัท = corporate action) · `DASH` (คู่แข่ง)
+**ตกด้วยราคา > $198.74 (12):** CIEN DELL FIX LITE MU MRNA PANW SNDK STX TER WDC VRT
+**ตกด้วยสภาพคล่อง ADV20 < $50M (23):** APLD CIFR COIN CORT CRDO CTVA DDD DBD DKNG FLEX FMC FRMI FSLR FTNT HPE KTOS MCHP NTAP NVA P SPWR TEAM
+**ด่านที่ตัดทั้งรอบ:** ชื่อที่ผ่าน 1+5 ทั้ง 21 ชื่อมี **ATR14% ต่ำสุด = 3.71% (CVS)** ⇒ **0/21 ผ่านด่าน ATR ≤3.33%**
+
+### PM findings (ใช้รอบหน้า)
+
+1. **กฎ 3 ข้อของโหมดเป็นจริงพร้อมกันไม่ได้สำหรับชื่อที่ตก ≥20% + ใต้ MA200** — พิสูจน์: `T1=(H+E)/2` ∧ `T1−E ≤1.5×ATR` ∧ `1.5×ATR ≤0.05E` ⇒ **E ≥ H/1.1 ⇒ dd ≤ 9.09%** แต่ news บังคับ dd ≥20% (ห่างกัน 5 จุดเปอร์เซ็นต์ของ ATR%) ⇒ **ไม่ใช่ปัญหา ATR ของวันนี้ แต่เป็นสมบัติของบทกฎ** · ทางเดียวที่ผ่านได้ = ชื่อที่ยัง **เหนือ MA200** (counter-trend cap ไม่บังคับ) + ATR% ≤3.33%
+2. **การบีบ stop ให้พ้นเพดาน 5% ไม่ใช่ทางผ่าน** — tech เสนอ stop ใต้ฐาน $25.69 (4.39% ≤ 5.00%) แต่เป็น **0.449×ATR** ⇒ ตกเกต ≥1.5×ATR · stop ที่ถูกกฎ = 14.98% ⇒ ตกเพดาน ⇒ **ไม่มีจุดตัด**
+3. **เพดาน stop ไม่ใช่ตัวบล็อกที่แท้จริงของ SMCI — R:R คือตัวบล็อก** — ที่ stop ถูกกฎ net R:R = 1.299 (tech 1.326) · คำนวณย้อน: ต้องมี **T1 = $35.00** ที่ราคาตลาด ⇒ **การรอ ATR ลดไม่ช่วย** (ถ้า ATR ลด T1 จะเกิน 1.5×ATR แทน)
+4. **ATR จาก iex ของ SMCI เชื่อถือได้น้อย** — iex volume 1.26M = **2.8% ของ consolidated 45.57M** ⇒ ATR ต่างกัน 0.18 จุด (9.81 vs 9.99) · NVDA ต่างแค่ 0.01 · **ใช้ SIP เป็นตัวตัดสินทุกครั้งที่ดึงได้** (วันนี้ได้ — ต่างจากรอบ 11-13 ที่ 403)
+5. **volR ไม่ตรงกัน (leader 0.69 iex / tech 0.94 consolidated)** — ทั้งคู่ <1 ⇒ ผลไม่เปลี่ยน แต่ให้ desk ใช้ consolidated เป็นหลักสำหรับ volume ratio
