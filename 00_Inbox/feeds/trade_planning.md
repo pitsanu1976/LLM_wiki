@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-16
-updated: 2026-11-16
-source_mtime: 2026-11-16 10:58 UTC
-source_sha256: 451fccd9a29a126a
+created: 2026-11-17
+updated: 2026-11-17
+source_mtime: 2026-11-17 08:50 UTC
+source_sha256: ff4b5f4fecdf919b
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-16 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-17 08:50 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -686,3 +686,5 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 3. **เพดาน stop ไม่ใช่ตัวบล็อกที่แท้จริงของ SMCI — R:R คือตัวบล็อก** — ที่ stop ถูกกฎ net R:R = 1.299 (tech 1.326) · คำนวณย้อน: ต้องมี **T1 = $35.00** ที่ราคาตลาด ⇒ **การรอ ATR ลดไม่ช่วย** (ถ้า ATR ลด T1 จะเกิน 1.5×ATR แทน)
 4. **ATR จาก iex ของ SMCI เชื่อถือได้น้อย** — iex volume 1.26M = **2.8% ของ consolidated 45.57M** ⇒ ATR ต่างกัน 0.18 จุด (9.81 vs 9.99) · NVDA ต่างแค่ 0.01 · **ใช้ SIP เป็นตัวตัดสินทุกครั้งที่ดึงได้** (วันนี้ได้ — ต่างจากรอบ 11-13 ที่ 403)
 5. **volR ไม่ตรงกัน (leader 0.69 iex / tech 0.94 consolidated)** — ทั้งคู่ <1 ⇒ ผลไม่เปลี่ยน แต่ให้ desk ใช้ consolidated เป็นหลักสำหรับ volume ratio
+
+> **BLACKOUT 2026-11-13→17 (ผู้ใช้สั่ง):** ห้ามเข้าไม้ใหม่ในโหมด CONTRARIAN ก่อน **2026-11-18** — รอ NVDA งบ Q3 FY2027 (17 พ.ย. ~20:20Z) ผ่านก่อน · เกตทุกข้อคงเดิม

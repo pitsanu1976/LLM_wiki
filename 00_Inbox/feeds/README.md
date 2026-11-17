@@ -3,8 +3,8 @@ title: "Feeds & Plans (mirror)"
 type: reference
 status: active
 agent: leader
-created: 2026-11-16
-updated: 2026-11-16
+created: 2026-11-17
+updated: 2026-11-17
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 
 # Feeds & Plans (mirror)
 
-สำเนาไฟล์ทำงานของทีม ณ **2026-11-16 11:00 UTC** — ต้นฉบับอยู่ใน `workspace/`
+สำเนาไฟล์ทำงานของทีม ณ **2026-11-17 09:00 UTC** — ต้นฉบับอยู่ใน `workspace/`
 สร้างด้วย `scripts/sync_feeds_to_wiki.py` โดย cron `wiki-push-feeds` (ห้ามแก้ไฟล์ในโฟลเดอร์นี้ด้วยมือ)
 
 | ไฟล์ | ต้นทาง | mtime ต้นทาง | ขนาด |
@@ -26,7 +26,7 @@ related:
 | [[stock_decision]] | `ingest/stock_decision.md` | 2026-11-16 10:58 UTC | 78,082 B |
 | [[trade_improvement]] | `ingest/trade_improvement.md` | 2026-11-12 16:01 UTC | 11,064 B |
 | [[trade_journal_summary]] | `ingest/trade_journal_summary.md` | 2026-11-10 10:57 UTC | 4,352 B |
-| [[trade_planning]] | `ingest/trade_planning.md` | 2026-11-16 10:58 UTC | 59,797 B |
+| [[trade_planning]] | `ingest/trade_planning.md` | 2026-11-17 08:50 UTC | 59,962 B |
 
 ## เกี่ยวข้อง
 
