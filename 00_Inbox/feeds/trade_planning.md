@@ -5,8 +5,8 @@ status: active
 agent: leader
 created: 2026-11-17
 updated: 2026-11-17
-source_mtime: 2026-11-17 08:50 UTC
-source_sha256: ff4b5f4fecdf919b
+source_mtime: 2026-11-17 10:57 UTC
+source_sha256: b28deaffc7b68ef5
 tags:
   - source/feed
   - domain/trading
@@ -15,12 +15,12 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-17 08:50 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-17 10:57 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
 
-- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev14: 2026-11-16 11:40 UTC (รอบ DAILY-2026-11-16 · CONTRARIAN-REVERSAL · 0 ไม้ · 2 REJECT · 0 armed · positions 0)** · **rev13: 2026-11-13 11:15 UTC (รอบ DAILY-2026-11-13 · CONTRARIAN-REVERSAL · 0 ไม้ · 1 REJECT · 0 armed · positions 0)** · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
+- สร้าง: 2026-11-01 11:55 UTC (leader) · **rev15: 2026-11-17 11:20 UTC (รอบ DAILY-2026-11-17 · CONTRARIAN-REVERSAL · BLACKOUT · 0 ไม้ · 2 REJECT · 0 armed · positions 0)** · **rev14: 2026-11-16 11:40 UTC (รอบ DAILY-2026-11-16 · CONTRARIAN-REVERSAL · 0 ไม้ · 2 REJECT · 0 armed · positions 0)** · **rev13: 2026-11-13 11:15 UTC (รอบ DAILY-2026-11-13 · CONTRARIAN-REVERSAL · 0 ไม้ · 1 REJECT · 0 armed · positions 0)** · **rev12: 2026-11-12 11:10 UTC (รอบ DAILY-2026-11-12 · 0 ไม้ · 6 REJECT · 0 armed · positions 0)** · **rev3: 2026-11-01 22:35 UTC (รอบ DAILY 2026-11-02)** · **rev4: 2026-11-02 23:05 UTC (รอบ DAILY-2026-11-03 · 0 ไม้ใหม่ · arm 8 ระดับรอ trigger)** · **rev5: 2026-11-03 23:05 UTC (รอบ DAILY-2026-11-04 · GDDY FILLED · 0 ไม้ใหม่ · arm 9 ระดับรอ trigger)** · **rev6: 2026-11-05 11:02 UTC (รอบ DAILY-2026-11-05 · MSFT SENT)** · **rev7: 2026-11-06 11:10 UTC (รอบ DAILY-2026-11-06 · MSFT CLOSED by stop · 0 แผนใหม่ · 2 WATCH + 3 armed)** · รอบ: WEEKEND-SCAN-2026-11-01 → DAILY-2026-11-02 → … → DAILY-2026-11-06
 - แหล่งข้อมูล: `raw/news.md` (09:57–10:02 UTC) · `raw/finance.md` (10:05 UTC) · `raw/tech.md` (10:08 UTC) — จับคู่ด้วย `news_id`
 - ราคาอ้างอิง: ปิด **Fri 2026-10-30 16:00 ET / 20:00 UTC** (SIP) · ไม่มี session ใหม่ระหว่าง 30 ต.ค. → 2 พ.ย. ⇒ ข้อมูลยังเป็นชุดล่าสุด · ตลาดเปิด **Mon 2026-11-02 09:30 ET = 14:30 UTC / 21:30 ICT** (DST สหรัฐสิ้นสุด 1 พ.ย. ⇒ เปิด/ปิดเร็วขึ้น 1 ชม. จากสัปดาห์ก่อน)
 - บัญชี: Alpaca paper **`PA3ZME9WF`** — equity **$1,000.00** · cash $1,000.00 · positions 0 · open orders 1 (GET 2026-11-01 22:31:12 UTC)
@@ -688,3 +688,16 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 5. **volR ไม่ตรงกัน (leader 0.69 iex / tech 0.94 consolidated)** — ทั้งคู่ <1 ⇒ ผลไม่เปลี่ยน แต่ให้ desk ใช้ consolidated เป็นหลักสำหรับ volume ratio
 
 > **BLACKOUT 2026-11-13→17 (ผู้ใช้สั่ง):** ห้ามเข้าไม้ใหม่ในโหมด CONTRARIAN ก่อน **2026-11-18** — รอ NVDA งบ Q3 FY2027 (17 พ.ย. ~20:20Z) ผ่านก่อน · เกตทุกข้อคงเดิม
+
+---
+
+## rev15 — 2026-11-17 11:20 UTC · รอบ DAILY-2026-11-17 · CONTRARIAN-REVERSAL · **0 ไม้ · 2 REJECT · 0 armed · positions 0 · BLACKOUT**
+
+- **สถานะ:** ไม่มีแผนใหม่ · ไม่มีออเดอร์ · `positions 0` / `open orders 0` (GET 10:55:55Z) · equity **$993.69** · risk/ไม้ $4.9685 · เพดาน/ตัว $198.74 · reserve $198.74 · ถือได้ 1 ไม้
+- **BLACKOUT ยังมีผล:** ห้ามเข้าไม้ใหม่ก่อน **2026-11-18** (NVDA งบ **วันนี้ 20:20Z**) ⇒ แม้ผ่านเกตก็ไม่ส่ง
+- **ข้อมูลวันนี้:** news ✅ 10:08Z (`reports/news/2026-11-17-DAILY.md`) · **finance/tech ไม่มีรายงานวันนี้** — เพราะ news คืน **0 ชื่อผ่านเกต** ⇒ ไม่มี shortlist ให้ forward ⇒ ไม่เขียนใบสั่งงาน (ไม่ใช่ dispatch พลาด)
+- **ผลคัด:** NVDA — news เกต 6 ตก (งบวันนี้) + ATR14 **6.29%** ⇒ 1.5×ATR **9.43% > 5.00%** ⇒ ไม่มี stop ถูกกฎ · SMCI — news เกต 3 structural (ลูกค้ารายเดียว 44%) + ATR **10.18%** · **ATR% ต่ำสุดใน 20 ชื่อที่ผ่านราคา/ADV ของรอบ = 5.89% (PLTR)** ⇒ 0/20 ผ่านด่าน stop
+- **armed: 0** — ไม่มีระดับใดมีชีวิต (NVDA A/B revoked 11-08 · TSM revoked 11-09) · เงื่อนไขปลดล็อกเขียนเป็นตัวเลข: NVDA **ATR14 ≤ $5.196** + งบผ่าน + net T1 ≥ 1.103×entry · SMCI **ATR14 ≤ $0.834** + พ้นเกต structural
+- **PM corrections:** (1) news เขียนเกต ATR "≤ ~1.67%" → ที่ถูก **3.333%** (5.00 ÷ 1.5) (2) NVDA ปิดจริง 16 พ.ย. **156.145** ต่ำกว่าที่ desk เห็นระหว่างวัน (162.85) 4.1% (3) SIP 403 รอบนี้ ⇒ IEX + กำกับ feed
+- **ค้างผู้ใช้ (รอบที่ 3):** ชุดกฎ 4 ข้อเป็นจริงพร้อมกันไม่ได้ — (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยนนิยาม T1 (ง) watchlist builder
+- memo `reports/leader/2026-11-17-DAILY.md` · calc `data/2026-11-17-leader-calc.json`
