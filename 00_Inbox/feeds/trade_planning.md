@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-17
-updated: 2026-11-17
-source_mtime: 2026-11-17 10:57 UTC
-source_sha256: b28deaffc7b68ef5
+created: 2026-11-18
+updated: 2026-11-18
+source_mtime: 2026-11-18 10:59 UTC
+source_sha256: c64770940bb5ce14
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-17 10:57 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-18 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -701,3 +701,19 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - **PM corrections:** (1) news เขียนเกต ATR "≤ ~1.67%" → ที่ถูก **3.333%** (5.00 ÷ 1.5) (2) NVDA ปิดจริง 16 พ.ย. **156.145** ต่ำกว่าที่ desk เห็นระหว่างวัน (162.85) 4.1% (3) SIP 403 รอบนี้ ⇒ IEX + กำกับ feed
 - **ค้างผู้ใช้ (รอบที่ 3):** ชุดกฎ 4 ข้อเป็นจริงพร้อมกันไม่ได้ — (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยนนิยาม T1 (ง) watchlist builder
 - memo `reports/leader/2026-11-17-DAILY.md` · calc `data/2026-11-17-leader-calc.json`
+
+---
+
+## rev16 — 2026-11-18 11:10 UTC · รอบ DAILY-2026-11-18 · CONTRARIAN-REVERSAL · **0 ไม้ · 1 REJECT · 0 armed · positions 0 · BLACKOUT สิ้นสุดวันนี้**
+
+- **สถานะ:** ไม่มีแผนใหม่ · ไม่มีออเดอร์ · `positions 0` / `open orders 0` (GET **2026-11-18 10:55:57Z** `alpaca_sync.py` "OK synced") · equity **$993.69** · cash $993.69 · risk/ไม้ **$4.9685** (0.5%) · เพดาน/ตัว **$198.74** (20%) · reserve **$198.74** · deployable $794.95 · ถือได้ 1 ไม้ ⇒ ว่าง 1 ช่อง
+- **BLACKOUT:** ผู้ใช้สั่งห้ามเข้าไม้ใหม่ก่อน **2026-11-18** ⇒ **วันนี้พ้นแล้ว** · รอบนี้จึงตัดสินด้วยเกตตามปกติ (ไม่ใช่ปฏิเสธเพราะ blackout)
+- **ข้อมูลวันนี้:** news `2026-11-18-DAILY.md` 09:55Z ✅ · tech `2026-11-18-NVDA.md` 10:20Z ✅ · finance `2026-11-18-NVDA.md` 10:23Z ✅ · ใบสั่งงานครบใน `inbox/*/done/`
+- **ผลคัด:** **NVDA — REJECT** ตก tech เกต 1 (หยุดตก 0/3: low 158.39→155.01→150.33) + เกต 3 (stop 1.5×ATR = 11.09% > 5.00%) + เกต 5 (T1 +21.46% เกิน cap 1.5×ATR) · news ผ่าน 8/8 (N=6) · finance ผ่าน 5/6 (ข้อ 5 ส่วน ข = ตัดสินไม่ได้)
+- **ตัวเลขที่ใช้ตัดสิน (ปิด 2026-11-17, consolidated):** close **155.46** · ATR14 **11.495 = 7.39%** · 20d high 222.19 · dd20 **−30.03%** · MA200 203.87 (−23.74%) · T1 **188.82** · R:R gross ที่ stop 1.5×ATR **1.94** · pre-market 11-18 **161.10 (+3.63%)** @10:58Z
+- **ATR floor (คำนวณเอง):** ATR14 ต่ำกว่า $5.182 ไม่ได้ก่อน **2026-11-30** (+9 session จาก 11-17) ⇒ **ไม่มีแผน NVDA ที่ถูกกฎก่อนวันนั้น**
+- **universe screen 72 ชื่อ (PM):** dd ≤−20% = 28 · ATR% ต่ำสุด 4.59% (CRM) · ATR ≤3.33% = 19 ชื่อ แต่ dd แย่สุด −15.17% ⇒ **0/72 ผ่านพร้อมกัน**
+- **armed: 0** · ไม่มีระดับใดมีชีวิต (NVDA A/B revoked 11-08 · TSM revoked 11-09) · ไม่ตั้งใหม่เพราะเงื่อนไข ATR เป็นราคาเดียวแก้ไม่ได้
+- **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
+- **ค้างผู้ใช้ (รอบที่ 4):** (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยน T1 (ง) watchlist · ตัวเลขใหม่: ที่ risk 0.5% + stop 11.09% ไม้สูงสุด **$44.80 (4.5% ของ equity)** · risk 1% → $89.59 (9.0%) · 2% → $179.18 (18.0%)
+- memo `reports/leader/2026-11-18-DAILY.md` · calc `data/2026-11-18-leader-calc.json` · screen `data/2026-11-18-pm-screen.json`
