@@ -1,0 +1,95 @@
+---
+title: "NVDA — งบ 2027 Q3"
+type: source
+status: active
+created: 2026-11-18
+updated: 2026-11-18
+agent: finance
+ticker: NVDA
+period: 2027-Q3
+tags:
+  - finance/earnings
+  - ticker/NVDA
+---
+
+# NVDA — งบ Q3 FY2027 (งวดถึง 2026-10-25)
+
+**สถานะงบ: ยังไม่ตรวจสอบ (unaudited)** — 10-Q ของ Q3 FY2027 **ยังไม่ถูกยื่น** ณ 2026-11-18; ตัวเลขทั้งหมดมาจาก 8-K Item 2.02 + EX-99.1 press release / EX-99.2 CFO commentary / EX-99.3 supplemental (ยื่น **2026-11-17**, accession `0001045810-26-000088`)
+งบปีก่อนหน้า: FY2026 สิ้น 2026-01-25 (audited, 10-K ยื่น 2026-02-25) · ปีงบของ NVDA สิ้นเดือน ม.ค.
+
+## ตารางตัวเลขหลัก (Q3 FY2027)
+
+| รายการ | ค่า | หมายเหตุ |
+|---|---|---|
+| Revenue | $115,844M | +20% QoQ, +103% YoY |
+| Gross profit / GM | $86,676M / 74.8% | non-GAAP GM 74.9% |
+| Operating income / OM | $77,520M / 66.9% | non-GAAP $77,883M |
+| Net income / NM | $65,287M / 56.4% | รวม equity gains +$1,767M |
+| EPS diluted GAAP / non-GAAP | $2.70 / $2.68 | non-GAAP รวม SBC ตั้งแต่ Q1 FY27 |
+| Data Center | $107,600M (92.9%) | Hyperscale $60.1B, ACIE $47.5B |
+| China (รวม HK) | $11,050M (9.5%) | +272% YoY; Hopper DC shipments $2.4B |
+| OCF / Capex / FCF | $48,253M / $4,422M / $43,777M | FCF = OCF − purchases PPE − principal pmts |
+| Cash + marketable debt sec. | $53,512M | cash $29,089M + debt sec $24,423M |
+| หนี้รวม | $32,371M | ST debt $0; ก้อนถัดไป มิ.ย. 2028 $3.5B |
+| Net debt | **−$21,141M (net cash)** | ND/EBITDA **−0.087x** |
+| Goodwill | $26,451M | เพิ่มจาก $20,832M (2026-01-25) — ไม่มี impairment |
+| Shareholders' equity | $266,666M | total assets $372,188M |
+
+## Margin / EPS / ROE / FCF / Net debt / D-E
+
+- FCF 4 ไตรมาส: Q4 FY26 $34,902M · Q1 FY27 $48,554M · Q2 FY27 $21,341M · Q3 FY27 $43,777M = **$148,574M (41.1% ของรายได้ TTM $361,807M)**
+- FCF margin 3 ปี: FY2024 44.2% · FY2025 46.5% · FY2026 44.7% → **ไม่มีแนวโน้มเสื่อม**
+- Capex Q3 +170% YoY vs OCF +103% → capex/OCF 9.2% (ปีก่อน 6.9%)
+- ROE TTM 106.7% (calc, NI TTM $226,256M ÷ equity เฉลี่ย $211,980M) · ROIC ประมาณ 80.8%
+- D/E = 0.121 (calc $32,371M ÷ $266,666M)
+
+## Valuation (คำนวณเอง; ราคาปิด 2026-11-17 = $155.46, หุ้น 24.1B ณ 2026-08-21)
+
+| ตัวชี้วัด | ตัวตั้ง / ตัวหาร | ค่า |
+|---|---|---|
+| Market cap | 24,100M × $155.46 | $3,746.6B |
+| P/E TTM GAAP | 155.46 ÷ 9.31 (EPS TTM) | 16.70x |
+| P/E TTM non-GAAP | 155.46 ÷ 8.36 | 18.60x |
+| P/B | 155.46 ÷ BVPS 11.06 | 14.05x |
+| EV/EBITDA | EV $3,725.4B ÷ EBITDA $243.278B | 15.3x |
+| Dividend yield | $0.25×4 ÷ 155.46 | 0.64% |
+| Forward P/E (scenario) | Q4 guide 130×71.5% − 11 = EBIT 81.95 → NI 68.02 → EPS 2.82 → ×4 | ~13.8x |
+
+## เทียบ peers (ทุติยภูมิ — stockanalysis.com/statistics, 2026-11-18)
+
+| | NVDA | AMD | AVGO | MU | TSM |
+|---|---|---|---|---|---|
+| P/E TTM | 16.70x (calc) | 109.11x | 43.60x | 9.58x | 24.30x |
+| P/B | 14.05x (calc) | 12.07x | 16.36x | 5.82x | 7.78x |
+| D/E | 0.121 (calc) | 0.13 | 0.60 | 0.04 | 0.15 |
+| ROE | 106.7% (calc) | 11.96% | 44.25% | 88.26% | 41.86% |
+| Op margin | 66.1% (calc) | 17.82% | 48.81% | 74.59% | 57.96% |
+
+## one-off items (Q3 FY2027)
+
+- กำไรจาก equity securities **+$1,767M** (ในนั้น impairment non-marketable −$1,846M) → อยู่ใน other income ไม่ใช่ operating
+- สะสม 9M FY2027 **+$25,474M** → ทำให้ NM 9M 62.5% สูงเกินจริง (Q1 FY27 other income $16,367M ก้อนใหญ่)
+- Legal settlement **$107M** + acquisition-related **$363M** → ตัดออกจาก non-GAAP (ผลต่าง EPS 2.70 vs 2.68)
+- Inventory provisions **$680M (Q3) / $2.3B (9M)** — อยู่ใน COGS ไม่ใช่ one-off นอกงบ
+- H20 charges: **insignificant ใน 9M FY2027** (เทียบ $4.3B ใน 9M FY2026)
+
+## ความเสี่ยงเชิงงบ
+
+1. AR $81,033M DSO 64 วัน (จาก 60) — เพิ่ม $42,642M ใน 9M FY27 จาก extended terms ลูกค้า investment-grade
+2. ลูกค้า 3 ราย = 14%/11%/11% ของรายได้ Q3; 2 รายถือ 18%/17% ของ AR
+3. ภาระนอกงบ: supply commitments **$390B** (จาก $279B), cloud/lease $102B, guarantees สูงสุด **$118.0B** (SB Energy $105B เริ่มมีผลปีงบ 2029, ขึ้นกับ OpenAI)
+4. ดีลค้าง: Hugging Face **$11.9B** + retention $1.0B คาดปิด 1H 2027 (8-K 2026-09-03)
+5. การสอบสวนของบอร์ด: ปรากฏเฉพาะใน forward-looking statements — **ไม่มีตัวเลข/ขอบเขตในเอกสาร SEC**; 8-K 2026-11-12 (Item 5.02) ไม่กล่าวถึงกรณีข่าวกรองต่างประเทศ และไม่เปิดเผยค่าชดเชย
+
+## Guidance ที่ยังใช้อยู่ (ไม่ถูกถอน)
+
+Q4 FY2027: รายได้ **$130.0B ±3%** · GAAP/non-GAAP GM **71–72%** · GAAP opex ~$11.0B (non-GAAP $10.7B) · ภาษีทั้งปี 16–18% · **ไม่รวม China DC compute** · Q4 มี 14 สัปดาห์
+ให้เมื่อ **2026-11-17** (8-K `0001045810-26-000088`) · **ไม่มีเอกสาร SEC ใดยื่นหลังวันนั้น** ⇒ ไม่มีการแก้/ถอน
+
+## หมายเหตุวิธีอ่าน
+
+- ตัวเลข Q3 ทั้งหมด unaudited; ข้อสรุป "ไม่มี covenant ที่ trigger จาก CEO ออก" ครอบคลุมเฉพาะหุ้นกู้ (indenture + officers' certificate 2026-06-18) — ไม่ครอบคลุม CP program $25B หรือสัญญาเช่า data center
+- mcap คลาดเคลื่อน ±$7.8B เพราะจำนวนหุ้นปัดเป็น 0.1B และยังไม่หัก buyback Q3 ($22.1B)
+- รายงานฉบับเต็มของรอบ: `hermes-stock-team/workspace/reports/finance/2026-11-18-NVDA.md`
+
+เกี่ยวข้อง: [[NVDA]] · [[trading-finance-moc]]

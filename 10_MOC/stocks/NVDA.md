@@ -72,10 +72,10 @@ related:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-- งบ Q2 FY27 (ถึง 2026-07-26, unaudited): Revenue 96,221M +105.8% YoY · GM 75.0% · GAAP EPS 2.46 (ตัด equity gains 7.8B → core ~2.19) · FCF 21,341M −56% QoQ · net cash 23.2B
-- Valuation @2026-11-06 (186.64): P/E trailing 23.60 · FY27E 20.05 (EPS 9.31) · **core P/E 27.1** · EV/EBITDA 22.3 · PEG 0.25
-- จับตางบ 17 พ.ย.: GM guidance 74% (จาก 75.0) · DSO 45.4→59.6 วัน + FCF หายครึ่ง · consensus FY27 9.31 ต่ำกว่า run-rate 9.71
-- เต็ม: [[NVDA_fin_2027-Q2]]
+- งบ **Q3 FY2027** (งวดถึง 2026-10-25, **unaudited — 10-Q ยังไม่ยื่น**): Revenue **115,844M** (+20% QoQ, +103% YoY) · GM **74.8%** · OM 66.9% · EPS GAAP **2.70** / non-GAAP **2.68** · FCF **43,777M** (4Q รวม 148,574M = 41.1% ของรายได้ TTM)
+- Valuation @ปิด **2026-11-17 = 155.46**: P/E TTM GAAP **16.70** (EPS TTM 9.31) · non-GAAP 18.60 · P/B **14.05** (BVPS 11.06) · EV/EBITDA **15.3** · **D/E 0.121** · net cash **21,141M** ⇒ **ND/EBITDA −0.09x** · หนี้ครบ 12 เดือน **$0**
+- จับตา: (1) guidance Q4 FY2027 **130.0B ±3% / GM 71–72%** ยังไม่ถูกถอน (8-K 17 พ.ย.) แต่ GM ลง ~3 pts จาก Rubin ramp (2) **AR 81,033M DSO 64 วัน** + inventory 39,724M — โตเร็วกว่ารายได้ (3) ภาระนอกงบ **supply 390B / guarantees 118B** ยังไม่ปรากฏในหนี้สิน · การสอบสวนของบอร์ด **ไม่มีตัวเลขในเอกสาร SEC**
+- เต็ม: [[NVDA_fin_2027-Q3]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision
