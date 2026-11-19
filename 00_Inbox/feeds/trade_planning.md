@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-18
-updated: 2026-11-18
-source_mtime: 2026-11-18 10:59 UTC
-source_sha256: c64770940bb5ce14
+created: 2026-11-19
+updated: 2026-11-19
+source_mtime: 2026-11-19 10:58 UTC
+source_sha256: b5dc1364ece9b03e
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-18 10:59 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-19 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -717,3 +717,21 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
 - **ค้างผู้ใช้ (รอบที่ 4):** (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยน T1 (ง) watchlist · ตัวเลขใหม่: ที่ risk 0.5% + stop 11.09% ไม้สูงสุด **$44.80 (4.5% ของ equity)** · risk 1% → $89.59 (9.0%) · 2% → $179.18 (18.0%)
 - memo `reports/leader/2026-11-18-DAILY.md` · calc `data/2026-11-18-leader-calc.json` · screen `data/2026-11-18-pm-screen.json`
+
+
+---
+
+## rev17 — 2026-11-19 10:57 UTC · รอบ DAILY-2026-11-19 · CONTRARIAN-REVERSAL · **0 ไม้ · 2 REJECT · 0 armed · positions 0 · ไม่มี blackout**
+
+- **สถานะ:** ไม่มีแผนใหม่ · ไม่มีออเดอร์ · `positions 0` / `open orders 0` (GET **2026-11-19 10:55:55Z** · `alpaca_sync.py` "OK synced") · equity **$993.69** · cash $993.69 · risk/ไม้ **$4.9685** (0.5%) · เพดาน/ตัว **$198.74** (20%) · reserve **$198.74** · deployable $794.95 · ถือได้ 1 ไม้ ⇒ ว่าง 1 ช่อง
+- **blackout:** สิ้นสุด 2026-11-18 ตามคำสั่งผู้ใช้ ⇒ **รอบนี้ไม่ติด blackout** (มติมาจากเกต)
+- **ข้อมูลวันนี้:** news `2026-11-19-DAILY.md` 09:53Z ✅ · tech `2026-11-19-NVDA.md` 10:18Z + `2026-11-19-BETA.md` 10:19Z ✅ · finance `2026-11-19-NVDA.md` 10:19Z + `2026-11-19-BETA.md` 10:21Z ✅ · ใบสั่งงานครบ `inbox/*/done/2026-11-19-DAILY.md` (dispatch staged: news 09:46Z → tech+finance 10:13Z)
+- **ผลคัด — ไม่มี SELECT ทั้ง 2 ชื่อ:**
+  - **NVDA — REJECT** · tech **0/5** (เกต 1 หยุดตก 0/3 · เกต 3 stop 1.5×ATR **11.85% > 5.00%** · เกต 5 T1 185.475 = 2.895×ATR > cap 1.5×ATR · เกต 4 net R:R **1.881**) · news N=3 · finance 5/6
+  - **BETA — REJECT** · tech **0/5** (stop ใต้ low ฐาน = **9.03% > 5.00% ก่อนคิด ATR**; stop ที่เพดานอยู่เหนือ low ฐาน · 1.5×ATR 16.44% · net R:R **1.329**) · finance ตกเกต 2 (FCF 4Q −$479.3M) + เกต 5 ตัดสินไม่ได้ · news N=2, ADV20 คร่อม $50M
+- **ตัวเลข PM (SIP ถึงแท่ง 2026-11-18):** NVDA close 150.96 · ATR14 11.9236 (7.898%) · H20 219.99 · dd20 −31.38% · MA200 203.718 (−25.90%) · T1 185.475 ‖ BETA close 20.05 · ATR14 2.1980 (10.963%) · H20 29.00 · dd20 −30.86% · MA200 19.025 (+5.39% ⇒ ไม่ใช่ counter-trend) · T1 24.525
+- **finding ใหม่ 3 ข้อ:** (1) **ATR floor ของ NVDA = session ที่ 9 (~2026-12-01)** ไม่ใช่ 2026-11-30 (k=8 ATR_min 5.039 > 5.0315) (2) **R:R ≥2 ที่ stop 1.5×ATR** ⇒ `E ≤ H20 − 6×ATR` = 148.45 < 52w low 148.80 ⇒ **เกต R:R ขัดเกต 1 ของโหมด** ⇒ ผ่อนเพดาน stop 5% อย่างเดียวไม่พอ (3) **BETA** ต้องมี **ฐานใหม่ที่ low ≥ 0.95×entry** (ที่ 20.05 ⇒ ≥19.05) — เงื่อนไขราคา ไม่ใช่ ATR
+- **armed: 0 — ห้ามตั้ง** · ไม่มีระดับใดมีชีวิต (NVDA A/B revoked 11-08 · TSM revoked 11-09) · เงื่อนไขกลับเข้าเขียนเต็มใน memo §7
+- **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
+- **ค้างผู้ใช้ (รอบที่ 5):** ชุดกฎ 4–5 ข้อเป็นจริงพร้อมกันไม่ได้ — (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยน T1 (ง) watchlist builder · ที่ risk 0.5% + stop 11.85% ไม้สูงสุด = **$41.94 (4.22% ของ equity)**
+- memo `reports/leader/2026-11-19-DAILY.md` · calc `data/2026-11-19-leader-calc.json`
