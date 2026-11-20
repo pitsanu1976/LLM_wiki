@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-19
-updated: 2026-11-19
-source_mtime: 2026-11-19 10:58 UTC
-source_sha256: b5dc1364ece9b03e
+created: 2026-11-20
+updated: 2026-11-20
+source_mtime: 2026-11-20 10:58 UTC
+source_sha256: 4bac276b9eb47e48
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-19 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-20 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -735,3 +735,25 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
 - **ค้างผู้ใช้ (รอบที่ 5):** ชุดกฎ 4–5 ข้อเป็นจริงพร้อมกันไม่ได้ — (ก) คงกฎ (ข) ตัดเพดาน 5% + ลดขนาด (ค) เปลี่ยน T1 (ง) watchlist builder · ที่ risk 0.5% + stop 11.85% ไม้สูงสุด = **$41.94 (4.22% ของ equity)**
 - memo `reports/leader/2026-11-19-DAILY.md` · calc `data/2026-11-19-leader-calc.json`
+
+
+---
+
+## rev18 — 2026-11-20 11:35 UTC · รอบ DAILY-2026-11-20 · CONTRARIAN-REVERSAL · **0 ไม้ · 3 REJECT · 0 armed · positions 0 · ไม่มี blackout**
+
+- **สถานะ:** ไม่มีแผนใหม่ · ไม่มีออเดอร์ · `positions 0` / `open orders 0` (GET **2026-11-20 10:55:52Z** · `alpaca_sync.py` "OK synced") · equity **$993.69** · cash $993.69 · risk/ไม้ **$4.9685** (0.5%) · เพดาน/ตัว **$198.74** (20%) · reserve **$198.74** · deployable $794.95 · ถือได้ 1 ไม้ ⇒ ว่าง 1 ช่อง
+- **blackout:** ไม่มีแล้ว (สิ้นสุด 2026-11-18) ⇒ มติรอบนี้มาจากเกตล้วน ๆ
+- **ข้อมูลวันนี้:** news `2026-11-20-DAILY.md` 10:03Z ✅ · tech `2026-11-20-NVDA/SMCI/SKHY.md` 10:18–10:19Z ✅ · finance `2026-11-20-NVDA/SMCI/SKHY.md` 10:19–10:20Z ✅ · ใบสั่งงานครบ `inbox/*/done/2026-11-20-DAILY.md` (news 09:46Z → tech+finance 10:12Z)
+- **ผลคัด — ไม่มี SELECT ทั้ง 3 ชื่อ (ตก tech เกต 1 = 0/3 ทุกตัว):**
+  - **NVDA — REJECT** · tech **0/5** (เกต 1 0/3: low ใหม่ **145.71** = 52w low, close 145.98 < high 11-18 159.70 · เกต 5 T1 182.99 = **3.109×ATR** · เกต 4 net R:R **2.000** ผ่านเส้น) · news N=3 · finance ผ่าน (FCF 4Q +$148.574B · ND/EBITDA 0.013x · guidance Q4 $130.0B ±3% 8-K 2026-11-17)
+  - **SMCI — REJECT** · tech **0/5** (เกต 1 0/3: low 23.71 หลุด 23.76 · เกต 4 net R:R **1.591** = ตกแบบแก้ที่ราคาไม่ได้ reward 6.28 < 2×stop 7.66 · เกต 5 T1 2.459×ATR) · finance ผ่านแบบมีเงื่อนไข (FCF 4Q **−$6.4977B** · ND/EBITDA 0.37x · guidance Q2 FY27 $19.5–21.5B 8-K 2026-11-03; กรอบ FY27 $72–82B **ยืนยันไม่ได้**) · news N=4
+  - **SKHY — REJECT** · tech **0/5** (เกต 1 0/3: แท่งกลับตัวขาลง 11-19 open 128.16 → close 119.20 · เกต 4 net R:R **1.464** · เกต 5 ประเมินไม่ได้—MA200 n/a 94 แท่ง) · **finance ตัดสินไม่ได้** (FCF/ND-EBITDA/impairment อ่านไม่ได้ · ไม่มี guidance · ADS ratio ไม่ทราบ ⇒ mcap USD คำนวณไม่ได้) ⇒ §1 "ประเมินไม่ได้ = ตก" · news N=3
+- **ตัวเลข PM (SIP bar ถึง 2026-11-19 · ดึง 11:0xZ · n=308/308/94):** NVDA close 145.98 · ATR14 11.9007 (8.152%) · H20 219.99 · dd20 −33.64% · MA200 203.577 (−28.29%) ‖ SMCI 23.84 · ATR 2.5544 (10.715%) · H20 36.40 · dd20 −34.51% · MA200 32.417 (−26.46%) ‖ SKHY 119.20 · ATR 10.2657 (8.612%) · H20 166.06 · dd20 −28.22% · MA200 n/a ⇒ **ตรงกับ tech ทุกช่อง ไม่ต้องแก้**
+- **ขนาดถ้าเกตผ่าน (บันทึกไว้ใช้ซ้ำ):** stop 12.23% → notional **$40.63** (NVDA) · 16.07% → **$30.93** (SMCI) · 12.92% → **$38.46** (SKHY) — ผ่านด่าน notional ≥$25 ∧ stop ≤20% ทั้งหมด แต่ **ไม่มีตัวใดผ่านเกต** ⇒ ตัวเลขนี้เป็นแบบฝึกหัด ไม่ใช่แผน
+- **finding ใหม่ (พิสูจน์ทั่วไป):** **เกต 4 กับเกต 5 ขัดกันเชิงคณิตศาสตร์** — เกต 3 ⇒ stop ≥1.5A · เกต 4 ⇒ reward ≥3A · เกต 5 (ใต้ MA200) ⇒ reward ≤1.5A ⇒ `3A ≤ reward ≤ 1.5A` เป็นไปไม่ได้ · = เกต 5 เพดาน R:R 1.00 แต่เกต 4 ต้องการ 2.00 · จุดตัดราคารอบนี้: NVDA E ≤148.59 vs ≥184.29 · SMCI ≤21.07 vs ≥28.74 · SKHY ≤104.47 vs ≥135.26 ⇒ **ทับซ้อน 0** ⇒ โหมดนี้จะคืน 0 ไม้ทุกรอบกับชื่อใต้ MA200 จนกว่าจะแก้เกตใดเกตหนึ่ง
+- **armed: 0 — ห้ามตั้ง** · ไม่มีระดับใดมีชีวิต (NVDA A/B revoked 11-08 · TSM revoked 11-09) · **การ revoke ตามกฎ stop-width ไม่มีของใหม่รอบนี้** (ไม่มี armed เดิมค้าง) · เงื่อนไขกลับเข้าเขียนเต็มใน memo §7 (เป็นราคา)
+- **ruling ที่ออกเอง:** (1) ชื่อประวัติ <200 แท่ง (SKHY) = ถือเป็น counter-trend โดยปริยาย ใช้เกต 5 (2) SMCI เกต 2 — leader อ่านว่า **ตก** (FCF 4Q −$6.50B, เติบโตด้วย convertible $4.67B + preferred $4.23B + ATM) แต่ไม่แก้เกตเอง และมติไม่ขึ้นกับการอ่านนี้
+- **ด่าน sentiment:** news ให้ **Bearish (broad)** (2026-11-19 >90% ของ S&P ปิดลบ ลบ 6 วันติด; 2026-11-20 เอเชีย −3.3% ถึง −6.2%) ⇒ กติกาที่เขียนในใบสั่งงาน = ห้ามเข้าไม้ใหม่ทั้งรอบ ⇒ เป็นด่านที่ 2 ที่อิสระจากเกตเทคนิค
+- **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
+- **ค้างผู้ใช้ (รอบที่ 6):** (1) เกต 4/5 ขัดกัน — เลือก (ก) คงกฎ (ข) ตัดเพดาน 1.5×ATR ของเกต 5 (ค) ผ่อน R:R ≥1 (ง) เปลี่ยนนิยาม T1 (2) เกต 2 FCF ต้องเป็นบวกหรือไม่ (3) เกต 5 กับ ADR ประวัติสั้น (4) universe ยังไม่ครอบ mid/small cap — รอบที่ 8 (5) desk ไม่ให้ id ต่อชื่อ — รอบที่ 9
+- memo `reports/leader/2026-11-20-DAILY.md` · calc/gate `data/2026-11-20-leader-calc.json` · `data/2026-11-20-leader-gate.json` · `decisions.md` +3 + FINDING block · `stock_decision.md` +3 (DEC-20261120-01..03)
