@@ -3,10 +3,10 @@ title: "trade_planning.md"
 type: source
 status: active
 agent: leader
-created: 2026-11-20
-updated: 2026-11-20
-source_mtime: 2026-11-20 10:58 UTC
-source_sha256: 4bac276b9eb47e48
+created: 2026-11-22
+updated: 2026-11-22
+source_mtime: 2026-11-22 17:39 UTC
+source_sha256: 8dc7fa2ee6755998
 tags:
   - source/feed
   - domain/trading
@@ -15,7 +15,7 @@ related:
 source: "workspace/ingest/trade_planning.md"
 ---
 
-> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-20 10:58 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
+> 🔁 สำเนาอัตโนมัติจาก `workspace/ingest/trade_planning.md` (mtime 2026-11-22 17:39 UTC) — **ห้ามแก้ด้วยมือ** ระบบเขียนทับจากต้นฉบับ
 > แผนเทรด/armed levels/สถานะไม้
 
 # Trade Planning
@@ -687,7 +687,7 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 4. **ATR จาก iex ของ SMCI เชื่อถือได้น้อย** — iex volume 1.26M = **2.8% ของ consolidated 45.57M** ⇒ ATR ต่างกัน 0.18 จุด (9.81 vs 9.99) · NVDA ต่างแค่ 0.01 · **ใช้ SIP เป็นตัวตัดสินทุกครั้งที่ดึงได้** (วันนี้ได้ — ต่างจากรอบ 11-13 ที่ 403)
 5. **volR ไม่ตรงกัน (leader 0.69 iex / tech 0.94 consolidated)** — ทั้งคู่ <1 ⇒ ผลไม่เปลี่ยน แต่ให้ desk ใช้ consolidated เป็นหลักสำหรับ volume ratio
 
-> **BLACKOUT 2026-11-13→17 (ผู้ใช้สั่ง):** ห้ามเข้าไม้ใหม่ในโหมด CONTRARIAN ก่อน **2026-11-18** — รอ NVDA งบ Q3 FY2027 (17 พ.ย. ~20:20Z) ผ่านก่อน · เกตทุกข้อคงเดิม
+> **BLACKOUT 2026-11-13→17 (ผู้ใช้สั่ง · สิ้นสุดแล้ว 2026-11-18):** ห้ามเข้าไม้ใหม่ในโหมด CONTRARIAN ก่อน **2026-11-18** — รอ NVDA งบ Q3 FY2027 (17 พ.ย. ~20:20Z) ผ่านก่อน · เกตทุกข้อคงเดิม
 
 ---
 
@@ -757,3 +757,5 @@ cash หลัง fill = 1,000 − 153.36 = 846.64 (84.66%) ≥ reserve 200 ✓ 
 - **ความเสี่ยงที่ใช้:** 0.00% · exposure 0.00% · cash ≥ reserve ✓ · `ingest/manual_stops.json` = `stops: []` · **ไม่มีการเรียก `alpaca_order.py` — 0 ออเดอร์**
 - **ค้างผู้ใช้ (รอบที่ 6):** (1) เกต 4/5 ขัดกัน — เลือก (ก) คงกฎ (ข) ตัดเพดาน 1.5×ATR ของเกต 5 (ค) ผ่อน R:R ≥1 (ง) เปลี่ยนนิยาม T1 (2) เกต 2 FCF ต้องเป็นบวกหรือไม่ (3) เกต 5 กับ ADR ประวัติสั้น (4) universe ยังไม่ครอบ mid/small cap — รอบที่ 8 (5) desk ไม่ให้ id ต่อชื่อ — รอบที่ 9
 - memo `reports/leader/2026-11-20-DAILY.md` · calc/gate `data/2026-11-20-leader-calc.json` · `data/2026-11-20-leader-gate.json` · `decisions.md` +3 + FINDING block · `stock_decision.md` +3 (DEC-20261120-01..03)
+
+> **MODE 2026-11-20: WATCHLIST BUILDER — ไม่เทรด** · ห้ามส่ง/แก้/ยกเลิกออเดอร์ · ห้ามคำนวณ size · เก็บเฉพาะ trigger 2 ชั้น (T-trigger ราคา+volR / S-trigger ปิดเหนือ MA200) · เปิดเทรดอีกครั้งเมื่อผู้ใช้สั่ง
