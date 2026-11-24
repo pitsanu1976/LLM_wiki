@@ -75,10 +75,11 @@ related:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-- งบ **Q3 FY2027** (งวดถึง 2026-10-25, **unaudited — 10-Q ยังไม่ยื่น ณ 2026-11-19 10:20Z**): Revenue **115,844M** (+20% QoQ, +103% YoY) · GM **74.8%** · OM 66.9% · EPS GAAP **2.70** / non-GAAP **2.68** · FCF **43,777M** (4Q รวม 148,574M = 41.1% ของรายได้ TTM)
-- Valuation @ปิด **2026-11-18 = 150.96** (mcap **3,638.1B**): P/E TTM GAAP **16.21** (EPS TTM 9.31) · non-GAAP 18.06 · P/B **13.64** (BVPS 11.06) · EV/EBITDA **14.87** · **D/E 0.121** · net cash **21,141M** ⇒ **ND/EBITDA −0.09x** · หนี้ครบ 12 เดือน **$0**
-- จับตา: (1) guidance Q4 FY2027 **130.0B ±3% / GM 71–72%** ยังไม่ถูกถอน และ **ไม่มีเอกสาร SEC หลัง 17 พ.ย.** (2) **AR 81,033M DSO 64 วัน** + inventory 39,724M โตเร็วกว่ารายได้ (3) ภาระนอกงบ **supply 390B / guarantees 118B** · การสอบสวนของบอร์ด **ไม่มีตัวเลขในเอกสาร SEC** ⇒ เกต 5 ผ่านเฉพาะส่วนที่พิสูจน์ได้
-- เต็ม: [[NVDA_fin_2027-Q3]] · รอบล่าสุด: `workspace/reports/finance/2026-11-19-NVDA.md`
+- งบ **Q3 FY2027** (งวดถึง 2026-10-25, **unaudited — 10-Q ยังไม่ยื่น ณ 2026-11-24 10:22Z** ตรวจ `submissions` ซ้ำแล้ว): Revenue **115,844M** (+20% QoQ, +103% YoY) · GM **74.8%** · OI 77,520M · EPS GAAP **2.70** · CFO 48,253M / capex 4,422M ⇒ FCF **43,831M**
+- FCF 4Q: 34,904 / 48,587 / **21,400** / 43,831 = **148,722M (41.1% ของรายได้ TTM 361,807M)** · รายปี FY24 44.4% → FY25 46.6% → FY26 44.8% ⇒ **บวกทุกไตรมาส แต่ margin หด**
+- Valuation @ปิด **2026-11-23 = 165.05**: mcap **3,977.7B** (24.1B หุ้น, dei 2026-08-21 ปัด 0.1B) · P/E TTM **17.7** · P/B **15.0** (BVPS 11.03) · EV/EBITDA **16.4** · **D/E 0.121** · net debt **3,282M** ⇒ **ND/EBITDA 0.0135x** · หนี้ครบ 12 เดือน **$0**
+- จับตา: (1) **CEO กลับตำแหน่ง 2026-11-22** (8-K 2026-11-23, Item 5.02: Huang กลับเป็น President/CEO, Kress กลับเป็น CFO) แต่ **ไม่มีเอกสารปิดการสอบของ independent committee** — EX-99.1 (17 พ.ย.) ยังมีถ้อยคำ "ongoing investigation" (2) **10-Q Q3 ยังไม่ยื่น** ⇒ disclosure revenue recognition / SEC inquiry **ตรวจไม่ได้**; 10-Q Q2 FY27 + 10-K FY26 **ไม่มีคำว่า subpoena/SEC investigation (0 hit)** (3) AR 81,033M (+28% QoQ) + inventory 39,724M โตเร็วกว่ารายได้ ⇒ คุณภาพกำไร
+- เต็ม: [[NVDA_fin_2027-Q3]] · รอบล่าสุด: `workspace/reports/finance/2026-11-24-NVDA.md`
 <!-- agent:finance:end -->
 
 ## 👑 Decision
