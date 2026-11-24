@@ -93,3 +93,13 @@ Q4 FY2027: รายได้ **$130.0B ±3%** · GAAP/non-GAAP GM **71–72%** 
 - รายงานฉบับเต็มของรอบ: `hermes-stock-team/workspace/reports/finance/2026-11-18-NVDA.md`
 
 เกี่ยวข้อง: [[NVDA]] · [[trading-finance-moc]]
+
+## อัปเดตจากงาน 2026-11-24 (ตรวจซ้ำ · ยังไม่มีงบใหม่)
+
+- **10-Q Q3 FY2027 ยังไม่ยื่น** ณ 2026-11-24 10:22Z (ตรวจ `data.sec.gov/submissions/CIK0001045810.json` ซ้ำ; 10-Q ล่าสุด = period 2026-07-26 ยื่น 2026-08-26) ⇒ ตัวเลข Q3 ทั้งหมดยังมาจาก **8-K EX-99.1 (unaudited)**
+- **CEO กลับตำแหน่ง 2026-11-22**: 8-K ยื่น 2026-11-23 (acc 0001045810-26-000090, Item 5.02) — บอร์ดแต่งตั้ง Jen-Hsun Huang กลับเป็น President/CEO/กรรมการทันที; Kress กลับเป็น EVP & CFO. **ไม่มีข้อความเรื่องผลการสอบของ independent committee** ใน 8-K
+- EX-99.1 (2026-11-17) **ยังมีถ้อยคำ** "ongoing investigation by an independent committee" และ "search for a new chief executive officer" ⇒ ถ้อยคำล้าสมัยบางส่วนหลัง 22 พ.ย. แต่ **ไม่มีการประกาศปิดการสอบ**
+- 10-Q Q2 FY27 และ 10-K FY2026: **ไม่มีคำว่า subpoena / SEC investigation (ค้น 0 hit)** ⇒ ยังไม่เข้าเกต 3 structural แต่ยังพิสูจน์ว่าไม่เข้าไม่ได้
+- FCF 4Q คำนวณซ้ำ: 34,904 / 48,587 / 21,400 / **43,831** = **148,722M** = **41.1%** ของรายได้ TTM 361,807M · ND/EBITDA **0.0135x** (net debt 3,282) · mcap **$3,977.7B** @165.05 (2026-11-23)
+
+รายงานเต็ม: `workspace/reports/finance/2026-11-24-NVDA.md`

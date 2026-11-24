@@ -83,3 +83,13 @@ tags:
 รายงานเต็ม: `workspace/reports/finance/2026-11-23-AMD.md`
 
 ลิงก์: [[AMD]] · [[trading-finance-moc]]
+
+## อัปเดตจากงาน 2026-11-24 (เอกสารใหม่: S-3ASR 2026-11-23)
+
+- **S-3ASR ยื่น 2026-11-23** (acc 0001193125-26-472370): จดทะเบียน **336,934,324 หุ้นเพื่อ resale** โดย selling stockholders = **20.34% ของ 1,656,317,509 หุ้น** (ณ 2026-11-18 ระบุในเอกสาร)
+- องค์ประกอบ: OpenAI warrant **160,000,000** + Meta warrant **160,000,000** (= 19.32%; ใช้สิทธิ $0.01, vest ตามการซื้อ GPU 6 GW + ราคาหุ้นเป้าถึง $600) · หุ้นจากดีล Taalas/World Labs **16,934,324** (= 1.02%)
+- **บริษัทไม่ได้รับ proceeds**: "We are not selling any shares … and will not receive any proceeds"; ได้เพียง $3.2M ถ้า warrant ใช้สิทธิเต็มที่ $0.01
+- คำตัดสิน: **overhang ฝั่ง supply + contingent dilution — ไม่ใช่ dilution ตามเกต 3** (ไม่มีทุนใหม่, warrant ประกาศไว้แล้ว 2025-10-05 และ 2026-02-23)
+- Guidance Q4-2026 **~$17B ±3% / non-GAAP GM ~55%** ออก 2026-11-03 ยังไม่ถูกถอน · FCF TTM 7,056M (15.5%) โดย Q3 เหลือ **554M (4.1%)** · ND/EBITDA **−0.03x**
+
+รายงานเต็ม: `workspace/reports/finance/2026-11-24-AMD.md`
