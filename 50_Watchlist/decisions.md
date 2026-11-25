@@ -137,6 +137,22 @@ aliases:
 - **เงื่อนไขที่ทำให้คิดใหม่:** SMCI ครบ 4 — ATR14 ≤ $0.8956 ∧ เหนือ $25.70 ∧ ปิด 1D >$27.30 vol consolidated ≥48.1M ∧ **R:R net ≥2 (ต้องมี T1 $35.00)** · **NVDA** เงื่อนไขเดิมจาก 2026-11-13 ยังไม่ครบ
 - **แหล่งข้อมูล:** `reports/leader/2026-11-16-DAILY.md` · `reports/news/2026-11-16-DAILY.md` · `reports/{finance,tech}/2026-11-16-SMCI.md` · `ingest/stock_decision.md` (`DEC-20261116-01..02`)
 
+## [2026-11-25] AMD · SMCI · SKHY · NVDA — WATCH (0 หุ้น · 0 คำสั่ง · โหมด WATCHLIST BUILDER)
+
+- **ราคาอ้างอิง:** ปิด 2026-11-24 (Alpaca SIP, leader ดึงเอง 10:56–11:05Z) — AMD **413.27** · SMCI **22.62** · SKHY **111.98** · NVDA **155.38**
+- **มติ:** **0 ELIGIBLE · 0 TRIGGERED · 0 ออเดอร์** · บัญชี `PA3ZME9WF` equity **$993.69** cash $993.69 positions 0 open orders 0 (GET 2026-11-25 10:55:56Z)
+- **เหตุผลหลัก (ทำไมยังไม่ใช่):** เกตเทรดว่าง **0/4** — `E_min = B+1.5A > E_max = hi20−6A` ทุกชื่อ และ ATR ขยายขึ้นอีก 3/4 ชื่อ ⇒ ต้อง `ATR14 ≤ (hi20−B)/7.5`: AMD ≤26.40 (มี 55.60 · 2.11×) · NVDA ≤12.73 (16.15) · SKHY ≤8.48 (12.26) · SMCI ≤1.99 (2.63) · T-trigger ไม่ครบ 0/4 (แท่ง 11-24 ปิดแดงทั้งชุด + low ต่ำกว่า low 11-23)
+- **สอง verdict ของ finance พลิกสวนทาง:** AMD **F ผ่าน** (worst case รายได้จีน 22.38% ⇒ 1.13% ของ mcap < เพดาน 5% · 10-K Note 4) แต่ **S-trigger หลุด MA200** (−4.34%) · SMCI **F ถอยเป็น "ตัดสินไม่ได้"** (10-Q FQ1 FY27 Note 15: SEC subpoena + SDNY USAO + grand jury + indictment 3 คน และบริษัทระบุ "unable to estimate the possible loss")
+- **ความเสี่ยงที่เห็น:** AMD เป็นชื่อเปราะสุด — invalidation 402.10 เหลือ buffer **0.20×ATR** และ pre-market 389.10 ต่ำกว่าระดับแล้ว ⇒ ปิดวันนี้ใต้ 402.10 = แท่งยืนยันที่ 1 จาก 2 · NVDA มี binary 1 ธ.ค. (ไต่สวนปิด) และ 3 ธ.ค. (Senate hearing) ในหน้าต่างถือ 10 session · SKHY: ADS ซื้อขาย premium **29.1%** เหนือหุ้น KOSPI
+- **เงื่อนไขที่ทำให้คิดใหม่:** ชื่อจะถึง ELIGIBLE ก็ต่อเมื่อ T-trigger ครบ (ปิดเหนือ high ของแท่งกลับตัว + volR ≥1.0) **และ** เกตเทรดผ่านพร้อมกัน (ต้องปิดเหนือ MA200) — วันนี้ไม่มีชื่อใดใกล้ · NVDA: ถ้าผู้ใช้ไม่รับการเปิดเคสใหม่ ให้กลับเป็น CLOSED
+- **ปฏิทินตลาด:** 2026-11-26 ปิด (Thanksgiving) · 2026-11-27 ปิดครึ่งวัน 13:00 ET = 18:00Z (venue `/v2/calendar`)
+- **แหล่งข้อมูล:** `workspace/reports/leader/2026-11-25-DAILY.md` · `workspace/ingest/watchlist_contrarian.md` · `reports/{news,finance,tech}/2026-11-25-*` · [[NVDA]]
+
+> [!note] ช่องว่างที่ยังไม่ได้ mirror
+> รอบ 2026-11-17 ถึง 2026-11-24 (ทุกวัน 0 ออเดอร์ · WATCHLIST BUILDER ตั้งแต่ 11-20) ยังไม่ได้คัดลอกเข้าไฟล์นี้ — ต้นทางคือ `workspace/reports/leader/decisions.md` และ `ingest/stock_decision.md` (`DEC-20261117-01` … `DEC-20261125-04`)
+
+
+
 ## Watchlist ปัจจุบัน
 
 | Ticker | สถานะ | อัปเดตล่าสุด | หน้า |
