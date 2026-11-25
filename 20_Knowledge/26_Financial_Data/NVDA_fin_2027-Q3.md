@@ -3,7 +3,7 @@ title: "NVDA — งบ 2027 Q3"
 type: source
 status: active
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-25
 agent: finance
 ticker: NVDA
 period: 2027-Q3
@@ -103,3 +103,11 @@ Q4 FY2027: รายได้ **$130.0B ±3%** · GAAP/non-GAAP GM **71–72%** 
 - FCF 4Q คำนวณซ้ำ: 34,904 / 48,587 / 21,400 / **43,831** = **148,722M** = **41.1%** ของรายได้ TTM 361,807M · ND/EBITDA **0.0135x** (net debt 3,282) · mcap **$3,977.7B** @165.05 (2026-11-23)
 
 รายงานเต็ม: `workspace/reports/finance/2026-11-24-NVDA.md`
+
+## อัปเดต 2026-11-25 (10-Q Q3 FY2027 ยังไม่ยื่น)
+
+- **ตรวจ EDGAR 2026-11-25 10:20Z: 10-Q Q3 FY2027 ยังไม่ถูกยื่น** (filing ล่าสุด = 8-K 2026-11-23 items 5.02/9.01) ⇒ disclosure SEC probe/revenue recognition/restatement ใน filing **ตรวจไม่ได้**; ไม่มี 8-K Item 4.02 / 10-Q/A ⇒ **ยังไม่ตกเกต structural**
+- **Commitments (10-Q Q2 FY27, ณ 2026-07-26)**: รวม **$366B** — supply & capacity **$279B** (เพิ่มจาก $119B ใน Q1), cloud service $29B, data-center leases not commenced $25B, equity inv $25B, capex $8B
+- **Guarantees max exposure = $108.5B @2026-07-26** (XBRL `GuaranteeObligationsMaximumExposure`, land/power/shell for AI clouds)
+- one-off: H200 excess inventory/purchase-obligation charge **−$400M (Q2 FY27)**; equity-securities gains 9M FY27 +$25,474M
+- verdict รอบนี้: **ตัดสินไม่ได้** (ข้อ 4/6 ประเมินเป็นเงินไม่ได้ + ข้อ 5 ตรวจไม่ได้) แม้ FCF TTM +$148.7B, ND/EBITDA 0.0135x

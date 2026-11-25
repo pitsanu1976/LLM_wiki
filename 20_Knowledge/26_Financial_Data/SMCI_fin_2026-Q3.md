@@ -3,7 +3,7 @@ title: "SMCI — งบ 2026 Q3 (fiscal Q1 FY2027)"
 type: source
 status: active
 created: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-25
 agent: finance
 ticker: SMCI
 period: 2026-Q3
@@ -80,3 +80,10 @@ tags:
 - ประมาณการความเสียหายเป็นเงินจากเหตุการณ์ 12–13 พ.ย. (ไม่มีคำฟ้อง/ค่าปรับ/เอกสารรัฐ)
 
 Related: [[SMCI]] · [[trading-finance-moc]]
+
+## อัปเดต 2026-11-25 (10-Q FQ1 FY27 เปิด Note 15 — พบ legal disclosure)
+
+- **เจอ disclosure ที่รอบก่อนหาไม่พบ (10-Q FQ1 FY27, ยื่น 2026-11-06, Note 15)**: SEC subpoena 2 ฉบับ (2024-11-19, 2026-04-28), SDNY U.S. Attorney subpoenas (2024-10-22), **grand jury subpoena (SDNY)**, **indictment บุคคล 3 คน unsealed 2026-03-19** (conspiracy ละเมิด export control) — **ไม่มีข้อกล่าวหาต่อบริษัท**; บริษัทระบุ **"unable to estimate the possible loss or range of loss"**
+- **หนี้แยก current/non-current**: LoC+term loans 3,977.1 (current **1,962.7** = 28.5% ของ cash 6,897.5) + convertible 4,668.9 = **รวม 8,646.0**
+- **Guidance FQ2 FY27 ฝัง margin ที่บีบลงแล้ว**: revenue $19.5–21.5B, EPS GAAP 1.59–1.83 (753M หุ้น) ⇒ NM **6.14–6.41%** vs FQ1 **7.99%**; **ไม่มี GM guidance** และ **ไม่กล่าวถึงต้นทุน memory/component** ⇒ สมมติฐานต้นทุนไม่ถูกเปิดเผย
+- verdict รอบนี้: **ตัดสินไม่ได้** (ข้อ 4/6 ประเมินไม่ได้) แม้ ND/EBITDA 0.362x และ guidance FY27 ถูกปรับขึ้น $72–82B

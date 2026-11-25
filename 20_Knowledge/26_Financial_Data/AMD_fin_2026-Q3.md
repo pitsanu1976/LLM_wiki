@@ -3,7 +3,7 @@ title: "AMD — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-23
-updated: 2026-11-23
+updated: 2026-11-25
 agent: finance
 ticker: AMD
 period: 2026-Q3
@@ -93,3 +93,11 @@ tags:
 - Guidance Q4-2026 **~$17B ±3% / non-GAAP GM ~55%** ออก 2026-11-03 ยังไม่ถูกถอน · FCF TTM 7,056M (15.5%) โดย Q3 เหลือ **554M (4.1%)** · ND/EBITDA **−0.03x**
 
 รายงานเต็ม: `workspace/reports/finance/2026-11-24-AMD.md`
+
+## อัปเดต 2026-11-25 (ตรวจซ้ำเพื่อ watchlist — ไม่มีงบใหม่)
+
+- **10-K FY2025 Note 4 (ยื่น 2026-02-04) ยืนยัน geographic revenue**: จีน+ฮ่องกง **$7,751M = 22.38%** ของ $34,639M (ตรวจจากตารางจริง ไม่ใช่ข้ออ้างสื่อ)
+- **Inventory (XBRL)**: 7,920 (2025-12-27) → 8,468 (2026-06-27) → **11,463 (2026-09-26)** = +35.4% QoQ, +56.7% YoY ⇒ FCF margin Q3 **4.1%** (554 ÷ 13,377)
+- **S-3ASR 2026-11-23** = resale 336,934,324 หุ้น = **20.29% ของ diluted 1,661M** (weighted avg Q3-2026); warrant 320M = 19.27%; ไม่มี proceeds ⇒ overhang ไม่ใช่ dilution ใหม่
+- **คำฟ้อง Rosen (PR 2026-11-24)**: 10-Q Q3-2026 (ยื่น 2026-11-04) ค้น "Rosen"/"Hunterbrook" = 0 hit ⇒ ยังไม่มีคำฟ้องที่เปิดเผย
+- worst case จีน: revenue at risk **1.13% ของ mcap $684.5B**, GP at risk 0.61% ⇒ ต่ำกว่าเพดาน 5%

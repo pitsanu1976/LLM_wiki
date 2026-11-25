@@ -75,11 +75,11 @@ related:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-- งบ **Q3 FY2027** (งวดถึง 2026-10-25, **unaudited — 10-Q ยังไม่ยื่น ณ 2026-11-24 10:22Z** ตรวจ `submissions` ซ้ำแล้ว): Revenue **115,844M** (+20% QoQ, +103% YoY) · GM **74.8%** · OI 77,520M · EPS GAAP **2.70** · CFO 48,253M / capex 4,422M ⇒ FCF **43,831M**
-- FCF 4Q: 34,904 / 48,587 / **21,400** / 43,831 = **148,722M (41.1% ของรายได้ TTM 361,807M)** · รายปี FY24 44.4% → FY25 46.6% → FY26 44.8% ⇒ **บวกทุกไตรมาส แต่ margin หด**
-- Valuation @ปิด **2026-11-23 = 165.05**: mcap **3,977.7B** (24.1B หุ้น, dei 2026-08-21 ปัด 0.1B) · P/E TTM **17.7** · P/B **15.0** (BVPS 11.03) · EV/EBITDA **16.4** · **D/E 0.121** · net debt **3,282M** ⇒ **ND/EBITDA 0.0135x** · หนี้ครบ 12 เดือน **$0**
-- จับตา: (1) **CEO กลับตำแหน่ง 2026-11-22** (8-K 2026-11-23, Item 5.02: Huang กลับเป็น President/CEO, Kress กลับเป็น CFO) แต่ **ไม่มีเอกสารปิดการสอบของ independent committee** — EX-99.1 (17 พ.ย.) ยังมีถ้อยคำ "ongoing investigation" (2) **10-Q Q3 ยังไม่ยื่น** ⇒ disclosure revenue recognition / SEC inquiry **ตรวจไม่ได้**; 10-Q Q2 FY27 + 10-K FY26 **ไม่มีคำว่า subpoena/SEC investigation (0 hit)** (3) AR 81,033M (+28% QoQ) + inventory 39,724M โตเร็วกว่ารายได้ ⇒ คุณภาพกำไร
-- เต็ม: [[NVDA_fin_2027-Q3]] · รอบล่าสุด: `workspace/reports/finance/2026-11-24-NVDA.md`
+**finance · งบ Q3 FY2027 (2026-10-25, unaudited/8-K)**
+- รายได้ $115.84B · OI $77.52B · EPS $2.70 · FCF 4Q **+$148.72B (41.1%)** · ND/EBITDA **0.0135x**
+- **10-Q Q3 FY2027 ยังไม่ยื่น ณ 2026-11-25** ⇒ disclosure SEC probe/restatement ตรวจไม่ได้ (ไม่ใช่ "ผ่าน")
+- จับตา: commitments **$366B** (supply $279B) + guarantees max **$108.5B** @2026-07-26 · verdict **ตัดสินไม่ได้**
+- [[NVDA_fin_2027-Q3]] · [[trading-finance-moc]]
 <!-- agent:finance:end -->
 
 ## 👑 Decision

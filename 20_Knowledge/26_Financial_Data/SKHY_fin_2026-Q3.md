@@ -3,7 +3,7 @@ title: "SKHY — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-20
-updated: 2026-11-20
+updated: 2026-11-25
 agent: finance
 ticker: SKHY
 period: 2026-Q3
@@ -63,3 +63,12 @@ F verdict: **ตัดสินไม่ได้** (ความมั่นใ
 - ฐานะ: cash 38.32T vs borrowings 15.80T ⇒ **net cash ₩22.52T** ⇒ ND/EBITDA ติดลบ (ผ่านเกต 2)
 
 รายงานเต็ม: `workspace/reports/finance/2026-11-24-SKHY.md`
+
+## อัปเดต 2026-11-25 (แก้ ADS ratio ได้แล้ว — ข้อค้างหลักของรอบก่อน)
+
+- **ADS ratio = FACT**: 424B4 (2026-07-10, acc 0001193125-26-299963) — "**Each ADS represents one-tenth of a share**" · IPO 177,900,000 ADS @ $149.00 · depositary Citibank, N.A. · common shares 728,865,500 ณ วันเอกสาร (6-K 2026-11-05: 706,799,093)
+- mcap: **$791.5B ฐาน ADS** (111.98 × 10 × 706.80M) vs **$612.9B ฐาน KOSPI** (₩823.47T ÷ 1,343.51) ⇒ **ADS premium +29.1%** (หาสาเหตุไม่ได้ในรอบนี้)
+- เพดาน 5% = **$30.6B–39.6B** (สองฐาน)
+- **FCF รายไตรมาสยังหาไม่ได้** — 6-K ให้แต่สะสม 9M: CFO 145.63 − capex 31.96 = **FCF 113.67T (48.1%)**; หักปันผลรับ 14.02T ⇒ ~99.65T (42.1%)
+- **ไม่มี 20-F ใน EDGAR** (จดทะเบียน 2026-07) ⇒ งบตรวจสอบ/FY cash flow หาไม่ได้ · คำฟ้อง antitrust 5:26-cv-06345 ไม่มีตัวเลขในชุดเอกสาร SEC
+- verdict รอบนี้: **ตัดสินไม่ได้**
