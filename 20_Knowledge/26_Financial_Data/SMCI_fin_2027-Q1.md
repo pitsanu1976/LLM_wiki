@@ -3,7 +3,7 @@ title: "SMCI — งบ 2027 Q1"
 type: source
 status: active
 created: 2026-11-20
-updated: 2026-11-20
+updated: 2026-11-26
 agent: finance
 ticker: SMCI
 period: 2027-Q1
@@ -65,3 +65,12 @@ F verdict: **ผ่าน** (ความมั่นใจกลาง) — ผ
 - ND/EBITDA **0.362x** · mcap **$16.17B** @24.53 · **5% = $808.5M**
 
 รายงานเต็ม: `workspace/reports/finance/2026-11-24-SMCI.md`
+
+## อัปเดต 2026-11-26 (ตรวจซ้ำก่อน Leader ใช้)
+
+- **Purchase commitments $33.3B** (10-Q FQ1 FY27, non-cancelable ~12 เดือน, รวม $0.2B related parties) = **216.7% ของ mcap $15.37B** ⇒ ภาระใหญ่กว่าหนี้รวม 8,646.0 และใหญ่กว่า equity มาก
+- **ความเข้มข้นลูกค้า (10-Q "Concentration of Customer Risk")**: FQ1 FY27 (ก.ย. 2026) **1 ราย = 44.0% ของ net sales** (ปีก่อน 2 ราย = 17.3% + 11.6%) ⇒ ถ้าชะลอ = รายได้หาย ~$8.78B/ไตรมาส (57.1% ของ mcap)
+- **ND/EBITDA ปรับเป็น 0.371x** (net debt 1,748.5 = 8,646.0 − 6,897.5; ถ้ารวม ST investments 15.1 → 1,733.4 → 0.368x) — รอบก่อนรายงาน 0.362x ด้วยฐาน cash ต่างกัน
+- **ยืนยัน FCF TTM −6,497.6** (XBRL: FY26 CFO −6,809.9, FQ1 FY27 −434.0, capex 41.6) · ข้อ 4/6 ยัง **"unable to estimate possible loss"** ตามคำบริษัท ⇒ verdict คงเป็น **ตัดสินไม่ได้** แม้ราคาเด้ง +3.05%
+
+รายงานรอบ: `workspace/reports/finance/2026-11-26-SMCI.md`

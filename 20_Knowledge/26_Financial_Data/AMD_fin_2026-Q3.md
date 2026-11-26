@@ -3,7 +3,7 @@ title: "AMD — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-23
-updated: 2026-11-25
+updated: 2026-11-26
 agent: finance
 ticker: AMD
 period: 2026-Q3
@@ -101,3 +101,12 @@ tags:
 - **S-3ASR 2026-11-23** = resale 336,934,324 หุ้น = **20.29% ของ diluted 1,661M** (weighted avg Q3-2026); warrant 320M = 19.27%; ไม่มี proceeds ⇒ overhang ไม่ใช่ dilution ใหม่
 - **คำฟ้อง Rosen (PR 2026-11-24)**: 10-Q Q3-2026 (ยื่น 2026-11-04) ค้น "Rosen"/"Hunterbrook" = 0 hit ⇒ ยังไม่มีคำฟ้องที่เปิดเผย
 - worst case จีน: revenue at risk **1.13% ของ mcap $684.5B**, GP at risk 0.61% ⇒ ต่ำกว่าเพดาน 5%
+
+## อัปเดต 2026-11-26 (ตรวจซ้ำก่อน Leader ใช้)
+
+- **XBRL cross-check เอง**: 9M-2026 CFO **6,523** − capex **1,845** = 9M FCF **4,678** · Q3 CFO = 6,523 − 5,321 = **1,202** · Q3 capex = 1,845 − 1,197 = **648** ⇒ ตาราง FCF ยืนยัน
+- **เงื่อนไข vest ของ warrant (S-3ASR 2026-11-23)**: OpenAI 160M + Meta 160M = 320M หุ้น @ ใช้สิทธิ $0.01; tranche แรกเมื่อส่งมอบ **1 GW**, full vest เมื่อซื้อครบ **6 GW**, ราคาหุ้นเป้าไล่ขึ้นถึง **$600** สำหรับ tranche สุดท้าย; หมดอายุ 2030-10-05 (OpenAI) / 2031-02-23 (Meta) ⇒ **contingent dilution 19.27% ของ diluted ไม่ใช่ dilution วันนี้ และไม่มี proceeds**
+- **damage คำนวณใหม่ที่ close 2026-11-25 = 406.03**: mcap **$672.5B** (× 1,656,317,509 หุ้น S-3ASR) ⇒ รายได้จีน+HK FY2025 $7,751M = **1.15% ของ mcap**; GP at risk 54% = **0.62%**; เพดาน 5% = $33.6B
+- **ยังไม่มีคำฟ้อง Rosen ในเอกสาร**: 10-Q คำว่า `Rosen`/`Hunterbrook` = 0 hit; EDGAR ไม่มี filing หลัง 11-23; CourtListener API = HTTP 401 (เปิด docket ไม่ได้)
+
+รายงานรอบ: `workspace/reports/finance/2026-11-26-AMD.md`

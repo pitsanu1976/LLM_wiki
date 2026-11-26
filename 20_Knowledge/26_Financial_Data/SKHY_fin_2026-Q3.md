@@ -3,7 +3,7 @@ title: "SKHY — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-20
-updated: 2026-11-25
+updated: 2026-11-26
 agent: finance
 ticker: SKHY
 period: 2026-Q3
@@ -72,3 +72,12 @@ F verdict: **ตัดสินไม่ได้** (ความมั่นใ
 - **FCF รายไตรมาสยังหาไม่ได้** — 6-K ให้แต่สะสม 9M: CFO 145.63 − capex 31.96 = **FCF 113.67T (48.1%)**; หักปันผลรับ 14.02T ⇒ ~99.65T (42.1%)
 - **ไม่มี 20-F ใน EDGAR** (จดทะเบียน 2026-07) ⇒ งบตรวจสอบ/FY cash flow หาไม่ได้ · คำฟ้อง antitrust 5:26-cv-06345 ไม่มีตัวเลขในชุดเอกสาร SEC
 - verdict รอบนี้: **ตัดสินไม่ได้**
+
+## อัปเดต 2026-11-26 (ตรวจซ้ำก่อน Leader ใช้)
+
+- **6-K ใหม่ 2026-11-25** (acc 0001193125-26-476869): Corporate Value-up Plan 2026 — **แผนคืนทุน FY2026 ≈₩100T ยังไม่ถูกถอน** (cash dividends **≥₩30T** + buyback/cancellation **≥₩60T**), ระบุ revenue 9M **₩237T**, net cash **₩99T** @2026-09-30
+- **capex ยืนยันจากบรรทัด CF จริง**: 9M-2026 PP&E (30,998,642) + intangible (960,924) = **₩31,959,566M** ⇒ FCF 9M = 145,634 − 31,960 = **₩113.67T (48.1%)** · **capex เฉพาะ Q3 ไม่มีในงบ (สะสมเท่านั้น) ⇒ ดึงไม่ได้**
+- **ADS ratio ยืนยัน: 1 ADS = 0.1 หุ้นสามัญ** (424B4 2026-07-10) · ที่ close **111.14 (2026-11-25)**: mcap ADS **$785.5B** vs KOSPI **$612.9B** ⇒ premium **+28.2%** (เพดาน 5% = $30.6B–39.3B)
+- **คดี antitrust**: คำค้น `antitrust`/`treble` ใน 6-K = 0 hit; CourtListener HTTP 401 ⇒ ไม่มีตัวเลขเรียกค่าเสียหายที่ตรวจได้
+
+รายงานรอบ: `workspace/reports/finance/2026-11-26-SKHY.md`

@@ -3,7 +3,7 @@ title: "NVDA — งบ 2027 Q3"
 type: source
 status: active
 created: 2026-11-18
-updated: 2026-11-25
+updated: 2026-11-26
 agent: finance
 ticker: NVDA
 period: 2027-Q3
@@ -111,3 +111,13 @@ Q4 FY2027: รายได้ **$130.0B ±3%** · GAAP/non-GAAP GM **71–72%** 
 - **Guarantees max exposure = $108.5B @2026-07-26** (XBRL `GuaranteeObligationsMaximumExposure`, land/power/shell for AI clouds)
 - one-off: H200 excess inventory/purchase-obligation charge **−$400M (Q2 FY27)**; equity-securities gains 9M FY27 +$25,474M
 - verdict รอบนี้: **ตัดสินไม่ได้** (ข้อ 4/6 ประเมินเป็นเงินไม่ได้ + ข้อ 5 ตรวจไม่ได้) แม้ FCF TTM +$148.7B, ND/EBITDA 0.0135x
+
+## อัปเดต 2026-11-26 (ตรวจซ้ำก่อน Leader ใช้)
+
+- **10-Q Q3 FY2027 ยังไม่ถูกยื่น** (EDGAR `submissions/CIK0001045810.json`, GET 2026-11-26 10:17Z): filing ล่าสุด = 8-K 2026-11-23 (items 5.02, 9.01). ครบกำหนด ~2026-12-04 ⇒ **ยังไม่ล่าช้า**
+- **10-Q Q2 FY2027 (2026-07-26) คำค้น 0 hit ทุกคำ**: `subpoena`, `SEC investigation`, `circular`, `secondary market`, `allowance` (เชิง inventory) ⇒ ไม่มีหลักฐานในเอกสารของ SEC probe / GPU มือสอง
+- **ความเข้มข้นลูกค้า (10-Q Q2 FY27)**: Q2 direct customer 1 ราย = **16% ของรายได้**; 1H FY27 direct 3 ราย = 16%, 15%, 13%
+- **ไม่มี 8-K Item 4.02 / 10-Q/A** ⇒ ยังไม่ถึงขั้น restatement; ไม่พบเอกสารปฐมภูมิของ S&P CreditWatch 2026-11-25 (ไม่มี filing หลัง 11-23)
+- **mcap $3,598.1B** (149.30 × 24.1B, dei @2026-08-21) ⇒ เพดาน 5% = **$179.9B**; P/E 16.0x (÷EPS TTM 9.31)
+
+รายงานรอบ: `workspace/reports/finance/2026-11-26-NVDA.md`
