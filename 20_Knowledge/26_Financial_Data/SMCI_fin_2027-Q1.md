@@ -3,7 +3,7 @@ title: "SMCI — งบ 2027 Q1"
 type: source
 status: active
 created: 2026-11-20
-updated: 2026-11-26
+updated: 2026-11-27
 agent: finance
 ticker: SMCI
 period: 2027-Q1
@@ -74,3 +74,16 @@ F verdict: **ผ่าน** (ความมั่นใจกลาง) — ผ
 - **ยืนยัน FCF TTM −6,497.6** (XBRL: FY26 CFO −6,809.9, FQ1 FY27 −434.0, capex 41.6) · ข้อ 4/6 ยัง **"unable to estimate possible loss"** ตามคำบริษัท ⇒ verdict คงเป็น **ตัดสินไม่ได้** แม้ราคาเด้ง +3.05%
 
 รายงานรอบ: `workspace/reports/finance/2026-11-26-SMCI.md`
+
+## อัปเดต 2026-11-27 (เปิด 10-Q FQ1 FY27 เต็ม + เจอโครงสร้างทุนจริง)
+
+- **10-Q FQ1 FY2027 (2026-11-06, period 2026-09-30) — "unable to estimate the possible loss or range of loss, if any" อยู่ที่ Note 15 หน้า 36** (pagination "SMCI | Q1 2027 Form 10-Q | 36") ⇒ ข้อ 4 ประเมินเป็นเงินไม่ได้ **โดยคำพูดของบริษัทเอง**
+- **การเพิ่มทุน = underwritten offering จริง ไม่ใช่ ATM**: common 45,454,545 หุ้น @ $27.50 (2026-06-10, gross $1.25B / net $1.22B) + greenshoe 6,818,181 หุ้น (net $183.4M) · **mandatory convertible preferred** 75,000,000 depositary shares @ $50 (liquidation $3.75B, net $3.68B) + greenshoe $551.6M ⇒ **net proceeds รวม ≈ $5.64B** · **ATM $1.25B จัดตั้ง 2026-06-11 แต่ยังไม่ขายเลย ณ 2026-09-30**
+- **ถ้านับ preferred (liquidation $4,312.5M) เป็น quasi-debt: ND/EBITDA = 1.29x** (จาก 0.371x ที่นับเฉพาะหนี้ในงบ) — ยังผ่าน ≤2.5
+- **Purchase commitments $33.3B @2026-09-30** (non-cancelable ~12 เดือน, รวม $0.2B related parties) = **216.7% ของ mcap $15.37B** · expected-loss liability current $43.0M + LT $489.6M
+- **ลูกค้ารายเดียว 44.0% ของ net sales FQ1 FY27** (ปีก่อน 2 ราย 17.3%/11.6%) ⇒ revenue at risk ~$8.78B/ไตรมาส = 57.1% ของ mcap
+- **one-off ใหม่: vendor refund $157.6M** (บันทึกลด COGS) + interest income $6.0M ⇒ กำไรปกติ ≈ 1,470M (หลัง tax 21.2%)
+- **FCF margin 3 ปี**: FY2024 **−17.4%** · FY2025 **+7.0%** · FY2026 **−17.8%** → TTM −12.0%
+- verdict **ตัดสินไม่ได้** (ข้อ 4 ไม่มีจำนวน, ข้อ 1 ตึงตัว −$6.5B TTM)
+
+รายงานรอบ: `workspace/reports/finance/2026-11-27-SMCI.md`

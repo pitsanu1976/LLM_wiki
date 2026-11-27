@@ -3,7 +3,7 @@ title: "AMD — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-23
-updated: 2026-11-26
+updated: 2026-11-27
 agent: finance
 ticker: AMD
 period: 2026-Q3
@@ -110,3 +110,13 @@ tags:
 - **ยังไม่มีคำฟ้อง Rosen ในเอกสาร**: 10-Q คำว่า `Rosen`/`Hunterbrook` = 0 hit; EDGAR ไม่มี filing หลัง 11-23; CourtListener API = HTTP 401 (เปิด docket ไม่ได้)
 
 รายงานรอบ: `workspace/reports/finance/2026-11-26-AMD.md`
+
+## อัปเดต 2026-11-27 (เปิด S-3ASR ต้นฉบับ + 8-K ใหม่)
+
+- **S-3ASR 2026-11-23 (acc 0001193125-26-472370) — เปิดเต็มต้นฉบับ 114,398 ตัวอักษร**: *"We are not selling any shares of our common stock under this prospectus and will not receive any proceeds from the sale or other disposition of our common stock by the selling stockholders"* ⇒ **resale ของ selling stockholders ไม่ใช่การออกหุ้นใหม่/ไม่มี ATM ของผู้ออก** · 336,934,324 หุ้น = **20.34%** ของหุ้นที่ออกแล้ว 1,656,317,509 · องค์ประกอบ: OpenAI 160M + Meta 160M (warrant) + 16,934,324 หุ้นจากดีล M&A (รวม Taalas Closing Shares 16,627) · บริษัทได้เพียง $3.2M ถ้าใช้สิทธิเต็ม (320M × $0.01)
+- **8-K 2026-11-20 (ของใหม่, Item 5.03)**: แก้ไข bylaws มีผล 2026-11-18 (universal proxy, กลไก nomination, exclusive forum, indemnification) — **ไม่กระทบตัวเลขงบ**
+- **Goodwill @2026-09-26 = $25,470M** (Data Center 3,690 / **Embedded 21,072** = Xilinx / Client&Gaming 364) · **ไม่มี impairment ใน Q3-2026** (10-Q Note 6) · inventory write-down 0 (ปีก่อน 800)
+- **FCF margin 3 ปี (XBRL)**: FY2023 **4.9%** · FY2024 **9.3%** · FY2025 **19.4%** → TTM 15.5%; FCF 4Q 2,378/2,566/1,558/**554** = +$7,056M · FCF margin Q3 **4.1%** + inventory **11,463 (+35.4% QoQ)**
+- verdict **พื้นฐานไม่ถูกทำลาย** (มั่นใจ กลาง) — upper bound damage 1.153% ของ mcap $672.5B ($7.75B revenue จีน+HK FY2025 = 22.38%)
+
+รายงานรอบ: `workspace/reports/finance/2026-11-27-AMD.md`

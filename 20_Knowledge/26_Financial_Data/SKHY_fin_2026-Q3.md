@@ -3,7 +3,7 @@ title: "SKHY — งบ 2026 Q3"
 type: source
 status: active
 created: 2026-11-20
-updated: 2026-11-26
+updated: 2026-11-27
 agent: finance
 ticker: SKHY
 period: 2026-Q3
@@ -81,3 +81,15 @@ F verdict: **ตัดสินไม่ได้** (ความมั่นใ
 - **คดี antitrust**: คำค้น `antitrust`/`treble` ใน 6-K = 0 hit; CourtListener HTTP 401 ⇒ ไม่มีตัวเลขเรียกค่าเสียหายที่ตรวจได้
 
 รายงานรอบ: `workspace/reports/finance/2026-11-26-SKHY.md`
+
+## อัปเดต 2026-11-27 (เปิดต้นฉบับ 6-K เอง — ยืนยันแผนคืนทุน ₩100T)
+
+- **6-K 2026-11-25 (acc 0001193125-26-476869, เปิดเต็มต้นฉบับ)** — ถ้อยคำตรง: *"Pursuing Shareholder Returns of Approximately Won 100 Trillion for Fiscal Year 2026 — Cash dividends of Won 30 trillion or more — Acquisition and cancellation of treasury shares of Won 60 trillion or more"* · *"Recorded revenue of Won 237 trillion for the nine months ended September 30, 2026"* (งบจริง 9M ₩236.51T ⇒ +0.21% เป็นการปัด) · *"Secured net cash of Won 99 trillion as of September 30, 2026"* (calc: 114.46 − borrowings 15.80 = **98.66T**) ⇒ **ตรงกับที่ข่าวอ้าง ไม่มีส่วนต่างที่มีนัย**
+- **ผลต่อหุ้น (calc)**: ₩60T ÷ ราคา ₩1,493,177/หุ้น (ADS $111.14 × 10 × FX 1,343.51 @2026-11-24) = **40.18M หุ้น = 5.69% ของ 706,799,093** ⇒ EPS/FCF ต่อหุ้น **+6.03%** ถ้ายกเลิกหมด · แผน ₩100T = **98.7% ของ net cash 98.66T** = 16.3% ของ mcap KOSPI ($612.7B) / 12.7% ของ mcap ADS ($785.5B)
+- **จำนวนหุ้นยืนยันจาก 6-K 2026-11-16**: **706,799,093 หุ้น** ณ วันรายงาน หลังยกเลิกหุ้นทุน **23,693,272 หุ้น เมื่อ 2026-11-05** (มูลค่ายกเลิกสะสม ₩40,004,339,063,500) · weighted avg Q3-2026 721,785,638 / 9M 712,477,554
+- **ND/EBITDA = −0.51x** = net cash 98.66T ÷ EBITDA 9M **192.66T** (OI 181.49 + D&A 11.17) · หนี้ครบ 12 เดือน **4.56T = 4.0% ของสภาพคล่อง 114.46T**
+- **6-K 2026-11-20 (ใหม่)**: ซื้อหุ้น BCPE Pangea Cayman2 (vehicle ถือหุ้น Toshiba memory) ผ่าน CB conversion, กำหนด **2026-12-04**, ratio 2.82% ของสินทรัพย์รวม — รายการลงทุน ไม่ใช่ impairment
+- **ยืนยัน: แผน ₩100T ไม่ใช่ impairment** (เป็นการใช้ cash; ไม่มีคำ impairment ในเอกสาร 11-25) · **FCF รายไตรมาสยังหาไม่ได้** (เอกสารเต็ม 712k ตัวอักษรไม่มีคอลัมน์ 3 เดือน) · 9M FCF ₩113.67T (48.1%), หักปันผลรับ 99.65T (42.1%)
+- verdict **ตัดสินไม่ได้** (ขาด FCF รายไตรมาส + ตัวเลขค่าเสียหายคดี antitrust)
+
+รายงานรอบ: `workspace/reports/finance/2026-11-27-SKHY.md`

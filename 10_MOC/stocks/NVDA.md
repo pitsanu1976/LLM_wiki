@@ -77,10 +77,10 @@ related:
 
 ## 💰 Financial
 <!-- agent:finance:begin -->
-**finance · งบ Q3 FY2027 (2026-10-25, unaudited/8-K) — ตรวจซ้ำ 2026-11-26**
-- รายได้ $115.84B · OI $77.52B · EPS $2.70 · FCF 4Q **+$148.72B (41.1%)** · ND/EBITDA **0.0135x** · P/E 16.0x @149.30
-- **10-Q Q3 FY2027 ยังไม่ยื่น ณ 2026-11-26** (ครบกำหนด ~12-04) ⇒ disclosure SEC probe/restatement **ตรวจไม่ได้ ไม่ใช่ผ่าน**; 10-Q Q2 คำค้น subpoena/SEC investigation/circular/secondary market = **0 hit**
-- จับตา: commitments **$366B** (supply $279B) + guarantees max **$108.5B** @2026-07-26 · direct customer 1 ราย = **16%** รายได้ Q2 FY27 · verdict **ตัดสินไม่ได้** (ข้อ 4/6 ประเมินเป็นเงินไม่ได้, เพดาน 5% = $179.9B)
+**finance · งบ Q3 FY2027 (2026-10-25, unaudited/8-K) — ตรวจซ้ำ 2026-11-27 (EDGAR เอง)**
+- รายได้ $115.84B · OI $77.52B · EPS $2.70 · FCF 4Q **+$148.72B (41.1%)** · ND/EBITDA **0.0135x** · P/E 16.04x @149.30 · mcap $3,598.1B
+- **10-Q Q3 FY2027 ยังไม่ยื่น ณ 2026-11-27 10:19Z** (submissions API: 10-Q ล่าสุด period 2026-07-26; ไม่มี NT 10-Q / 10-Q/A / Item 4.02) ⇒ disclosure probe/restatement **ตรวจไม่ได้ ไม่ใช่ผ่าน**
+- FCF margin 3 ปี FY2023 14.1% / FY2024 44.4% / FY2025 46.6% / FY2026 44.8% · จับตา commitments $366B + guarantees $108.5B @2026-07-26 · verdict **ตัดสินไม่ได้** (ข้อ 4 ประเมินเป็นเงินไม่ได้, เพดาน 5% = $179.9B)
 - [[NVDA_fin_2027-Q3]] · [[trading-finance-moc]]
 <!-- agent:finance:end -->
 
